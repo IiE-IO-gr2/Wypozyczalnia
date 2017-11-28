@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Web.WebPages.OAuth</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Web.WebPages.OAuth.AuthenticationClientData">
+      <summary>Reprezentuje dane klienta uwierzytelnienia.</summary>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.AuthenticationClientData.#ctor(DotNetOpenAuth.AspNet.IAuthenticationClient,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+      <summary>Inicjuje nowe wystąpienie klasy <see cref="T:Microsoft.Web.WebPages.OAuth.AuthenticationClientData" />.</summary>
+      <param name="authenticationClient">Klient uwierzytelnienia.</param>
+      <param name="displayName">Nazwa wyświetlana danych.</param>
+      <param name="extraData">Dodatkowe dane.</param>
+    </member>
+    <member name="P:Microsoft.Web.WebPages.OAuth.AuthenticationClientData.AuthenticationClient">
+      <summary>Pobiera klienta uwierzytelnienia.</summary>
+      <returns>Klient uwierzytelnienia.</returns>
+    </member>
+    <member name="P:Microsoft.Web.WebPages.OAuth.AuthenticationClientData.DisplayName">
+      <summary>Pobiera lub ustawia nazwę wyświetlaną danych.</summary>
+      <returns>Nazwa wyświetlana danych.</returns>
+    </member>
+    <member name="P:Microsoft.Web.WebPages.OAuth.AuthenticationClientData.ExtraData">
+      <summary>Pobiera dodatkowe dane obiektu.</summary>
+      <returns>Dodatkowe dane obiektu.</returns>
+    </member>
+    <member name="T:Microsoft.Web.WebPages.OAuth.OAuthAccount">
+      <summary>Reprezentuje konto uwierzytelniania OAuth lub OpenID.</summary>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthAccount.#ctor(System.String,System.String)">
+      <summary>Inicjuje nowe wystąpienie klasy <see cref="T:Microsoft.Web.WebPages.OAuth.OAuthAccount" />.</summary>
+      <param name="provider">Nazwa dostawcy.</param>
+      <param name="providerUserId">Identyfikator użytkownika dostawcy.</param>
+    </member>
+    <member name="P:Microsoft.Web.WebPages.OAuth.OAuthAccount.Provider">
+      <summary>Uzyskuje nazwę dostawcy.</summary>
+      <returns>Nazwa dostawcy.</returns>
+    </member>
+    <member name="P:Microsoft.Web.WebPages.OAuth.OAuthAccount.ProviderUserId">
+      <summary>Uzyskuje identyfikator użytkownika dostawcy.</summary>
+      <returns>Identyfikator użytkownika dostawcy.</returns>
+    </member>
+    <member name="T:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity">
+      <summary>Zarządza zabezpieczeniami korzystającymi z dostawców uwierzytelniania OAuth, takich jak Facebook, Twitter, LinkedIn i Windows Live, oraz dostawców uwierzytelniania OpenID, takich jak Google i Yahoo.</summary>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.CreateOrUpdateAccount(System.String,System.String,System.String)">
+      <summary>Tworzy lub aktualizuje konto za pomocą określonego dostawcy i identyfikatora użytkownika dla identyfikatora dostawcy oraz kojarzy nowe konto z określoną nazwą użytkownika.</summary>
+      <param name="providerName">Nazwa dostawcy.</param>
+      <param name="providerUserId">Identyfikator użytkownika dla określonego dostawcy.</param>
+      <param name="userName">Nazwa użytkownika.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.DeleteAccount(System.String,System.String)">
+      <summary>Usuwa określone konto członkowskie.</summary>
+      <returns>Wartość true, jeśli konto zostało usunięte, a wartość false, jeśli nie.</returns>
+      <param name="providerName">Nazwa dostawcy.</param>
+      <param name="providerUserId">Identyfikator użytkownika dla określonego dostawcy.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.GetAccountsFromUserName(System.String)">
+      <summary>Uzyskuje dane dotyczące konta lub kont skojarzonych za pomocą określonej nazwy użytkownika.</summary>
+      <returns>Kolekcja kont.</returns>
+      <param name="userName">Nazwa użytkownika.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.GetOAuthClientData(System.String)">
+      <summary>Zwraca dane klienta uwierzytelnienia OAuth z określonym dostawcą.</summary>
+      <returns>Dane klienta uwierzytelniania OAuth.</returns>
+      <param name="providerName">Nazwa dostawcy.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.GetUserName(System.String,System.String)">
+      <summary>Zwraca identyfikator użytkownika dla określonego dostawcy uwierzytelniania OAuth lub OpenID oraz identyfikatora użytkownika dostawcy.</summary>
+      <returns>Identyfikator użytkownika lub wartość null, jeśli nie ma identyfikatora użytkownika skojarzonego z identyfikatorem użytkownika dostawcy uwierzytelniania OAuth lub Open ID.</returns>
+      <param name="providerName">Nazwa dostawcy.</param>
+      <param name="providerUserId">Identyfikator użytkownika dla określonego dostawcy.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.HasLocalAccount(System.Int32)">
+      <summary>Wskazuje, czy użytkownik ma lokalne konto.</summary>
+      <returns>Wartość true, jeśli użytkownik ma konto, w przeciwnym razie wartość false.</returns>
+      <param name="userId">Identyfikator użytkownika.</param>
+    </member>
+    <member name="P:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.IsAuthenticatedWithOAuth">
+      <summary>Uzyskuje wartość wskazującą, czy użytkownik został uwierzytelniony w trybie OAuth.</summary>
+      <returns>Wartość true, jeśli użytkownik został uwierzytelniony w trybie OAuth. W przeciwnym razie wartość false.</returns>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.Login(System.String,System.String,System.Boolean)">
+      <summary>Loguje użytkownika.</summary>
+      <returns>Wartość true, jeśli logowanie powiodło się. W przeciwnym razie wartość false.</returns>
+      <param name="providerName">Nazwa dostawcy.</param>
+      <param name="providerUserId">Identyfikator użytkownika dla określonego dostawcy.</param>
+      <param name="createPersistentCookie">Wartość true, aby utworzyć trwały plik cookie umożliwiający zapisanie danych logowania na użytek wielu sesji przeglądarki. W przeciwnym razie wartość false.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisterClient(DotNetOpenAuth.AspNet.IAuthenticationClient)">
+      <summary>Rejestruje klienta uwierzytelniania OAuth.</summary>
+      <param name="client">Jeden z obsługiwanych klientów uwierzytelniania OAuth.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisterClient(DotNetOpenAuth.AspNet.IAuthenticationClient,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+      <summary>Rejestruje klienta uwierzytelniania OAuth.</summary>
+      <param name="client">Jeden z obsługiwanych klientów uwierzytelniania OAuth.</param>
+      <param name="displayName">Nazwa wyświetlana.</param>
+      <param name="extraData">Dodatkowe dane.</param>
+    </member>
+    <member name="P:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisteredClientData">
+      <summary>Pobiera kolekcję zarejestrowanych danych klienta.</summary>
+      <returns>Kolekcja zarejestrowanych danych klienta.</returns>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisterFacebookClient(System.String,System.String)">
+      <summary>Rejestruje klienta serwisu Facebook z określonym identyfikatorem.</summary>
+      <param name="appId">Identyfikator aplikacji.</param>
+      <param name="appSecret">Klucz tajny aplikacji.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisterFacebookClient(System.String,System.String,System.String)">
+      <summary>Rejestruje klienta serwisu Facebook z określonym identyfikatorem.</summary>
+      <param name="appId">Identyfikator aplikacji.</param>
+      <param name="appSecret">Klucz tajny aplikacji.</param>
+      <param name="displayName">Nazwa wyświetlana.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisterFacebookClient(System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+      <summary>Rejestruje klienta serwisu Facebook z określonym identyfikatorem.</summary>
+      <param name="appId">Identyfikator aplikacji.</param>
+      <param name="appSecret">Klucz tajny aplikacji.</param>
+      <param name="displayName">Nazwa wyświetlana.</param>
+      <param name="extraData">Dodatkowe dane.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisterGoogleClient">
+      <summary>Rejestruje klienta serwisu Google.</summary>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisterGoogleClient(System.String)">
+      <summary>Rejestruje klienta serwisu Google.</summary>
+      <param name="displayName">Nazwa wyświetlana.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisterGoogleClient(System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+      <summary>Rejestruje klienta serwisu Google.</summary>
+      <param name="displayName">Nazwa wyświetlana.</param>
+      <param name="extraData">Dodatkowe dane.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisterLinkedInClient(System.String,System.String)">
+      <summary>Rejestruje klienta serwisu LinkedIn z określonym identyfikatorem konsumenta.</summary>
+      <param name="consumerKey">Klucz konsumenta.</param>
+      <param name="consumerSecret">Klucz tajny konsumenta.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisterLinkedInClient(System.String,System.String,System.String)">
+      <summary>Rejestruje klienta serwisu LinkedIn z określonym identyfikatorem konsumenta.</summary>
+      <param name="consumerKey">Klucz konsumenta.</param>
+      <param name="consumerSecret">Klucz tajny konsumenta.</param>
+      <param name="displayName">Nazwa wyświetlana.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisterLinkedInClient(System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+      <summary>Rejestruje klienta serwisu LinkedIn z określonym identyfikatorem konsumenta.</summary>
+      <param name="consumerKey">Klucz konsumenta.</param>
+      <param name="consumerSecret">Klucz tajny konsumenta.</param>
+      <param name="displayName">Nazwa wyświetlana.</param>
+      <param name="extraData">Dodatkowe dane.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisterMicrosoftClient(System.String,System.String)">
+      <summary>Rejestruje klienta Microsoft z określonym identyfikatorem.</summary>
+      <param name="clientId">Identyfikator klienta.</param>
+      <param name="clientSecret">Klucz tajny klienta.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisterMicrosoftClient(System.String,System.String,System.String)">
+      <summary>Rejestruje klienta Microsoft z określonym identyfikatorem.</summary>
+      <param name="clientId">Identyfikator klienta.</param>
+      <param name="clientSecret">Klucz tajny klienta.</param>
+      <param name="displayName">Nazwa wyświetlana.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisterMicrosoftClient(System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+      <summary>Rejestruje klienta Microsoft z określonym identyfikatorem.</summary>
+      <param name="clientId">Identyfikator klienta.</param>
+      <param name="clientSecret">Klucz tajny klienta.</param>
+      <param name="displayName">Nazwa wyświetlana.</param>
+      <param name="extraData">Dodatkowe dane.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisterTwitterClient(System.String,System.String)">
+      <summary>Rejestruje klienta serwisu Twitter z określonym identyfikatorem konsumenta.</summary>
+      <param name="consumerKey">Klucz klienta.</param>
+      <param name="consumerSecret">Klucz tajny klienta.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisterTwitterClient(System.String,System.String,System.String)">
+      <summary>Rejestruje klienta serwisu Twitter z określonym identyfikatorem konsumenta.</summary>
+      <param name="consumerKey">Klucz klienta.</param>
+      <param name="consumerSecret">Klucz tajny klienta.</param>
+      <param name="displayName">Nazwa wyświetlana.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisterTwitterClient(System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+      <summary>Rejestruje klienta serwisu Twitter z określonym identyfikatorem konsumenta.</summary>
+      <param name="consumerKey">Klucz klienta.</param>
+      <param name="consumerSecret">Klucz tajny klienta.</param>
+      <param name="displayName">Nazwa wyświetlana.</param>
+      <param name="extraData">Dodatkowe dane.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisterYahooClient">
+      <summary>Rejestruje klienta serwisu Yahoo.</summary>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisterYahooClient(System.String)">
+      <summary>Rejestruje klienta serwisu Yahoo.</summary>
+      <param name="displayName">Nazwa wyświetlana.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RegisterYahooClient(System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+      <summary>Rejestruje klienta serwisu Yahoo.</summary>
+      <param name="displayName">Nazwa wyświetlana.</param>
+      <param name="extraData">Dodatkowe dane.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RequestAuthentication(System.String)">
+      <summary>Żąda od określonego dostawcy rozpoczęcia uwierzytelniania, kierując użytkowników do zewnętrznej witryny sieci Web.</summary>
+      <param name="provider">Dostawca uwierzytelniania OAuth.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.RequestAuthentication(System.String,System.String)">
+      <summary>Żąda od określonego dostawcy rozpoczęcia uwierzytelniania, kierując użytkowników do witryny zewnętrznej, i instruuje dostawcę, aby po pomyślnym uwierzytelnieniu przekierował użytkownika do określonego adresu URL.</summary>
+      <param name="provider">Dostawca uwierzytelniania OAuth.</param>
+      <param name="returnUrl">Adres URL zwracany po pomyślnym uwierzytelnieniu.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.SerializeProviderUserId(System.String,System.String)">
+      <summary>Serializuje identyfikator użytkownika dostawcy.</summary>
+      <returns>Serializowany identyfikator użytkownika dostawcy.</returns>
+      <param name="providerName">Nazwa dostawcy.</param>
+      <param name="providerUserId">Identyfikator użytkownika dostawcy.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.TryDeserializeProviderUserId(System.String,System.String@,System.String@)">
+      <summary>Wskazuje, czy identyfikator użytkownika dostawcy został zdeserializowany.</summary>
+      <returns>Wartość true, jeśli identyfikator użytkownika został zdeserializowany, w przeciwnym razie wartość false.</returns>
+      <param name="data">Dane.</param>
+      <param name="providerName">Nazwa dostawcy.</param>
+      <param name="providerUserId">Identyfikator użytkownika dostawcy.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.TryGetOAuthClientData(System.String,Microsoft.Web.WebPages.OAuth.AuthenticationClientData@)">
+      <summary>Wskazuje, czy dostawca otrzymuje dane klienta OAuth.</summary>
+      <returns>Wartość true, jeśli dostawca otrzymuje dane klienta OAuth, w przeciwnym razie wartość false.</returns>
+      <param name="providerName">Nazwa dostawcy.</param>
+      <param name="clientData">Dane klienta.</param>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.VerifyAuthentication">
+      <summary>Zwraca wartość wskazującą, czy konto użytkownika zostało potwierdzone przez dostawcę.</summary>
+      <returns>Wystąpienie <see cref="T:DotNetOpenAuth.AspNet.AuthenticationResult" />, które można zbadać w celu określenia, czy weryfikacja powiodła się.</returns>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.OAuthWebSecurity.VerifyAuthentication(System.String)">
+      <summary>Zwraca wartość wskazującą, czy konto użytkownika zostało potwierdzone przez dostawcę.</summary>
+      <returns>Wystąpienie <see cref="T:DotNetOpenAuth.AspNet.AuthenticationResult" />, które można zbadać w celu określenia, czy weryfikacja powiodła się.</returns>
+      <param name="returnUrl">Zwraca adres URL.</param>
+    </member>
+    <member name="T:Microsoft.Web.WebPages.OAuth.PreApplicationStartCode">
+      <summary>Udostępnia punkt rejestracji dla kodu uruchomienia wstępnej aplikacji zabezpieczającej za pomocą uwierzytelniania OAuth.</summary>
+    </member>
+    <member name="M:Microsoft.Web.WebPages.OAuth.PreApplicationStartCode.Start">
+      <summary>Rejestruje kod uruchomienia wstępnej aplikacji uwierzytelniania OAuth.</summary>
+    </member>
+  </members>
+</doc>
