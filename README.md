@@ -1,2 +1,0 @@
-# Symulator
-Symulator fali akustycznej
