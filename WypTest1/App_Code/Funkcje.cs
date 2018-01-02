@@ -9,8 +9,8 @@ using System.IO;
 
 public static class Funkcje
 {
-    public static string connString = @"Password=IOadmin;Persist Security Info=True;User ID = IOadmin; Initial Catalog = wypozyczalnia;" +
-        @"Data Source = 10.64.232.0,49172";
+    public static string connString = @"Password=iieIOgr2;Persist Security Info=True;User ID=IOadmin;Initial Catalog=wypozyczalnia;"+
+        @"Data Source=iie-io-gr2.database.windows.net";
     
     // @"Provider = SQLOLEDB.1; Password=IOadmin;Persist Security Info=True;User ID = IOadmin; Initial Catalog = wypozyczalnia; Data Source = 10.78.246.150,49172";
     // @"server=tcp:KRYCHCIAPC,49172;database=wypozyczalnia;UID=IOadmin;password=IOadmin";
