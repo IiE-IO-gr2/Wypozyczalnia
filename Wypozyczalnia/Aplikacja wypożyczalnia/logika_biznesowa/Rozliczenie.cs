@@ -18,7 +18,7 @@ namespace logika_biznesowa {
 		}
 
 		private Wypo¿yczenie wypo¿yczenie;
-		private Panel_administratora panel administratora;
+		private Panel_administratora panel_administratora;
 
 	}
 
