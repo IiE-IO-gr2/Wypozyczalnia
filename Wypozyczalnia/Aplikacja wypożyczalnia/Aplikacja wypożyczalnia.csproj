@@ -44,11 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu glowne.cs">
+    <Compile Include="Menu_glowne.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu glowne.Designer.cs">
-      <DependentUpon>Menu glowne.cs</DependentUpon>
+    <Compile Include="Menu_glowne.Designer.cs">
+      <DependentUpon>Menu_glowne.cs</DependentUpon>
     </Compile>
     <Compile Include="logika_biznesowa\Klient.cs" />
     <Compile Include="logika_biznesowa\Klient_firmy.cs" />
@@ -61,8 +61,8 @@
     <Compile Include="logika_biznesowa\Wypożyczenie.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Menu glowne.resx">
-      <DependentUpon>Menu glowne.cs</DependentUpon>
+    <EmbeddedResource Include="Menu_glowne.resx">
+      <DependentUpon>Menu_glowne.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
