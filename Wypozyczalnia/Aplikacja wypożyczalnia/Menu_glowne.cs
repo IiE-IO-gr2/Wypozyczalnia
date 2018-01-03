@@ -16,5 +16,17 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Panel_administratora pa = new Panel_administratora();
+            pa.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -16,5 +16,17 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu_po_zalogowaniu m = new Menu_po_zalogowaniu();
+            m.Show();
+        }
     }
 }
