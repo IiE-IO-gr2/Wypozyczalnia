@@ -44,7 +44,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DodajKlientaFirma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajKlientaFirma.Designer.cs">
+      <DependentUpon>DodajKlientaFirma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DodajKlientaIndywidualny.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajKlientaIndywidualny.Designer.cs">
+      <DependentUpon>DodajKlientaIndywidualny.cs</DependentUpon>
+    </Compile>
     <Compile Include="FunkcjeSQL.cs" />
+    <Compile Include="Klienci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Klienci.Designer.cs">
+      <DependentUpon>Klienci.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu po zalogowaniu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +92,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RodzajKlienta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RodzajKlienta.Designer.cs">
+      <DependentUpon>RodzajKlienta.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DodajKlientaFirma.resx">
+      <DependentUpon>DodajKlientaFirma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodajKlientaIndywidualny.resx">
+      <DependentUpon>DodajKlientaIndywidualny.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klienci.resx">
+      <DependentUpon>Klienci.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu po zalogowaniu.resx">
       <DependentUpon>Menu po zalogowaniu.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +125,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RodzajKlienta.resx">
+      <DependentUpon>RodzajKlienta.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
