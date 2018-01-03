@@ -47,7 +47,7 @@ namespace logika_biznesowa {
 
 		private Samochód samochód;
 		private Klient klient;
-		private Panel_administratora panel administratora;
+		private Panel_administratora panel_administratora;
 
 		private Wypo¿yczenie wypo¿yczenie;
 		private Lista_rezerwacji lista_rezerwacji;

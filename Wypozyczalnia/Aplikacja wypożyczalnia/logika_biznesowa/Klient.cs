@@ -51,7 +51,7 @@ namespace logika_biznesowa {
 			throw new System.Exception("Not implemented");
 		}
 
-		private Panel_administratora panel administratora;
+		private Panel_administratora panel_administratora;
 
 		private Rezerwacja rezerwacja;
 
