@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FunkcjeSQL.cs" />
     <Compile Include="Menu po zalogowaniu.cs">
       <SubType>Form</SubType>
     </Compile>
