@@ -4,7 +4,7 @@ namespace logika_biznesowa {
 		/// <summary>
 		/// data zwrotu samochodu
 		/// </summary>
-		public string Data_zwrotu;
+		public DateTime Data_zwrotu;
 		/// <summary>
 		/// sprawdzenie, czy samochód jest uszkodzony
 		/// </summary>

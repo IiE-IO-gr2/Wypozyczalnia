@@ -8,11 +8,11 @@ namespace logika_biznesowa {
 		/// <summary>
 		/// data wypo퓓czenia samochodu
 		/// </summary>
-		public string Data_wypo퓓czenia;
+		public DateTime Data_wypo퓓czenia;
 		/// <summary>
 		/// data planowanego zwrotu samochodu
 		/// </summary>
-		public string Data_planowanego_zwrotu;
+		public DateTime Data_planowanego_zwrotu;
 		/// <summary>
 		/// cena za wypo퓓czenie samochodu
 		/// </summary>
