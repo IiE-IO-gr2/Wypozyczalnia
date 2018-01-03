@@ -22,10 +22,6 @@ namespace Aplikacja_wypożyczalnia
         private Button button3;
         private Label label1;
 
-        public Form1()
-        {
-            InitializeComponent();
-        }
 
         private void InitializeComponent()
         {
@@ -52,6 +48,7 @@ namespace Aplikacja_wypożyczalnia
             this.label1.Size = new System.Drawing.Size(217, 29);
             this.label1.TabIndex = 15;
             this.label1.Text = "Dodaj rezerwację";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label4
             // 
@@ -138,6 +135,11 @@ namespace Aplikacja_wypożyczalnia
             this.Name = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }
