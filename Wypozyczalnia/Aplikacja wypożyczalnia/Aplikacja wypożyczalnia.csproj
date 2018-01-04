@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dodaj_rezerwacje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dodaj_rezerwacje.Designer.cs">
+      <DependentUpon>Dodaj_rezerwacje.cs</DependentUpon>
+    </Compile>
     <Compile Include="FunkcjeSQL.cs" />
     <Compile Include="Menu po zalogowaniu.cs">
       <SubType>Form</SubType>
@@ -80,6 +86,9 @@
     <Compile Include="Samochody.Designer.cs">
       <DependentUpon>Samochody.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Dodaj_rezerwacje.resx">
+      <DependentUpon>Dodaj_rezerwacje.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu po zalogowaniu.resx">
       <DependentUpon>Menu po zalogowaniu.cs</DependentUpon>
     </EmbeddedResource>
