@@ -44,6 +44,7 @@
             this.label1.Size = new System.Drawing.Size(348, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Wypożyczalnia Samochodów";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -78,6 +79,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Menu_glowne";
             this.Text = "Wypożyczalnia Samochodów";
+            this.Load += new System.EventHandler(this.Menu_glowne_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
