@@ -69,5 +69,25 @@ namespace Aplikacja_wypożyczalnia.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _26653464_1222776397822724_926715336_o {
+            get {
+                object obj = ResourceManager.GetObject("26653464_1222776397822724_926715336_o", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _26653464_1222776397822724_926715336_o1 {
+            get {
+                object obj = ResourceManager.GetObject("26653464_1222776397822724_926715336_o1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

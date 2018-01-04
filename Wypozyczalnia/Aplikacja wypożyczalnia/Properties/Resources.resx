@@ -121,4 +121,10 @@
   <data name="26553194_1222756987824665_2060964163_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\26553194_1222756987824665_2060964163_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="26653464_1222776397822724_926715336_o" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\26653464_1222776397822724_926715336_o1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="26653464_1222776397822724_926715336_o1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\26653464_1222776397822724_926715336_o2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
