@@ -104,6 +104,12 @@
     <Compile Include="Samochody.Designer.cs">
       <DependentUpon>Samochody.cs</DependentUpon>
     </Compile>
+    <Compile Include="WyszukajKlienta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WyszukajKlienta.Designer.cs">
+      <DependentUpon>WyszukajKlienta.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DodajKlientaFirma.resx">
       <DependentUpon>DodajKlientaFirma.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Samochody.resx">
       <DependentUpon>Samochody.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WyszukajKlienta.resx">
+      <DependentUpon>WyszukajKlienta.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
