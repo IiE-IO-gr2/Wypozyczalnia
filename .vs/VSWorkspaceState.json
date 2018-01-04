@@ -4,8 +4,10 @@
     "\\Wypozyczalnia",
     "\\Wypozyczalnia\\Aplikacja wypożyczalnia",
     "\\Wypozyczalnia\\Aplikacja wypożyczalnia\\Menu glowne",
-    "\\Wypozyczalnia\\Aplikacja wypożyczalnia\\obj"
+    "\\Wypozyczalnia\\Aplikacja wypożyczalnia\\obj",
+    "\\Wypozyczalnia\\Aplikacja wypożyczalnia\\Resources",
+    "\\WypTest1"
   ],
-  "SelectedNode": "\\Wypozyczalnia\\Aplikacja wypożyczalnia\\Menu_glowne.resx",
+  "SelectedNode": "\\Wypozyczalnia\\Aplikacja wypożyczalnia\\DodajKlientaFirma.resx",
   "PreviewInSolutionExplorer": false
 }
