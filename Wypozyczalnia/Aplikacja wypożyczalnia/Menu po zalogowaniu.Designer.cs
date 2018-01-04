@@ -122,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            
+            this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o1;
             this.ClientSize = new System.Drawing.Size(888, 484);
             this.Controls.Add(this.wylogowanie);
             this.Controls.Add(this.czas);
