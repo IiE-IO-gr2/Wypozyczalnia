@@ -63,49 +63,9 @@ namespace Aplikacja_wypożyczalnia.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _26653464_1222776397822724_926715336_o {
+        internal static System.Drawing.Bitmap _26553194_1222756987824665_2060964163_n {
             get {
-                object obj = ResourceManager.GetObject("26653464_1222776397822724_926715336_o", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Chrysanthemum {
-            get {
-                object obj = ResourceManager.GetObject("Chrysanthemum", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap log_off {
-            get {
-                object obj = ResourceManager.GetObject("log_off", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap obraz {
-            get {
-                object obj = ResourceManager.GetObject("obraz", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap obraz1 {
-            get {
-                object obj = ResourceManager.GetObject("obraz1", resourceCulture);
+                object obj = ResourceManager.GetObject("26553194_1222756987824665_2060964163_n", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

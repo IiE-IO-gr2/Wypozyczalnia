@@ -74,6 +74,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Samochody.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Samochody.Designer.cs">
+      <DependentUpon>Samochody.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Menu po zalogowaniu.resx">
       <DependentUpon>Menu po zalogowaniu.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +99,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Samochody.resx">
+      <DependentUpon>Samochody.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -107,19 +116,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\obraz.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\26653464_1222776397822724_926715336_o.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\obraz1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Chrysanthemum.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\log_off.png" />
+    <None Include="Resources\26553194_1222756987824665_2060964163_n.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
