@@ -48,6 +48,7 @@
             this.samochody.TabIndex = 0;
             this.samochody.Text = "Samochody";
             this.samochody.UseVisualStyleBackColor = true;
+            this.samochody.Click += new System.EventHandler(this.samochody_Click);
             // 
             // rezerwacje
             // 
