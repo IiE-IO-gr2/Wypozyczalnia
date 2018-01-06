@@ -18,9 +18,7 @@ namespace Aplikacja_wypożyczalnia
         private Label label3;
         private DateTimePicker dateTimePicker1;
         private DateTimePicker dateTimePicker2;
-        private Button button2;
         private Button button3;
-        private Label label1;
 
 
         private void InitializeComponent()
@@ -139,6 +137,11 @@ namespace Aplikacja_wypożyczalnia
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

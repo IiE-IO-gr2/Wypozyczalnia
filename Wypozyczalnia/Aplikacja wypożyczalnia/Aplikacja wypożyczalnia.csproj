@@ -56,6 +56,12 @@
     <Compile Include="DodajKlientaIndywidualny.Designer.cs">
       <DependentUpon>DodajKlientaIndywidualny.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dodaj_rezerwacje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dodaj_rezerwacje.Designer.cs">
+      <DependentUpon>Dodaj_rezerwacje.cs</DependentUpon>
+    </Compile>
     <Compile Include="EdytujKlienta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DodajKlientaIndywidualny.resx">
       <DependentUpon>DodajKlientaIndywidualny.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dodaj_rezerwacje.resx">
+      <DependentUpon>Dodaj_rezerwacje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EdytujKlienta.resx">
       <DependentUpon>EdytujKlienta.cs</DependentUpon>
