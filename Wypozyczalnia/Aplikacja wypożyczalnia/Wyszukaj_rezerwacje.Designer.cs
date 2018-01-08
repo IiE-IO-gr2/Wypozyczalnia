@@ -28,72 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Wyszukaj_rezerwacje));
+            this.rezerwacje = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // rezerwacje
+            // 
+            this.rezerwacje.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.rezerwacje.Location = new System.Drawing.Point(313, 26);
+            this.rezerwacje.Name = "rezerwacje";
+            this.rezerwacje.Size = new System.Drawing.Size(272, 72);
+            this.rezerwacje.TabIndex = 27;
+            this.rezerwacje.Text = "Wyszukaj rezerwację";
+            this.rezerwacje.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(302, 35);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(287, 150);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 29);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Dodaj rezerwację";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(285, 200);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 34);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Menu główne";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(426, 200);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 34);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Szukaj";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(277, 123);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 20);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "ID rezerwacji";
+            this.label1.Size = new System.Drawing.Size(100, 20);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "ID rezerwacji";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(426, 123);
+            this.textBox1.Location = new System.Drawing.Point(405, 150);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 20);
-            this.textBox1.TabIndex = 26;
+            this.textBox1.Size = new System.Drawing.Size(180, 20);
+            this.textBox1.TabIndex = 39;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button4.Location = new System.Drawing.Point(365, 333);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(163, 42);
+            this.button4.TabIndex = 45;
+            this.button4.Text = "Menu główne";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button1.Location = new System.Drawing.Point(365, 230);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(163, 42);
+            this.button1.TabIndex = 46;
+            this.button1.Text = "Zatwierdź";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Wyszukaj_rezerwacje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(884, 461);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
+            this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o1;
+            this.ClientSize = new System.Drawing.Size(888, 484);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.rezerwacje);
             this.Name = "Wyszukaj_rezerwacje";
             this.Text = "Wyszukaj_rezerwacje";
             this.ResumeLayout(false);
@@ -103,10 +102,10 @@
 
         #endregion
 
+        private System.Windows.Forms.Button rezerwacje;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button1;
     }
 }
