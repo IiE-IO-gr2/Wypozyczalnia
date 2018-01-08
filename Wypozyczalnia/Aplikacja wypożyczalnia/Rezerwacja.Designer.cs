@@ -39,7 +39,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Location = new System.Drawing.Point(480, 166);
+            this.button1.Location = new System.Drawing.Point(480, 148);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(131, 51);
             this.button1.TabIndex = 6;
@@ -50,7 +50,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button2.Location = new System.Drawing.Point(480, 256);
+            this.button2.Location = new System.Drawing.Point(480, 245);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(131, 51);
             this.button2.TabIndex = 7;
@@ -60,7 +60,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button4.Location = new System.Drawing.Point(246, 166);
+            this.button4.Location = new System.Drawing.Point(246, 148);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(131, 51);
             this.button4.TabIndex = 9;
@@ -70,7 +70,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button3.Location = new System.Drawing.Point(246, 256);
+            this.button3.Location = new System.Drawing.Point(246, 245);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(131, 51);
             this.button3.TabIndex = 10;
@@ -80,7 +80,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button5.Location = new System.Drawing.Point(368, 371);
+            this.button5.Location = new System.Drawing.Point(361, 352);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(131, 51);
             this.button5.TabIndex = 23;
@@ -90,7 +90,7 @@
             // rezerwacje
             // 
             this.rezerwacje.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.rezerwacje.Location = new System.Drawing.Point(311, 41);
+            this.rezerwacje.Location = new System.Drawing.Point(313, 26);
             this.rezerwacje.Name = "rezerwacje";
             this.rezerwacje.Size = new System.Drawing.Size(235, 73);
             this.rezerwacje.TabIndex = 24;
@@ -102,7 +102,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o1;
-            this.ClientSize = new System.Drawing.Size(888, 476);
+            this.ClientSize = new System.Drawing.Size(888, 484);
             this.Controls.Add(this.rezerwacje);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);

@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Aplikacja_wypożyczalnia
 {
-    public partial class Usun_rezerwacje : Form
+    public partial class Edytuj_rezerwacje : Form
     {
-        public Usun_rezerwacje()
+        public Edytuj_rezerwacje()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void rezerwacje_Click(object sender, EventArgs e)
         {
 
         }
