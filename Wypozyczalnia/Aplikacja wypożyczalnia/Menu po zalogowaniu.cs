@@ -88,5 +88,10 @@ namespace Aplikacja_wypożyczalnia
             Samochody sa = new Samochody();
             sa.Show();
         }
+
+        private void rezerwacje_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

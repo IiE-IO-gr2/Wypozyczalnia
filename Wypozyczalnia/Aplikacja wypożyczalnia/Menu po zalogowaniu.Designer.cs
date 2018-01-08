@@ -59,6 +59,7 @@
             this.rezerwacje.TabIndex = 1;
             this.rezerwacje.Text = "Rezerwacje";
             this.rezerwacje.UseVisualStyleBackColor = true;
+            this.rezerwacje.Click += new System.EventHandler(this.rezerwacje_Click);
             // 
             // klienci
             // 

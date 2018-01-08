@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "zadanie-Dodaj_rezerwacje",
+      "appliesTo": "Wypozyczalnia/Aplikacja wypożyczalnia/Dodaj_rezerwacje.resx",
+      "type": "launch"
+    }
+  ]
+}
