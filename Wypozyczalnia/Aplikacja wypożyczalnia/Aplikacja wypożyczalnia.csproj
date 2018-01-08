@@ -62,6 +62,12 @@
     <Compile Include="DodajSamochód.Designer.cs">
       <DependentUpon>DodajSamochód.cs</DependentUpon>
     </Compile>
+    <Compile Include="DodajWypozyczenie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajWypozyczenie.Designer.cs">
+      <DependentUpon>DodajWypozyczenie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dodaj_rezerwacje.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,11 +86,23 @@
     <Compile Include="EdytujSamochód.Designer.cs">
       <DependentUpon>EdytujSamochód.cs</DependentUpon>
     </Compile>
+    <Compile Include="EdytujWypozyczenie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdytujWypozyczenie.Designer.cs">
+      <DependentUpon>EdytujWypozyczenie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Edytuj_rezerwacje.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Edytuj_rezerwacje.Designer.cs">
       <DependentUpon>Edytuj_rezerwacje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="FunkcjeSQL.cs" />
     <Compile Include="Klienci.cs">
@@ -191,6 +209,9 @@
     <EmbeddedResource Include="DodajSamochód.resx">
       <DependentUpon>DodajSamochód.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DodajWypozyczenie.resx">
+      <DependentUpon>DodajWypozyczenie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dodaj_rezerwacje.resx">
       <DependentUpon>Dodaj_rezerwacje.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,8 +221,14 @@
     <EmbeddedResource Include="EdytujSamochód.resx">
       <DependentUpon>EdytujSamochód.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EdytujWypozyczenie.resx">
+      <DependentUpon>EdytujWypozyczenie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Edytuj_rezerwacje.resx">
       <DependentUpon>Edytuj_rezerwacje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Klienci.resx">
       <DependentUpon>Klienci.cs</DependentUpon>
@@ -242,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UsuńSamochód.resx">
       <DependentUpon>UsuńSamochód.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wypozyczenia.resx">
+      <DependentUpon>Wypozyczenia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WyszukajKlienta.resx">
       <DependentUpon>WyszukajKlienta.cs</DependentUpon>

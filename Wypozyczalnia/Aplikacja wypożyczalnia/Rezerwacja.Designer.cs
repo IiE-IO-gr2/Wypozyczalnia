@@ -33,7 +33,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.rezerwacje = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -91,15 +91,16 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // rezerwacje
+            // label1
             // 
-            this.rezerwacje.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.rezerwacje.Location = new System.Drawing.Point(313, 26);
-            this.rezerwacje.Name = "rezerwacje";
-            this.rezerwacje.Size = new System.Drawing.Size(235, 73);
-            this.rezerwacje.TabIndex = 24;
-            this.rezerwacje.Text = "Rezerwacje";
-            this.rezerwacje.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.label1.Image = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
+            this.label1.Location = new System.Drawing.Point(345, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 31);
+            this.label1.TabIndex = 52;
+            this.label1.Text = "Rezerwacje";
             // 
             // Rezerwacja
             // 
@@ -107,7 +108,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o1;
             this.ClientSize = new System.Drawing.Size(888, 484);
-            this.Controls.Add(this.rezerwacje);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
@@ -117,6 +118,7 @@
             this.Text = "Rezerwacja";
             this.Load += new System.EventHandler(this.Rezerwacja_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -126,6 +128,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button rezerwacje;
+        private System.Windows.Forms.Label label1;
     }
 }
