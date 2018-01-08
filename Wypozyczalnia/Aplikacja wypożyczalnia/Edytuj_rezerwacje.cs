@@ -10,18 +10,16 @@ using System.Windows.Forms;
 
 namespace Aplikacja_wypożyczalnia
 {
-    public partial class EdytujSamochód : Form
+    public partial class Edytuj_rezerwacje : Form
     {
-        public EdytujSamochód()
+        public Edytuj_rezerwacje()
         {
             InitializeComponent();
         }
 
-        private void WsteczES_Click(object sender, EventArgs e)
+        private void rezerwacje_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Samochody es = new Samochody();
-            es.Show();
+
         }
     }
 }
