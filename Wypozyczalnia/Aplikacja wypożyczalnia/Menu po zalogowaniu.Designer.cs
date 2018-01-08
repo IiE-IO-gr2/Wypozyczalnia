@@ -59,6 +59,7 @@
             this.rezerwacje.TabIndex = 1;
             this.rezerwacje.Text = "Rezerwacje";
             this.rezerwacje.UseVisualStyleBackColor = true;
+            this.rezerwacje.Click += new System.EventHandler(this.rezerwacje_Click);
             // 
             // klienci
             // 
@@ -69,6 +70,7 @@
             this.klienci.TabIndex = 2;
             this.klienci.Text = "Klienci";
             this.klienci.UseVisualStyleBackColor = true;
+            this.klienci.Click += new System.EventHandler(this.klienci_Click);
             // 
             // wypozyczenia
             // 
@@ -79,6 +81,7 @@
             this.wypozyczenia.TabIndex = 3;
             this.wypozyczenia.Text = "Wypożyczenia";
             this.wypozyczenia.UseVisualStyleBackColor = true;
+            this.wypozyczenia.Click += new System.EventHandler(this.wypozyczenia_Click);
             // 
             // data
             // 

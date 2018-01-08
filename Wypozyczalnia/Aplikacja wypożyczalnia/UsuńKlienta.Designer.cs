@@ -40,7 +40,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(322, 31);
+            this.label1.Location = new System.Drawing.Point(348, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 29);
             this.label1.TabIndex = 2;
@@ -49,7 +49,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(353, 88);
+            this.textBox1.Location = new System.Drawing.Point(337, 88);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 33;
@@ -68,7 +68,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button1.Location = new System.Drawing.Point(371, 388);
+            this.button1.Location = new System.Drawing.Point(374, 401);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 40);
             this.button1.TabIndex = 53;
@@ -84,6 +84,7 @@
             this.button5.TabIndex = 54;
             this.button5.Text = "Wstecz";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // UsuńKlienta
             // 
