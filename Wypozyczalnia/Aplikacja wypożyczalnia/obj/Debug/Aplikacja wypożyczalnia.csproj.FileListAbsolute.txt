@@ -36,3 +36,7 @@ C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\
 C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Menu_po_zalogowaniu.resources
 C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Samochody.resources
 C:\Users\Lenovo\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Samochody.resources
+C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.DodajKlientaFirma.resources
+C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.DodajKlientaIndywidualny.resources
+C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Klienci.resources
+C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.RodzajKlienta.resources
