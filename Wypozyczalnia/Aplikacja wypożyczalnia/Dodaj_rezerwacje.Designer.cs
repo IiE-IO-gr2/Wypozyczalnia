@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rezerwacje = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,18 +38,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // rezerwacje
-            // 
-            this.rezerwacje.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.rezerwacje.Location = new System.Drawing.Point(313, 26);
-            this.rezerwacje.Name = "rezerwacje";
-            this.rezerwacje.Size = new System.Drawing.Size(235, 73);
-            this.rezerwacje.TabIndex = 25;
-            this.rezerwacje.Text = "Dodaj rezerwację";
-            this.rezerwacje.UseVisualStyleBackColor = true;
-            this.rezerwacje.Click += new System.EventHandler(this.rezerwacje_Click);
             // 
             // label1
             // 
@@ -140,8 +129,20 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(163, 42);
             this.button4.TabIndex = 43;
-            this.button4.Text = "Menu główne";
+            this.button4.Text = "Wstecz";
             this.button4.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.Control;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.label4.Image = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
+            this.label4.Location = new System.Drawing.Point(320, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(240, 31);
+            this.label4.TabIndex = 44;
+            this.label4.Text = "Dodaj rezerwację";
             // 
             // Dodaj_rezerwacje
             // 
@@ -149,6 +150,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o1;
             this.ClientSize = new System.Drawing.Size(888, 484);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -159,7 +161,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.rezerwacje);
             this.Name = "Dodaj_rezerwacje";
             this.Text = "Dodaj_rezerwacje";
             this.ResumeLayout(false);
@@ -168,8 +169,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button rezerwacje;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -180,5 +179,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label4;
     }
 }
