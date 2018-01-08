@@ -56,6 +56,12 @@
     <Compile Include="DodajKlientaIndywidualny.Designer.cs">
       <DependentUpon>DodajKlientaIndywidualny.cs</DependentUpon>
     </Compile>
+    <Compile Include="DodajSamochód.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajSamochód.Designer.cs">
+      <DependentUpon>DodajSamochód.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dodaj_rezerwacje.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,12 @@
     </Compile>
     <Compile Include="EdytujKlienta.Designer.cs">
       <DependentUpon>EdytujKlienta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EdytujSamochód.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdytujSamochód.Designer.cs">
+      <DependentUpon>EdytujSamochód.cs</DependentUpon>
     </Compile>
     <Compile Include="FunkcjeSQL.cs" />
     <Compile Include="Klienci.cs">
@@ -128,11 +140,23 @@
     <Compile Include="UsuńKlienta.Designer.cs">
       <DependentUpon>UsuńKlienta.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsuńSamochód.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuńSamochód.Designer.cs">
+      <DependentUpon>UsuńSamochód.cs</DependentUpon>
+    </Compile>
     <Compile Include="WyszukajKlienta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WyszukajKlienta.Designer.cs">
       <DependentUpon>WyszukajKlienta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WyszukajSamochód.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WyszukajSamochód.Designer.cs">
+      <DependentUpon>WyszukajSamochód.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="DodajKlientaFirma.resx">
       <DependentUpon>DodajKlientaFirma.cs</DependentUpon>
@@ -140,11 +164,17 @@
     <EmbeddedResource Include="DodajKlientaIndywidualny.resx">
       <DependentUpon>DodajKlientaIndywidualny.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DodajSamochód.resx">
+      <DependentUpon>DodajSamochód.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dodaj_rezerwacje.resx">
       <DependentUpon>Dodaj_rezerwacje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EdytujKlienta.resx">
       <DependentUpon>EdytujKlienta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EdytujSamochód.resx">
+      <DependentUpon>EdytujSamochód.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Klienci.resx">
       <DependentUpon>Klienci.cs</DependentUpon>
@@ -180,8 +210,14 @@
     <EmbeddedResource Include="UsuńKlienta.resx">
       <DependentUpon>UsuńKlienta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UsuńSamochód.resx">
+      <DependentUpon>UsuńSamochód.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WyszukajKlienta.resx">
       <DependentUpon>WyszukajKlienta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WyszukajSamochód.resx">
+      <DependentUpon>WyszukajSamochód.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

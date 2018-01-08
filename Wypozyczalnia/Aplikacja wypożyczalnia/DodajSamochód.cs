@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Aplikacja_wypożyczalnia
 {
-    public partial class WyszukajKlienta : Form
+    public partial class DodajSamochód : Form
     {
-        public WyszukajKlienta()
+        public DodajSamochód()
         {
             InitializeComponent();
         }
