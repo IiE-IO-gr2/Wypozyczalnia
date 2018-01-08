@@ -29,6 +29,7 @@ namespace Aplikacja_wypożyczalnia
 
         private void WsteczDS_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Samochody ds = new Samochody();
             ds.Show();
         }
