@@ -66,5 +66,12 @@ namespace Aplikacja_wypożyczalnia
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu_po_zalogowaniu mpz = new Menu_po_zalogowaniu();
+            mpz.Show();
+        }
     }
 }
