@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DodajKlientaFirma));
             this.button1 = new System.Windows.Forms.Button();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -112,6 +111,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label12.Location = new System.Drawing.Point(306, 306);
             this.label12.Name = "label12";
@@ -122,6 +122,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label11.Location = new System.Drawing.Point(317, 271);
             this.label11.Name = "label11";
@@ -132,6 +133,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label10.Location = new System.Drawing.Point(291, 237);
             this.label10.Name = "label10";
@@ -142,6 +144,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label9.Location = new System.Drawing.Point(344, 203);
             this.label9.Name = "label9";
@@ -152,6 +155,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label8.Location = new System.Drawing.Point(236, 169);
             this.label8.Name = "label8";
@@ -162,6 +166,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(362, 135);
             this.label6.Name = "label6";
@@ -172,6 +177,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(295, 99);
             this.label3.Name = "label3";
@@ -189,6 +195,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(372, 68);
             this.label2.Name = "label2";
@@ -199,12 +206,14 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(300, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(260, 29);
             this.label1.TabIndex = 28;
             this.label1.Text = "Dodaj Klienta - Firma";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button5
             // 
@@ -221,7 +230,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o1;
             this.ClientSize = new System.Drawing.Size(884, 462);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button1);
