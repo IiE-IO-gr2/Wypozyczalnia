@@ -30,7 +30,7 @@
         {
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.wstecz = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,15 +56,16 @@
             this.textBox1.Size = new System.Drawing.Size(131, 20);
             this.textBox1.TabIndex = 13;
             // 
-            // button4
+            // wstecz
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button4.Location = new System.Drawing.Point(332, 368);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(163, 42);
-            this.button4.TabIndex = 44;
-            this.button4.Text = "Menu główne";
-            this.button4.UseVisualStyleBackColor = true;
+            this.wstecz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.wstecz.Location = new System.Drawing.Point(332, 368);
+            this.wstecz.Name = "wstecz";
+            this.wstecz.Size = new System.Drawing.Size(163, 42);
+            this.wstecz.TabIndex = 44;
+            this.wstecz.Text = "Wstecz";
+            this.wstecz.UseVisualStyleBackColor = true;
+            this.wstecz.Click += new System.EventHandler(this.wstecz_Click);
             // 
             // button1
             // 
@@ -133,7 +134,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.wstecz);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
             this.Name = "Usun_rezerwacje";
@@ -147,7 +148,7 @@
 
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button wstecz;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
