@@ -56,6 +56,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Usuń";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button4
             // 
@@ -66,6 +67,7 @@
             this.button4.TabIndex = 9;
             this.button4.Text = "Wyszukaj";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -76,6 +78,7 @@
             this.button3.TabIndex = 10;
             this.button3.Text = "Edytuj";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button5
             // 
@@ -86,6 +89,7 @@
             this.button5.TabIndex = 23;
             this.button5.Text = "Menu główne";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // rezerwacje
             // 

@@ -16,5 +16,12 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
+
+        private void WsteczUS_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Samochody us = new Samochody();
+            us.Show();
+        }
     }
 }

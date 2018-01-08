@@ -29,87 +29,91 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.DodajSamochód = new System.Windows.Forms.Button();
+            this.EdytujSamochód = new System.Windows.Forms.Button();
+            this.UsuńSamochód = new System.Windows.Forms.Button();
+            this.WyszukajSamochód = new System.Windows.Forms.Button();
+            this.MenuGłówne = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Image = global::Aplikacja_wypożyczalnia.Properties.Resources._26553194_1222756987824665_2060964163_n;
-            this.label1.Location = new System.Drawing.Point(361, 20);
+            this.label1.Image = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
+            this.label1.Location = new System.Drawing.Point(380, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Samochody";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
+            // DodajSamochód
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(206, 81);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 64);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Dodaj";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.DodajSamochód.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.DodajSamochód.Location = new System.Drawing.Point(262, 100);
+            this.DodajSamochód.Name = "DodajSamochód";
+            this.DodajSamochód.Size = new System.Drawing.Size(125, 65);
+            this.DodajSamochód.TabIndex = 1;
+            this.DodajSamochód.Text = "Dodaj";
+            this.DodajSamochód.UseVisualStyleBackColor = true;
+            this.DodajSamochód.Click += new System.EventHandler(this.DodajSamochód_Click);
             // 
-            // button2
+            // EdytujSamochód
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(562, 81);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(134, 64);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Edytuj";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button1_Click);
+            this.EdytujSamochód.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.EdytujSamochód.Location = new System.Drawing.Point(529, 100);
+            this.EdytujSamochód.Name = "EdytujSamochód";
+            this.EdytujSamochód.Size = new System.Drawing.Size(125, 65);
+            this.EdytujSamochód.TabIndex = 2;
+            this.EdytujSamochód.Text = "Edytuj";
+            this.EdytujSamochód.UseVisualStyleBackColor = true;
+            this.EdytujSamochód.Click += new System.EventHandler(this.EdytujSamochód_Click);
             // 
-            // button3
+            // UsuńSamochód
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.Location = new System.Drawing.Point(206, 237);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(134, 64);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Usuń";
-            this.button3.UseVisualStyleBackColor = true;
+            this.UsuńSamochód.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.UsuńSamochód.Location = new System.Drawing.Point(262, 241);
+            this.UsuńSamochód.Name = "UsuńSamochód";
+            this.UsuńSamochód.Size = new System.Drawing.Size(125, 65);
+            this.UsuńSamochód.TabIndex = 3;
+            this.UsuńSamochód.Text = "Usuń";
+            this.UsuńSamochód.UseVisualStyleBackColor = true;
+            this.UsuńSamochód.Click += new System.EventHandler(this.UsuńSamochód_Click);
             // 
-            // button4
+            // WyszukajSamochód
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button4.Location = new System.Drawing.Point(562, 237);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(134, 64);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Wyszukaj";
-            this.button4.UseVisualStyleBackColor = true;
+            this.WyszukajSamochód.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.WyszukajSamochód.Location = new System.Drawing.Point(529, 241);
+            this.WyszukajSamochód.Name = "WyszukajSamochód";
+            this.WyszukajSamochód.Size = new System.Drawing.Size(125, 65);
+            this.WyszukajSamochód.TabIndex = 4;
+            this.WyszukajSamochód.Text = "Wyszukaj";
+            this.WyszukajSamochód.UseVisualStyleBackColor = true;
+            this.WyszukajSamochód.Click += new System.EventHandler(this.WyszukajSamochód_Click);
             // 
-            // button5
+            // MenuGłówne
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button5.Location = new System.Drawing.Point(379, 371);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(131, 51);
-            this.button5.TabIndex = 24;
-            this.button5.Text = "Menu główne";
-            this.button5.UseVisualStyleBackColor = true;
+            this.MenuGłówne.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.MenuGłówne.Location = new System.Drawing.Point(395, 384);
+            this.MenuGłówne.Name = "MenuGłówne";
+            this.MenuGłówne.Size = new System.Drawing.Size(125, 65);
+            this.MenuGłówne.TabIndex = 5;
+            this.MenuGłówne.Text = "Menu Główne";
+            this.MenuGłówne.UseVisualStyleBackColor = true;
+            this.MenuGłówne.Click += new System.EventHandler(this.MenuGłówne_Click);
             // 
             // Samochody
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26553194_1222756987824665_2060964163_n;
+            this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
             this.ClientSize = new System.Drawing.Size(884, 461);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.MenuGłówne);
+            this.Controls.Add(this.WyszukajSamochód);
+            this.Controls.Add(this.UsuńSamochód);
+            this.Controls.Add(this.EdytujSamochód);
+            this.Controls.Add(this.DodajSamochód);
             this.Controls.Add(this.label1);
             this.Name = "Samochody";
             this.Text = "Samochody";
@@ -121,10 +125,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button DodajSamochód;
+        private System.Windows.Forms.Button EdytujSamochód;
+        private System.Windows.Forms.Button UsuńSamochód;
+        private System.Windows.Forms.Button WyszukajSamochód;
+        private System.Windows.Forms.Button MenuGłówne;
     }
 }

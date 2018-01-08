@@ -85,13 +85,23 @@ namespace Aplikacja_wypożyczalnia
 
         private void samochody_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Samochody sa = new Samochody();
             sa.Show();
         }
 
         private void rezerwacje_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Rezerwacja re = new Rezerwacja();
+            re.Show();
+        }
 
+        private void klienci_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Klienci kl = new Klienci();
+            kl.Show();
         }
     }
 }

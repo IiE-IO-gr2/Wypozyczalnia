@@ -31,15 +31,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.WsteczES = new System.Windows.Forms.Button();
+            this.ZatwierdźES = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Image = global::Aplikacja_wypożyczalnia.Properties.Resources._26553194_1222756987824665_2060964163_n;
+            this.label1.Image = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
             this.label1.Location = new System.Drawing.Point(336, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(216, 29);
@@ -50,6 +50,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Image = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
             this.label2.Location = new System.Drawing.Point(235, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 20);
@@ -63,34 +64,35 @@
             this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 35;
             // 
-            // button5
+            // WsteczES
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button5.Location = new System.Drawing.Point(239, 409);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 40);
-            this.button5.TabIndex = 55;
-            this.button5.Text = "Wstecz";
-            this.button5.UseVisualStyleBackColor = true;
+            this.WsteczES.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.WsteczES.Location = new System.Drawing.Point(235, 384);
+            this.WsteczES.Name = "WsteczES";
+            this.WsteczES.Size = new System.Drawing.Size(125, 65);
+            this.WsteczES.TabIndex = 36;
+            this.WsteczES.Text = "Wstecz";
+            this.WsteczES.UseVisualStyleBackColor = true;
+            this.WsteczES.Click += new System.EventHandler(this.WsteczES_Click);
             // 
-            // button1
+            // ZatwierdźES
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button1.Location = new System.Drawing.Point(550, 409);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 40);
-            this.button1.TabIndex = 56;
-            this.button1.Text = "Zatwierdź";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ZatwierdźES.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ZatwierdźES.Location = new System.Drawing.Point(500, 384);
+            this.ZatwierdźES.Name = "ZatwierdźES";
+            this.ZatwierdźES.Size = new System.Drawing.Size(125, 65);
+            this.ZatwierdźES.TabIndex = 37;
+            this.ZatwierdźES.Text = "Zatwierdź";
+            this.ZatwierdźES.UseVisualStyleBackColor = true;
             // 
             // EdytujSamochód
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26553194_1222756987824665_2060964163_n;
+            this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
             this.ClientSize = new System.Drawing.Size(884, 461);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.ZatwierdźES);
+            this.Controls.Add(this.WsteczES);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -106,7 +108,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button WsteczES;
+        private System.Windows.Forms.Button ZatwierdźES;
     }
 }
