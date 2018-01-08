@@ -161,6 +161,7 @@
             this.wstecz.TabIndex = 49;
             this.wstecz.Text = "Wstecz";
             this.wstecz.UseVisualStyleBackColor = true;
+            this.wstecz.Click += new System.EventHandler(this.wstecz_Click);
             // 
             // EdytujWypozyczenie
             // 

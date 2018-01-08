@@ -141,6 +141,7 @@
             this.wstecz.TabIndex = 44;
             this.wstecz.Text = "Wstecz";
             this.wstecz.UseVisualStyleBackColor = true;
+            this.wstecz.Click += new System.EventHandler(this.wstecz_Click);
             // 
             // button1
             // 

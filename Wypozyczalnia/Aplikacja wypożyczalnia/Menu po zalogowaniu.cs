@@ -103,5 +103,12 @@ namespace Aplikacja_wypożyczalnia
             Klienci kl = new Klienci();
             kl.Show();
         }
+
+        private void wypozyczenia_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Wypozyczenia w = new Wypozyczenia();
+            w.Show();
+        }
     }
 }

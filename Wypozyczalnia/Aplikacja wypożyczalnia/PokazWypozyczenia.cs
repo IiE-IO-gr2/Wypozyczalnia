@@ -16,5 +16,12 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
+
+        private void wstecz_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Wypozyczenia w = new Wypozyczenia();
+            w.Show();
+        }
     }
 }

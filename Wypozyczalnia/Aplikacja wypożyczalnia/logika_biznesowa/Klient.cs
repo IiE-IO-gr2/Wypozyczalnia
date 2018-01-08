@@ -32,17 +32,7 @@ namespace logika_biznesowa {
 
         public void DodanieKlienta()
         {
-            string zapytanie = "INSERT INTO Klienci (Id_klienta,Telefon kontaktowy, Adres, Adres_email, Promocja, Aktywnosc) VALUES('" + Id_klienta + "','" + Telefon_kontaktowy + "','" + Adres + "','" + Adres_email + "','" + Promocja + "','" + Aktywnosc + "')";
-            DataTable dt = FunkcjeSQL.PobierzDaneSQL(zapytanie, ref exmsg);
-            using (SqlConnection conn = new SqlConnection(connString))
-            {
-                SqlCommand sqlc = new SqlCommand(zapytanie);
-                sqlc.CommandType = CommandType.Text;
-                sqlc.Connection = conn;
-                conn.Open();
-                sqlc.ExecuteNonQuery();
-                conn.Close();
-            }
+            
 
 
         }
