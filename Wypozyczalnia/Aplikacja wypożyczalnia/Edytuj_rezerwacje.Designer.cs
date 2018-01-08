@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rezerwacje = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,18 +38,8 @@
             this.wstecz = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // rezerwacje
-            // 
-            this.rezerwacje.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.rezerwacje.Location = new System.Drawing.Point(313, 26);
-            this.rezerwacje.Name = "rezerwacje";
-            this.rezerwacje.Size = new System.Drawing.Size(235, 73);
-            this.rezerwacje.TabIndex = 26;
-            this.rezerwacje.Text = "Edytuj rezerwację";
-            this.rezerwacje.UseVisualStyleBackColor = true;
-            this.rezerwacje.Click += new System.EventHandler(this.rezerwacje_Click);
             // 
             // label1
             // 
@@ -110,7 +99,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(163, 42);
             this.button3.TabIndex = 43;
-            this.button3.Text = "Zapisz";
+            this.button3.Text = "Zapisz zmiany";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // wstecz
@@ -144,12 +133,24 @@
             this.button2.Text = "Edytuj samochód";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Image = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
+            this.label4.Location = new System.Drawing.Point(304, 64);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(246, 31);
+            this.label4.TabIndex = 47;
+            this.label4.Text = "Edytuj rezerwację";
+            // 
             // Edytuj_rezerwacje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o1;
             this.ClientSize = new System.Drawing.Size(888, 484);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.wstecz);
@@ -160,7 +161,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.rezerwacje);
             this.Name = "Edytuj_rezerwacje";
             this.Text = "Edytuj_rezerwacje";
             this.ResumeLayout(false);
@@ -169,8 +169,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button rezerwacje;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -181,5 +179,6 @@
         private System.Windows.Forms.Button wstecz;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label4;
     }
 }
