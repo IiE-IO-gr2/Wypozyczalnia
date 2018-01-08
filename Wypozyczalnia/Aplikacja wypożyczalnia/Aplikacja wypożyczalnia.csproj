@@ -80,6 +80,12 @@
     <Compile Include="EdytujSamochód.Designer.cs">
       <DependentUpon>EdytujSamochód.cs</DependentUpon>
     </Compile>
+    <Compile Include="Edytuj_rezerwacje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edytuj_rezerwacje.Designer.cs">
+      <DependentUpon>Edytuj_rezerwacje.cs</DependentUpon>
+    </Compile>
     <Compile Include="FunkcjeSQL.cs" />
     <Compile Include="Klienci.cs">
       <SubType>Form</SubType>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EdytujSamochód.resx">
       <DependentUpon>EdytujSamochód.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edytuj_rezerwacje.resx">
+      <DependentUpon>Edytuj_rezerwacje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Klienci.resx">
       <DependentUpon>Klienci.cs</DependentUpon>
