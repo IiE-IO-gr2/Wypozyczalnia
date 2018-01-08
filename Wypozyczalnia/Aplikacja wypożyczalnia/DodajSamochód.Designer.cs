@@ -74,7 +74,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Image = global::Aplikacja_wypożyczalnia.Properties.Resources._26553194_1222756987824665_2060964163_n;
+            this.label1.Image = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
             this.label1.Location = new System.Drawing.Point(319, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(209, 29);
@@ -93,6 +93,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(262, 52);
             this.label2.Name = "label2";
@@ -403,7 +404,7 @@
             // ZatwierdźDS
             // 
             this.ZatwierdźDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ZatwierdźDS.Location = new System.Drawing.Point(747, 384);
+            this.ZatwierdźDS.Location = new System.Drawing.Point(143, 384);
             this.ZatwierdźDS.Name = "ZatwierdźDS";
             this.ZatwierdźDS.Size = new System.Drawing.Size(125, 65);
             this.ZatwierdźDS.TabIndex = 44;
@@ -425,7 +426,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26553194_1222756987824665_2060964163_n;
+            this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
             this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.Inne);
             this.Controls.Add(this.ZatwierdźDS);
