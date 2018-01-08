@@ -31,8 +31,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.WsteczWS = new System.Windows.Forms.Button();
+            this.ZatwierdźWS = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -64,25 +64,26 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Wyszukaj samochód";
             // 
-            // button5
+            // WsteczWS
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button5.Location = new System.Drawing.Point(250, 409);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 40);
-            this.button5.TabIndex = 54;
-            this.button5.Text = "Wstecz";
-            this.button5.UseVisualStyleBackColor = true;
+            this.WsteczWS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.WsteczWS.Location = new System.Drawing.Point(250, 384);
+            this.WsteczWS.Name = "WsteczWS";
+            this.WsteczWS.Size = new System.Drawing.Size(125, 65);
+            this.WsteczWS.TabIndex = 34;
+            this.WsteczWS.Text = "Wstecz";
+            this.WsteczWS.UseVisualStyleBackColor = true;
+            this.WsteczWS.Click += new System.EventHandler(this.WsteczWS_Click);
             // 
-            // button1
+            // ZatwierdźWS
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button1.Location = new System.Drawing.Point(560, 409);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 40);
-            this.button1.TabIndex = 55;
-            this.button1.Text = "Zatwierdź";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ZatwierdźWS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ZatwierdźWS.Location = new System.Drawing.Point(510, 384);
+            this.ZatwierdźWS.Name = "ZatwierdźWS";
+            this.ZatwierdźWS.Size = new System.Drawing.Size(125, 65);
+            this.ZatwierdźWS.TabIndex = 35;
+            this.ZatwierdźWS.Text = "Zatwierdź";
+            this.ZatwierdźWS.UseVisualStyleBackColor = true;
             // 
             // WyszukajSamochód
             // 
@@ -90,8 +91,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
             this.ClientSize = new System.Drawing.Size(884, 461);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.ZatwierdźWS);
+            this.Controls.Add(this.WsteczWS);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
@@ -107,7 +108,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button WsteczWS;
+        private System.Windows.Forms.Button ZatwierdźWS;
     }
 }

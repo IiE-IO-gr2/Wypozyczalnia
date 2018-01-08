@@ -65,8 +65,9 @@
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.WsteczDS = new System.Windows.Forms.Button();
+            this.ZatwierdźDS = new System.Windows.Forms.Button();
+            this.Inne = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -388,25 +389,37 @@
             this.textBox18.Size = new System.Drawing.Size(180, 20);
             this.textBox18.TabIndex = 42;
             // 
-            // button5
+            // WsteczDS
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button5.Location = new System.Drawing.Point(26, 409);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 40);
-            this.button5.TabIndex = 43;
-            this.button5.Text = "Wstecz";
-            this.button5.UseVisualStyleBackColor = true;
+            this.WsteczDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.WsteczDS.Location = new System.Drawing.Point(12, 384);
+            this.WsteczDS.Name = "WsteczDS";
+            this.WsteczDS.Size = new System.Drawing.Size(125, 65);
+            this.WsteczDS.TabIndex = 43;
+            this.WsteczDS.Text = "Wstecz";
+            this.WsteczDS.UseVisualStyleBackColor = true;
+            this.WsteczDS.Click += new System.EventHandler(this.WsteczDS_Click);
             // 
-            // button1
+            // ZatwierdźDS
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button1.Location = new System.Drawing.Point(768, 409);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 40);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "Zatwierdź";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ZatwierdźDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ZatwierdźDS.Location = new System.Drawing.Point(747, 384);
+            this.ZatwierdźDS.Name = "ZatwierdźDS";
+            this.ZatwierdźDS.Size = new System.Drawing.Size(125, 65);
+            this.ZatwierdźDS.TabIndex = 44;
+            this.ZatwierdźDS.Text = "Zatwierdź";
+            this.ZatwierdźDS.UseVisualStyleBackColor = true;
+            this.ZatwierdźDS.Click += new System.EventHandler(this.ZatwierdźDS_Click);
+            // 
+            // Inne
+            // 
+            this.Inne.AutoSize = true;
+            this.Inne.Location = new System.Drawing.Point(608, 376);
+            this.Inne.Name = "Inne";
+            this.Inne.Size = new System.Drawing.Size(15, 14);
+            this.Inne.TabIndex = 45;
+            this.Inne.UseVisualStyleBackColor = true;
+            this.Inne.CheckedChanged += new System.EventHandler(this.Inne_CheckedChanged);
             // 
             // DodajSamochód
             // 
@@ -414,8 +427,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26553194_1222756987824665_2060964163_n;
             this.ClientSize = new System.Drawing.Size(884, 461);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.Inne);
+            this.Controls.Add(this.ZatwierdźDS);
+            this.Controls.Add(this.WsteczDS);
             this.Controls.Add(this.textBox18);
             this.Controls.Add(this.textBox17);
             this.Controls.Add(this.textBox16);
@@ -499,7 +513,8 @@
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button WsteczDS;
+        private System.Windows.Forms.Button ZatwierdźDS;
+        private System.Windows.Forms.CheckBox Inne;
     }
 }
