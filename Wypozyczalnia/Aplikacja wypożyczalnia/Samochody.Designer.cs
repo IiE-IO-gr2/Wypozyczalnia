@@ -40,7 +40,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Image = global::Aplikacja_wypożyczalnia.Properties.Resources._26553194_1222756987824665_2060964163_n;
+            this.label1.Image = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
             this.label1.Location = new System.Drawing.Point(380, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 29);
@@ -107,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26553194_1222756987824665_2060964163_n;
+            this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
             this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.MenuGłówne);
             this.Controls.Add(this.WyszukajSamochód);
