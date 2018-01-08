@@ -67,7 +67,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button1.Location = new System.Drawing.Point(392, 389);
+            this.button1.Location = new System.Drawing.Point(404, 134);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 40);
             this.button1.TabIndex = 54;
@@ -83,6 +83,7 @@
             this.button5.TabIndex = 55;
             this.button5.Text = "Wstecz";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // EdytujKlienta
             // 

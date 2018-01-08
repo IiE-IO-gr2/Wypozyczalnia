@@ -28,22 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rezerwacje = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.wstecz = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // rezerwacje
-            // 
-            this.rezerwacje.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.rezerwacje.Location = new System.Drawing.Point(313, 26);
-            this.rezerwacje.Name = "rezerwacje";
-            this.rezerwacje.Size = new System.Drawing.Size(272, 72);
-            this.rezerwacje.TabIndex = 27;
-            this.rezerwacje.Text = "Wyszukaj rezerwację";
-            this.rezerwacje.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -62,25 +52,37 @@
             this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 39;
             // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button4.Location = new System.Drawing.Point(365, 333);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(163, 42);
-            this.button4.TabIndex = 45;
-            this.button4.Text = "Menu główne";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Location = new System.Drawing.Point(365, 230);
+            this.button1.Location = new System.Drawing.Point(462, 361);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(163, 42);
             this.button1.TabIndex = 46;
             this.button1.Text = "Zatwierdź";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // wstecz
+            // 
+            this.wstecz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.wstecz.Location = new System.Drawing.Point(204, 361);
+            this.wstecz.Name = "wstecz";
+            this.wstecz.Size = new System.Drawing.Size(163, 42);
+            this.wstecz.TabIndex = 47;
+            this.wstecz.Text = "Wstecz";
+            this.wstecz.UseVisualStyleBackColor = true;
+            this.wstecz.Click += new System.EventHandler(this.wstecz_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(296, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(256, 29);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Wyszukaj rezerwację";
             // 
             // Wyszukaj_rezerwacje
             // 
@@ -88,11 +90,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o1;
             this.ClientSize = new System.Drawing.Size(888, 484);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.wstecz);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.rezerwacje);
             this.Name = "Wyszukaj_rezerwacje";
             this.Text = "Wyszukaj_rezerwacje";
             this.ResumeLayout(false);
@@ -101,11 +103,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button rezerwacje;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button wstecz;
+        private System.Windows.Forms.Label label2;
     }
 }

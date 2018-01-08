@@ -16,5 +16,17 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RodzajKlienta rk = new RodzajKlienta();
+            rk.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

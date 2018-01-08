@@ -3,11 +3,12 @@
     "",
     "\\Wypozyczalnia",
     "\\Wypozyczalnia\\Aplikacja wypożyczalnia",
+    "\\Wypozyczalnia\\Aplikacja wypożyczalnia\\logika_biznesowa",
     "\\Wypozyczalnia\\Aplikacja wypożyczalnia\\Menu glowne",
     "\\Wypozyczalnia\\Aplikacja wypożyczalnia\\obj",
     "\\Wypozyczalnia\\Aplikacja wypożyczalnia\\Resources",
     "\\WypTest1"
   ],
-  "SelectedNode": "\\Wypozyczalnia\\Aplikacja wypożyczalnia\\Properties",
+  "SelectedNode": "\\Wypozyczalnia\\Wypożyczalnia samochodów.sln",
   "PreviewInSolutionExplorer": false
 }
