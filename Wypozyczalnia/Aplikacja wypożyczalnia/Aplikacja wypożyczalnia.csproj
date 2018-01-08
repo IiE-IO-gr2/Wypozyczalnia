@@ -86,6 +86,12 @@
     <Compile Include="Edytuj_rezerwacje.Designer.cs">
       <DependentUpon>Edytuj_rezerwacje.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="FunkcjeSQL.cs" />
     <Compile Include="Klienci.cs">
       <SubType>Form</SubType>
@@ -203,6 +209,9 @@
     <EmbeddedResource Include="Edytuj_rezerwacje.resx">
       <DependentUpon>Edytuj_rezerwacje.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Klienci.resx">
       <DependentUpon>Klienci.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UsuńSamochód.resx">
       <DependentUpon>UsuńSamochód.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wypozyczenia.resx">
+      <DependentUpon>Wypozyczenia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WyszukajKlienta.resx">
       <DependentUpon>WyszukajKlienta.cs</DependentUpon>
