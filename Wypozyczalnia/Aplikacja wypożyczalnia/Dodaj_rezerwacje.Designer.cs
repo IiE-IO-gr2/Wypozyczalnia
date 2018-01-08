@@ -48,7 +48,7 @@
             this.rezerwacje.Name = "rezerwacje";
             this.rezerwacje.Size = new System.Drawing.Size(235, 73);
             this.rezerwacje.TabIndex = 25;
-            this.rezerwacje.Text = "Dodaj rezerwacje";
+            this.rezerwacje.Text = "Dodaj rezerwację";
             this.rezerwacje.UseVisualStyleBackColor = true;
             this.rezerwacje.Click += new System.EventHandler(this.rezerwacje_Click);
             // 
