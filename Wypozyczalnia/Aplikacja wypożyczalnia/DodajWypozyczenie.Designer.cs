@@ -129,7 +129,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(163, 42);
             this.button3.TabIndex = 43;
-            this.button3.Text = "Zapisz zmiany";
+            this.button3.Text = "Zapisz ";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // wstecz

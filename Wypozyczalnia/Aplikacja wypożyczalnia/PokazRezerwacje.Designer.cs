@@ -28,7 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label2 = new System.Windows.Forms.Label();
+            this.wstecz = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(305, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(195, 29);
+            this.label2.TabIndex = 49;
+            this.label2.Text = "Lista rezerwacji";
+            // 
+            // wstecz
+            // 
+            this.wstecz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.wstecz.Location = new System.Drawing.Point(322, 400);
+            this.wstecz.Name = "wstecz";
+            this.wstecz.Size = new System.Drawing.Size(163, 42);
+            this.wstecz.TabIndex = 50;
+            this.wstecz.Text = "Wstecz";
+            this.wstecz.UseVisualStyleBackColor = true;
             // 
             // PokazRezerwacje
             // 
@@ -36,12 +59,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o1;
             this.ClientSize = new System.Drawing.Size(888, 484);
+            this.Controls.Add(this.wstecz);
+            this.Controls.Add(this.label2);
             this.Name = "PokazRezerwacje";
             this.Text = "PokazRezerwacje";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button wstecz;
     }
 }
