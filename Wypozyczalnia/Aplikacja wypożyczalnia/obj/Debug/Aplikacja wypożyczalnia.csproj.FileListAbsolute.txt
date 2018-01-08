@@ -96,4 +96,7 @@ C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\
 C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WyszukajKlienta.resources
 C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WyszukajSamochód.resources
 C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Wyszukaj_rezerwacje.resources
-C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja wypożyczalnia.csprojResolveAssemblyReference.cache
+C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.DodajWypozyczenie.resources
+C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.EdytujWypozyczenie.resources
+C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Form1.resources
+C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Wypozyczenia.resources
