@@ -91,7 +91,14 @@ namespace Aplikacja_wypożyczalnia
 
         private void rezerwacje_Click(object sender, EventArgs e)
         {
+            Rezerwacja re = new Rezerwacja();
+            re.Show();
+        }
 
+        private void klienci_Click(object sender, EventArgs e)
+        {
+            Klienci kl = new Klienci();
+            kl.Show();
         }
     }
 }

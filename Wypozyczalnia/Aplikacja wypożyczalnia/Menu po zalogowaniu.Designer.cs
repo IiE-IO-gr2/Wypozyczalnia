@@ -70,6 +70,7 @@
             this.klienci.TabIndex = 2;
             this.klienci.Text = "Klienci";
             this.klienci.UseVisualStyleBackColor = true;
+            this.klienci.Click += new System.EventHandler(this.klienci_Click);
             // 
             // wypozyczenia
             // 
