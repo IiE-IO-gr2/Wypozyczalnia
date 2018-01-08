@@ -158,6 +158,12 @@
     <Compile Include="UsuńSamochód.Designer.cs">
       <DependentUpon>UsuńSamochód.cs</DependentUpon>
     </Compile>
+    <Compile Include="Wypozyczenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wypozyczenia.Designer.cs">
+      <DependentUpon>Wypozyczenia.cs</DependentUpon>
+    </Compile>
     <Compile Include="WyszukajKlienta.cs">
       <SubType>Form</SubType>
     </Compile>
