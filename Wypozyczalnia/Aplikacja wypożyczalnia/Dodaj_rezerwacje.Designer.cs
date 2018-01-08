@@ -56,7 +56,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(290, 123);
+            this.label1.Location = new System.Drawing.Point(290, 132);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 20);
             this.label1.TabIndex = 26;
@@ -66,7 +66,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(146, 159);
+            this.label2.Location = new System.Drawing.Point(146, 170);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(244, 20);
             this.label2.TabIndex = 27;
@@ -76,7 +76,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(196, 194);
+            this.label3.Location = new System.Drawing.Point(196, 209);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(194, 20);
             this.label3.TabIndex = 28;
@@ -84,21 +84,21 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(407, 123);
+            this.textBox1.Location = new System.Drawing.Point(422, 132);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 37;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(407, 158);
+            this.dateTimePicker1.Location = new System.Drawing.Point(422, 169);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 38;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(407, 194);
+            this.dateTimePicker2.Location = new System.Drawing.Point(422, 209);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 39;

@@ -50,6 +50,7 @@
             this.rezerwacje.TabIndex = 26;
             this.rezerwacje.Text = "Edytuj rezerwację";
             this.rezerwacje.UseVisualStyleBackColor = true;
+            this.rezerwacje.Click += new System.EventHandler(this.rezerwacje_Click);
             // 
             // label1
             // 

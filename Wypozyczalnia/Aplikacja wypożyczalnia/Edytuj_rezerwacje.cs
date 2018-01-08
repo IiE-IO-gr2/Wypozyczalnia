@@ -16,5 +16,10 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
+
+        private void rezerwacje_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
