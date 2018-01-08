@@ -200,6 +200,12 @@
     <Compile Include="WyszukajSamochód.Designer.cs">
       <DependentUpon>WyszukajSamochód.cs</DependentUpon>
     </Compile>
+    <Compile Include="WyszukajWypozyczenie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WyszukajWypozyczenie.Designer.cs">
+      <DependentUpon>WyszukajWypozyczenie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wyszukaj_rezerwacje.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WyszukajSamochód.resx">
       <DependentUpon>WyszukajSamochód.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WyszukajWypozyczenie.resx">
+      <DependentUpon>WyszukajWypozyczenie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wyszukaj_rezerwacje.resx">
       <DependentUpon>Wyszukaj_rezerwacje.cs</DependentUpon>
