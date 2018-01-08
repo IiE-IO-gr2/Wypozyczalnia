@@ -29,12 +29,33 @@ namespace Aplikacja_wypożyczalnia
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            DodajSamochód ds = new DodajSamochód();
+            ds.Show();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu_po_zalogowaniu mpz = new Menu_po_zalogowaniu();
+            mpz.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UsuńSamochód us = new UsuńSamochód();
+            us.Show();
         }
     }
 }

@@ -26,5 +26,12 @@ namespace Aplikacja_wypożyczalnia
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Samochody s = new Samochody();
+            s.Show();
+        }
     }
 }
