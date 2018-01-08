@@ -81,6 +81,7 @@
             this.wypozyczenia.TabIndex = 3;
             this.wypozyczenia.Text = "Wypożyczenia";
             this.wypozyczenia.UseVisualStyleBackColor = true;
+            this.wypozyczenia.Click += new System.EventHandler(this.wypozyczenia_Click);
             // 
             // data
             // 

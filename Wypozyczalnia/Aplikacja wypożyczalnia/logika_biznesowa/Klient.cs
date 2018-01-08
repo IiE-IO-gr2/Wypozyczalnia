@@ -73,10 +73,9 @@ namespace logika_biznesowa {
         /// </summary>
         public void DodanieKlienta()
         {
-            string query = "INSERT INTO Klienci (Id_klienta,Telefon kontaktowy, Adres, Adres_email, Promocja, Aktywnosc) VALUES('" + Id_klienta + "','" + Telefon_kontaktowy + "','" + Adres + "','" + Adres_email + "','" + Promocja + "','" + Aktywnosc + "')";
-
             
-           
+
+
         }
         /// <summary>
         /// metoda usuniêcia klienta z bazy

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Aplikacja_wypożyczalnia
 {
-    public partial class EdytujWypozyczenie : Form
+    public partial class WyszukajWypozyczenie : Form
     {
-        public EdytujWypozyczenie()
+        public WyszukajWypozyczenie()
         {
             InitializeComponent();
         }

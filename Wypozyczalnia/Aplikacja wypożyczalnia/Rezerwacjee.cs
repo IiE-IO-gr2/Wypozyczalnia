@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Aplikacja_wypożyczalnia
 {
-    public partial class EdytujWypozyczenie : Form
+    public partial class Rezerwacjee : Form
     {
-        public EdytujWypozyczenie()
+        public Rezerwacjee()
         {
             InitializeComponent();
-        }
-
-        private void wstecz_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Wypozyczenia w = new Wypozyczenia();
-            w.Show();
         }
     }
 }
