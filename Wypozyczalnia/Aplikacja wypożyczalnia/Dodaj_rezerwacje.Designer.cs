@@ -138,7 +138,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.label4.Image = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
-            this.label4.Location = new System.Drawing.Point(322, 53);
+            this.label4.Location = new System.Drawing.Point(321, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(240, 31);
             this.label4.TabIndex = 44;
