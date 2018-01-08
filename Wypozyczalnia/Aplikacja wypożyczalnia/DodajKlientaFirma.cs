@@ -23,5 +23,10 @@ namespace Aplikacja_wypożyczalnia
             RodzajKlienta rk = new RodzajKlienta();
             rk.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
