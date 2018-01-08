@@ -26,16 +26,31 @@ namespace logika_biznesowa {
 		/// </summary>
 		public int Aktywnosc;
 
-		/// <summary>
-		/// metoda dodania klienta do bazy
-		/// </summary>
-		public void DodajKlienta() {
-			throw new System.Exception("Not implemented");
-		}
-		/// <summary>
-		/// metoda usuniêcia klienta z bazy
-		/// </summary>
-		public void UsunKlienta() {
+        /// <summary>
+        /// metoda dodania klienta do bazy
+        /// </summary>
+
+        public void DodanieKlienta()
+        {
+            string query = "INSERT INTO Klienci (Id_klienta,Telefon kontaktowy, Adres, Adres_email, Promocja, Aktywnosc) VALUES('" + Id_klienta + "','" + Telefon_kontaktowy + "','" + Adres + "','" + Adres_email + "','" + Promocja + "','" + Aktywnosc + "')";
+
+            //open connection
+            if (this.OpenConnection() == true)
+            {
+                //create command and assign the query and connection from the constructor
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                //Execute command
+                cmd.ExecuteNonQuery();
+
+                //close connection
+                this.CloseConnection();
+            }
+        }
+        /// <summary>
+        /// metoda usuniêcia klienta z bazy
+        /// </summary>
+        public void UsunKlienta() {
 			throw new System.Exception("Not implemented");
 		}
 		/// <summary>
