@@ -65,7 +65,7 @@
             // wstecz
             // 
             this.wstecz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.wstecz.Location = new System.Drawing.Point(193, 361);
+            this.wstecz.Location = new System.Drawing.Point(204, 361);
             this.wstecz.Name = "wstecz";
             this.wstecz.Size = new System.Drawing.Size(163, 42);
             this.wstecz.TabIndex = 47;
