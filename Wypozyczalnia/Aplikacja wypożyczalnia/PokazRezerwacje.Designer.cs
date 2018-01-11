@@ -52,6 +52,7 @@
             this.wstecz.TabIndex = 50;
             this.wstecz.Text = "Wstecz";
             this.wstecz.UseVisualStyleBackColor = true;
+            this.wstecz.Click += new System.EventHandler(this.wstecz_Click);
             // 
             // PokazRezerwacje
             // 
