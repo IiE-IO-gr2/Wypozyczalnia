@@ -152,11 +152,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rezerwacjee.cs">
+    <Compile Include="Rezerwacja.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Rezerwacjee.Designer.cs">
-      <DependentUpon>Rezerwacjee.cs</DependentUpon>
+    <Compile Include="Rezerwacja.Designer.cs">
+      <DependentUpon>Rezerwacja.cs</DependentUpon>
     </Compile>
     <Compile Include="RodzajKlienta.cs">
       <SubType>Form</SubType>
@@ -282,8 +282,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Rezerwacjee.resx">
-      <DependentUpon>Rezerwacjee.cs</DependentUpon>
+    <EmbeddedResource Include="Rezerwacja.resx">
+      <DependentUpon>Rezerwacja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RodzajKlienta.resx">
       <DependentUpon>RodzajKlienta.cs</DependentUpon>

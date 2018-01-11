@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Aplikacja_wypożyczalnia
 {
-    public partial class Rezerwacjee : Form
+    public partial class Rezerwacja : Form
     {
-        public Rezerwacjee()
+        public Rezerwacja()
         {
             InitializeComponent();
         }
