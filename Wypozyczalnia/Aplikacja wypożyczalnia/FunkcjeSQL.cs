@@ -50,6 +50,47 @@ public static class FunkcjeSQL
     }
 
     /// <summary>
+    /// Pobieranie z bazy wartości z pierwszej kolumny ostatniego wiersza
+    /// Co w przypadku zapytań typu "select count()" zwraca jedną wartość
+    /// </summary>
+    /// <param name="zapytanie">Zapytanie SQL nastawione na zwrócenie jednej wartości</param>
+    /// <param name="exmsg">exit message - informacja zwrotna wywołania zapytania sql</param>
+    /// <returns></returns>
+    public static string PobierzDaneSQLPojedyncze(string zapytanie, ref string exmsg)
+    {
+        using (SqlConnection conn = new SqlConnection(connString))
+        {
+            DataTable dt = new DataTable();
+            string wartosc = "";
+            try
+            {
+                SqlDataReader dr;
+                SqlCommand sqlc;
+                sqlc = new SqlCommand(zapytanie);
+                sqlc.Connection = conn;
+                conn.Open();
+                dr = sqlc.ExecuteReader();
+                dt.Load(dr);
+                foreach (DataRow item in dt.Rows)
+                    wartosc = item[0].ToString();
+                conn.Close();
+                return wartosc;
+            }
+            catch (SqlException ex)
+            {
+                exmsg += "\nSQL: " + ex.Message + " " + ex.Number + " " + ex.ErrorCode + " " + ex.LineNumber;
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                exmsg += "\nSys: " + ex.Message;
+                conn.Close();
+            }
+            return wartosc;
+        }
+    }
+
+    /// <summary>
     /// Wstawianie danych do bazy
     /// </summary>
     /// <param name="zapytanie">zapytanie SQL (insert values into...)</param>

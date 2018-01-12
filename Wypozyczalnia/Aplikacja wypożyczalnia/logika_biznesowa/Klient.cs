@@ -79,31 +79,49 @@ namespace logika_biznesowa {
         /// <returns></returns>
         public static string UsunKlienta(int identyfikator)
         {
-            string exmsg = "", exmsg1 = "", exmsg2 = "";
-            // usuniêcie danych z tabeli Klienci
-            string zapytanie1 = @"UPDATE [dbo].[Klient] SET [CzyUsuniete] = 1 WHERE [Id_klienta] = " + identyfikator;
-            FunkcjeSQL.WstawDaneSQL(zapytanie1, ref exmsg1);
-            // sprawdzenie, czy klient by³ klientem indywidualnym, czy firm¹
-            string zapytanieTestoweCzyKlientFirma = @"SELECT count(*) FROM [dbo].[Klient_KlientFirma] WHERE [Id_klienta_K] = " + identyfikator;
-            DataTable dt = FunkcjeSQL.PobierzDaneSQL(zapytanieTestoweCzyKlientFirma, ref exmsg);
-            string liczbaRekordow = "";
-            foreach (DataRow item in dt.Rows)
-                liczbaRekordow = item[0].ToString();
-            string zapytanie2 = "";
-            // budowa zapytania aktualizuj¹cego klienta_indywidualnego lub klienta_firmê
-            if (liczbaRekordow == "0") // czyli nie jest to klient-firma
-                zapytanie2 = @"UPDATE [dbo].[Klient_indywidualny] ";
-            else
-                zapytanie2 = @"UPDATE [dbo].[Klient_firmy] ";
-            zapytanie2 += @"SET[CzyUsuniete] = 1 WHERE[Id_klienta] = " + identyfikator;
-            // update klienta-indywidualnego lub klienta-firmy
-            FunkcjeSQL.WstawDaneSQL(zapytanie2, ref exmsg2);
-            // budowa informacji wyjœciowej z funkcji
-            if (!string.IsNullOrWhiteSpace(exmsg1))
-                exmsg += "\n" + exmsg1;
-            if (!string.IsNullOrWhiteSpace(exmsg2))
-                exmsg += "\n" + exmsg2;
-            return exmsg;
+            string zapytanieCzyKlientIstnieje = @"SELECT count(*) FROM [dbo].[Klient] WHERE [Id_klienta] = " + identyfikator;
+            string exmsgTest = "";
+            string zwrotZapytanieCzyKlientIstnieje = FunkcjeSQL.PobierzDaneSQLPojedyncze(zapytanieCzyKlientIstnieje, ref exmsgTest);
+            if (!string.IsNullOrWhiteSpace(exmsgTest)) // zapytanie testuj¹ce, czy w bazie jest klient o danym ID zwróci³o b³¹d
+                return exmsgTest;
+            else // zapytanie nie zwróci³o b³êdu
+            {
+                int licznik;
+                if (int.TryParse(zwrotZapytanieCzyKlientIstnieje, out licznik) == true) // uzyskan¹ wartoœæ da siê przekonwetowaæ na inta
+                {
+                    if (licznik == 1) // zapytanie zwróci³o znalezienie w bazie klientów rekordu o podanym ID
+                    {
+                        string exmsg = "", exmsg1 = "", exmsg2 = "";
+                        // usuniêcie danych z tabeli Klienci
+                        string zapytanie1 = @"UPDATE [dbo].[Klient] SET [CzyUsuniete] = 1 WHERE [Id_klienta] = " + identyfikator;
+                        FunkcjeSQL.WstawDaneSQL(zapytanie1, ref exmsg1);
+                        // sprawdzenie, czy klient by³ klientem indywidualnym, czy firm¹
+                        string zapytanieTestoweCzyKlientFirma = @"SELECT count(*) FROM [dbo].[Klient_KlientFirma] WHERE [Id_klienta_K] = " + identyfikator;
+                        string liczbaRekordow = FunkcjeSQL.PobierzDaneSQLPojedyncze(zapytanieTestoweCzyKlientFirma, ref exmsg);
+                        // budowa zapytania aktualizuj¹cego klienta_indywidualnego lub klienta_firmê
+                        string zapytanie2 = "";
+                        if (liczbaRekordow == "0") // czyli nie jest to klient-firma
+                            zapytanie2 = @"UPDATE [dbo].[Klient_indywidualny] ";
+                        else
+                            zapytanie2 = @"UPDATE [dbo].[Klient_firmy] ";
+                        zapytanie2 += @"SET[CzyUsuniete] = 1 WHERE[Id_klienta] = " + identyfikator;
+                        // update klienta-indywidualnego lub klienta-firmy
+                        FunkcjeSQL.WstawDaneSQL(zapytanie2, ref exmsg2);
+                        // budowa informacji wyjœciowej z funkcji
+                        if (!string.IsNullOrWhiteSpace(exmsg1))
+                            exmsg += "\n" + exmsg1;
+                        if (!string.IsNullOrWhiteSpace(exmsg2))
+                            exmsg += "\n" + exmsg2;
+                        return exmsg;
+                    }
+                    else
+                        return "Nie odnaleziono klienta o podanym ID";
+                }
+                else
+                    return "Nie odnaleziono klienta o podanym ID";
+            }
+
+            
 		}
 		/// <summary>
 		/// metoda wyszukania klienta w bazie
