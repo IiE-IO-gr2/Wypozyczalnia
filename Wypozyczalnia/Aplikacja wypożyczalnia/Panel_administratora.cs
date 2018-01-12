@@ -19,7 +19,10 @@ namespace Aplikacja_wypożyczalnia
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (Application.MessageLoop)
+            {
+                System.Windows.Forms.Application.Exit();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

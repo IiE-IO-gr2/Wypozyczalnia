@@ -58,6 +58,7 @@
             this.button1.TabIndex = 51;
             this.button1.Text = "Zatwierdź";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox11
             // 
@@ -253,6 +254,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DodajKlientaFirma";
             this.Text = "DodajKlientaFirma";
+            this.Load += new System.EventHandler(this.DodajKlientaFirma_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
