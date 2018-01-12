@@ -126,7 +126,8 @@ namespace logika_biznesowa {
 		/// <summary>
 		/// metoda wyszukania klienta w bazie
 		/// </summary>
-		public void WyszukajKlienta() {
+        public static Klient WyszukajKlienta(ref string exmsg)
+        {
 			throw new System.Exception("Not implemented");
 		}
 		/// <summary>
@@ -149,16 +150,9 @@ namespace logika_biznesowa {
         {
             string zapytanie = @"select max([Id_klienta]) from [dbo].[Klient]";
             string exmsg = "";
-            DataTable dt = FunkcjeSQL.PobierzDaneSQL(zapytanie, ref exmsg);
-            string numerZBazy = "";
-            foreach (DataRow item in dt.Rows)
-            {
-                numerZBazy = item[0].ToString();
-            }
+            string numerZBazy = FunkcjeSQL.PobierzDaneSQLPojedyncze(zapytanie, ref exmsg);
             if (!string.IsNullOrWhiteSpace(numerZBazy))
-            {
                 return int.Parse(numerZBazy);
-            }
             else
                 return 0;
         }
