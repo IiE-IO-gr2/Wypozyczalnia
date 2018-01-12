@@ -133,7 +133,7 @@ namespace logika_biznesowa {
 		/// metoda edytowania klienta w bazie
 		/// </summary>
 		public void EdytujKlienta() {
-			throw new System.Exception("Not implemented");
+			throw new System.Exception("Not implemented!");
 		}
 
 		private Panel_administratora panel_administratora;
