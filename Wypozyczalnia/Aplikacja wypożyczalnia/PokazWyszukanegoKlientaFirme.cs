@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace Aplikacja_wypożyczalnia
 {
-    public partial class Wyszukaj_rezerwacje : Form
+    public partial class PokazWyszukanegoKlientaFirme : Form
     {
-        public Wyszukaj_rezerwacje()
+        public PokazWyszukanegoKlientaFirme()
         {
             InitializeComponent();
-        }
-
-        private void wstecz_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Rezerwacja re = new Rezerwacja();
-            re.Show();
-            
-
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Aplikacja_wypożyczalnia
 {
-    partial class Rezerwacjee
+    partial class Rezerwacja
     {
         /// <summary>
         /// Required designer variable.
@@ -114,7 +114,7 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // Rezerwacjee
+            // Rezerwacja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -127,8 +127,8 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label2);
-            this.Name = "Rezerwacjee";
-            this.Text = "Rezerwacjee";
+            this.Name = "Rezerwacja";
+            this.Text = "Rezerwacje";
             this.ResumeLayout(false);
             this.PerformLayout();
 
