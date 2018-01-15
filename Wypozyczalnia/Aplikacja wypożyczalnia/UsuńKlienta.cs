@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using logika_biznesowa;
 
 namespace Aplikacja_wypożyczalnia
 {
@@ -31,10 +32,26 @@ namespace Aplikacja_wypożyczalnia
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Usunięto klienta z bazy");
-            this.Hide();
-            UsuńKlienta uk = new UsuńKlienta();
-            uk.Show();
+            try
+            {
+                int id = int.Parse(textBox1.Text);
+                string exmsg = Klient.UsunKlienta(id);
+                if (!string.IsNullOrWhiteSpace(exmsg))
+                    MessageBox.Show("Wystąpił błąd:\n" + exmsg);
+                else
+                {
+                    MessageBox.Show("Usunięto klienta z bazy");
+                    textBox1.Clear();
+                    //this.Hide();
+                    //UsuńKlienta uk = new UsuńKlienta();
+                    //uk.Show();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Wystąpił błąd:\nNiepoprawny lub pusty numer identyfikacyjny");
+            }
+            
         }
     }
 }
