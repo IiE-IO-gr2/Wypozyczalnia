@@ -18,17 +18,73 @@ namespace logika_biznesowa {
 		/// </summary>
 		public float Cena_za_wypozyczenie;
 
+
+        public Wypo¿yczenie()
+        {
+            ID_wypo¿yczenia = 0;
+            Data_wypo¿yczenia = 0;
+            Data_planowanego_zwrotu = 0;
+            Cena_za_wypozyczenie = 0.0;
+        }
+
+        /// <summary>
+        /// konstruktor Wypozyczenie
+        /// </summary>
+        public Wypo¿yczenie(int id, DateTime dw, DateTime dpz, float czp)
+        {
+            ID_wypo¿yczenia = id;
+            Data_wypo¿yczenia = dw;
+            Data_planowanego_zwrotu = dpz;
+            Cena_za_wypozyczenie = czp;
+        }
+
 		/// <summary>
 		/// metoda dodaj¹ca wypo¿yczenie do bazy
 		/// </summary>
-		public void DodajWypozyczenie() {
-			throw new System.Exception("Not implemented");
-		}
+
+        public string DodajWypozyczenie()
+        {
+            string exmsg = "";
+            string zapytanie = @"insert into [dbo].[Wypo¿yczenie] ([ID_wypo¿yczenia], [Data_wypo¿yczenia], [Data_planowanego_zwrotu], [Cena_za_wypozyczenie])" +
+                @"values (" + ID_wypo¿yczenia + ", " + Data_wypo¿yczenia + " , " + Data_planowanego_zwrotu + ", " + Cena_za_wypozyczenie + " )";
+            FunkcjeSQL.WstawDaneSQL(zapytanie, ref exmsg);
+            return exmsg;
+        }
+		
 		/// <summary>
 		/// metoda usuwaj¹ca wypo¿yczenie z bazy
 		/// </summary>
-		public void UsunWypozyczenie() {
-			throw new System.Exception("Not implemented");
+		public static string UsunWypozyczenie(int identyfikator)
+        {
+            string zapytanieCzyWypozyczenieIstnieje = @"SELECT count(*) FROM [dbo].[Wypo¿yczenie] WHERE [ID_wypo¿yczenia] = " + identyfikator;
+            string exmsgTest = "";
+            string zwrotZapytanieCzyWypozyczenieIstnieje = FunkcjeSQL.PobierzDaneSQLPojedyncze(zapytanieCzyWypozyczenieIstnieje, ref exmsgTest);
+            if (!string.IsNullOrWhiteSpace(exmsgTest)) // zapytanie testuj¹ce, czy w bazie jest wypo¿yczenie o danym ID zwróci³o b³¹d
+                return exmsgTest;
+            else // zapytanie nie zwróci³o b³êdu
+            {
+                int licznik;
+                if (int.TryParse(zwrotZapytanieCzyWypozyczenieIstnieje, out licznik) == true) // uzyskan¹ wartoœæ da siê przekonwetowaæ na inta
+                {
+                    if (licznik == 1) // zapytanie zwróci³o znalezienie w bazie wypo¿yczeñ rekordu o podanym ID
+                    {
+                        string exmsg = "", exmsg1 = "", exmsg2 = "";
+                        // usuniêcie danych z tabeli Wypo¿yczenie
+                        string zapytanie1 = @"UPDATE [dbo].[Wypo¿yczenie] SET [CzyUsuniete] = 1 WHERE [ID_wypo¿yczenia] = " + identyfikator;
+                        FunkcjeSQL.WstawDaneSQL(zapytanie1, ref exmsg1);
+                        // budowa informacji wyjœciowej z funkcji
+                        if (!string.IsNullOrWhiteSpace(exmsg1))
+                            exmsg += "\n" + exmsg1;
+                        if (!string.IsNullOrWhiteSpace(exmsg2))
+                            exmsg += "\n" + exmsg2;
+                        return exmsg;
+                    }
+                    else
+                        return "Nie odnaleziono wypo¿yczenia o podanym ID";
+                }
+                else
+                    return "Nie odnaleziono wypo¿yczenia o podanym ID";
+            }
 		}
 		/// <summary>
 		/// metoda edytuj¹ca wypo¿yczenie w bazie
@@ -54,6 +110,17 @@ namespace logika_biznesowa {
 		private Klient_indywidualny klient_indywidualny;
 		private Rozliczenie rozliczenie;
 
+
+        public static int MaksymalnyNumerIdentyfikatoraWBazie()
+        {
+            string zapytanie = @"select max([ID_wypo¿yczenia]) from [dbo].[Wypo¿yczenie]";
+            string exmsg = "";
+            string numerZBazy = FunkcjeSQL.PobierzDaneSQLPojedyncze(zapytanie, ref exmsg);
+            if (!string.IsNullOrWhiteSpace(numerZBazy))
+                return int.Parse(numerZBazy);
+            else
+                return 0;
+        }
 	}
 
 }

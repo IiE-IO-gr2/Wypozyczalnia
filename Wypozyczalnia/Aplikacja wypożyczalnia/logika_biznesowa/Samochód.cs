@@ -102,7 +102,7 @@ namespace logika_biznesowa {
         }
 
         /// <summary>
-        /// konstruktor Klient
+        /// konstruktor Samochód
         /// </summary>
         public Samochód(int id, string mar, string mod, double poj, string rp, string tn, int ik, string sk, int ib, double zp, int im, int ilodr, int roc, string kol, double czd, bool dostep, string inne, int ka)
         {
@@ -127,7 +127,7 @@ namespace logika_biznesowa {
         }
 
         /// <summary>
-        /// metoda dodania klienta do bazy
+        /// metoda dodania samochodu do bazy
         /// </summary>
         public string DodajSamochod()
         {
