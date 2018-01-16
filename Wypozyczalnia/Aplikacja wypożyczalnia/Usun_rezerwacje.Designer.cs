@@ -54,10 +54,10 @@
             // 
             // wstecz
             // 
-            this.wstecz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.wstecz.Location = new System.Drawing.Point(234, 388);
+            this.wstecz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.wstecz.Location = new System.Drawing.Point(215, 407);
             this.wstecz.Name = "wstecz";
-            this.wstecz.Size = new System.Drawing.Size(163, 42);
+            this.wstecz.Size = new System.Drawing.Size(145, 65);
             this.wstecz.TabIndex = 44;
             this.wstecz.Text = "Wstecz";
             this.wstecz.UseVisualStyleBackColor = true;
@@ -65,10 +65,10 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Location = new System.Drawing.Point(466, 388);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Location = new System.Drawing.Point(484, 407);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 42);
+            this.button1.Size = new System.Drawing.Size(145, 65);
             this.button1.TabIndex = 45;
             this.button1.Text = "Zatwierdź";
             this.button1.UseVisualStyleBackColor = true;

@@ -278,6 +278,9 @@
     <EmbeddedResource Include="PokazWypozyczenia.resx">
       <DependentUpon>PokazWypozyczenia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PokazWyszukanegoKlientaFirme.resx">
+      <DependentUpon>PokazWyszukanegoKlientaFirme.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
