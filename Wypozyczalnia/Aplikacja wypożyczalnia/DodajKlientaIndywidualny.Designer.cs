@@ -83,6 +83,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 6;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -273,6 +274,7 @@
             this.ZatwierdźWS.TabIndex = 36;
             this.ZatwierdźWS.Text = "Zatwierdź";
             this.ZatwierdźWS.UseVisualStyleBackColor = true;
+            this.ZatwierdźWS.Click += new System.EventHandler(this.ZatwierdźWS_Click);
             // 
             // WsteczWS
             // 
