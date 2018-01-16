@@ -129,26 +129,27 @@ public static class FunkcjePomicnicze
         string Email = "iie.io.gr2@gmail.com";
         string Login = "iie.io.gr2@gmail.com";
         string Haslo = "gr2IOiie";
-        try
+        foreach (string adresEmail in listaAdresatow)
         {
-            MailMessage mail = new MailMessage();
-            SmtpClient smpt = new SmtpClient(SmptServer);
-            mail.From = new MailAddress(Email);
-            foreach (string adresEmail in listaAdresatow)
+            try
             {
+                MailMessage mail = new MailMessage();
+                SmtpClient smpt = new SmtpClient(SmptServer);
+                mail.From = new MailAddress(Email);
+                mail.Subject = tytulMaila;
                 mail.To.Add(adresEmail);
+                mail.Body = trescMaila;
+                smpt.Port = Port;
+                smpt.Credentials = new System.Net.NetworkCredential(Login, Haslo);
+                smpt.EnableSsl = true;
+                smpt.Send(mail);
             }
-            mail.Subject = tytulMaila;
-            mail.Body = trescMaila;
-            smpt.Port = Port;
-            smpt.Credentials = new System.Net.NetworkCredential(Login, Haslo);
-            smpt.EnableSsl = true;
-            smpt.Send(mail);
+            catch (Exception ex)
+            {
+                exmsg = ex.Message;
+            }
         }
-        catch (Exception ex)
-        {
-            exmsg = ex.Message;
-        }
+        
     }              
 
 }
