@@ -17,8 +17,8 @@ namespace logika_biznesowa {
         public Rezerwacja()
         {
             ID_rezerwacji = 0;
-            Data_planowanego_wypozyczenia = 0;
-            Data_planowanego_zwrotu = 0;
+            Data_planowanego_wypozyczenia = new DateTime(1,1,1);
+            Data_planowanego_zwrotu = new DateTime(1, 1, 1);
         }
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace logika_biznesowa {
         public Rezerwacja(int id, DateTime dpw, DateTime dpz)
         {
             ID_rezerwacji = id;
-            Data_planowanego_wypozyczenia = dw;
+            Data_planowanego_wypozyczenia = dpw;
             Data_planowanego_zwrotu = dpz;
         }
 		/// <summary>

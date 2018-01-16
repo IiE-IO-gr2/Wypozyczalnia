@@ -16,14 +16,14 @@ namespace logika_biznesowa {
 		/// <summary>
 		/// cena za wypo퓓czenie samochodu
 		/// </summary>
-		public float Cena_za_wypozyczenie;
+		public double Cena_za_wypozyczenie;
 
 
         public Wypo퓓czenie()
         {
             ID_wypo퓓czenia = 0;
-            Data_wypo퓓czenia = 0;
-            Data_planowanego_zwrotu = 0;
+            Data_wypo퓓czenia = new DateTime(1, 1, 1);
+            Data_planowanego_zwrotu = new DateTime(1, 1, 1);
             Cena_za_wypozyczenie = 0.0;
         }
 
