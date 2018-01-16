@@ -45,10 +45,10 @@
             // 
             // wstecz
             // 
-            this.wstecz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.wstecz.Location = new System.Drawing.Point(348, 397);
+            this.wstecz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.wstecz.Location = new System.Drawing.Point(355, 397);
             this.wstecz.Name = "wstecz";
-            this.wstecz.Size = new System.Drawing.Size(163, 42);
+            this.wstecz.Size = new System.Drawing.Size(125, 65);
             this.wstecz.TabIndex = 50;
             this.wstecz.Text = "Wstecz";
             this.wstecz.UseVisualStyleBackColor = true;

@@ -94,20 +94,20 @@
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button3.Location = new System.Drawing.Point(332, 335);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button3.Location = new System.Drawing.Point(447, 407);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(163, 42);
+            this.button3.Size = new System.Drawing.Size(125, 65);
             this.button3.TabIndex = 43;
             this.button3.Text = "Zapisz zmiany";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // wstecz
             // 
-            this.wstecz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.wstecz.Location = new System.Drawing.Point(332, 397);
+            this.wstecz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.wstecz.Location = new System.Drawing.Point(235, 407);
             this.wstecz.Name = "wstecz";
-            this.wstecz.Size = new System.Drawing.Size(163, 42);
+            this.wstecz.Size = new System.Drawing.Size(125, 65);
             this.wstecz.TabIndex = 44;
             this.wstecz.Text = "Wstecz";
             this.wstecz.UseVisualStyleBackColor = true;
@@ -115,20 +115,20 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button1.Location = new System.Drawing.Point(235, 269);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 42);
+            this.button1.Size = new System.Drawing.Size(125, 65);
             this.button1.TabIndex = 45;
             this.button1.Text = "Edytuj klienta";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button2.Location = new System.Drawing.Point(447, 269);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(163, 42);
+            this.button2.Size = new System.Drawing.Size(125, 65);
             this.button2.TabIndex = 46;
             this.button2.Text = "Edytuj samochód";
             this.button2.UseVisualStyleBackColor = true;
