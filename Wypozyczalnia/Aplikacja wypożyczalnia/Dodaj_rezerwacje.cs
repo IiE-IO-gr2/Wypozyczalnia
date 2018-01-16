@@ -29,5 +29,15 @@ namespace Aplikacja_wypożyczalnia
             re.Show();
         
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // Do przetestowania!
+            DateTime dataPlanowanegoWypozyczenia = dateTimePicker1.Value;
+            if (dataPlanowanegoWypozyczenia.CompareTo(DateTime.Today) == -1)
+            {
+                MessageBox.Show("Nie można podać minionej daty.");
+            }
+        }
     }
 }

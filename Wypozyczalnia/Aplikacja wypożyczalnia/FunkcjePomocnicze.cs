@@ -146,7 +146,7 @@ public static class FunkcjePomicnicze
             }
             catch (Exception ex)
             {
-                exmsg = ex.Message;
+                exmsg += "Błąd dla adresu: " + adresEmail + ": " + ex.Message;
             }
         }
         
