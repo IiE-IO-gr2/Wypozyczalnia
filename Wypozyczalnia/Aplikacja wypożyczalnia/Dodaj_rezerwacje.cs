@@ -25,8 +25,19 @@ namespace Aplikacja_wypożyczalnia
         private void wstecz_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Rezerwacja es = new Rezerwacja();
-            es.Show();
+            Rezerwacja re = new Rezerwacja();
+            re.Show();
+        
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // Do przetestowania!
+            DateTime dataPlanowanegoWypozyczenia = dateTimePicker1.Value;
+            if (dataPlanowanegoWypozyczenia.CompareTo(DateTime.Today) == -1)
+            {
+                MessageBox.Show("Nie można podać minionej daty.");
+            }
         }
     }
 }

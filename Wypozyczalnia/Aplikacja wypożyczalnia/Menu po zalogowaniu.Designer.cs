@@ -37,6 +37,7 @@
             this.czas = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.wylogowanie = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // samochody
@@ -122,12 +123,24 @@
             this.wylogowanie.UseVisualStyleBackColor = true;
             this.wylogowanie.Click += new System.EventHandler(this.wylogowanie_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(697, 50);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(148, 49);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "wyslij testowego maila";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Menu_po_zalogowaniu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o1;
             this.ClientSize = new System.Drawing.Size(888, 484);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.wylogowanie);
             this.Controls.Add(this.czas);
             this.Controls.Add(this.data);
@@ -154,5 +167,6 @@
         private System.Windows.Forms.Label czas;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button wylogowanie;
+        private System.Windows.Forms.Button button1;
     }
 }
