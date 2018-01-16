@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dodaj = new System.Windows.Forms.Button();
-            this.usun = new System.Windows.Forms.Button();
-            this.wyszukaj = new System.Windows.Forms.Button();
-            this.edytuj = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.WsteczWS = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -48,60 +48,55 @@
             this.label1.Text = "Klienci";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // dodaj
+            // WsteczWS
             // 
-            this.dodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.dodaj.Location = new System.Drawing.Point(280, 125);
-            this.dodaj.Name = "dodaj";
-            this.dodaj.Size = new System.Drawing.Size(75, 40);
-            this.dodaj.TabIndex = 1;
-            this.dodaj.Text = "Dodaj";
-            this.dodaj.UseVisualStyleBackColor = true;
-            this.dodaj.Click += new System.EventHandler(this.dodaj_Click);
+            this.WsteczWS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.WsteczWS.Location = new System.Drawing.Point(362, 385);
+            this.WsteczWS.Name = "WsteczWS";
+            this.WsteczWS.Size = new System.Drawing.Size(125, 65);
+            this.WsteczWS.TabIndex = 55;
+            this.WsteczWS.Text = "Wstecz";
+            this.WsteczWS.UseVisualStyleBackColor = true;
             // 
-            // usun
+            // button1
             // 
-            this.usun.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.usun.Location = new System.Drawing.Point(489, 125);
-            this.usun.Name = "usun";
-            this.usun.Size = new System.Drawing.Size(75, 40);
-            this.usun.TabIndex = 2;
-            this.usun.Text = "Usuń";
-            this.usun.UseVisualStyleBackColor = true;
-            this.usun.Click += new System.EventHandler(this.usun_Click);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Location = new System.Drawing.Point(230, 258);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 65);
+            this.button1.TabIndex = 56;
+            this.button1.Text = "Wyszukaj";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // wyszukaj
+            // button2
             // 
-            this.wyszukaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.wyszukaj.Location = new System.Drawing.Point(280, 226);
-            this.wyszukaj.Name = "wyszukaj";
-            this.wyszukaj.Size = new System.Drawing.Size(75, 40);
-            this.wyszukaj.TabIndex = 3;
-            this.wyszukaj.Text = "Wyszukaj";
-            this.wyszukaj.UseVisualStyleBackColor = true;
-            this.wyszukaj.Click += new System.EventHandler(this.wyszukaj_Click);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button2.Location = new System.Drawing.Point(489, 258);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(125, 65);
+            this.button2.TabIndex = 57;
+            this.button2.Text = "Edytuj";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // edytuj
+            // button3
             // 
-            this.edytuj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.edytuj.Location = new System.Drawing.Point(489, 226);
-            this.edytuj.Name = "edytuj";
-            this.edytuj.Size = new System.Drawing.Size(75, 40);
-            this.edytuj.TabIndex = 4;
-            this.edytuj.Text = "Edytuj";
-            this.edytuj.UseVisualStyleBackColor = true;
-            this.edytuj.Click += new System.EventHandler(this.edytuj_Click);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button3.Location = new System.Drawing.Point(489, 107);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(125, 65);
+            this.button3.TabIndex = 58;
+            this.button3.Text = "Usuń";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // button4
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button5.Location = new System.Drawing.Point(61, 391);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 40);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Wstecz";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button4.Location = new System.Drawing.Point(230, 107);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(125, 65);
+            this.button4.TabIndex = 59;
+            this.button4.Text = "Dodaj";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // Klienci
             // 
@@ -109,11 +104,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o1;
             this.ClientSize = new System.Drawing.Size(884, 462);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.edytuj);
-            this.Controls.Add(this.wyszukaj);
-            this.Controls.Add(this.usun);
-            this.Controls.Add(this.dodaj);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.WsteczWS);
             this.Controls.Add(this.label1);
             this.Name = "Klienci";
             this.Text = "Klienci";
@@ -125,10 +120,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button dodaj;
-        private System.Windows.Forms.Button usun;
-        private System.Windows.Forms.Button wyszukaj;
-        private System.Windows.Forms.Button edytuj;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button WsteczWS;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
