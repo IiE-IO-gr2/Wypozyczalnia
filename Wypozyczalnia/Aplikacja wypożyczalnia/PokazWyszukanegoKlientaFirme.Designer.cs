@@ -1,6 +1,6 @@
 ﻿namespace Aplikacja_wypożyczalnia
 {
-    partial class DodajKlientaFirma
+    partial class PokazWyszukanegoKlientaFirme
     {
         /// <summary>
         /// Required designer variable.
@@ -56,9 +56,8 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 40);
             this.button1.TabIndex = 51;
-            this.button1.Text = "Zatwierdź";
+            this.button1.Text = "Zamknij okno";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox11
             // 
@@ -188,6 +187,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(425, 68);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 20);
@@ -211,10 +211,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(300, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(260, 29);
+            this.label1.Size = new System.Drawing.Size(341, 29);
             this.label1.TabIndex = 28;
-            this.label1.Text = "Dodaj Klienta - Firma";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Poszukiwany Klienta - Firma";
             // 
             // button5
             // 
@@ -225,9 +224,8 @@
             this.button5.TabIndex = 52;
             this.button5.Text = "Wstecz";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // DodajKlientaFirma
+            // PokazWyszukanegoKlientaFirme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -252,9 +250,8 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "DodajKlientaFirma";
+            this.Name = "PokazWyszukanegoKlientaFirme";
             this.Text = "DodajKlientaFirma";
-            this.Load += new System.EventHandler(this.DodajKlientaFirma_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

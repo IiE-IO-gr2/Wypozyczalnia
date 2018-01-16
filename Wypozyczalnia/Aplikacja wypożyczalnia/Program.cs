@@ -9,7 +9,7 @@ namespace Aplikacja_wypożyczalnia
     static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        /// Funkcja rozpoczynająca działanie aplikacji
         /// </summary>
         [STAThread]
         static void Main()
