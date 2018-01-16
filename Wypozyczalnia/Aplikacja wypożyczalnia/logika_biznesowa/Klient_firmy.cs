@@ -33,7 +33,7 @@ namespace logika_biznesowa {
             string exmsg = "";
             string zapytanie = @"INSERT INTO [dbo].[Klient_firmy] ([Id_klienta], [Nazwa_firmy], [NIP], [CzyUsuniete])" +
                 @"values(" + identyfikator + ", '" + Nazwa_firmy + "', '" + NIP + "', 0)";
-            FunkcjeSQL.WstawDaneSQL(zapytanie, ref exmsg);
+            FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             string exmsg1 = DodajDoBazyPolaczenieKlientaFirmyZKlientem(identyfikator);
             if (!string.IsNullOrWhiteSpace(exmsg1))
                 exmsg += exmsg1;
@@ -44,7 +44,7 @@ namespace logika_biznesowa {
         {
             string exmsg = "";
             string zapytanie = @"insert into[dbo].[Klient_KlientFirma] values(" + identyfikator + "," + identyfikator + ")";
-            FunkcjeSQL.WstawDaneSQL(zapytanie, ref exmsg);
+            FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }
     }

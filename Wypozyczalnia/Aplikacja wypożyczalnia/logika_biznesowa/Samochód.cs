@@ -140,7 +140,7 @@ namespace logika_biznesowa {
             string czd = Cena_za_dobê.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
             string zapytanie = @"insert into [dbo].[Samochód] ([Id_samochodu], [Marka], [Model], [Pojemnosc], [Rodzaj_paliwa], [Typ_nadwozia], [Ilosc_koni], [Skrzynia_biegow], [Ilosc_biegów], [Zu¿ycie_paliwa], [Ilosc_miejsc], [Ilosc_drzwi], [Rocznik], [Kolor], [Cena_za_dobê], [Dostepnosc], [Inne], [Kaucja] )" +
                 @"values (" + Id_samochodu + ", '" + Marka + "' , '" + Model + "', " + Pojemnosc + ", '" + Rodzaj_paliwa + "', '" + Typ_nadwozia + "', " + Ilosc_koni + ", '" + Skrzynia_biegow + "', " + Ilosc_biegów + ", " + zuz + ", " + Ilosc_miejsc + ", " + Ilosc_drzwi + ", " + Rocznik + ", '" + Kolor + "', " + czd + ", " + dostbool + ", '" + Inne + "', " + Kaucja + " )";
-            FunkcjeSQL.WstawDaneSQL(zapytanie, ref exmsg);
+            FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }
 		
@@ -157,7 +157,7 @@ namespace logika_biznesowa {
         {
             string zapytanieCzySamochodIstnieje = @"SELECT count(*) FROM [dbo].[Samochód] WHERE [Id_samochodu] = " + identyfikator;
             string exmsgTest = "";
-            string zwrotZapytanieCzySamochodIstnieje = FunkcjeSQL.PobierzDaneSQLPojedyncze(zapytanieCzySamochodIstnieje, ref exmsgTest);
+            string zwrotZapytanieCzySamochodIstnieje = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanieCzySamochodIstnieje, ref exmsgTest);
             if (!string.IsNullOrWhiteSpace(exmsgTest)) // zapytanie testuj¹ce, czy w bazie jest samochód o danym ID zwróci³o b³¹d
                 return exmsgTest;
             else // zapytanie nie zwróci³o b³êdu
@@ -170,7 +170,7 @@ namespace logika_biznesowa {
                         string exmsg = "", exmsg1 = "", exmsg2 = "";
                         // usuniêcie danych z tabeli Samochody
                         string zapytanie1 = @"UPDATE [dbo].[Samochód] SET [CzyUsuniete] = 1 WHERE [Id_klienta] = " + identyfikator;
-                        FunkcjeSQL.WstawDaneSQL(zapytanie1, ref exmsg1);
+                        FunkcjePomicnicze.WstawDaneSQL(zapytanie1, ref exmsg1);
                         // budowa informacji wyjœciowej z funkcji
                         if (!string.IsNullOrWhiteSpace(exmsg1))
                             exmsg += "\n" + exmsg1;
@@ -210,7 +210,7 @@ namespace logika_biznesowa {
         {
             string zapytanie = @"select max([Id_samochodu]) from [dbo].[Samochód]";
             string exmsg = "";
-            string numerZBazy = FunkcjeSQL.PobierzDaneSQLPojedyncze(zapytanie, ref exmsg);
+            string numerZBazy = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanie, ref exmsg);
             if (!string.IsNullOrWhiteSpace(numerZBazy))
                 return int.Parse(numerZBazy);
             else

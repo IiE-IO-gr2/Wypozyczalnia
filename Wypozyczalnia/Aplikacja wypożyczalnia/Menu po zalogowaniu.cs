@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using System.Net.Mail;
 
 namespace Aplikacja_wypożyczalnia
 {
@@ -109,6 +110,21 @@ namespace Aplikacja_wypożyczalnia
             this.Hide();
             Wypozyczenia w = new Wypozyczenia();
             w.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string exmsg = "";
+            string tytulMaila = "Tytuł maila testowego";
+            string trescMaila = "Treść testowego wysyłania maili";
+            List<string> listaAdresatow = new List<string>();
+            listaAdresatow.Add("iie.io.gr2@gmail.com");
+            listaAdresatow.Add("k.e.golaszewska@gmail.com");
+            FunkcjePomicnicze.WyslijMaila(tytulMaila, trescMaila, listaAdresatow, ref exmsg);
+            if (string.IsNullOrWhiteSpace(exmsg))
+                MessageBox.Show("Wysylanie powiodlo sie.");
+            else
+                MessageBox.Show("Wysylanie nie powiodlo sie.");
         }
     }
 }

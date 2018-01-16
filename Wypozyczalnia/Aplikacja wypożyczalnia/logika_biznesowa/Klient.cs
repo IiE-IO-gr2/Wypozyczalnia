@@ -68,7 +68,7 @@ namespace logika_biznesowa {
             string promo = Promocja.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
             string zapytanie = @"insert into [dbo].[Klient] ([Id_klienta], [Telefon_kontaktowy], [Adres], [Adres_email], [Promocja], [Aktywnosc], [CzyUsuniete])" +
                 @"values (" + Id_klienta + ", '" + Telefon_kontaktowy + "' , '" + Adres + "', '" + Adres_email + "', " + promo + ", " + Aktywnosc + ",0)";
-            FunkcjeSQL.WstawDaneSQL(zapytanie, ref exmsg);
+            FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }
 
@@ -81,7 +81,7 @@ namespace logika_biznesowa {
         {
             string zapytanieCzyKlientIstnieje = @"SELECT count(*) FROM [dbo].[Klient] WHERE [Id_klienta] = " + identyfikator;
             string exmsgTest = "";
-            string zwrotZapytanieCzyKlientIstnieje = FunkcjeSQL.PobierzDaneSQLPojedyncze(zapytanieCzyKlientIstnieje, ref exmsgTest);
+            string zwrotZapytanieCzyKlientIstnieje = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanieCzyKlientIstnieje, ref exmsgTest);
             if (!string.IsNullOrWhiteSpace(exmsgTest)) // zapytanie testuj¹ce, czy w bazie jest klient o danym ID zwróci³o b³¹d
                 return exmsgTest;
             else // zapytanie nie zwróci³o b³êdu
@@ -94,10 +94,10 @@ namespace logika_biznesowa {
                         string exmsg = "", exmsg1 = "", exmsg2 = "";
                         // usuniêcie danych z tabeli Klienci
                         string zapytanie1 = @"UPDATE [dbo].[Klient] SET [CzyUsuniete] = 1 WHERE [Id_klienta] = " + identyfikator;
-                        FunkcjeSQL.WstawDaneSQL(zapytanie1, ref exmsg1);
+                        FunkcjePomicnicze.WstawDaneSQL(zapytanie1, ref exmsg1);
                         // sprawdzenie, czy klient by³ klientem indywidualnym, czy firm¹
                         string zapytanieTestoweCzyKlientFirma = @"SELECT count(*) FROM [dbo].[Klient_KlientFirma] WHERE [Id_klienta_K] = " + identyfikator;
-                        string liczbaRekordow = FunkcjeSQL.PobierzDaneSQLPojedyncze(zapytanieTestoweCzyKlientFirma, ref exmsg);
+                        string liczbaRekordow = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanieTestoweCzyKlientFirma, ref exmsg);
                         // budowa zapytania aktualizuj¹cego klienta_indywidualnego lub klienta_firmê
                         string zapytanie2 = "";
                         if (liczbaRekordow == "0") // czyli nie jest to klient-firma
@@ -106,7 +106,7 @@ namespace logika_biznesowa {
                             zapytanie2 = @"UPDATE [dbo].[Klient_firmy] ";
                         zapytanie2 += @"SET[CzyUsuniete] = 1 WHERE[Id_klienta] = " + identyfikator;
                         // update klienta-indywidualnego lub klienta-firmy
-                        FunkcjeSQL.WstawDaneSQL(zapytanie2, ref exmsg2);
+                        FunkcjePomicnicze.WstawDaneSQL(zapytanie2, ref exmsg2);
                         // budowa informacji wyjœciowej z funkcji
                         if (!string.IsNullOrWhiteSpace(exmsg1))
                             exmsg += "\n" + exmsg1;
@@ -150,7 +150,7 @@ namespace logika_biznesowa {
         {
             string zapytanie = @"select max([Id_klienta]) from [dbo].[Klient]";
             string exmsg = "";
-            string numerZBazy = FunkcjeSQL.PobierzDaneSQLPojedyncze(zapytanie, ref exmsg);
+            string numerZBazy = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanie, ref exmsg);
             if (!string.IsNullOrWhiteSpace(numerZBazy))
                 return int.Parse(numerZBazy);
             else

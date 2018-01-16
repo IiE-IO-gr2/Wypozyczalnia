@@ -45,9 +45,9 @@ namespace logika_biznesowa {
         public string DodajWypozyczenie()
         {
             string exmsg = "";
-            string zapytanie = @"insert into [dbo].[Wypo¿yczenie] ([ID_wypo¿yczenia], [Data_wypo¿yczenia], [Data_planowanego_zwrotu], [Cena_za_wypozyczenie])" +
-                @"values (" + ID_wypo¿yczenia + ", " + Data_wypo¿yczenia + " , " + Data_planowanego_zwrotu + ", " + Cena_za_wypozyczenie + " )";
-            FunkcjeSQL.WstawDaneSQL(zapytanie, ref exmsg);
+            string zapytanie = @"insert into [dbo].[Wypo¿yczenie] ([ID_wypo¿yczenia], [Data_wypo¿yczenia], [Data_planowanego_zwrotu], [Cena_za_wypozyczenie], [CzyUsuniete])" +
+                @"values (" + ID_wypo¿yczenia + ", " + Data_wypo¿yczenia + " , " + Data_planowanego_zwrotu + ", " + Cena_za_wypozyczenie + " , 0)";
+            FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }
 		
@@ -58,7 +58,7 @@ namespace logika_biznesowa {
         {
             string zapytanieCzyWypozyczenieIstnieje = @"SELECT count(*) FROM [dbo].[Wypo¿yczenie] WHERE [ID_wypo¿yczenia] = " + identyfikator;
             string exmsgTest = "";
-            string zwrotZapytanieCzyWypozyczenieIstnieje = FunkcjeSQL.PobierzDaneSQLPojedyncze(zapytanieCzyWypozyczenieIstnieje, ref exmsgTest);
+            string zwrotZapytanieCzyWypozyczenieIstnieje = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanieCzyWypozyczenieIstnieje, ref exmsgTest);
             if (!string.IsNullOrWhiteSpace(exmsgTest)) // zapytanie testuj¹ce, czy w bazie jest wypo¿yczenie o danym ID zwróci³o b³¹d
                 return exmsgTest;
             else // zapytanie nie zwróci³o b³êdu
@@ -71,7 +71,7 @@ namespace logika_biznesowa {
                         string exmsg = "", exmsg1 = "", exmsg2 = "";
                         // usuniêcie danych z tabeli Wypo¿yczenie
                         string zapytanie1 = @"UPDATE [dbo].[Wypo¿yczenie] SET [CzyUsuniete] = 1 WHERE [ID_wypo¿yczenia] = " + identyfikator;
-                        FunkcjeSQL.WstawDaneSQL(zapytanie1, ref exmsg1);
+                        FunkcjePomicnicze.WstawDaneSQL(zapytanie1, ref exmsg1);
                         // budowa informacji wyjœciowej z funkcji
                         if (!string.IsNullOrWhiteSpace(exmsg1))
                             exmsg += "\n" + exmsg1;
@@ -115,7 +115,7 @@ namespace logika_biznesowa {
         {
             string zapytanie = @"select max([ID_wypo¿yczenia]) from [dbo].[Wypo¿yczenie]";
             string exmsg = "";
-            string numerZBazy = FunkcjeSQL.PobierzDaneSQLPojedyncze(zapytanie, ref exmsg);
+            string numerZBazy = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanie, ref exmsg);
             if (!string.IsNullOrWhiteSpace(numerZBazy))
                 return int.Parse(numerZBazy);
             else

@@ -104,7 +104,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FunkcjeSQL.cs" />
+    <Compile Include="FunkcjePomocnicze.cs" />
     <Compile Include="Klienci.cs">
       <SubType>Form</SubType>
     </Compile>

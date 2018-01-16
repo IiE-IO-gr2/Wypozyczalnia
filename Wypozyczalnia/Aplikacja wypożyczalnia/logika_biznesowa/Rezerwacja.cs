@@ -17,7 +17,7 @@ namespace logika_biznesowa {
         public Rezerwacja()
         {
             ID_rezerwacji = 0;
-            Data_planowanego_wypozyczenia = new DateTime(1,1,1);
+            Data_planowanego_wypozyczenia = new DateTime(1, 1, 1);
             Data_planowanego_zwrotu = new DateTime(1, 1, 1);
         }
 
@@ -48,9 +48,9 @@ namespace logika_biznesowa {
 		public string DodajRezerwacje()
         {
             string exmsg = "";
-            string zapytanie = @"insert into [dbo].[Rezerwacja] ([ID_rezerwacji], [Data_planowanego_wypozyczenia], [Data_planowanego_zwrotu])" +
-                @"values (" + ID_rezerwacji + ", " + Data_planowanego_wypozyczenia + " , " + Data_planowanego_zwrotu + " )";
-            FunkcjeSQL.WstawDaneSQL(zapytanie, ref exmsg);
+            string zapytanie = @"insert into [dbo].[Rezerwacja] ([ID_rezerwacji], [Data_planowanego_wypozyczenia], [Data_planowanego_zwrotu], [CzyUsuniete])" +
+                @"values (" + ID_rezerwacji + ", " + Data_planowanego_wypozyczenia + " , " + Data_planowanego_zwrotu + " , 0)";
+            FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }
 		/// <summary>
@@ -60,7 +60,7 @@ namespace logika_biznesowa {
         {
             string zapytanieCzyRezerwacjaIstnieje = @"SELECT count(*) FROM [dbo].[Rezerwacja] WHERE [ID_rezerwacji] = " + identyfikator;
             string exmsgTest = "";
-            string zwrotZapytanieCzyRezerwacjaIstnieje = FunkcjeSQL.PobierzDaneSQLPojedyncze(zapytanieCzyRezerwacjaIstnieje, ref exmsgTest);
+            string zwrotZapytanieCzyRezerwacjaIstnieje = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanieCzyRezerwacjaIstnieje, ref exmsgTest);
             if (!string.IsNullOrWhiteSpace(exmsgTest)) // zapytanie testuj¹ce, czy w bazie jest rezerwacja o danym ID zwróci³o b³¹d
                 return exmsgTest;
             else // zapytanie nie zwróci³o b³êdu
@@ -73,7 +73,7 @@ namespace logika_biznesowa {
                         string exmsg = "", exmsg1 = "", exmsg2 = "";
                         // usuniêcie danych z tabeli Rezerwacja
                         string zapytanie1 = @"UPDATE [dbo].[Rezerwacja] SET [CzyUsuniete] = 1 WHERE [ID_rezerwacji] = " + identyfikator;
-                        FunkcjeSQL.WstawDaneSQL(zapytanie1, ref exmsg1);
+                        FunkcjePomicnicze.WstawDaneSQL(zapytanie1, ref exmsg1);
                         // budowa informacji wyjœciowej z funkcji
                         if (!string.IsNullOrWhiteSpace(exmsg1))
                             exmsg += "\n" + exmsg1;
@@ -106,7 +106,7 @@ namespace logika_biznesowa {
         {
             string zapytanie = @"select max([ID_rezerwacji]) from [dbo].[Rezerwacja]";
             string exmsg = "";
-            string numerZBazy = FunkcjeSQL.PobierzDaneSQLPojedyncze(zapytanie, ref exmsg);
+            string numerZBazy = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanie, ref exmsg);
             if (!string.IsNullOrWhiteSpace(numerZBazy))
                 return int.Parse(numerZBazy);
             else
