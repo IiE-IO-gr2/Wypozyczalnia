@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -46,18 +45,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.ZatwierdźWS = new System.Windows.Forms.Button();
+            this.WsteczWS = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button1.Location = new System.Drawing.Point(376, 391);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 40);
-            this.button1.TabIndex = 51;
-            this.button1.Text = "Zatwierdź";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox11
             // 
@@ -215,16 +205,25 @@
             this.label1.Text = "Dodaj Klienta - Firma";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button5
+            // ZatwierdźWS
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button5.Location = new System.Drawing.Point(21, 410);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 40);
-            this.button5.TabIndex = 52;
-            this.button5.Text = "Wstecz";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.ZatwierdźWS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ZatwierdźWS.Location = new System.Drawing.Point(520, 385);
+            this.ZatwierdźWS.Name = "ZatwierdźWS";
+            this.ZatwierdźWS.Size = new System.Drawing.Size(125, 65);
+            this.ZatwierdźWS.TabIndex = 53;
+            this.ZatwierdźWS.Text = "Zatwierdź";
+            this.ZatwierdźWS.UseVisualStyleBackColor = true;
+            // 
+            // WsteczWS
+            // 
+            this.WsteczWS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.WsteczWS.Location = new System.Drawing.Point(275, 385);
+            this.WsteczWS.Name = "WsteczWS";
+            this.WsteczWS.Size = new System.Drawing.Size(125, 65);
+            this.WsteczWS.TabIndex = 54;
+            this.WsteczWS.Text = "Wstecz";
+            this.WsteczWS.UseVisualStyleBackColor = true;
             // 
             // DodajKlientaFirma
             // 
@@ -232,8 +231,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o1;
             this.ClientSize = new System.Drawing.Size(884, 462);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.WsteczWS);
+            this.Controls.Add(this.ZatwierdźWS);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox9);
@@ -259,8 +258,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox9;
@@ -278,6 +275,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button ZatwierdźWS;
+        private System.Windows.Forms.Button WsteczWS;
     }
 }

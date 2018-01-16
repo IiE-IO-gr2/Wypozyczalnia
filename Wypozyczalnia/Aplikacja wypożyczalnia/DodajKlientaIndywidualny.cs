@@ -58,5 +58,10 @@ namespace Aplikacja_wypożyczalnia
             else
                 MessageBox.Show("Wystąpił błąd:\n" + exmsg_ind);
         }
+
+        private void DodajKlientaIndywidualny_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
