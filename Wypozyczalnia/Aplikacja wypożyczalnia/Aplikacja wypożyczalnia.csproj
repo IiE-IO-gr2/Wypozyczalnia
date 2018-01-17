@@ -200,6 +200,12 @@
     <Compile Include="UsuńSamochód.Designer.cs">
       <DependentUpon>UsuńSamochód.cs</DependentUpon>
     </Compile>
+    <Compile Include="WybierzKlienta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WybierzKlienta.Designer.cs">
+      <DependentUpon>WybierzKlienta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wypozyczenia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -308,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UsuńSamochód.resx">
       <DependentUpon>UsuńSamochód.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WybierzKlienta.resx">
+      <DependentUpon>WybierzKlienta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wypozyczenia.resx">
       <DependentUpon>Wypozyczenia.cs</DependentUpon>
