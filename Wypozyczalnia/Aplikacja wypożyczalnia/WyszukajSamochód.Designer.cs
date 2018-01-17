@@ -84,6 +84,7 @@
             this.ZatwierdźWS.TabIndex = 35;
             this.ZatwierdźWS.Text = "Zatwierdź";
             this.ZatwierdźWS.UseVisualStyleBackColor = true;
+            this.ZatwierdźWS.Click += new System.EventHandler(this.ZatwierdźWS_Click);
             // 
             // WyszukajSamochód
             // 

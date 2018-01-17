@@ -54,7 +54,7 @@ namespace logika_biznesowa {
                 plecBool = 1;
             string zapytanie = @"insert into[dbo].[Klient_indywidualny]([Id_klienta], [Imiê], [Nazwisko], [Numer_prawa_jazdy], [PESEL], [P³ec], [CzyUsuniete])" +
                 @"values(" + identyfikator + ", '" + Imiê + "', '" + Nazwisko + "', '" + Numer_prawa_jazdy + "', " + PESEL + "," + plecBool + " , 0)";
-            FunkcjeSQL.WstawDaneSQL(zapytanie, ref exmsg);
+            FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             string exmsg1 = DodajDoBazyPolaczenieKlientaIndywidualnegoZKlientem(identyfikator);
             if (!string.IsNullOrWhiteSpace(exmsg1))
                 exmsg += exmsg1;
@@ -65,7 +65,7 @@ namespace logika_biznesowa {
         {
             string exmsg = "";
             string zapytanie = @"insert into[dbo].[Klient_KlientIndyw] values(" + identyfikator + "," + identyfikator + ")";
-            FunkcjeSQL.WstawDaneSQL(zapytanie, ref exmsg);
+            FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }
 	}

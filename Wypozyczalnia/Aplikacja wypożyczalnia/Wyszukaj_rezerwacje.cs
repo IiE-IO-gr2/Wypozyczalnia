@@ -22,7 +22,10 @@ namespace Aplikacja_wypożyczalnia
             this.Hide();
             Rezerwacja re = new Rezerwacja();
             re.Show();
-            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
     }

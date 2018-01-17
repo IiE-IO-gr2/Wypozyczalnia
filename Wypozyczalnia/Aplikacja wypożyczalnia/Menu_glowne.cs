@@ -38,15 +38,5 @@ namespace Aplikacja_wypożyczalnia
             Menu_po_zalogowaniu mpz = new Menu_po_zalogowaniu();
             mpz.Show();
         }
-
-        private void Menu_glowne_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

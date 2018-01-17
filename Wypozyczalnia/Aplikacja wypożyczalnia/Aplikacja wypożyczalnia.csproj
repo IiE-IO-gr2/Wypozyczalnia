@@ -104,7 +104,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FunkcjeSQL.cs" />
+    <Compile Include="FunkcjePomocnicze.cs" />
     <Compile Include="Klienci.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +143,12 @@
     </Compile>
     <Compile Include="PokazRezerwacje.Designer.cs">
       <DependentUpon>PokazRezerwacje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PokazSamochod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PokazSamochod.Designer.cs">
+      <DependentUpon>PokazSamochod.cs</DependentUpon>
     </Compile>
     <Compile Include="PokazWypozyczenia.cs">
       <SubType>Form</SubType>
@@ -281,8 +287,14 @@
     <EmbeddedResource Include="PokazRezerwacje.resx">
       <DependentUpon>PokazRezerwacje.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PokazSamochod.resx">
+      <DependentUpon>PokazSamochod.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PokazWypozyczenia.resx">
       <DependentUpon>PokazWypozyczenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PokazWyszukanegoKlientaFirme.resx">
+      <DependentUpon>PokazWyszukanegoKlientaFirme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -354,6 +366,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\26653464_1222776397822724_926715336_o2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="skryptBazaDanych.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

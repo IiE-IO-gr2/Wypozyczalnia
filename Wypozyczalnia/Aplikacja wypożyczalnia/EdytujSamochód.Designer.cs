@@ -84,6 +84,7 @@
             this.ZatwierdźES.TabIndex = 37;
             this.ZatwierdźES.Text = "Zatwierdź";
             this.ZatwierdźES.UseVisualStyleBackColor = true;
+            this.ZatwierdźES.Click += new System.EventHandler(this.ZatwierdźES_Click);
             // 
             // EdytujSamochód
             // 

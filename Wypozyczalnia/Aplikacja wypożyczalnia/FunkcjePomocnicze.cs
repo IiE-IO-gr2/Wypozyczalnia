@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
+using System.Net.Mail;
 
-public static class FunkcjeSQL
+public static class FunkcjePomicnicze
 {
     public static string connString = @"Password=iieIOgr2;Persist Security Info=True;User ID=IOadmin;Initial Catalog=wypozyczalnia;"+
         @"Data Source=iie-io-gr2.database.windows.net";
@@ -121,5 +122,34 @@ public static class FunkcjeSQL
         }
     }
 
+    public static void WyslijMaila(string tytulMaila, string trescMaila, List<string> listaAdresatow, ref string exmsg)
+    {
+        string SmptServer = "smtp.gmail.com";
+        int Port = 587;
+        string Email = "iie.io.gr2@gmail.com";
+        string Login = "iie.io.gr2@gmail.com";
+        string Haslo = "gr2IOiie";
+        foreach (string adresEmail in listaAdresatow)
+        {
+            try
+            {
+                MailMessage mail = new MailMessage();
+                SmtpClient smpt = new SmtpClient(SmptServer);
+                mail.From = new MailAddress(Email);
+                mail.Subject = tytulMaila;
+                mail.To.Add(adresEmail);
+                mail.Body = trescMaila;
+                smpt.Port = Port;
+                smpt.Credentials = new System.Net.NetworkCredential(Login, Haslo);
+                smpt.EnableSsl = true;
+                smpt.Send(mail);
+            }
+            catch (Exception ex)
+            {
+                exmsg += "Błąd dla adresu: " + adresEmail + ": " + ex.Message;
+            }
+        }
+        
+    }              
 
 }

@@ -19,13 +19,6 @@ namespace Aplikacja_wypożyczalnia
             textBox1.ReadOnly = true;
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            RodzajKlienta rk = new RodzajKlienta();
-            rk.Show();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             /// Pobranie danych z TextBoxów
@@ -59,6 +52,13 @@ namespace Aplikacja_wypożyczalnia
                 MessageBox.Show("Dodano połączenie oraz klienta indywidualnego do bazy");
             else
                 MessageBox.Show("Wystąpił błąd:\n" + exmsg_ind);
+        }
+
+        private void WsteczWS_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RodzajKlienta rk = new RodzajKlienta();
+            rk.Show();
         }
     }
 }

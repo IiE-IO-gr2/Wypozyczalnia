@@ -51,10 +51,10 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button1.Location = new System.Drawing.Point(376, 391);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Location = new System.Drawing.Point(506, 385);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 40);
+            this.button1.Size = new System.Drawing.Size(125, 65);
             this.button1.TabIndex = 51;
             this.button1.Text = "Zatwierdź";
             this.button1.UseVisualStyleBackColor = true;
@@ -214,14 +214,13 @@
             this.label1.Size = new System.Drawing.Size(260, 29);
             this.label1.TabIndex = 28;
             this.label1.Text = "Dodaj Klienta - Firma";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button5
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button5.Location = new System.Drawing.Point(21, 410);
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button5.Location = new System.Drawing.Point(240, 385);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 40);
+            this.button5.Size = new System.Drawing.Size(125, 65);
             this.button5.TabIndex = 52;
             this.button5.Text = "Wstecz";
             this.button5.UseVisualStyleBackColor = true;
@@ -254,7 +253,6 @@
             this.Controls.Add(this.label1);
             this.Name = "DodajKlientaFirma";
             this.Text = "DodajKlientaFirma";
-            this.Load += new System.EventHandler(this.DodajKlientaFirma_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

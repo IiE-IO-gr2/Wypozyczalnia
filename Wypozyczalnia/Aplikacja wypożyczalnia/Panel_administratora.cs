@@ -31,7 +31,7 @@ namespace Aplikacja_wypożyczalnia
             string h = textBox2.Text;
             string zapytanie = "Select haslo from [dbo].[Panel_administratora] where Login='"+l+"'";
             string exmsg="";
-            DataTable dt = FunkcjeSQL.PobierzDaneSQL(zapytanie, ref exmsg);
+            DataTable dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
             string hasloZBazy = "";
             foreach (DataRow item in dt.Rows)
             {
@@ -51,11 +51,6 @@ namespace Aplikacja_wypożyczalnia
                     MessageBox.Show(exmsg);
                 }
             }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

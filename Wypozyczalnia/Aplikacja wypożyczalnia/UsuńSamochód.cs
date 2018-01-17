@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using logika_biznesowa;
 
 namespace Aplikacja_wypożyczalnia
 {
@@ -22,6 +23,27 @@ namespace Aplikacja_wypożyczalnia
             this.Hide();
             Samochody us = new Samochody();
             us.Show();
+        }
+
+        private void ZatwierdźUS_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = int.Parse(textBox1.Text);
+                string exmsg = Samochód.UsunSamochod(id);
+                if (!string.IsNullOrWhiteSpace(exmsg))
+                    MessageBox.Show("Wystąpił błąd:\n" + exmsg);
+                else
+                {
+                    MessageBox.Show("Usunięto samochód z bazy");
+                    textBox1.Clear();
+                    
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Wystąpił błąd:\nNiepoprawny lub pusty numer identyfikacyjny");
+            }
         }
     }
 }
