@@ -138,7 +138,7 @@ namespace Aplikacja_wypożyczalnia
                 int id = Samochód.MaksymalnyNumerIdentyfikatoraWBazie() + 1;
                 string mar = textBox2.Text;
                 string mod = textBox4.Text;
-                string poj = textBox3.Text;
+                double poj = double.Parse(textBox3.Text);
                 string rp = textBox5.Text;
                 string tn = textBox6.Text;
                 int ik = int.Parse(textBox7.Text);

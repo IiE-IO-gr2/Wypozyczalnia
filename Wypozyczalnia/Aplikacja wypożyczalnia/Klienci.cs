@@ -59,5 +59,24 @@ namespace Aplikacja_wypożyczalnia
             ek.Show();
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RodzajKlienta rk = new RodzajKlienta();
+            rk.Show();
+        }
+
+        private void WsteczWS_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu_po_zalogowaniu mpz = new Menu_po_zalogowaniu();
+            mpz.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
