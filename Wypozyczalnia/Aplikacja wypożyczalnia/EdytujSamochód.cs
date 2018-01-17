@@ -23,5 +23,15 @@ namespace Aplikacja_wypożyczalnia
             Samochody es = new Samochody();
             es.Show();
         }
+
+        private void ZatwierdźES_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
