@@ -195,7 +195,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 30;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -218,7 +217,6 @@
             this.label1.Size = new System.Drawing.Size(260, 29);
             this.label1.TabIndex = 28;
             this.label1.Text = "Dodaj Klienta - Firma";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button5
             // 
@@ -258,7 +256,6 @@
             this.Controls.Add(this.label1);
             this.Name = "DodajKlientaFirma";
             this.Text = "DodajKlientaFirma";
-            this.Load += new System.EventHandler(this.DodajKlientaFirma_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

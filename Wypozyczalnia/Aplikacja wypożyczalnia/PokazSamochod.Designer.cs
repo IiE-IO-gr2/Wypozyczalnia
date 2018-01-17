@@ -79,7 +79,6 @@
             this.label1.Size = new System.Drawing.Size(367, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Pokaż wyszukiwany samochód";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label19
             // 
@@ -426,6 +425,7 @@
             this.button2.TabIndex = 66;
             this.button2.Text = "Wstecz";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // PokazSamochod
             // 

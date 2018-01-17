@@ -94,7 +94,6 @@
             this.data.Size = new System.Drawing.Size(40, 18);
             this.data.TabIndex = 4;
             this.data.Text = "data";
-            this.data.Click += new System.EventHandler(this.data_Click);
             // 
             // czas
             // 
@@ -106,7 +105,6 @@
             this.czas.Size = new System.Drawing.Size(44, 18);
             this.czas.TabIndex = 5;
             this.czas.Text = "czas";
-            this.czas.Click += new System.EventHandler(this.czas_Click);
             // 
             // timer1
             // 

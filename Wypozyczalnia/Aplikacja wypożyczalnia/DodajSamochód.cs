@@ -17,17 +17,7 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void WsteczDS_Click(object sender, EventArgs e)
         {
             
@@ -138,7 +128,7 @@ namespace Aplikacja_wypożyczalnia
                 int id = Samochód.MaksymalnyNumerIdentyfikatoraWBazie() + 1;
                 string mar = textBox2.Text;
                 string mod = textBox4.Text;
-                string poj = textBox3.Text;
+                double poj = double.Parse(textBox3.Text);
                 string rp = textBox5.Text;
                 string tn = textBox6.Text;
                 int ik = int.Parse(textBox7.Text);
@@ -173,11 +163,6 @@ namespace Aplikacja_wypożyczalnia
             this.Hide();
             DodajSamochód dod = new DodajSamochód();
             dod.Show();
-        }
-
-        private void Inne_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -51,7 +51,7 @@
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
-            this.ZatwierdźWS = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.WsteczWS = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -83,7 +83,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 6;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -265,16 +264,16 @@
             this.textBox11.Size = new System.Drawing.Size(180, 20);
             this.textBox11.TabIndex = 26;
             // 
-            // ZatwierdźWS
+            // button1
             // 
-            this.ZatwierdźWS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ZatwierdźWS.Location = new System.Drawing.Point(536, 385);
-            this.ZatwierdźWS.Name = "ZatwierdźWS";
-            this.ZatwierdźWS.Size = new System.Drawing.Size(125, 65);
-            this.ZatwierdźWS.TabIndex = 36;
-            this.ZatwierdźWS.Text = "Zatwierdź";
-            this.ZatwierdźWS.UseVisualStyleBackColor = true;
-            this.ZatwierdźWS.Click += new System.EventHandler(this.ZatwierdźWS_Click);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Location = new System.Drawing.Point(536, 385);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 65);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "Zatwierdź";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // WsteczWS
             // 
@@ -285,6 +284,7 @@
             this.WsteczWS.TabIndex = 37;
             this.WsteczWS.Text = "Wstecz";
             this.WsteczWS.UseVisualStyleBackColor = true;
+            this.WsteczWS.Click += new System.EventHandler(this.WsteczWS_Click);
             // 
             // DodajKlientaIndywidualny
             // 
@@ -293,7 +293,7 @@
             this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o1;
             this.ClientSize = new System.Drawing.Size(884, 462);
             this.Controls.Add(this.WsteczWS);
-            this.Controls.Add(this.ZatwierdźWS);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox9);
@@ -319,7 +319,6 @@
             this.Controls.Add(this.label1);
             this.Name = "DodajKlientaIndywidualny";
             this.Text = "DodajKlienta";
-            this.Load += new System.EventHandler(this.DodajKlientaIndywidualny_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,7 +349,7 @@
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Button ZatwierdźWS;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button WsteczWS;
     }
 }

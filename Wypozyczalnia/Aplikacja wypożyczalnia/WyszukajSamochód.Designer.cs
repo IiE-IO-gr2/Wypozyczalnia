@@ -52,7 +52,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 32;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -85,6 +84,7 @@
             this.ZatwierdźWS.TabIndex = 35;
             this.ZatwierdźWS.Text = "Zatwierdź";
             this.ZatwierdźWS.UseVisualStyleBackColor = true;
+            this.ZatwierdźWS.Click += new System.EventHandler(this.ZatwierdźWS_Click);
             // 
             // WyszukajSamochód
             // 

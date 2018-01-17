@@ -18,11 +18,6 @@ namespace Aplikacja_wypożyczalnia
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -52,11 +47,6 @@ namespace Aplikacja_wypożyczalnia
                 MessageBox.Show("Wystąpił błąd:\nNiepoprawny lub pusty numer identyfikacyjny");
             }
             
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
