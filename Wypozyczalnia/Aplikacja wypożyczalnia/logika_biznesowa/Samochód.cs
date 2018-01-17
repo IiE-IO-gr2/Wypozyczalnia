@@ -188,7 +188,7 @@ namespace logika_biznesowa {
 		/// <summary>
 		/// metoda wyszukuj¹ca samochód w bazie
 		/// </summary>
-		public void WyszukajSamochod() {
+		public static Samochód WyszukajSamochod(ref string exmsg) {
 			throw new System.Exception("Not implemented");
 		}
 		/// <summary>

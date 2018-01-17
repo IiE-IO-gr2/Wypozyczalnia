@@ -183,3 +183,39 @@ C:\Users\sasal_000\Desktop\Studia - SGGW\IV rok\Inżyniera Oprogramowania\Wypoż
 C:\Users\sasal_000\Desktop\Studia - SGGW\IV rok\Inżyniera Oprogramowania\Wypożyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.UsunWypozyczenie.resources
 C:\Users\sasal_000\Desktop\Studia - SGGW\IV rok\Inżyniera Oprogramowania\Wypożyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Wypozyczenia.resources
 C:\Users\sasal_000\Desktop\Studia - SGGW\IV rok\Inżyniera Oprogramowania\Wypożyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WyszukajWypozyczenie.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja wypożyczalnia.csprojResolveAssemblyReference.cache
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.DodajKlientaFirma.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.DodajKlientaIndywidualny.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.DodajSamochód.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.DodajWypozyczenie.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Dodaj_rezerwacje.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.EdytujKlienta.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.EdytujSamochód.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.EdytujWypozyczenie.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Edytuj_rezerwacje.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Form1.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Klienci.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Menu_po_zalogowaniu.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Menu_glowne.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Panel_administratora.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazRezerwacje.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazSamochod.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazWypozyczenia.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazWyszukanegoKlientaFirme.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Properties.Resources.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Rezerwacja.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.RodzajKlienta.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Samochody.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.UsunWypozyczenie.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Usun_rezerwacje.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.UsuńKlienta.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.UsuńSamochód.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Wypozyczenia.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WyszukajKlienta.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WyszukajSamochód.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WyszukajWypozyczenie.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Wyszukaj_rezerwacje.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja wypożyczalnia.csproj.GenerateResource.Cache
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja wypożyczalnia.csproj.CoreCompileInputs.cache
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja wypożyczalnia.exe
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja wypożyczalnia.pdb
