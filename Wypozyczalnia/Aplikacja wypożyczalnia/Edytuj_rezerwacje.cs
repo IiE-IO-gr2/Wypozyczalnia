@@ -29,5 +29,10 @@ namespace Aplikacja_wypożyczalnia
             re.Show();
         
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

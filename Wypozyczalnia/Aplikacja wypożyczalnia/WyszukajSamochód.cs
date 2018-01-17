@@ -46,10 +46,5 @@ namespace Aplikacja_wypożyczalnia
                 MessageBox.Show("Wystąpił błąd:\nNiepoprawny lub pusty numer identyfikacyjny");
             }
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

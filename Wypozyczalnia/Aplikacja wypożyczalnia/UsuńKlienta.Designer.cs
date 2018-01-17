@@ -45,7 +45,6 @@
             this.label1.Size = new System.Drawing.Size(160, 29);
             this.label1.TabIndex = 2;
             this.label1.Text = "Usuń Klienta";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
@@ -53,7 +52,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 33;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 

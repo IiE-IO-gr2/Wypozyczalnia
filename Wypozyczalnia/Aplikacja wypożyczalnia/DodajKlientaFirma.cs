@@ -26,11 +26,6 @@ namespace Aplikacja_wypożyczalnia
             rk.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -87,16 +82,6 @@ namespace Aplikacja_wypożyczalnia
                 bladWTextboxach = "";
                 poprawneTextboxy = true;
             }
-        }
-
-        private void DodajKlientaFirma_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

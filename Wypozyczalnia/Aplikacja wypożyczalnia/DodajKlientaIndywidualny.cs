@@ -19,13 +19,6 @@ namespace Aplikacja_wypożyczalnia
             textBox1.ReadOnly = true;
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            RodzajKlienta rk = new RodzajKlienta();
-            rk.Show();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             /// Pobranie danych z TextBoxów
@@ -61,19 +54,11 @@ namespace Aplikacja_wypożyczalnia
                 MessageBox.Show("Wystąpił błąd:\n" + exmsg_ind);
         }
 
-        private void DodajKlientaIndywidualny_Load(object sender, EventArgs e)
+        private void WsteczWS_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void ZatwierdźWS_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            this.Hide();
+            RodzajKlienta rk = new RodzajKlienta();
+            rk.Show();
         }
     }
 }

@@ -183,3 +183,5 @@ C:\Users\sasal_000\Desktop\Studia - SGGW\IV rok\Inżyniera Oprogramowania\Wypoż
 C:\Users\sasal_000\Desktop\Studia - SGGW\IV rok\Inżyniera Oprogramowania\Wypożyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.UsunWypozyczenie.resources
 C:\Users\sasal_000\Desktop\Studia - SGGW\IV rok\Inżyniera Oprogramowania\Wypożyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Wypozyczenia.resources
 C:\Users\sasal_000\Desktop\Studia - SGGW\IV rok\Inżyniera Oprogramowania\Wypożyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WyszukajWypozyczenie.resources
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazSamochod.resources
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazWyszukanegoKlientaFirme.resources
