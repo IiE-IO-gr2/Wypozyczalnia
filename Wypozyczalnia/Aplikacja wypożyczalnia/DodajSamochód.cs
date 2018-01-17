@@ -164,5 +164,10 @@ namespace Aplikacja_wypożyczalnia
             DodajSamochód dod = new DodajSamochód();
             dod.Show();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
