@@ -20,15 +20,6 @@ namespace Aplikacja_wypożyczalnia
 
        
         
-        public WybierzKlienta()
-        {
-           
-            InitializeComponent();
-            System.Data.DataTable exmsg_kl = FunkcjeSQL.PobierzDaneSQL("use wypozyczalnia" +
-                "select Nazwa_firmy from dbo.Klient_firmy", ref nazwa);
-            //Klient_firmy klientwyswietl = new Klient_firmy(nazwa, nip);
-            dataGridView1.Rows.Add(id,nazwa,nip,tl);
-        }
         
         
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
