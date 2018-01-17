@@ -44,49 +44,15 @@ namespace Aplikacja_wypożyczalnia
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu nazwa";
                 poprawneTextboxy = false;
             }
-            MessageBox.Show("Dlugosc = " + textBox5.Text.Length);
             if (string.IsNullOrWhiteSpace(textBox5.Text) ||
                 !System.Text.RegularExpressions.Regex.IsMatch(textBox5.Text, @"^[0-9]{10}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu NIP";
                 poprawneTextboxy = false;
             }
-            MessageBox.Show("Dlugosc = " + textBox7.Text.Length);
-            if (string.IsNullOrWhiteSpace(textBox7.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox7.Text, @"^[0-9]{9}$"))
-            {
-                bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu telefon kontaktowy";
-                poprawneTextboxy = false;
-            }
-            MessageBox.Show("Dlugosc = " + textBox8.Text.Length);
-            if (string.IsNullOrWhiteSpace(textBox8.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox8.Text, @"^([A-Za-z0-9\-]){10,70}$"))
-            {
-                bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu adres";
-                poprawneTextboxy = false;
-            }
-            MessageBox.Show("Dlugosc = " + textBox9.Text.Length);
-            if (string.IsNullOrWhiteSpace(textBox9.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox9.Text, @"^([A-Za-z0-9@\-]){5,50}$"))
-            {
-                bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu adres e-mail";
-                poprawneTextboxy = false;
-            }
-            MessageBox.Show("Dlugosc = " + textBox10.Text.Length);
-            if (string.IsNullOrWhiteSpace(textBox10.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox10.Text, @"^[0-9]{10}$"))
-            {
-                bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu promocja";
-                poprawneTextboxy = false;
-            }
-            MessageBox.Show("Dlugosc = " + textBox11.Text.Length);
-            if (string.IsNullOrWhiteSpace(textBox11.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox11.Text, @"^[0-9]{10}$"))
-            {
-                bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu aktywność";
-                poprawneTextboxy = false;
-            }
-            
+            //
+            // DOPISAĆ DLA RESZTY PÓL
+            //
             if (poprawneTextboxy == true)
             {
                 /// Pobranie danych z TextBoxów
@@ -129,21 +95,6 @@ namespace Aplikacja_wypożyczalnia
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
         {
 
         }
