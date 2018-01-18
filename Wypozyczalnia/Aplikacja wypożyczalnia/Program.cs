@@ -9,14 +9,15 @@ namespace Aplikacja_wypożyczalnia
     static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        /// Funkcja rozpoczynająca działanie aplikacji
         /// </summary>
         [STAThread]
         static void Main()
+
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Menu_glowne());
         }
     }
 }
