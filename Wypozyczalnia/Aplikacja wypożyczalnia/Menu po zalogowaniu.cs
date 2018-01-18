@@ -76,11 +76,16 @@ namespace Aplikacja_wypożyczalnia
         private void button1_Click(object sender, EventArgs e)
         {
             string exmsg = "";
-            string tytulMaila = "Tytuł maila testowego";
-            string trescMaila = "Treść testowego wysyłania maili";
+            string tytulMaila = "Przypomnienie o rezerwacji";
+            string trescMaila = "Dzień dobry." +
+                "Pragniemy przypomnieć o złożonej przez Pana/Panią rezerwacji u numerze 4127." +
+                "Samochód będzie dostępny do Pana/Pani potrzeb przez 3 doby." +
+                "Mamy nadzieję, że pojazd się przysłuży oraz w przyszłości chętnie Pan/Pani do nas wróci." +
+                "Serdecznie pozdrawiamy," +
+                "Biuro Obsługi Wypożyczalni KGB";
             List<string> listaAdresatow = new List<string>();
             listaAdresatow.Add("iie.io.gr2@gmail.com");
-            listaAdresatow.Add("k.e.golaszewska@gmail.com");
+            listaAdresatow.Add("mateuszsobol25@gmail.com");
             FunkcjePomicnicze.WyslijMaila(tytulMaila, trescMaila, listaAdresatow, ref exmsg);
             if (string.IsNullOrWhiteSpace(exmsg))
                 MessageBox.Show("Wysylanie powiodlo sie.");
