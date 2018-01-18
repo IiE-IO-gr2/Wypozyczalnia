@@ -33,14 +33,14 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox3.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, @"^[A-Za-z]{20}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, @"^[A-Za-z]{2,20}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu nazwisko";
                 poprawneTextboxy = false;
             }
 
             if (string.IsNullOrWhiteSpace(textBox4.Text) ||
-               !System.Text.RegularExpressions.Regex.IsMatch(textBox4.Text, @"^[A-Za-z0-9\-]{20}$"))
+               !System.Text.RegularExpressions.Regex.IsMatch(textBox4.Text, @"^[A-Za-z0-9\-]{2,20}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu numer prawa jazdy";
                 poprawneTextboxy = false;
@@ -52,37 +52,37 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox6.Text) ||
-              !System.Text.RegularExpressions.Regex.IsMatch(textBox6.Text, @"^[A-Za-z]{10}$"))
+              !System.Text.RegularExpressions.Regex.IsMatch(textBox6.Text, @"^[A-Za-z]{1,10}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu płeć";
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox7.Text) ||
-              !System.Text.RegularExpressions.Regex.IsMatch(textBox7.Text, @"^[0-9]{11}$"))
+              !System.Text.RegularExpressions.Regex.IsMatch(textBox7.Text, @"^[0-9]{9,11}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu telefon";
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox8.Text) ||
-              !System.Text.RegularExpressions.Regex.IsMatch(textBox8.Text, @"^[A-Za-z0-9\-]{50}$"))
+              !System.Text.RegularExpressions.Regex.IsMatch(textBox8.Text, @"^[A-Za-z0-9\-]{2,50}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu adres zamieszkania";
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox9.Text) ||
-              !System.Text.RegularExpressions.Regex.IsMatch(textBox9.Text, @"^[A-Za-z0-9\-]{50}$"))
+              !System.Text.RegularExpressions.Regex.IsMatch(textBox9.Text, @"^[A-Za-z0-9\-]{2,50}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu adres e-mail";
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox10.Text) ||
-              !System.Text.RegularExpressions.Regex.IsMatch(textBox10.Text, @"^[0-9]{10}$"))
+              !System.Text.RegularExpressions.Regex.IsMatch(textBox10.Text, @"^[0-9]{1,10}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu promocja";
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox11.Text) ||
-              !System.Text.RegularExpressions.Regex.IsMatch(textBox11.Text, @"^[0-9]{20}$"))
+              !System.Text.RegularExpressions.Regex.IsMatch(textBox11.Text, @"^[0-9]{1,20}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu aktywność";
                 poprawneTextboxy = false;
