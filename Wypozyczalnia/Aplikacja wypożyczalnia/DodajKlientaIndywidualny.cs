@@ -27,13 +27,13 @@ namespace Aplikacja_wypożyczalnia
             bool poprawneTextboxy = true;
             MessageBox.Show("Dlugosc = " + textBox2.Text.Length);
             if (string.IsNullOrWhiteSpace(textBox2.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, @"^([A-Za-z]){2,20}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, @"^([A-Za-ząęłóżćśźń]){2,20}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu imię";
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox3.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, @"^[A-Za-z]{2,20}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, @"^[A-Za-ząęłóżćśźń]{2,20}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu nazwisko";
                 poprawneTextboxy = false;
@@ -52,7 +52,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox6.Text) ||
-              !System.Text.RegularExpressions.Regex.IsMatch(textBox6.Text, @"^[A-Za-z]{1,10}$"))
+              !System.Text.RegularExpressions.Regex.IsMatch(textBox6.Text, @"^[A-Za-ząęłóżćśźń]{1,10}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu płeć";
                 poprawneTextboxy = false;
@@ -64,7 +64,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox8.Text) ||
-              !System.Text.RegularExpressions.Regex.IsMatch(textBox8.Text, @"^[A-Za-z0-9\- ,.-]{2,50}$"))
+              !System.Text.RegularExpressions.Regex.IsMatch(textBox8.Text, @"^[A-Za-z0-9\- ,.-ąęłóżćśźń]{2,50}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu adres zamieszkania";
                 poprawneTextboxy = false;
