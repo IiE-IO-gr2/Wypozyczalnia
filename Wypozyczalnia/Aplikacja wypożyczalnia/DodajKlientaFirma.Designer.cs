@@ -1,4 +1,6 @@
-﻿namespace Aplikacja_wypożyczalnia
+﻿using System;
+
+namespace Aplikacja_wypożyczalnia
 {
     partial class DodajKlientaFirma
     {
@@ -259,6 +261,21 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
