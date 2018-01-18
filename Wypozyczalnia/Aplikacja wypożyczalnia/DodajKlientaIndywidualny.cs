@@ -64,7 +64,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox8.Text) ||
-              !System.Text.RegularExpressions.Regex.IsMatch(textBox8.Text, @"^[A-Za-z0-9\-]{2,50}$"))
+              !System.Text.RegularExpressions.Regex.IsMatch(textBox8.Text, @"^[A-Za-z0-9\-,.-]{2,50}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu adres zamieszkania";
                 poprawneTextboxy = false;
