@@ -18,3 +18,13 @@ C:\Users\krychcia\Source\Repos\Wypozyczalnia\WypTest1\obj\Debug\WypTest1.csproj.
 C:\Users\krychcia\Source\Repos\Wypozyczalnia\WypTest1\obj\Debug\WypTest1.csproj.CoreCompileInputs.cache
 C:\Users\krychcia\Source\Repos\Wypozyczalnia\WypTest1\obj\Debug\WypTest1.exe
 C:\Users\krychcia\Source\Repos\Wypozyczalnia\WypTest1\obj\Debug\WypTest1.pdb
+C:\Users\Użytkownik\Source\Repos\Wypozyczalnia\WypTest1\bin\Debug\WypTest1.exe.config
+C:\Users\Użytkownik\Source\Repos\Wypozyczalnia\WypTest1\bin\Debug\WypTest1.exe
+C:\Users\Użytkownik\Source\Repos\Wypozyczalnia\WypTest1\bin\Debug\WypTest1.pdb
+C:\Users\Użytkownik\Source\Repos\Wypozyczalnia\WypTest1\obj\Debug\WypTest1.csprojResolveAssemblyReference.cache
+C:\Users\Użytkownik\Source\Repos\Wypozyczalnia\WypTest1\obj\Debug\WypTest1.Form1.resources
+C:\Users\Użytkownik\Source\Repos\Wypozyczalnia\WypTest1\obj\Debug\WypTest1.Properties.Resources.resources
+C:\Users\Użytkownik\Source\Repos\Wypozyczalnia\WypTest1\obj\Debug\WypTest1.csproj.GenerateResource.Cache
+C:\Users\Użytkownik\Source\Repos\Wypozyczalnia\WypTest1\obj\Debug\WypTest1.csproj.CoreCompileInputs.cache
+C:\Users\Użytkownik\Source\Repos\Wypozyczalnia\WypTest1\obj\Debug\WypTest1.exe
+C:\Users\Użytkownik\Source\Repos\Wypozyczalnia\WypTest1\obj\Debug\WypTest1.pdb
