@@ -16,19 +16,14 @@ namespace Aplikacja_wypożyczalnia
         public DodajKlientaIndywidualny()
         {
             InitializeComponent();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            RodzajKlienta rk = new RodzajKlienta();
-            rk.Show();
+            textBox1.ReadOnly = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             /// Pobranie danych z TextBoxów
-            int id = int.Parse(textBox1.Text);
+            //int id = int.Parse(textBox1.Text);
+            int id = Klient.MaksymalnyNumerIdentyfikatoraWBazie() + 1;
             string imie = textBox2.Text;
             string nazw = textBox3.Text;
             string nr = textBox4.Text;
@@ -47,7 +42,7 @@ namespace Aplikacja_wypożyczalnia
             Klient_indywidualny klientIndywidualny1 =
                 new Klient_indywidualny(imie, nazw, nr, psl, pl);
 
-            string exmsg_kl = klient1.DodajKlientaDoBazy();
+            string exmsg_kl = klient1.DodanieKlienta();
             string exmsg_ind = klientIndywidualny1.DodajKlientaIndywidualnegoDoBazy(klient1.Id_klienta);
             if (string.IsNullOrWhiteSpace(exmsg_kl))
                 MessageBox.Show("Dodano klienta do bazy");
@@ -57,6 +52,13 @@ namespace Aplikacja_wypożyczalnia
                 MessageBox.Show("Dodano połączenie oraz klienta indywidualnego do bazy");
             else
                 MessageBox.Show("Wystąpił błąd:\n" + exmsg_ind);
+        }
+
+        private void WsteczWS_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RodzajKlienta rk = new RodzajKlienta();
+            rk.Show();
         }
     }
 }

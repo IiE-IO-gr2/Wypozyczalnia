@@ -16,5 +16,13 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
+
+        private void wstecz_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Rezerwacja re = new Rezerwacja();
+            re.Show();
+
+        }
     }
 }

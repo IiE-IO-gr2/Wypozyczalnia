@@ -23,5 +23,10 @@ namespace Aplikacja_wypożyczalnia
             Wypozyczenia w = new Wypozyczenia();
             w.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

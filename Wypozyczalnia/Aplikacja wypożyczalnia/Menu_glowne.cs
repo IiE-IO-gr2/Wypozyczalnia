@@ -26,7 +26,10 @@ namespace Aplikacja_wypożyczalnia
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (Application.MessageLoop)
+            {
+                System.Windows.Forms.Application.Exit();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -34,16 +37,6 @@ namespace Aplikacja_wypożyczalnia
             this.Hide();
             Menu_po_zalogowaniu mpz = new Menu_po_zalogowaniu();
             mpz.Show();
-        }
-
-        private void Menu_glowne_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

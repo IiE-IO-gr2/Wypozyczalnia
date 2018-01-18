@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using System.Net.Mail;
 
 namespace Aplikacja_wypożyczalnia
 {
@@ -27,33 +28,6 @@ namespace Aplikacja_wypożyczalnia
             timer1.Start();
             data.Text = DateTime.Now.ToLongDateString();
             czas.Text = DateTime.Now.ToLongTimeString();
-
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void data_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -63,24 +37,12 @@ namespace Aplikacja_wypożyczalnia
 
         }
 
-        private void czas_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
-
         private void wylogowanie_Click(object sender, EventArgs e)
         {
-          
-
-                MessageBox.Show("Wylogowano");
-                this.Hide();
-                Panel_administratora pan = new Panel_administratora();
-                pan.Show();
-            
-
-         
+            MessageBox.Show("Wylogowano");
+            this.Hide();
+            Panel_administratora pan = new Panel_administratora();
+            pan.Show();
         }
 
         private void samochody_Click(object sender, EventArgs e)
@@ -93,8 +55,8 @@ namespace Aplikacja_wypożyczalnia
         private void rezerwacje_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Rezerwacja re = new Rezerwacja();
-            re.Show();
+            Rezerwacja rez = new Rezerwacja();
+            rez.Show();
         }
 
         private void klienci_Click(object sender, EventArgs e)
@@ -109,6 +71,21 @@ namespace Aplikacja_wypożyczalnia
             this.Hide();
             Wypozyczenia w = new Wypozyczenia();
             w.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string exmsg = "";
+            string tytulMaila = "Tytuł maila testowego";
+            string trescMaila = "Treść testowego wysyłania maili";
+            List<string> listaAdresatow = new List<string>();
+            listaAdresatow.Add("iie.io.gr2@gmail.com");
+            listaAdresatow.Add("k.e.golaszewska@gmail.com");
+            FunkcjePomicnicze.WyslijMaila(tytulMaila, trescMaila, listaAdresatow, ref exmsg);
+            if (string.IsNullOrWhiteSpace(exmsg))
+                MessageBox.Show("Wysylanie powiodlo sie.");
+            else
+                MessageBox.Show("Wysylanie nie powiodlo sie.");
         }
     }
 }

@@ -51,13 +51,14 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button1.Location = new System.Drawing.Point(376, 391);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Location = new System.Drawing.Point(506, 385);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 40);
+            this.button1.Size = new System.Drawing.Size(125, 65);
             this.button1.TabIndex = 51;
             this.button1.Text = "Zatwierdź";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox11
             // 
@@ -93,6 +94,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(180, 20);
             this.textBox7.TabIndex = 46;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // textBox5
             // 
@@ -100,6 +102,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(180, 20);
             this.textBox5.TabIndex = 44;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox2
             // 
@@ -107,6 +110,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(180, 20);
             this.textBox2.TabIndex = 41;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label12
             // 
@@ -213,14 +217,13 @@
             this.label1.Size = new System.Drawing.Size(260, 29);
             this.label1.TabIndex = 28;
             this.label1.Text = "Dodaj Klienta - Firma";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button5
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button5.Location = new System.Drawing.Point(21, 410);
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button5.Location = new System.Drawing.Point(240, 385);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 40);
+            this.button5.Size = new System.Drawing.Size(125, 65);
             this.button5.TabIndex = 52;
             this.button5.Text = "Wstecz";
             this.button5.UseVisualStyleBackColor = true;

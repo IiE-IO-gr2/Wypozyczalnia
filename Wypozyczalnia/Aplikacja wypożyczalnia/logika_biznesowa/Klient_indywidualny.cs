@@ -23,8 +23,12 @@ namespace logika_biznesowa {
 		/// p³eæ klienta indywidualnego
 		/// </summary>
 		public bool P³ec;
+        /// <summary>
+        /// w³asnoœæ wskazuj¹ca, czy dany klient zosta³ oznaczony w bazie jako usuniêty
+        /// </summary>
+        public bool CzyUsuniete;
 
-		private Wypo¿yczenie wypo¿yczenie;
+        private Wypo¿yczenie wypo¿yczenie;
         
         /// <summary>
         /// konstruktor klient indtywidualny
@@ -36,6 +40,7 @@ namespace logika_biznesowa {
             Numer_prawa_jazdy = nr;
             PESEL = ps;
             P³ec = pl;
+            CzyUsuniete = false;
         }
 
         /// <summary>
@@ -47,9 +52,9 @@ namespace logika_biznesowa {
             int plecBool = 0;
             if (P³ec == true)
                 plecBool = 1;
-            string zapytanie = @"insert into[dbo].[Klient_indywidualny]([Id_klienta], [Imiê], [Nazwisko], [Numer_prawa_jazdy], [PESEL], [P³ec])" +
-                @"values(" + identyfikator + ", '" + Imiê + "', '" + Nazwisko + "', '" + Numer_prawa_jazdy + "', " + PESEL + "," + plecBool + " )";
-            FunkcjeSQL.WstawDaneSQL(zapytanie, ref exmsg);
+            string zapytanie = @"insert into[dbo].[Klient_indywidualny]([Id_klienta], [Imiê], [Nazwisko], [Numer_prawa_jazdy], [PESEL], [P³ec], [CzyUsuniete])" +
+                @"values(" + identyfikator + ", '" + Imiê + "', '" + Nazwisko + "', '" + Numer_prawa_jazdy + "', " + PESEL + "," + plecBool + " , 0)";
+            FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             string exmsg1 = DodajDoBazyPolaczenieKlientaIndywidualnegoZKlientem(identyfikator);
             if (!string.IsNullOrWhiteSpace(exmsg1))
                 exmsg += exmsg1;
@@ -60,7 +65,7 @@ namespace logika_biznesowa {
         {
             string exmsg = "";
             string zapytanie = @"insert into[dbo].[Klient_KlientIndyw] values(" + identyfikator + "," + identyfikator + ")";
-            FunkcjeSQL.WstawDaneSQL(zapytanie, ref exmsg);
+            FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }
 	}

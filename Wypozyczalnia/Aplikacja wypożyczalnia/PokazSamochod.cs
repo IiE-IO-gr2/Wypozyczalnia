@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Aplikacja_wypożyczalnia
 {
-    public partial class Rezerwacjee : Form
+    public partial class PokazSamochod : Form
     {
-        public Rezerwacjee()
+        public PokazSamochod()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

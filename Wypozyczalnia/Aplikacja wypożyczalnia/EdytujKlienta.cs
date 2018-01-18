@@ -23,5 +23,10 @@ namespace Aplikacja_wypożyczalnia
             Klienci k = new Klienci();
             k.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
