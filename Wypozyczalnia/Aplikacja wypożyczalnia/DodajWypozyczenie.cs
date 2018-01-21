@@ -28,21 +28,5 @@ namespace Aplikacja_wypożyczalnia
         {
 
         }
-        
-        private void button1_Click(object sender, EventArgs e)
-        {
-            using (WybierzKlienta wk = new WybierzKlienta())
-            {
-                if (wk.ShowDialog() == DialogResult.OK)
-                {
-                    textBox3.Text = wk.pobraneIDKlientaWartosc;
-                }
-                else
-                {
-                    MessageBox.Show("Wystąpił nieoczekiwany błąd.");
-                }
-            }
-
-        }
     }
 }
