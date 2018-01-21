@@ -15,6 +15,7 @@ namespace Aplikacja_wypożyczalnia
         public Dodaj_rezerwacje()
         {
             InitializeComponent();
+            textBox1.ReadOnly = true;
         }
 
         private void rezerwacje_Click(object sender, EventArgs e)
