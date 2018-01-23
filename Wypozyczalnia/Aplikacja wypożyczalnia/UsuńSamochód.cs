@@ -27,23 +27,53 @@ namespace Aplikacja_wypożyczalnia
 
         private void ZatwierdźUS_Click(object sender, EventArgs e)
         {
-            try
+
+
+            /// Sprawdzenie poprawności danych w textboxie
+            string bladWTextboxach = "";
+            bool poprawneTextboxy = true;
+            if (string.IsNullOrWhiteSpace(textBox1.Text) ||
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox1.Text, @"^[0-9]{1,10}$"))
             {
-                int id = int.Parse(textBox1.Text);
-                string exmsg = Samochód.UsunSamochod(id);
-                if (!string.IsNullOrWhiteSpace(exmsg))
-                    MessageBox.Show("Wystąpił błąd:\n" + exmsg);
-                else
+                bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu ID";
+                poprawneTextboxy = false;
+            }
+
+            if (poprawneTextboxy == true)
+            {
+                /// Pobranie danych z TextBoxa
+                int id1 = int.Parse(textBox1.Text);
+
+                try
                 {
-                    MessageBox.Show("Usunięto samochód z bazy");
-                    textBox1.Clear();
-                    
+                    int id = int.Parse(textBox1.Text);
+                    string exmsg = Samochód.UsunSamochod(id);
+                    if (!string.IsNullOrWhiteSpace(exmsg))
+                        MessageBox.Show("Wystąpił błąd:\n" + exmsg);
+                    else
+                    {
+                        MessageBox.Show("Usunięto samochód z bazy");
+                        textBox1.Clear();
+                        
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Wystąpił błąd:\nNiepoprawny lub pusty numer identyfikacyjny");
                 }
             }
-            catch (Exception)
+
+            else
             {
-                MessageBox.Show("Wystąpił błąd:\nNiepoprawny lub pusty numer identyfikacyjny");
+                MessageBox.Show("Wystąpił błąd w danych wejściowych:" + bladWTextboxach);
+                bladWTextboxach = "";
+                poprawneTextboxy = true;
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
