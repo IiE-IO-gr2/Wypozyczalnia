@@ -11,17 +11,16 @@ using logika_biznesowa;
 
 namespace Aplikacja_wypożyczalnia
 {
-    public partial class WybierzKlienta : Form
+    public partial class WybierzKlientaIndywidualnego : Form
     {
-        public WybierzKlienta()
+        public WybierzKlientaIndywidualnego()
         {
             InitializeComponent();
         }
-
         private void WybierzKlienta_Load(object sender, EventArgs e)
         {
-            string zapytanie = @"select k.[Id_klienta],k.[Telefon_kontaktowy],k.[Adres],k.[Adres_email],k.[Promocja],k.[Aktywnosc], ki.[Nazwa_firmy], ki.[NIP]" +
-                @"from [dbo].[Klient] as k inner join [dbo].[Klient_firmy] as ki on k.[Id_klienta] = ki.[Id_klienta]";
+            string zapytanie = @"select k.[Id_klienta],k.[Telefon_kontaktowy],k.[Adres],k.[Adres_email],k.[Promocja],k.[Aktywnosc], ki.[Imię], ki.[NIP],ki.[Nazwisko],ki.[PESEL]" +
+                @"from [dbo].[Klient] as k inner join [dbo].[Klient_indywidualny] as ki on k.[Id_klienta] = ki.[Id_klienta]";
             string exmsg = "";
             DataTable dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
             if (!string.IsNullOrWhiteSpace(exmsg))
@@ -51,9 +50,11 @@ namespace Aplikacja_wypożyczalnia
                 MessageBox.Show("Nie wybrano klienta");
             }
         }
-        public string PobraneIDKlientaWartosc
+        public string pobraneIDKlientaWartosc
         {
             get { return pobraneIDKlienta.Text; }
         }
     }
 }
+
+  
