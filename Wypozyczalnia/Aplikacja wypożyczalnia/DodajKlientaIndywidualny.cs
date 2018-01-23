@@ -137,5 +137,7 @@ namespace Aplikacja_wypożyczalnia
             RodzajKlienta rk = new RodzajKlienta();
             rk.Show();
         }
+
+        
     }
 }
