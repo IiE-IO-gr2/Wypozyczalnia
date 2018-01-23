@@ -138,8 +138,8 @@ namespace logika_biznesowa {
             string poj = Pojemnosc.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
             string zuz = Zu¿ycie_paliwa.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
             string czd = Cena_za_dobê.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
-            string zapytanie = @"insert into [dbo].[Samochód] ([Id_samochodu], [Marka], [Model], [Pojemnosc], [Rodzaj_paliwa], [Typ_nadwozia], [Ilosc_koni], [Skrzynia_biegow], [Ilosc_biegów], [Zu¿ycie_paliwa], [Ilosc_miejsc], [Ilosc_drzwi], [Rocznik], [Kolor], [Cena_za_dobê], [Dostepnosc], [Inne], [Kaucja] )" +
-                @"values (" + Id_samochodu + ", '" + Marka + "' , '" + Model + "', " + Pojemnosc + ", '" + Rodzaj_paliwa + "', '" + Typ_nadwozia + "', " + Ilosc_koni + ", '" + Skrzynia_biegow + "', " + Ilosc_biegów + ", " + zuz + ", " + Ilosc_miejsc + ", " + Ilosc_drzwi + ", " + Rocznik + ", '" + Kolor + "', " + czd + ", " + dostbool + ", '" + Inne + "', " + Kaucja + " )";
+            string zapytanie = @"insert into [dbo].[Samochód] ([Id_samochodu], [Marka], [Model], [Pojemnosc], [Rodzaj_paliwa], [Typ_nadwozia], [Ilosc_koni], [Skrzynia_biegow], [Ilosc_biegów], [Zu¿ycie_paliwa], [Ilosc_miejsc], [Ilosc_drzwi], [Rocznik], [Kolor], [Cena_za_dobê], [Dostepnosc], [Inne], [Kaucja], [CzyUsuniete] )" +
+                @"values (" + Id_samochodu + ", '" + Marka + "' , '" + Model + "', " + Pojemnosc + ", '" + Rodzaj_paliwa + "', '" + Typ_nadwozia + "', " + Ilosc_koni + ", '" + Skrzynia_biegow + "', " + Ilosc_biegów + ", " + zuz + ", " + Ilosc_miejsc + ", " + Ilosc_drzwi + ", " + Rocznik + ", '" + Kolor + "', " + czd + ", " + dostbool + ", '" + Inne + "', " + Kaucja + ", 0)";
             FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }
