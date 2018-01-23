@@ -38,6 +38,12 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
 
+            if (poprawneTextboxy == true)
+            {
+                /// Pobranie danych z TextBoxa
+                int id = textBox1.Text;
+            }
+
             else
             {
                 MessageBox.Show("Wystąpił błąd w danych wejściowych:" + bladWTextboxach);
