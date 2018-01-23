@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.WsteczWS = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -46,18 +46,17 @@
             this.label1.Size = new System.Drawing.Size(93, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Klienci";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // WsteczWS
+            // button5
             // 
-            this.WsteczWS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.WsteczWS.Location = new System.Drawing.Point(362, 385);
-            this.WsteczWS.Name = "WsteczWS";
-            this.WsteczWS.Size = new System.Drawing.Size(125, 65);
-            this.WsteczWS.TabIndex = 55;
-            this.WsteczWS.Text = "Wstecz";
-            this.WsteczWS.UseVisualStyleBackColor = true;
-            this.WsteczWS.Click += new System.EventHandler(this.WsteczWS_Click);
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button5.Location = new System.Drawing.Point(362, 385);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(125, 65);
+            this.button5.TabIndex = 55;
+            this.button5.Text = "Wstecz";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button1
             // 
@@ -113,7 +112,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.WsteczWS);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label1);
             this.Name = "Klienci";
             this.Text = "Klienci";
@@ -125,7 +124,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button WsteczWS;
+        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

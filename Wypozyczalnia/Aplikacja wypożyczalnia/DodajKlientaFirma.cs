@@ -26,11 +26,6 @@ namespace Aplikacja_wypożyczalnia
             rk.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -39,7 +34,7 @@ namespace Aplikacja_wypożyczalnia
             bool poprawneTextboxy = true;
             MessageBox.Show("Dlugosc = " + textBox2.Text.Length);
             if (string.IsNullOrWhiteSpace(textBox2.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, @"^([A-Za-z0-9\-]){2,30}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, @"^([A-Za-z0-9\- ,.-ąęłóżćśźńŁŚĆŻŹ]){2,30}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu nazwa";
                 poprawneTextboxy = false;
@@ -50,6 +45,38 @@ namespace Aplikacja_wypożyczalnia
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu NIP";
                 poprawneTextboxy = false;
             }
+            if (string.IsNullOrWhiteSpace(textBox7.Text) ||
+               !System.Text.RegularExpressions.Regex.IsMatch(textBox7.Text, @"^[0-9]{9,11}$"))
+            {
+                bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu telefon kontaktowy";
+                poprawneTextboxy = false;
+            }
+            if (string.IsNullOrWhiteSpace(textBox8.Text) ||
+              !System.Text.RegularExpressions.Regex.IsMatch(textBox8.Text, @"^[A-Za-z0-9\- ,.-ąęłóżćśźńŁŚĆŻŹ]{2,50}$"))
+            {
+                bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu adres";
+                poprawneTextboxy = false;
+            }
+            if (string.IsNullOrWhiteSpace(textBox9.Text) ||
+              !System.Text.RegularExpressions.Regex.IsMatch(textBox9.Text, @"^[A-Za-z0-9\-,.@]{2,50}$"))
+            {
+                bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu adres e-mail";
+                poprawneTextboxy = false;
+            }
+            if (string.IsNullOrWhiteSpace(textBox10.Text) ||
+              !System.Text.RegularExpressions.Regex.IsMatch(textBox10.Text, @"^[0-9,.]{1,10}$"))
+            {
+                bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu promocja";
+                poprawneTextboxy = false;
+            }
+            if (string.IsNullOrWhiteSpace(textBox11.Text) ||
+              !System.Text.RegularExpressions.Regex.IsMatch(textBox11.Text, @"^[0-9]{1,20}$"))
+            {
+                bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu aktywność";
+                poprawneTextboxy = false;
+            }
+
+
             //
             // DOPISAĆ DLA RESZTY PÓL
             //
@@ -87,16 +114,6 @@ namespace Aplikacja_wypożyczalnia
                 bladWTextboxach = "";
                 poprawneTextboxy = true;
             }
-        }
-
-        private void DodajKlientaFirma_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

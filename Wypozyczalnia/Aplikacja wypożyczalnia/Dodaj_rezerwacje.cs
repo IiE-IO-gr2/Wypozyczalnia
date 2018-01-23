@@ -15,6 +15,7 @@ namespace Aplikacja_wypożyczalnia
         public Dodaj_rezerwacje()
         {
             InitializeComponent();
+            textBox1.ReadOnly = true;
         }
 
         private void rezerwacje_Click(object sender, EventArgs e)
@@ -38,6 +39,16 @@ namespace Aplikacja_wypożyczalnia
             {
                 MessageBox.Show("Nie można podać minionej daty.");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

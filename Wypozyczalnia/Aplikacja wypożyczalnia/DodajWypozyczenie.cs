@@ -23,5 +23,26 @@ namespace Aplikacja_wypożyczalnia
             Wypozyczenia w = new Wypozyczenia();
             w.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (WybierzKlienta wk = new WybierzKlienta())
+            {
+                if (wk.ShowDialog() == DialogResult.OK)
+                {
+                    textBox3.Text = wk.pobraneIDKlientaWartosc;
+                }
+                else
+                {
+                    MessageBox.Show("Wystąpił nieoczekiwany błąd.");
+                }
+            }
+
+        }
     }
 }
