@@ -11,18 +11,20 @@ using logika_biznesowa;
 
 namespace Aplikacja_wypożyczalnia
 {
-    public partial class WybierzKlienta : Form
+    public partial class WybierzSamoch : Form
     {
-        public WybierzKlienta()
+        public WybierzSamoch()
         {
             InitializeComponent();
         }
-
-        private void WybierzKlienta_Load(object sender, EventArgs e)
+        
+        private void WybierzSamochod_Load(object sender, EventArgs e)
         {
-            string zapytanie = @"select k.[Id_klienta],k.[Telefon_kontaktowy],k.[Adres],k.[Adres_email],k.[Promocja],k.[Aktywnosc], ki.[Nazwa_firmy], ki.[NIP]" +
-                @"from [dbo].[Klient] as k inner join [dbo].[Klient_firmy] as ki on k.[Id_klienta] = ki.[Id_klienta]";
+            string zapytanie = @"select [Id_samochodu],[Marka],[Model],[Cena_za_dobę],[Kaucja],[Pojemnosc],[Rodzaj_paliwa],[Rocznik],[Kolor],s[Dostepnosc]" +
+                @"from [dbo].[Samochód] as s inner join [dbo].[Samochód] as si on s.[Id_samochodu] = si.[Id_samochodu]";
+
             string exmsg = "";
+
             DataTable dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
             if (!string.IsNullOrWhiteSpace(exmsg))
             {
@@ -41,8 +43,10 @@ namespace Aplikacja_wypożyczalnia
             {
                 DataRow dr = (dataGridView1.SelectedRows[0].DataBoundItem as DataRowView).Row;
                 string id = dr.ItemArray[0].ToString();
-                MessageBox.Show("ID wybranego klienta " + id);
-                pobraneIDKlienta.Text = id;
+                MessageBox.Show("ID wybranego samochodu " + id);
+                PobraneIDSam.Text = id;
+                string cena = dr.ItemArray[4].ToString();
+                Kwota.Text = cena;
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
@@ -51,9 +55,25 @@ namespace Aplikacja_wypożyczalnia
                 MessageBox.Show("Nie wybrano klienta");
             }
         }
-        public string PobraneIDKlientaWartosc
+
+        public string PobraneIDSamWartosc
         {
-            get { return pobraneIDKlienta.Text; }
+            get { return PobraneIDSam.Text; }
         }
+
+    
+        public string KwotaWart 
+        {
+            get { return Kwota.Text; }
+        }
+
+
+        
+        //private void pobraneIDKlienta_TextChanged(object sender, EventArgs e)
+        //{
+
+        //}
     }
 }
+    
+
