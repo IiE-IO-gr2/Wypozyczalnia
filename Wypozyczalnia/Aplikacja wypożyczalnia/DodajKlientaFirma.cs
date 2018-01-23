@@ -32,7 +32,7 @@ namespace Aplikacja_wypożyczalnia
             /// Sprawdzenie poprawności danych w textboxach
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
-            MessageBox.Show("Dlugosc = " + textBox2.Text.Length);
+           
             if (string.IsNullOrWhiteSpace(textBox2.Text) ||
                 !System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, @"^([A-Za-z0-9\- ,.-ąęłóżćśźńŁŚĆŻŹ]){2,30}$"))
             {
