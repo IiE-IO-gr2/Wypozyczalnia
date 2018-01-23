@@ -39,6 +39,24 @@ namespace Aplikacja_wypożyczalnia
             {
                 MessageBox.Show("Nie można podać minionej daty.");
             }
+
+            /// Sprawdzenie poprawności danych w textboxach
+            string bladWTextboxach = "";
+            bool poprawneTextboxy = true;
+
+            if (string.IsNullOrWhiteSpace(textBox1.Text) ||
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox1.Text, @"^[0-9]{1,10}$" ))
+            {
+                bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu ID rezerwacji";
+                poprawneTextboxy = false;
+            }
+            else
+            {
+                MessageBox.Show("Wystąpiły błędy w danych wejściowych:" + bladWTextboxach);
+                bladWTextboxach = "";
+                poprawneTextboxy = true;
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
