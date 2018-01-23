@@ -46,7 +46,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox3.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, @"^([0-9]){2,10}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, @"^[0-9,.]{1,10}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu pojemność";
                 poprawneTextboxy = false;
@@ -64,7 +64,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox7.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox7.Text, @"^[0-9]{10}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox7.Text, @"^[0-9]{1,4}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu ilość koni";
                 poprawneTextboxy = false;
@@ -82,7 +82,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox10.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox10.Text, @"^([0-9]){2,5}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox10.Text, @"^[0-9,.]{1,10}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu zużycie paliwa";
                 poprawneTextboxy = false;
@@ -117,6 +117,12 @@ namespace Aplikacja_wypożyczalnia
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu cena za dobę";
                 poprawneTextboxy = false;
             }
+            if (string.IsNullOrWhiteSpace(textBox16.Text) ||
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox16.Text, @"^([0-1]){1}$"))
+            {
+                bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu dostępność";
+                poprawneTextboxy = false;
+            }
             if (string.IsNullOrWhiteSpace(textBox18.Text) ||
                   !System.Text.RegularExpressions.Regex.IsMatch(textBox18.Text, @"^([0-9]){2,10}$"))
             {
@@ -140,7 +146,9 @@ namespace Aplikacja_wypożyczalnia
                 int roc = int.Parse(textBox13.Text);
                 string kol = textBox14.Text;
                 double czd = double.Parse(textBox15.Text);
-                bool dostep = bool.Parse(textBox16.Text);
+                bool dostep = false;
+                if (textBox16.Text == "1")
+                    dostep = true;
                 string inne = textBox17.Text;
                 int ka = int.Parse(textBox18.Text);
 
@@ -159,10 +167,7 @@ namespace Aplikacja_wypożyczalnia
                 bladWTextboxach = "";
                 poprawneTextboxy = true;
             }
-            MessageBox.Show("Dodano samochód");
-            this.Hide();
-            DodajSamochód dod = new DodajSamochód();
-            dod.Show();
+            
         }
 
         
