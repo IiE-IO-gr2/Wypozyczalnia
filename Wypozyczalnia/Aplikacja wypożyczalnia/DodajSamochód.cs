@@ -39,14 +39,14 @@ namespace Aplikacja_wypożyczalnia
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu marka";
                 poprawneTextboxy = false;
             }
-            if (string.IsNullOrWhiteSpace(textBox4.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox4.Text, @"^([A-Za-z0-9\-]){2,30}$"))
+            if (string.IsNullOrWhiteSpace(textBox3.Text) ||
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, @"^([A-Za-z0-9\-]){2,30}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu model";
                 poprawneTextboxy = false;
             }
-            if (string.IsNullOrWhiteSpace(textBox3.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, @"^[0-9,.]{1,10}$"))
+            if (string.IsNullOrWhiteSpace(textBox4.Text) ||
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox4.Text, @"^[0-9,.]{1,10}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu pojemność";
                 poprawneTextboxy = false;
@@ -133,8 +133,8 @@ namespace Aplikacja_wypożyczalnia
             {
                 int id = Samochód.MaksymalnyNumerIdentyfikatoraWBazie() + 1;
                 string mar = textBox2.Text;
-                string mod = textBox4.Text;
-                double poj = double.Parse(textBox3.Text);
+                string mod = textBox3.Text;
+                double poj = double.Parse(textBox4.Text);
                 string rp = textBox5.Text;
                 string tn = textBox6.Text;
                 int ik = int.Parse(textBox7.Text);
@@ -170,6 +170,9 @@ namespace Aplikacja_wypożyczalnia
             
         }
 
-        
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
