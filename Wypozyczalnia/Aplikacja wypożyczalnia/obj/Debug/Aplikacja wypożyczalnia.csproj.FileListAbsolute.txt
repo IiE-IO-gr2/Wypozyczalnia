@@ -197,7 +197,6 @@ C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\
 C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.EdytujSamochód.resources
 C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.EdytujWypozyczenie.resources
 C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Edytuj_rezerwacje.resources
-C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Form1.resources
 C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Klienci.resources
 C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Menu_po_zalogowaniu.resources
 C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Menu_glowne.resources
@@ -311,3 +310,5 @@ C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\b
 C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\bin\Debug\Aplikacja wypożyczalnia.pdb
 C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja wypożyczalnia.exe
 C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja wypożyczalnia.pdb
+C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WybierzKlientaIndywidualnego.resources
+C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WybierzSamoch.resources
