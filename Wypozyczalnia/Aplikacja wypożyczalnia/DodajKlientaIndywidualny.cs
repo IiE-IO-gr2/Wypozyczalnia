@@ -138,9 +138,6 @@ namespace Aplikacja_wypożyczalnia
             rk.Show();
         }
 
-        private void WsteczWS_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
