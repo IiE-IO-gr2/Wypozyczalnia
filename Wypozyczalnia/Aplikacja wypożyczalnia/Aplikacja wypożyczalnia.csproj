@@ -98,12 +98,6 @@
     <Compile Include="Edytuj_rezerwacje.Designer.cs">
       <DependentUpon>Edytuj_rezerwacje.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="FunkcjePomocnicze.cs" />
     <Compile Include="Klienci.cs">
       <SubType>Form</SubType>
@@ -212,6 +206,18 @@
     <Compile Include="WybierzKlienta.Designer.cs">
       <DependentUpon>WybierzKlienta.cs</DependentUpon>
     </Compile>
+    <Compile Include="WybierzKlientaIndywidualnego.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WybierzKlientaIndywidualnego.Designer.cs">
+      <DependentUpon>WybierzKlientaIndywidualnego.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WybierzSamoch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WybierzSamoch.Designer.cs">
+      <DependentUpon>WybierzSamoch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wypozyczenia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,9 +274,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Edytuj_rezerwacje.resx">
       <DependentUpon>Edytuj_rezerwacje.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Klienci.resx">
       <DependentUpon>Klienci.cs</DependentUpon>
@@ -329,6 +332,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WybierzKlienta.resx">
       <DependentUpon>WybierzKlienta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WybierzKlientaIndywidualnego.resx">
+      <DependentUpon>WybierzKlientaIndywidualnego.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WybierzSamoch.resx">
+      <DependentUpon>WybierzSamoch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wypozyczenia.resx">
       <DependentUpon>Wypozyczenia.cs</DependentUpon>
