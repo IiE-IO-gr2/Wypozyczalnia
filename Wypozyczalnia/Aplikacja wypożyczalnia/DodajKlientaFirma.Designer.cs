@@ -96,7 +96,6 @@ namespace Aplikacja_wypożyczalnia
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(180, 20);
             this.textBox7.TabIndex = 46;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // textBox5
             // 
@@ -104,7 +103,6 @@ namespace Aplikacja_wypożyczalnia
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(180, 20);
             this.textBox5.TabIndex = 44;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox2
             // 
@@ -112,7 +110,6 @@ namespace Aplikacja_wypożyczalnia
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(180, 20);
             this.textBox2.TabIndex = 41;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label12
             // 
@@ -193,6 +190,7 @@ namespace Aplikacja_wypożyczalnia
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(425, 68);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 20);
@@ -263,20 +261,7 @@ namespace Aplikacja_wypożyczalnia
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         #endregion
 

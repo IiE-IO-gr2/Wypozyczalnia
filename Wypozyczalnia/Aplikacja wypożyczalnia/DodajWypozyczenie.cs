@@ -15,6 +15,17 @@ namespace Aplikacja_wypożyczalnia
         public DodajWypozyczenie()
         {
             InitializeComponent();
+            /// Tu chciałam obliczyć ilość dni, później trzeba to pomnożyć przez cenę za dobę 
+            ///i mamy wartość wypożyczenia
+            ///
+            DateTime dts = dateTimePicker1.Value.Date;
+            DateTime dte = dateTimePicker2.Value.Date;
+            TimeSpan ts = dte - dts;
+
+            int days = ts.Days;
+            
+
+            
         }
 
         private void wstecz_Click(object sender, EventArgs e)
@@ -26,7 +37,18 @@ namespace Aplikacja_wypożyczalnia
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            using (WybierzSamoch ws = new WybierzSamoch())
+            {
+                if (ws.ShowDialog() == DialogResult.OK)
+                {
+                    textBox4.Text = ws.PobraneIDSamWartosc;
+                    textBox5.Text = ws.KwotaWart;
+                }
+                else
+                {
+                    MessageBox.Show("Wystąpił nieoczekiwany błąd.");
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,7 +57,7 @@ namespace Aplikacja_wypożyczalnia
             {
                 if (wk.ShowDialog() == DialogResult.OK)
                 {
-                    textBox3.Text = wk.pobraneIDKlientaWartosc;
+                    textBox3.Text = wk.PobraneIDKlientaWartosc;
                 }
                 else
                 {
@@ -44,5 +66,32 @@ namespace Aplikacja_wypożyczalnia
             }
 
         }
+        
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            using (WybierzKlientaIndywidualnego wki = new WybierzKlientaIndywidualnego())
+            {
+                if (wki.ShowDialog() == DialogResult.OK)
+                {
+                    textBox3.Text = wki.pobraneIDKlientaWartosc;
+                }
+                else
+                {
+                    MessageBox.Show("Wystąpił nieoczekiwany błąd.");
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
