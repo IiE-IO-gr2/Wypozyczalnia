@@ -51,5 +51,15 @@ namespace Aplikacja_wypożyczalnia
             EdytujKlienta ek = new EdytujKlienta();
             ek.Show();
         }
+
+        
+
+        private void WsteczWS_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu_po_zalogowaniu mpz = new Menu_po_zalogowaniu();
+            mpz.Show();
+        }
+
     }
 }

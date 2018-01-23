@@ -25,7 +25,7 @@ namespace Aplikacja_wypożyczalnia
             /// Sprawdzenie poprawności danych w textboxach
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
-            MessageBox.Show("Dlugosc = " + textBox2.Text.Length);
+            
             if (string.IsNullOrWhiteSpace(textBox2.Text) ||
                 !System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, @"^([A-Za-ząęłóżćśźńŁŚĆŻŹ]){2,20}$"))
             {
@@ -137,5 +137,7 @@ namespace Aplikacja_wypożyczalnia
             RodzajKlienta rk = new RodzajKlienta();
             rk.Show();
         }
+
+        
     }
 }
