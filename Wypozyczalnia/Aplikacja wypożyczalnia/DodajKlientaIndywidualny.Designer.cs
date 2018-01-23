@@ -285,6 +285,7 @@
             this.WsteczWS.TabIndex = 37;
             this.WsteczWS.Text = "Wstecz";
             this.WsteczWS.UseVisualStyleBackColor = true;
+            this.WsteczWS.Click += new System.EventHandler(this.WsteczWS_Click);
             // 
             // DodajKlientaIndywidualny
             // 

@@ -75,5 +75,10 @@ namespace Aplikacja_wypożyczalnia
         {
 
         }
+
+        private void WsteczWS_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
