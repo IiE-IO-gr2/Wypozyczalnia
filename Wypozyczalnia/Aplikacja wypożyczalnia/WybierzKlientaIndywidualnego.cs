@@ -75,12 +75,12 @@ namespace Aplikacja_wypożyczalnia
             get { return pobraneIDKlienta.Text; }
         }
 
-        public string PobranaIloscWypozyczen
+        public string PobranaIloscWypozyczenIND
         {
             get { return pobranaIloscWypozyczen.Text; }
         }
 
-        public string PobranaZnizkaLojalnosciowa
+        public string PobranaZnizkaLojalnosciowaIND
         {
             get { return pobranaZnizkaLojalnosciowa.Text; }
         }
