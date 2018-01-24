@@ -3,7 +3,8 @@ using System.Data;
 using System.Globalization;
 
 namespace logika_biznesowa {
-	public class Rezerwacja {
+	public class Rezerwacja
+    {
 		/// <summary>
 		/// numer id rezerwacji
 		/// </summary>
