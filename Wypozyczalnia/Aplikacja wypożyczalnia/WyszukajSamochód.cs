@@ -17,14 +17,16 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
-
+        //Przycisk, który cofa do poprzedniej sekcji tj. Samochód
         private void WsteczWS_Click(object sender, EventArgs e)
         {
             this.Hide();
             Samochody ws = new Samochody();
             ws.Show();
         }
-
+        /*Zatwierdza i wyszukuje w bazie samochodu o wpisanym numerze id,
+        jeśli samochodu o takim id nie ma w bazie pojawia się odpowiednia informacja.
+        */
         private void ZatwierdźWS_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = new DataTable();
@@ -48,6 +50,7 @@ namespace Aplikacja_wypożyczalnia
                 }
                 else
                 {
+                    //w oknie pojawia się wyszukiwany samochód ze wszystkimi atrybutami
                     dataGridView1.DataSource = dt;
                 }
             }
@@ -65,6 +68,11 @@ namespace Aplikacja_wypożyczalnia
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void WyszukajSamochód_Load(object sender, EventArgs e)
         {
 
         }

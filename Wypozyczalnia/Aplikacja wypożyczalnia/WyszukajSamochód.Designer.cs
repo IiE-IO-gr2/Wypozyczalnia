@@ -112,6 +112,7 @@
             this.Controls.Add(this.label2);
             this.Name = "WyszukajSamochód";
             this.Text = "WyszukajSamochód";
+            this.Load += new System.EventHandler(this.WyszukajSamochód_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
