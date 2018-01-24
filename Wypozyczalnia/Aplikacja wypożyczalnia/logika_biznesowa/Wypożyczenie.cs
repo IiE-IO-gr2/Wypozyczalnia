@@ -1,22 +1,25 @@
 using System;
+using System.Data;
+using System.Globalization;
 namespace logika_biznesowa {
-	public class Wypo¿yczenie {
-		/// <summary>
-		/// numer id wypo¿yczenia
-		/// </summary>
-		public int ID_wypo¿yczenia;
-		/// <summary>
-		/// data wypo¿yczenia samochodu
-		/// </summary>
-		public DateTime Data_wypo¿yczenia;
-		/// <summary>
-		/// data planowanego zwrotu samochodu
-		/// </summary>
-		public DateTime Data_planowanego_zwrotu;
-		/// <summary>
-		/// cena za wypo¿yczenie samochodu
-		/// </summary>
-		public double Cena_za_wypozyczenie;
+    public class Wypo¿yczenie
+    {
+        /// <summary>
+        /// numer id wypo¿yczenia
+        /// </summary>
+        public int ID_wypo¿yczenia;
+        /// <summary>
+        /// data wypo¿yczenia samochodu
+        /// </summary>
+        public DateTime Data_wypo¿yczenia;
+        /// <summary>
+        /// data planowanego zwrotu samochodu
+        /// </summary>
+        public DateTime Data_planowanego_zwrotu;
+        /// <summary>
+        /// cena za wypo¿yczenie samochodu
+        /// </summary>
+        public double Cena_za_wypozyczenie;
 
 
         public Wypo¿yczenie()
@@ -38,9 +41,9 @@ namespace logika_biznesowa {
             Cena_za_wypozyczenie = czp;
         }
 
-		/// <summary>
-		/// metoda dodaj¹ca wypo¿yczenie do bazy
-		/// </summary>
+        /// <summary>
+        /// metoda dodaj¹ca wypo¿yczenie do bazy
+        /// </summary>
 
         public string DodajWypozyczenie()
         {
@@ -50,11 +53,11 @@ namespace logika_biznesowa {
             FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }
-		
-		/// <summary>
-		/// metoda usuwaj¹ca wypo¿yczenie z bazy
-		/// </summary>
-		public static string UsunWypozyczenie(int identyfikator)
+
+        /// <summary>
+        /// metoda usuwaj¹ca wypo¿yczenie z bazy
+        /// </summary>
+        public static string UsunWypozyczenie(int identyfikator)
         {
             string zapytanieCzyWypozyczenieIstnieje = @"SELECT count(*) FROM [dbo].[Wypo¿yczenie] WHERE [ID_wypo¿yczenia] = " + identyfikator;
             string exmsgTest = "";
@@ -85,30 +88,30 @@ namespace logika_biznesowa {
                 else
                     return "Nie odnaleziono wypo¿yczenia o podanym ID";
             }
-		}
-		/// <summary>
-		/// metoda edytuj¹ca wypo¿yczenie w bazie
-		/// </summary>
-		public void EdytujWypozyczenie() {
-			throw new System.Exception("Not implemented");
-		}
-		/// <summary>
-		/// metoda wyszukuj¹ca wypo¿yczenie w bazie
-		/// </summary>
-		public void WyszukajWypozyczenie() {
-			throw new System.Exception("Not implemented");
-		}
-		/// <summary>
-		/// metoda pokazuj¹ca wypo¿yczenie w bazie
-		/// </summary>
-		public void PokazWypozyczenie() {
-			throw new System.Exception("Not implemented");
-		}
+        }
+        /// <summary>
+        /// metoda edytuj¹ca wypo¿yczenie w bazie
+        /// </summary>
+        public void EdytujWypozyczenie()
+        {
+            throw new System.Exception("Not implemented");
+        }
+        /// <summary>
+        /// metoda wyszukuj¹ca wypo¿yczenie w bazie
+        /// </summary>
+        public void WyszukajWypozyczenie()
+        {
+            throw new System.Exception("Not implemented");
+        }
+        /// <summary>
+        /// metoda pokazuj¹ca wypo¿yczenie w bazie
+        /// </summary>
+        
 
-		private Rezerwacja rezerwacja;
+        private Rezerwacja rezerwacja;
 
-		private Klient_indywidualny klient_indywidualny;
-		private Rozliczenie rozliczenie;
+        private Klient_indywidualny klient_indywidualny;
+        private Rozliczenie rozliczenie;
 
 
         public static int MaksymalnyNumerIdentyfikatoraWBazie()
@@ -121,6 +124,61 @@ namespace logika_biznesowa {
             else
                 return 0;
         }
-	}
+
+
+        public static DataTable WyszukajWypozyczenie(int identyfikator, ref string _exmsg)
+        {
+            DataTable dt = new DataTable();
+            string zapytanieCzyKlientIstnieje = @"SELECT count(*) from [dbo].[Wypo¿yczenie] WHERE (([CzyUsuniete] = 0 or [CzyUsuniete] is null)" +
+                @"and [ID_wypo¿yczenia] = " + identyfikator + ")";
+            string exmsgTest = "";
+            string zwrotZapytanieCzyWypozyczenieIstnieje = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanieCzyKlientIstnieje, ref exmsgTest);
+            if (!string.IsNullOrWhiteSpace(exmsgTest)) // zapytanie testuj¹ce, czy w bazie jest wypo¿yczenie o danym ID zwróci³o b³¹d
+            {
+                _exmsg = exmsgTest;
+                return dt;
+            }
+            else // zapytanie nie zwróci³o b³êdu
+            {
+                string zapytanie = "";
+                if (zwrotZapytanieCzyWypozyczenieIstnieje != "0") // zapytanie zwróci³o znalezienie w bazie klientów rekordu o podanym ID
+                {
+                    zapytanie = @"select [ID_wypo¿yczenia],[Data_wypo¿yczenia],[Data_planowanego_zwrotu],[Cena_za_wypozyczenie],[CzyUsuniete]" +
+                    @"from [dbo].[Wypo¿yczenie]" + identyfikator;
+
+                    // pobranie danych z bazy
+                    string exmsg = "";
+                    dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
+                    if (!string.IsNullOrWhiteSpace(exmsg))
+                        _exmsg += "\n" + exmsg;
+                    if (!string.IsNullOrWhiteSpace(exmsg))
+                        _exmsg += "\n" + exmsg;
+                    return dt;
+                }
+                else
+                {
+                    _exmsg = "Nie odnaleziono wypo¿yczenia o podanym ID";
+                    return dt;
+                }
+            }
+        }
+
+        public static DataTable PokazWypozyczenie(ref string _exmsg)
+        {
+            DataTable dt = new DataTable();
+
+            string zapytanie = @"select [ID_wypo¿yczenia],[Data_wypo¿yczenia],[Data_planowanego_zwrotu],[Cena_za_wypozyczenie],[CzyUsuniete]" +
+                @"from [dbo].[Wypo¿yczenie]";
+            //Pobieranie danych z bazy
+            string exmsg = "";
+
+            dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
+            return dt;
+
+
+
+        }
+    } 
+
 
 }
