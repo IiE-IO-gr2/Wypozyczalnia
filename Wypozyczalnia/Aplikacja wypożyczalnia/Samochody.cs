@@ -16,35 +16,48 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
-        //Przycisk przekierowuje do opcji dodania samochodu do bazy
+        /// <summary>
+        /// Przycisk przekierowuje do opcji dodania samochodu do bazy
+        /// </summary>
+       
         private void DodajSamochód_Click(object sender, EventArgs e)
         {
             this.Hide();
             DodajSamochód ds = new DodajSamochód();
             ds.Show();
         }
-        //Przycisk przekierowuje do opcji edycji samochodu w bazie
+        /// <summary>
+        /// Przycisk przekierowuje do opcji edycji samochodu w bazie
+        /// </summary>
+       
         private void EdytujSamochód_Click(object sender, EventArgs e)
         {
             this.Hide();
             EdytujSamochód es = new EdytujSamochód();
             es.Show();
         }
-        //Przycisk przekierowuje do opcji usuwaniua samochodu z bazy
+        /// <summary>
+        /// Przycisk przekierowuje do opcji usuwaniua samochodu z bazy
+        /// </summary>
+
         private void UsuńSamochód_Click(object sender, EventArgs e)
         {
             this.Hide();
             UsuńSamochód us = new UsuńSamochód();
             us.Show();
         }
-        //Przycisk przekierowuje do opcji wyszukania samochodu w bazie
+        /// <summary>
+        /// Przycisk przekierowuje do opcji wyszukania samochodu w bazie
+        /// </summary>
         private void WyszukajSamochód_Click(object sender, EventArgs e)
         {
             this.Hide();
             WyszukajSamochód ws = new WyszukajSamochód();
             ws.Show();
         }
-        //Przycisk przekierowuje do Menu główne po zalogowaniu
+        /// <summary>
+        /// Przycisk przekierowuje do Menu główne po zalogowaniu
+        /// </summary>
         private void MenuGłówne_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -55,6 +68,15 @@ namespace Aplikacja_wypożyczalnia
         private void Samochody_Load(object sender, EventArgs e)
         {
 
+        }
+        /// <summary>
+        /// Przycisk przekierowuje do listy samochodów
+        /// </summary>
+        private void ListaSamochodow_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PokazSamochody ws = new PokazSamochody();
+            ws.Show();
         }
     }
 }
