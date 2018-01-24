@@ -45,14 +45,13 @@ namespace Aplikacja_wypożyczalnia
                 string id = dr.ItemArray[0].ToString();
                 MessageBox.Show("ID wybranego samochodu " + id);
                 PobraneIDSam.Text = id;
-                string cena = dr.ItemArray[4].ToString();
-                Kwota.Text = cena;
+           
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             catch (Exception)
             {
-                MessageBox.Show("Nie wybrano klienta");
+                MessageBox.Show("Nie wybrano samochodu");
             }
         }
 

@@ -1,4 +1,7 @@
 using System;
+using System.Data;
+using System.Globalization;
+
 namespace logika_biznesowa {
 	public class Rezerwacja {
 		/// <summary>
@@ -88,12 +91,45 @@ namespace logika_biznesowa {
                     return "Nie odnaleziono rezerwacji o podanym ID";
             }
 		}
-		/// <summary>
-		/// metoda, która wyszukuje rezerwacjê
-		/// </summary>
-		public void WyszukajRezerwacje() {
-			throw new System.Exception("Not implemented");
-		}
+        /// <summary>
+        /// metoda, która wyszukuje rezerwacjê
+        /// </summary>
+        public static DataTable WyszukajRezerwacje(int identyfikator, ref string _exmsg)
+        {
+            //throw new System.Exception("Not implemented");
+            DataTable dt = new DataTable();
+            string zapytanieCzyRezerwacjaIstnieje = @"SELECT count(*) from [dbo].[Rezerwacja] WHERE (([CzyUsuniete] = 0 or [CzyUsuniete] is null)" +
+                @"and [Id_rezerwacji] = " + identyfikator + ")";
+            string exmsgTest = "";
+            string zwrotZapytanieCzyRezerwacjaIstnieje = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanieCzyRezerwacjaIstnieje, ref exmsgTest);
+            if (!string.IsNullOrWhiteSpace(exmsgTest)) // zapytanie testuj¹ce, czy w bazie jest rezerwacja o danym ID zwróci³o b³¹d
+            {
+                _exmsg = exmsgTest;
+                return dt;
+            }
+            else // zapytanie nie zwróci³o b³êdu
+            {
+                if (zwrotZapytanieCzyRezerwacjaIstnieje != "0") // zapytanie zwróci³o znalezienie w bazie rezerwacja rekordu o podanym ID
+                {
+                    string exmsg = "";
+                    string zapytanie = "";
+                    zapytanie = @"SELECT * from[dbo].[Rezerwacja] WHERE [Id_rezerwacji] = " + identyfikator;
+                    // pobranie danych z bazy
+                    string exmsg1 = "";
+                    dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg1);
+                    if (!string.IsNullOrWhiteSpace(exmsg))
+                        _exmsg += "\n" + exmsg;
+                    if (!string.IsNullOrWhiteSpace(exmsg1))
+                        _exmsg += "\n" + exmsg1;
+                    return dt;
+                }
+                else
+                {
+                    _exmsg = "Nie odnaleziono rezerwacji o podanym ID";
+                    return dt;
+                }
+            }
+        }
 
 		private Samochód samochód;
 		private Klient klient;

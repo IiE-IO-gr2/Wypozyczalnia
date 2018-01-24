@@ -42,7 +42,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(287, 150);
+            this.label1.Location = new System.Drawing.Point(225, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 20);
             this.label1.TabIndex = 28;
@@ -50,7 +50,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(405, 150);
+            this.textBox1.Location = new System.Drawing.Point(382, 66);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 39;
@@ -82,7 +82,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(296, 63);
+            this.label2.Location = new System.Drawing.Point(286, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(256, 29);
             this.label2.TabIndex = 48;
@@ -90,14 +90,11 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(53, 202);
+            this.dataGridView1.Location = new System.Drawing.Point(71, 108);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(783, 80);
-            this.dataGridView1.TabIndex = 55;
+            this.dataGridView1.Size = new System.Drawing.Size(686, 212);
+            this.dataGridView1.TabIndex = 49;
             // 
             // Wyszukaj_rezerwacje
             // 
