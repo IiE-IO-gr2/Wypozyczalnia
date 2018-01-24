@@ -111,11 +111,11 @@ namespace Aplikacja_wypożyczalnia
                 int id = Wypożyczenie.MaksymalnyNumerIdentyfikatoraWBazie() + 1;
                 string nazwa = textBox2.Text;
                 string nip = textBox5.Text;
-                string tl = textBox7.Text;
+               /* string tl = textBox7.Text;
                 string ad = textBox8.Text;
                 string em = textBox9.Text;
                 double pr = double.Parse(textBox10.Text);
-                int ak = int.Parse(textBox11.Text);
+                int ak = int.Parse(textBox11.Text);*/
                 /// Stworzenie obiektów reprezentujących podane dane
                 Klient klient1 = new Klient(id, tl, ad, em, pr, ak);
                 Klient_firmy klientFirma1 =
