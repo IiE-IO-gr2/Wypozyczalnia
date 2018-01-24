@@ -153,6 +153,7 @@
             this.button3.TabIndex = 48;
             this.button3.Text = "Zapisz zmiany";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // wstecz
             // 
