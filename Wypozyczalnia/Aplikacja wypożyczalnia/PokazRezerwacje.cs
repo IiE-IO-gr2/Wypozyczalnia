@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using logika_biznesowa;
 
+//using logika_biznesowa nie chce działać, przez to nie zczytuje metod
 namespace Aplikacja_wypożyczalnia
 {
     public partial class PokazRezerwacje : Form
@@ -24,6 +25,21 @@ namespace Aplikacja_wypożyczalnia
             Rezerwacje re = new Rezerwacje();
             re.Show();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = new DataTable();
+            string exmsg = "";
+            DataTable dt = Rezerwacja.PokazRezerwacje(ref exmsg);
+            if (!string.IsNullOrWhiteSpace(exmsg))
+            {
+                MessageBox.Show("Wystąpił błąd: " + exmsg);
+            }
+            else
+            {
+                dataGridView1.DataSource = dt;
+            }
         }
     }
 }
