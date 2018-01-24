@@ -1,6 +1,6 @@
 ﻿namespace Aplikacja_wypożyczalnia
 {
-    partial class Rezerwacja
+    partial class Rezerwacje
     {
         /// <summary>
         /// Required designer variable.

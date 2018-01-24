@@ -21,7 +21,7 @@ namespace Aplikacja_wypożyczalnia
         private void wstecz_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Rezerwacja re = new Rezerwacja();
+            Rezerwacje re = new Rezerwacje();
             re.Show();
 
         }
