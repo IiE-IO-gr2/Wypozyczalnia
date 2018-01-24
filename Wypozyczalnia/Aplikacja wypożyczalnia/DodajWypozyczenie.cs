@@ -67,8 +67,8 @@ namespace Aplikacja_wypożyczalnia
                 if (wki.ShowDialog() == DialogResult.OK)
                 {
                     textBox3.Text = wki.PobraneIDKlientaWartosc;
-                    textBox6.Text = wki.PobranaZnizkaLojalnosciowa;
-                    textBox7.Text = wki.PobranaIloscWypozyczen;
+                    textBox6.Text = wki.PobranaZnizkaLojalnosciowaIND;
+                    textBox7.Text = wki.PobranaIloscWypozyczenIND;
                 }
                 else
                 {
@@ -113,7 +113,7 @@ namespace Aplikacja_wypożyczalnia
                 int id_kli = int.Parse(textBox3.Text);
                 int id_sam = int.Parse(textBox4.Text);
                 double znizkaLojaln = double.Parse(textBox6.Text);
-                int liczbaWypozyczen = int.Parse(textBox7.Text);
+                int liczbaWypozyczen = (int)double.Parse(textBox7.Text);
                 double cena_za_dobe = double.Parse(textBox5.Text);
                 if (liczbaWypozyczen % 5 == 0 & liczbaWypozyczen != 0)
                     cena_za_dobe *= (1 - znizkaLojaln);
