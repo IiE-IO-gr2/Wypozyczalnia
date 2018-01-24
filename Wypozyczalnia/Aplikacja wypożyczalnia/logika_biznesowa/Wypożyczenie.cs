@@ -20,8 +20,13 @@ namespace logika_biznesowa {
         /// cena za wypo¿yczenie samochodu
         /// </summary>
         public double Cena_za_wypozyczenie;
+        private Rezerwacja rezerwacja;
+        private Klient_indywidualny klient_indywidualny;
+        private Rozliczenie rozliczenie;
 
-
+        /// <summary>
+        /// konstruktor bezparametrowy Wypozyczenie
+        /// </summary>
         public Wypo¿yczenie()
         {
             ID_wypo¿yczenia = 0;
@@ -44,7 +49,6 @@ namespace logika_biznesowa {
         /// <summary>
         /// metoda dodaj¹ca wypo¿yczenie do bazy
         /// </summary>
-
         public string DodajWypozyczenie()
         {
             string exmsg = "";
@@ -106,12 +110,6 @@ namespace logika_biznesowa {
         /// <summary>
         /// metoda pokazuj¹ca wypo¿yczenie w bazie
         /// </summary>
-        
-
-        private Rezerwacja rezerwacja;
-
-        private Klient_indywidualny klient_indywidualny;
-        private Rozliczenie rozliczenie;
 
 
         public static int MaksymalnyNumerIdentyfikatoraWBazie()
@@ -141,11 +139,10 @@ namespace logika_biznesowa {
             else // zapytanie nie zwróci³o b³êdu
             {
                 string zapytanie = "";
-                if (zwrotZapytanieCzyWypozyczenieIstnieje != "0") // zapytanie zwróci³o znalezienie w bazie klientów rekordu o podanym ID
+                if (zwrotZapytanieCzyWypozyczenieIstnieje != "0") // zapytanie zwróci³o znalezienie w bazie wypozyczeñ rekordu o podanym ID
                 {
-                    zapytanie = @"select [ID_wypo¿yczenia],[Data_wypo¿yczenia],[Data_planowanego_zwrotu],[Cena_za_wypozyczenie],[CzyUsuniete]" +
-                    @"from [dbo].[Wypo¿yczenie]" + identyfikator;
-
+                    zapytanie = @"select [ID_wypo¿yczenia],[Data_wypo¿yczenia],[Data_planowanego_zwrotu],[Cena_za_wypozyczenie]" +
+                    @"from [dbo].[Wypo¿yczenie] where [ID_wypo¿yczenia]=" + identyfikator;
                     // pobranie danych z bazy
                     string exmsg = "";
                     dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
@@ -167,16 +164,12 @@ namespace logika_biznesowa {
         {
             DataTable dt = new DataTable();
 
-            string zapytanie = @"select [ID_wypo¿yczenia],[Data_wypo¿yczenia],[Data_planowanego_zwrotu],[Cena_za_wypozyczenie],[CzyUsuniete]" +
-                @"from [dbo].[Wypo¿yczenie]";
+            string zapytanie = @"select [ID_wypo¿yczenia],[Data_wypo¿yczenia],[Data_planowanego_zwrotu],[Cena_za_wypozyczenie]" +
+                @"from [dbo].[Wypo¿yczenie] WHERE ([CzyUsuniete] = 0 or [CzyUsuniete] is null)";
             //Pobieranie danych z bazy
             string exmsg = "";
-
             dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
             return dt;
-
-
-
         }
     } 
 

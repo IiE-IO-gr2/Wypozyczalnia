@@ -56,13 +56,13 @@ namespace Aplikacja_wypożyczalnia
             bool poprawneTextboxy = true;
 
             if (string.IsNullOrWhiteSpace(textBox2.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, @"^([A-Za-z0-9\-]){2,30}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, @"^([A-Za-z0-9\-ąćęłńóśźżĄĘŁŃŚŻŹĆÓ]){2,30}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu marka";
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox3.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, @"^([A-Za-z0-9\-]){2,30}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, @"^([A-Za-z0-9\-ąćęłńóśźżĄĘŁŃŚŻŹĆÓ]){2,30}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu model";
                 poprawneTextboxy = false;
@@ -74,13 +74,13 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox5.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox5.Text, @"^([A-Za-z0-9\-]){2,20}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox5.Text, @"^([A-Za-z0-9\-ąćęłńóśźżĄĘŁŃŚŻŹĆÓ]){2,20}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu rodzaj paliwa";
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox6.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox6.Text, @"^([A-Za-z0-9\-]){2,30}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox6.Text, @"^([A-Za-z0-9\-ąćęłńóśźżĄĘŁŃŚŻŹĆÓ]){2,30}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu typ nadwozia";
                 poprawneTextboxy = false;
@@ -92,7 +92,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox8.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox8.Text, @"^([A-Za-z0-9\-]){2,30}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox8.Text, @"^([A-Za-z0-9\-ąćęłńóśźżĄĘŁŃŚŻŹĆÓ]){2,30}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu skrzynia biegów";
                 poprawneTextboxy = false;
@@ -128,7 +128,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox14.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox14.Text, @"^([A-Za-z]){2,20}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox14.Text, @"^([A-Za-ząćęłńóśźżĄĘŁŃŚŻŹĆÓ]){2,20}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu kolor";
                 poprawneTextboxy = false;
@@ -176,7 +176,7 @@ namespace Aplikacja_wypożyczalnia
 
                 /// Stworzenie obiektów reprezentujących podane dane
                 Samochód samochod = new Samochód(id, mar, mod, poj, rp, tn, ik, sk, ib, zp, im, ilodr, roc, kol, czd, dostep, inne, ka);
-                string exmsg_sm = samochod.EdytujSamochod(id);
+                string exmsg_sm = samochod.EdytujSamochod();
                 if (string.IsNullOrWhiteSpace(exmsg_sm))
                     MessageBox.Show("Zaktualizowano samochód w bazie");
                 else
