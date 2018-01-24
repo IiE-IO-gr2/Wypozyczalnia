@@ -131,8 +131,7 @@ namespace logika_biznesowa {
             else
                 return 0;
         }
-
-
+        
         public static DataTable WyszukajWypozyczenie(int identyfikator, ref string _exmsg)
         {
             DataTable dt = new DataTable();
@@ -150,8 +149,8 @@ namespace logika_biznesowa {
                 string zapytanie = "";
                 if (zwrotZapytanieCzyWypozyczenieIstnieje != "0") // zapytanie zwróci³o znalezienie w bazie wypozyczeñ rekordu o podanym ID
                 {
-                    zapytanie = @"select [ID_wypo¿yczenia],[Data_wypo¿yczenia],[Data_planowanego_zwrotu],[Cena_za_wypozyczenie]" +
-                    @"from [dbo].[Wypo¿yczenie] where [ID_wypo¿yczenia]=" + identyfikator;
+                    zapytanie = @"select [ID_wypo¿yczenia], [Data_wypo¿yczenia], [Data_planowanego_zwrotu], [Cena_za_wypozyczenie]," +
+                        @"[Id_Klienta], [Id_samochodu], [CzyRozliczone] from [dbo].[Wypo¿yczenie] where [ID_wypo¿yczenia]=" + identyfikator;
                     // pobranie danych z bazy
                     string exmsg = "";
                     dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
