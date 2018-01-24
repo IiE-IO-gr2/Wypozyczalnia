@@ -162,6 +162,12 @@
     <Compile Include="PokazWyszukanegoKlientaIndywidualnego.Designer.cs">
       <DependentUpon>PokazWyszukanegoKlientaIndywidualnego.cs</DependentUpon>
     </Compile>
+    <Compile Include="PokazWyszukiwanySamochod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PokazWyszukiwanySamochod.Designer.cs">
+      <DependentUpon>PokazWyszukiwanySamochod.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rezerwacja.cs">
@@ -307,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PokazWyszukanegoKlientaIndywidualnego.resx">
       <DependentUpon>PokazWyszukanegoKlientaIndywidualnego.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PokazWyszukiwanySamochod.resx">
+      <DependentUpon>PokazWyszukiwanySamochod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
