@@ -99,7 +99,6 @@ C:\Users\Lenovo\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalni
 C:\Users\Lenovo\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.EdytujWypozyczenie.resources
 C:\Users\Lenovo\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazRezerwacje.resources
 C:\Users\Lenovo\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazWypozyczenia.resources
-C:\Users\Lenovo\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.UsunWypozyczenie.resources
 C:\Users\Lenovo\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Wypozyczenia.resources
 C:\Users\Lenovo\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WyszukajWypozyczenie.resources
 C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.DodajWypozyczenie.resources
@@ -261,7 +260,6 @@ C:\Users\sasal_000\Desktop\Studia - SGGW\IV rok\Inżyniera Oprogramowania\Wypoż
 C:\Users\sasal_000\Desktop\Studia - SGGW\IV rok\Inżyniera Oprogramowania\Wypożyczalnia\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja wypożyczalnia.exe
 C:\Users\sasal_000\Desktop\Studia - SGGW\IV rok\Inżyniera Oprogramowania\Wypożyczalnia\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja wypożyczalnia.pdb
 C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WybierzKlienta.resources
-C:\Users\Lenovo\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazSamochod.resources
 C:\Users\Lenovo\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazWyszukanegoKlientaFirme.resources
 C:\Users\Lenovo\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WybierzKlienta.resources
 C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja wypożyczalnia.csprojResolveAssemblyReference.cache
@@ -368,3 +366,6 @@ C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\
 C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Rezerwacje.resources
 C:\Users\sasal_000\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazSamochody.resources
 C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazSamochody.resources
+C:\Users\Lenovo\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja wypożyczalnia.csprojResolveAssemblyReference.cache
+C:\Users\Lenovo\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazSamochody.resources
+C:\Users\Lenovo\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.RozliczWypozyczenie.resources
