@@ -106,7 +106,6 @@ C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\
 C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.EdytujWypozyczenie.resources
 C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazRezerwacje.resources
 C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazWypozyczenia.resources
-C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.UsunWypozyczenie.resources
 C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Wypozyczenia.resources
 C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WyszukajWypozyczenie.resources
 C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.DodajKlientaFirma.resources
@@ -368,3 +367,4 @@ C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\
 C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazSamochody.resources
 C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Rezerwacje.resources
 C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.RozliczWypozyczenie.resources
+C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.RozliczWypozyczenie.resources

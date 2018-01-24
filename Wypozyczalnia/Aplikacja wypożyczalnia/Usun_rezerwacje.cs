@@ -37,24 +37,23 @@ namespace Aplikacja_wypożyczalnia
                 /// Pobranie danych z TextBoxa
                 int id1 = int.Parse(textBox1.Text);
 
-                //zakomentowane, bo nie pokazuje mi metod z logiki biznesowej...:(
-                //try
-                //{
-                    //int id = int.Parse(textBox1.Text);
-                   // string exmsg = Rezerwacja.UsunRezerwacje(id);
-                    //if (!string.IsNullOrWhiteSpace(exmsg))
-                       // MessageBox.Show("Wystąpił błąd:\n" + exmsg);
-                   // else
-                   // {
-                        //MessageBox.Show("Usunięto rezerwację z bazy");
-                       // textBox1.Clear();
+                try
+                {
+                    int id = int.Parse(textBox1.Text);
+                    string exmsg = Rezerwacja.UsunRezerwacje(id);
+                    if (!string.IsNullOrWhiteSpace(exmsg))
+                        MessageBox.Show("Wystąpił błąd:\n" + exmsg);
+                   else
+                   {
+                        MessageBox.Show("Usunięto rezerwację z bazy");
+                        textBox1.Clear();
 
-                   // }
-               // }
-               // catch (Exception)
-                //{
-                   // MessageBox.Show("Wystąpił błąd:\nNiepoprawny lub pusty numer identyfikacyjny");
-               // }
+                   }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Wystąpił błąd:\nNiepoprawny lub pusty numer identyfikacyjny");
+                }
             }
 
             else
