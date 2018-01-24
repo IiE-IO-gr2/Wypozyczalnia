@@ -2,7 +2,10 @@ using System;
 using System.Data;
 using System.Globalization;
 namespace logika_biznesowa {
-	public class Samochód {
+    /// <summary>
+    /// implementacje parametrów
+    /// </summary>
+    public class Samochód {
 		/// <summary>
 		/// numer id samochodu
 		/// </summary>
@@ -140,6 +143,9 @@ namespace logika_biznesowa {
             string czd = Cena_za_dobê.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
             string zapytanie = @"insert into [dbo].[Samochód] ([Id_samochodu], [Marka], [Model], [Pojemnosc], [Rodzaj_paliwa], [Typ_nadwozia], [Ilosc_koni], [Skrzynia_biegow], [Ilosc_biegów], [Zu¿ycie_paliwa], [Ilosc_miejsc], [Ilosc_drzwi], [Rocznik], [Kolor], [Cena_za_dobê], [Dostepnosc], [Inne], [Kaucja], [CzyUsuniete] )" +
                 @"values (" + Id_samochodu + ", '" + Marka + "' , '" + Model + "', " + poj + ", '" + Rodzaj_paliwa + "', '" + Typ_nadwozia + "', " + Ilosc_koni + ", '" + Skrzynia_biegow + "', " + Ilosc_biegów + ", " + zuz + ", " + Ilosc_miejsc + ", " + Ilosc_drzwi + ", " + Rocznik + ", '" + Kolor + "', " + czd + ", " + dostbool + ", '" + Inne + "', " + Kaucja + ",0)";
+            /// <summary>
+            //wstawia wartoœci atrybutów u¿ytych w zapytaniu
+            /// </summary>
             FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }
@@ -153,7 +159,13 @@ namespace logika_biznesowa {
             int dostbool = 0;
             if (Dostepnosc == true)
                 dostbool = 1;
+            /// <summary>
+            ///zapytanie, które umo¿liwia edycjê samochodu w opcji edycji
+            /// </summary>
             string zapytanie = @"UPDATE [dbo].[Samochód] SET [Marka]='" + Marka + "', [Model]='" + Model + "', [Pojemnosc]=" + Pojemnosc + ",[Rodzaj_paliwa]='" + Rodzaj_paliwa + "', [Typ_nadwozia]='" + Typ_nadwozia + "', [Ilosc_koni]=" + Ilosc_koni + ",[Skrzynia_biegow]='" + Skrzynia_biegow + "', [Ilosc_biegów]=" + Ilosc_biegów + ", [Zu¿ycie_paliwa]=" + Zu¿ycie_paliwa + ",[Ilosc_miejsc]=" + Ilosc_miejsc + ", [Ilosc_drzwi]= " + Ilosc_drzwi + ", [Rocznik]=" + Rocznik + ", [Kolor]='" + Kolor + "', [Cena_za_dobê]=" + Cena_za_dobê + ", [Dostepnosc]=" + dostbool + ", [Inne]='" + Inne + "', [Kaucja]=" + Kaucja + " WHERE [Id_samochodu] = " + Id_samochodu;
+            /// <summary>
+            ///wstawia wartoœci atrybutów u¿ytych w zapytaniu
+            /// </summary>
             FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }
@@ -162,6 +174,9 @@ namespace logika_biznesowa {
 		/// </summary>
         public static string UsunSamochod(int identyfikator)
         {
+            /// <summary>
+            ///sprawdza czy samochód jest w bazie
+            /// </summary>
             string zapytanieCzySamochodIstnieje = @"SELECT count(*) FROM [dbo].[Samochód] WHERE [Id_samochodu] = " + identyfikator;
             string exmsgTest = "";
             string zwrotZapytanieCzySamochodIstnieje = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanieCzySamochodIstnieje, ref exmsgTest);
@@ -175,10 +190,17 @@ namespace logika_biznesowa {
                     if (licznik == 1) // zapytanie zwróci³o znalezienie w bazie samochodów rekordu o podanym ID
                     {
                         string exmsg = "", exmsg1 = "", exmsg2 = "";
-                        // usuniêcie danych z tabeli Samochody
+                        /// <summary>
+                        /// usuniêcie danych z tabeli Samochody
+                        /// </summary>
                         string zapytanie1 = @"UPDATE [dbo].[Samochód] SET [CzyUsuniete] = 1 WHERE [Id_samochodu] = " + identyfikator;
+                        /// <summary>
+                        ///wstawia wartoœci atrybutów u¿ytych w zapytaniu
+                        /// </summary>
                         FunkcjePomicnicze.WstawDaneSQL(zapytanie1, ref exmsg1);
-                        // budowa informacji wyjœciowej z funkcji
+                        /// <summary>
+                        /// budowa informacji wyjœciowej z funkcji
+                        /// </summary>
                         if (!string.IsNullOrWhiteSpace(exmsg1))
                             exmsg += "\n" + exmsg1;
                         if (!string.IsNullOrWhiteSpace(exmsg2))
@@ -198,6 +220,9 @@ namespace logika_biznesowa {
         public static DataTable WyszukajSamochod(int identyfikator, ref string _exmsg)
         {
             DataTable dt = new DataTable();
+            /// <summary>
+            ///sprawdza czy samochód jest w bazie
+            /// </summary>
             string zapytanieCzySamochodIstnieje = @"SELECT count(*) from [dbo].[Samochód] WHERE (([CzyUsuniete] = 0 or [CzyUsuniete] is null)" +
                 @"and [Id_samochodu] = " + identyfikator + ")";
             string exmsgTest = "";
@@ -213,9 +238,17 @@ namespace logika_biznesowa {
                 {
                     string exmsg = "";
                     string zapytanie = "";
+                    /// <summary>
+                    ///pokazuje wszystkie wartoœci atrybutów szukanego samochodu
+                    /// </summary>
                     zapytanie = @"SELECT * from[dbo].[Samochód] WHERE [Id_samochodu] = " + identyfikator;
-                    // pobranie danych z bazy
+                    /// <summary>
+                    /// pobranie danych z bazy
+                    /// </summary>
                     string exmsg1 = "";
+                    /// <summary>
+                    ///wstawia wartoœci atrybutów u¿ytych w zapytaniu do tabeli
+                    /// </summary>
                     dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg1);
                     if (!string.IsNullOrWhiteSpace(exmsg))
                         _exmsg += "\n" + exmsg;
@@ -230,14 +263,27 @@ namespace logika_biznesowa {
                 }
             }
         }
-		/// <summary>
-		/// metoda sprawdzaj¹ca czy samochód jest dostêpny w bazie
-		/// </summary>
-		/*public bool CzyDostepny() {
+        /// <summary>
+        ///metoda pokazuj¹ca listê samochodów
+        /// </summary>
+        public static DataTable PokazSamochody(ref string _exmsg)
+        {
+            DataTable dt = new DataTable();
+
+            string zapytanie = @"Select * from [dbo.][Samochód]  ";
+            //Pobieranie danych z bazy
+            string exmsg = "";
+            dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
+            return dt;
+        }
+        /// <summary>
+        /// metoda sprawdzaj¹ca czy samochód jest dostêpny w bazie
+        /// </summary>
+        /*public bool CzyDostepny() {
 			throw new System.Exception("Not implemented");
 		}*/
 
-		private Panel_administratora panel_administratora;
+        private Panel_administratora panel_administratora;
 
 		private Rezerwacja rezerwacja;
 

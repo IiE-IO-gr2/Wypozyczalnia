@@ -54,7 +54,7 @@ namespace Aplikacja_wypożyczalnia
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(506, 385);
+            this.button1.Location = new System.Drawing.Point(496, 384);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 65);
             this.button1.TabIndex = 51;
@@ -64,49 +64,49 @@ namespace Aplikacja_wypożyczalnia
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(425, 306);
+            this.textBox11.Location = new System.Drawing.Point(431, 266);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(180, 20);
             this.textBox11.TabIndex = 50;
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(425, 271);
+            this.textBox10.Location = new System.Drawing.Point(431, 235);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(180, 20);
             this.textBox10.TabIndex = 49;
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(425, 237);
+            this.textBox9.Location = new System.Drawing.Point(431, 206);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(180, 20);
             this.textBox9.TabIndex = 48;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(425, 203);
+            this.textBox8.Location = new System.Drawing.Point(431, 177);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(180, 20);
             this.textBox8.TabIndex = 47;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(425, 169);
+            this.textBox7.Location = new System.Drawing.Point(431, 148);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(180, 20);
             this.textBox7.TabIndex = 46;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(425, 135);
+            this.textBox5.Location = new System.Drawing.Point(431, 118);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(180, 20);
             this.textBox5.TabIndex = 44;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(425, 99);
+            this.textBox2.Location = new System.Drawing.Point(431, 88);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(180, 20);
             this.textBox2.TabIndex = 41;
@@ -116,7 +116,7 @@ namespace Aplikacja_wypożyczalnia
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(306, 306);
+            this.label12.Location = new System.Drawing.Point(318, 266);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(94, 20);
             this.label12.TabIndex = 40;
@@ -127,7 +127,7 @@ namespace Aplikacja_wypożyczalnia
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(317, 271);
+            this.label11.Location = new System.Drawing.Point(328, 235);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(83, 20);
             this.label11.TabIndex = 39;
@@ -138,7 +138,7 @@ namespace Aplikacja_wypożyczalnia
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(291, 237);
+            this.label10.Location = new System.Drawing.Point(302, 206);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(109, 20);
             this.label10.TabIndex = 38;
@@ -149,7 +149,7 @@ namespace Aplikacja_wypożyczalnia
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(344, 203);
+            this.label9.Location = new System.Drawing.Point(356, 177);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 20);
             this.label9.TabIndex = 37;
@@ -160,7 +160,7 @@ namespace Aplikacja_wypożyczalnia
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(236, 169);
+            this.label8.Location = new System.Drawing.Point(247, 148);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(164, 20);
             this.label8.TabIndex = 36;
@@ -171,7 +171,7 @@ namespace Aplikacja_wypożyczalnia
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(362, 135);
+            this.label6.Location = new System.Drawing.Point(373, 118);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 20);
             this.label6.TabIndex = 34;
@@ -182,7 +182,7 @@ namespace Aplikacja_wypożyczalnia
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(295, 99);
+            this.label3.Location = new System.Drawing.Point(306, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 20);
             this.label3.TabIndex = 31;
@@ -191,7 +191,7 @@ namespace Aplikacja_wypożyczalnia
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(425, 68);
+            this.textBox1.Location = new System.Drawing.Point(431, 57);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 30;
@@ -201,7 +201,7 @@ namespace Aplikacja_wypożyczalnia
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(372, 68);
+            this.label2.Location = new System.Drawing.Point(384, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 20);
             this.label2.TabIndex = 29;
@@ -212,7 +212,7 @@ namespace Aplikacja_wypożyczalnia
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(300, 19);
+            this.label1.Location = new System.Drawing.Point(333, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(260, 29);
             this.label1.TabIndex = 28;
@@ -221,7 +221,7 @@ namespace Aplikacja_wypożyczalnia
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button5.Location = new System.Drawing.Point(240, 385);
+            this.button5.Location = new System.Drawing.Point(234, 384);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(125, 65);
             this.button5.TabIndex = 52;

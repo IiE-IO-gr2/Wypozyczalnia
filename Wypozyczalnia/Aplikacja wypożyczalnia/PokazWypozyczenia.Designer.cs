@@ -65,6 +65,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(665, 276);
             this.dataGridView1.TabIndex = 51;
+            
             // 
             // button1
             // 
@@ -88,7 +89,6 @@
             this.Controls.Add(this.label2);
             this.Name = "PokazWypozyczenia";
             this.Text = "PokazWypozyczenia";
-            
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
