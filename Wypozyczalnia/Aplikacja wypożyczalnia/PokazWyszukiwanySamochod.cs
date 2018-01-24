@@ -13,7 +13,9 @@ namespace Aplikacja_wypożyczalnia
 {
     public partial class PokazWyszukiwanySamochod : Form
     {
-        //Pokazuje dane przed edycją
+        /// <summary>
+        ///Pokazuje dane przed edycją
+        /// </summary>
         public PokazWyszukiwanySamochod(DataTable dt)
         {
             InitializeComponent();
@@ -39,7 +41,9 @@ namespace Aplikacja_wypożyczalnia
                 textBox18.Text = item[16].ToString();
             }
         }
-        //Przycisk zamknij okno zamyka okno edycji samochodu
+        /// <summary>
+        ///Przycisk zamknij okno zamyka okno edycji samochodu
+        /// </summary>
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -49,11 +53,14 @@ namespace Aplikacja_wypożyczalnia
         {
 
         }
-        /*Przycisk, który zatwierdza wprowadzone zmiany (w polu Dostępność zawsze trzeba zmienić odpowiednio z true na 1,
-        a false na 0*/
+        /// <summary>
+        ///Przycisk, który zatwierdza wprowadzone zmiany (w polu Dostępność zawsze trzeba zmienić odpowiednio z true na 1, a false na 0
+        /// </summary>
         private void button1_Click_1(object sender, EventArgs e)
         {
+            /// <summary>
             /// Sprawdzenie poprawności danych w textboxach
+            /// </summary>
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
 
@@ -106,7 +113,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox10.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox10.Text, @"^[0-9,.]{1,10}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox10.Text, @"^[0-9,.]{1,3}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu zużycie paliwa";
                 poprawneTextboxy = false;
@@ -175,8 +182,9 @@ namespace Aplikacja_wypożyczalnia
                     dostep = true;
                 string inne = textBox17.Text;
                 int ka = int.Parse(textBox18.Text);
-
+                /// <summary>
                 /// Stworzenie obiektów reprezentujących podane dane
+                /// </summary>
                 Samochód samochod = new Samochód(id, mar, mod, poj, rp, tn, ik, sk, ib, zp, im, ilodr, roc, kol, czd, dostep, inne, ka);
                 string exmsg_sm = samochod.EdytujSamochod();
                 if (string.IsNullOrWhiteSpace(exmsg_sm))
@@ -185,7 +193,10 @@ namespace Aplikacja_wypożyczalnia
                     MessageBox.Show("Wystąpił błąd:\n" + exmsg_sm);
             }
             else
-            {//Pokazuje, w którym textboxie jest błąd wprowadzonych danych
+            {
+                /// <summary>
+                ///Pokazuje, w którym textboxie jest błąd wprowadzonych danych
+                /// </summary>
                 MessageBox.Show("Wystąpiły błędy w danych wejściowych:" + bladWTextboxach);
                 bladWTextboxach = "";
                 poprawneTextboxy = true;

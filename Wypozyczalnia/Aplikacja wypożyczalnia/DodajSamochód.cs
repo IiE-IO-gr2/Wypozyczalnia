@@ -17,7 +17,9 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
-        //Przycisk umożliwiający powrót do wyboru czynności w sekcji Samochody
+        /// <summary>
+        ///Przycisk umożliwiający powrót do wyboru czynności w sekcji Samochody
+        /// </summary>
         private void WsteczDS_Click(object sender, EventArgs e)
         {
             
@@ -26,10 +28,14 @@ namespace Aplikacja_wypożyczalnia
             Samochody ds = new Samochody();
             ds.Show();
         }
-        // Przycisk zatwierdź zatwierdza wprowadzone dane oraz dodaje nowy samochód do bazy
+        /// <summary>
+        ///Przycisk zatwierdź zatwierdza wprowadzone dane oraz dodaje nowy samochód do bazy
+        /// </summary>
         private void ZatwierdźDS_Click(object sender, EventArgs e)
         {
+            /// <summary>
             /// Sprawdzenie poprawności danych w textboxach
+            /// </summary>
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
             
@@ -82,7 +88,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox10.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox10.Text, @"^[0-9,.]{1,10}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox10.Text, @"^[0-9,.]{1,3}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu zużycie paliwa";
                 poprawneTextboxy = false;
@@ -161,7 +167,9 @@ namespace Aplikacja_wypożyczalnia
                     MessageBox.Show("Wystąpił błąd:\n" + exmsg_kl);
                
             }
-            //Wyświetlanie informacji o błędzie
+            /// <summary>
+            ///Wyświetlanie informacji o błędzie
+            /// </summary>
             else
             {
                 MessageBox.Show("Wystąpiły błędy w danych wejściowych:" + bladWTextboxach);

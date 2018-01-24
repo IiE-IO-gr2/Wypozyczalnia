@@ -17,14 +17,19 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
-        //Przycisk umożliwiający powrót do poprzedniego okna
+        /// <summary>
+        ///Przycisk umożliwiający powrót do poprzedniego okna
+        /// </summary>
         private void wstecz_Click(object sender, EventArgs e)
         {
             this.Hide();
             Wypozyczenia w = new Wypozyczenia();
             w.Show();
         }
-        //Przycisk umożliwiający poprawne wyszukanie wypożyczenia oraz umieszczenie go w tabeli
+        /// <summary>
+        ///Przycisk umożliwiający poprawne wyszukanie wypożyczenia oraz umieszczenie go w tabeli
+        /// </summary>
+        
         private void button4_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = new DataTable();
