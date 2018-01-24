@@ -156,13 +156,16 @@ namespace logika_biznesowa {
 		public string EdytujSamochod()
         {
             string exmsg = "";
+            string poj = Pojemnosc.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
+            string zuz = Zu¿ycie_paliwa.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
+            string czd = Cena_za_dobê.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
             int dostbool = 0;
             if (Dostepnosc == true)
                 dostbool = 1;
             /// <summary>
             ///zapytanie, które umo¿liwia edycjê samochodu w opcji edycji
             /// </summary>
-            string zapytanie = @"UPDATE [dbo].[Samochód] SET [Marka]='" + Marka + "', [Model]='" + Model + "', [Pojemnosc]=" + Pojemnosc + ",[Rodzaj_paliwa]='" + Rodzaj_paliwa + "', [Typ_nadwozia]='" + Typ_nadwozia + "', [Ilosc_koni]=" + Ilosc_koni + ",[Skrzynia_biegow]='" + Skrzynia_biegow + "', [Ilosc_biegów]=" + Ilosc_biegów + ", [Zu¿ycie_paliwa]=" + Zu¿ycie_paliwa + ",[Ilosc_miejsc]=" + Ilosc_miejsc + ", [Ilosc_drzwi]= " + Ilosc_drzwi + ", [Rocznik]=" + Rocznik + ", [Kolor]='" + Kolor + "', [Cena_za_dobê]=" + Cena_za_dobê + ", [Dostepnosc]=" + dostbool + ", [Inne]='" + Inne + "', [Kaucja]=" + Kaucja + " WHERE [Id_samochodu] = " + Id_samochodu;
+            string zapytanie = @"UPDATE [dbo].[Samochód] SET [Marka]='" + Marka + "', [Model]='" + Model + "', [Pojemnosc]=" + Pojemnosc + ",[Rodzaj_paliwa]='" + Rodzaj_paliwa + "', [Typ_nadwozia]='" + Typ_nadwozia + "', [Ilosc_koni]=" + Ilosc_koni + ",[Skrzynia_biegow]='" + Skrzynia_biegow + "', [Ilosc_biegów]=" + Ilosc_biegów + ", [Zu¿ycie_paliwa]=" + zuz + ",[Ilosc_miejsc]=" + Ilosc_miejsc + ", [Ilosc_drzwi]= " + Ilosc_drzwi + ", [Rocznik]=" + Rocznik + ", [Kolor]='" + Kolor + "', [Cena_za_dobê]=" + Cena_za_dobê + ", [Dostepnosc]=" + dostbool + ", [Inne]='" + Inne + "', [Kaucja]=" + Kaucja + " WHERE [Id_samochodu] = " + Id_samochodu;
             /// <summary>
             ///wstawia wartoœci atrybutów u¿ytych w zapytaniu
             /// </summary>
