@@ -25,14 +25,9 @@ namespace Aplikacja_wypożyczalnia
             us.Show();
         }
 
-        
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void ZatwierdźUS_Click_1(object sender, EventArgs e)
+        private void ZatwierdźUS_Click(object sender, EventArgs e)
         {
             /// Sprawdzenie poprawności danych w textboxie
             string bladWTextboxach = "";
@@ -77,4 +72,5 @@ namespace Aplikacja_wypożyczalnia
         }
     }
     }
+    
 
