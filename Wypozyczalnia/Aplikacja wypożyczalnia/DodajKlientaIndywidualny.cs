@@ -52,7 +52,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox6.Text) ||
-              !System.Text.RegularExpressions.Regex.IsMatch(textBox6.Text, @"^[A-Za-ząęłóżćśźńŁŚĆŻŹ]{1,10}$"))
+              !System.Text.RegularExpressions.Regex.IsMatch(textBox6.Text, @"^[K-Mk-m]{1}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu płeć";
                 poprawneTextboxy = false;
