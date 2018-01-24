@@ -58,6 +58,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "wybierz";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // WybierzKlientaIndywidualnego
             // 
@@ -69,7 +70,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "WybierzKlientaIndywidualnego";
             this.Text = "WybierzKlientaIndywidualnego";
-            this.Load += new System.EventHandler(this.WybierzKlienta_Load);
+            this.Load += new System.EventHandler(this.WybierzKlientaIndywidualnego_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

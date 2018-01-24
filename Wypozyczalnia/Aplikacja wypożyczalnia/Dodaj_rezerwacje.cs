@@ -83,7 +83,7 @@ namespace Aplikacja_wypożyczalnia
             {
                 if (wki.ShowDialog() == DialogResult.OK)
                 {
-                    textBox3.Text = wki.pobraneIDKlientaWartosc;
+                    textBox3.Text = wki.PobraneIDKlientaWartosc;
                 }
                 else
                 {
@@ -97,8 +97,9 @@ namespace Aplikacja_wypożyczalnia
 
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }

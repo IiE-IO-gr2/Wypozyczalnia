@@ -68,19 +68,13 @@ namespace Aplikacja_wypożyczalnia
 
         }
 
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             using (WybierzKlientaIndywidualnego wki = new WybierzKlientaIndywidualnego())
             {
                 if (wki.ShowDialog() == DialogResult.OK)
                 {
-                    textBox3.Text = wki.pobraneIDKlientaWartosc;
+                    textBox3.Text = wki.PobraneIDKlientaWartosc;
                 }
                 else
                 {

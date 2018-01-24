@@ -57,7 +57,7 @@ namespace Aplikacja_wypożyczalnia
             }
 
             if (string.IsNullOrWhiteSpace(textBox4.Text) ||
-               !System.Text.RegularExpressions.Regex.IsMatch(textBox4.Text, @"^[A-Za-z0-9\-]{2,20}$"))
+               !System.Text.RegularExpressions.Regex.IsMatch(textBox4.Text, @"^[A-Za-z0-9\-/]{2,15}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu numer prawa jazdy";
                 poprawneTextboxy = false;
