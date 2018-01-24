@@ -17,10 +17,10 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
-        private void WybierzKlienta_Load(object sender, EventArgs e)
+        private void WybierzKlientaIndywidualnego_Load(object sender, EventArgs e)
         {
             string zapytanie = @"select k.[Id_klienta],k.[Telefon_kontaktowy],k.[Adres],k.[Adres_email],k.[Promocja],k.[Aktywnosc], ki.[Imię],ki.[Nazwisko],ki.[PESEL]" +
-                @"from [dbo].[Klient] as k inner join [dbo].[Klient_indywidualny] as ki on k.[Id_klienta] = ki.[Id_klienta]";
+                @"from [dbo].[Klient] as k inner join [dbo].[Klient_indywidualny] as ki on k.[Id_klienta] = ki.[Id_klienta] WHERE (k.[CzyUsuniete] = 0 or k.[CzyUsuniete] is null)";
             string exmsg = "";
             DataTable dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
             if (!string.IsNullOrWhiteSpace(exmsg))
@@ -50,7 +50,8 @@ namespace Aplikacja_wypożyczalnia
                 MessageBox.Show("Nie wybrano klienta");
             }
         }
-        public string pobraneIDKlientaWartosc
+
+        public string PobraneIDKlientaWartosc
         {
             get { return pobraneIDKlienta.Text; }
         }
