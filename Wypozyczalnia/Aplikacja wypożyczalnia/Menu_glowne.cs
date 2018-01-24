@@ -17,6 +17,9 @@ namespace Aplikacja_wypożyczalnia
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Przycisk, który przekierowuje do formularza zalogowania się do systemu
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -24,6 +27,9 @@ namespace Aplikacja_wypożyczalnia
             pa.Show();
         }
 
+        /// <summary>
+        /// Przycisk kończący działanie aplikacji
+        /// </summary>
         private void button2_Click(object sender, EventArgs e)
         {
             if (Application.MessageLoop)
