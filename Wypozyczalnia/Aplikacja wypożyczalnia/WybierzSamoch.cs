@@ -21,7 +21,7 @@ namespace Aplikacja_wypożyczalnia
         private void WybierzSamochod_Load(object sender, EventArgs e)
         {
             string zapytanie = @"select [Id_samochodu],[Marka],[Model],[Cena_za_dobę],[Kaucja],[Pojemnosc],[Rodzaj_paliwa],[Rocznik],[Kolor]" +
-                @"from [dbo].[Samochód]";
+                @"from [dbo].[Samochód] WHERE ([CzyUsuniete] = 0 or [CzyUsuniete] is null)";
 
             string exmsg = "";
 
@@ -45,13 +45,14 @@ namespace Aplikacja_wypożyczalnia
                 string id = dr.ItemArray[0].ToString();
                 MessageBox.Show("ID wybranego samochodu " + id);
                 PobraneIDSam.Text = id;
-           
+                string cena = dr.ItemArray[3].ToString();
+                Kwota.Text = cena;
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             catch (Exception)
             {
-                MessageBox.Show("Nie wybrano samochodu");
+                MessageBox.Show("Nie wybrano klienta");
             }
         }
 
@@ -65,13 +66,6 @@ namespace Aplikacja_wypożyczalnia
         {
             get { return Kwota.Text; }
         }
-
-
-        
-        //private void pobraneIDKlienta_TextChanged(object sender, EventArgs e)
-        //{
-
-        //}
     }
 }
     

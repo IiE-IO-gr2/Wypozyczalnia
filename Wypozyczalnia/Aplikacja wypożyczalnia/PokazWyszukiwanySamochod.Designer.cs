@@ -475,6 +475,7 @@
             this.Controls.Add(this.label1);
             this.Name = "PokazWyszukiwanySamochod";
             this.Text = "PokazWyszukiwanySamochod";
+            this.Load += new System.EventHandler(this.PokazWyszukiwanySamochod_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
