@@ -369,3 +369,5 @@ C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\o
 C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazWyszukiwanySamochod.resources
 C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WybierzKlientaIndywidualnego.resources
 C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WybierzSamoch.resources
+C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazWyszukiwanySamochod.resources
+C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Rezerwacje.resources

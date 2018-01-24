@@ -117,7 +117,7 @@ namespace Aplikacja_wypożyczalnia
                 double pr = double.Parse(textBox10.Text);
                 int ak = int.Parse(textBox11.Text);*/
                 /// Stworzenie obiektów reprezentujących podane dane
-                Klient klient1 = new Klient(id, tl, ad, em, pr, ak);
+               /* Klient klient1 = new Klient(id, tl, ad, em, pr, ak);
                 Klient_firmy klientFirma1 =
                     new Klient_firmy(nazwa, nip);
                 string exmsg_kl = klient1.DodanieKlienta();
@@ -135,7 +135,7 @@ namespace Aplikacja_wypożyczalnia
             {
                 MessageBox.Show("Wystąpiły błędy w danych wejściowych:" + bladWTextboxach);
                 bladWTextboxach = "";
-                poprawneTextboxy = true;
+                poprawneTextboxy = true;*/
             }
 
         }
