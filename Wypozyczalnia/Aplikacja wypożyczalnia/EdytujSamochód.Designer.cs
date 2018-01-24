@@ -40,7 +40,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Image = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
-            this.label1.Location = new System.Drawing.Point(336, 9);
+            this.label1.Location = new System.Drawing.Point(350, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(216, 29);
             this.label1.TabIndex = 0;
@@ -51,7 +51,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.Image = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
-            this.label2.Location = new System.Drawing.Point(235, 84);
+            this.label2.Location = new System.Drawing.Point(243, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 20);
             this.label2.TabIndex = 34;
@@ -59,7 +59,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(445, 84);
+            this.textBox1.Location = new System.Drawing.Point(441, 71);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 35;
@@ -67,7 +67,7 @@
             // WsteczES
             // 
             this.WsteczES.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.WsteczES.Location = new System.Drawing.Point(235, 384);
+            this.WsteczES.Location = new System.Drawing.Point(243, 384);
             this.WsteczES.Name = "WsteczES";
             this.WsteczES.Size = new System.Drawing.Size(125, 65);
             this.WsteczES.TabIndex = 36;
@@ -78,7 +78,7 @@
             // ZatwierdźES
             // 
             this.ZatwierdźES.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ZatwierdźES.Location = new System.Drawing.Point(500, 384);
+            this.ZatwierdźES.Location = new System.Drawing.Point(496, 384);
             this.ZatwierdźES.Name = "ZatwierdźES";
             this.ZatwierdźES.Size = new System.Drawing.Size(125, 65);
             this.ZatwierdźES.TabIndex = 37;
