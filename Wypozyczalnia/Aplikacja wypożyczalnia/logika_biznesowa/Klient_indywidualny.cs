@@ -61,6 +61,9 @@ namespace logika_biznesowa {
             return exmsg;
         }
 
+        /// <summary>
+        /// Metoda dodaj¹c¹ rekord do tabeli ³acz¹cej Klienta z Klientem Indywidualnym
+        /// </summary>
         public string DodajDoBazyPolaczenieKlientaIndywidualnegoZKlientem(int identyfikator)
         {
             string exmsg = "";
