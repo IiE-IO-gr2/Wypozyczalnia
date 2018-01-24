@@ -33,6 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.WsteczWS = new System.Windows.Forms.Button();
             this.ZatwierdźWS = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -83,9 +85,18 @@
             this.ZatwierdźWS.Name = "ZatwierdźWS";
             this.ZatwierdźWS.Size = new System.Drawing.Size(125, 65);
             this.ZatwierdźWS.TabIndex = 35;
-            this.ZatwierdźWS.Text = "Zatwierdź";
+            this.ZatwierdźWS.Text = "Wyszukaj";
             this.ZatwierdźWS.UseVisualStyleBackColor = true;
             this.ZatwierdźWS.Click += new System.EventHandler(this.ZatwierdźWS_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(25, 159);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(833, 181);
+            this.dataGridView1.TabIndex = 36;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // WyszukajSamochód
             // 
@@ -93,6 +104,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
             this.ClientSize = new System.Drawing.Size(884, 461);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.ZatwierdźWS);
             this.Controls.Add(this.WsteczWS);
             this.Controls.Add(this.label1);
@@ -100,6 +112,7 @@
             this.Controls.Add(this.label2);
             this.Name = "WyszukajSamochód";
             this.Text = "WyszukajSamochód";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,5 +125,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button WsteczWS;
         private System.Windows.Forms.Button ZatwierdźWS;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

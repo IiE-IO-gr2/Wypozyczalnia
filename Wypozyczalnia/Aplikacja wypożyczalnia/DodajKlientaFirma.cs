@@ -45,7 +45,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox7.Text) ||
-               !System.Text.RegularExpressions.Regex.IsMatch(textBox7.Text, @"^[0-9]{1,9}$"))
+               !System.Text.RegularExpressions.Regex.IsMatch(textBox7.Text, @"^[0-9]{3}-[0-9]{3}-[0-9]{3}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu telefon kontaktowy";
                 poprawneTextboxy = false;

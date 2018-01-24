@@ -42,26 +42,19 @@ namespace Aplikacja_wypożyczalnia
             if (poprawneTextboxy == true)
             {
                 /// Pobranie danych z TextBoxa
-                int id1 = int.Parse(textBox1.Text);
-                try
+                int id = int.Parse(textBox1.Text);
+                string exmsg = "";
+                DataTable dt = Samochód.WyszukajSamochod(id, ref exmsg);
+                if (!string.IsNullOrEmpty(exmsg))
+                    MessageBox.Show("Wystąpił błąd:\n\t-" + exmsg);
+                else
                 {
-                    int id = int.Parse(textBox1.Text);
-                    string exmsg = Samochód.EdytujSamochod(id);
-                    if (!string.IsNullOrWhiteSpace(exmsg))
-                        MessageBox.Show("Wystąpił błąd:\n" + exmsg);
-                    else
-                    {
-                        MessageBox.Show("Edytowano samochód w bazie");
-                        textBox1.Clear();
-
-                    }
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Wystąpił błąd:\nNiepoprawny lub pusty numer identyfikacyjny");
+                    
+                        PokazWyszukiwanySamochod pws = new PokazWyszukiwanySamochod(dt);
+                        pws.Show();
+                    
                 }
             }
-
             else
             {
                 MessageBox.Show("Wystąpił błąd w danych wejściowych:" + bladWTextboxach);

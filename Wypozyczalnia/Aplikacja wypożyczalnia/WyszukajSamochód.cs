@@ -27,10 +27,10 @@ namespace Aplikacja_wypożyczalnia
 
         private void ZatwierdźWS_Click(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = new DataTable();
             /// Sprawdzenie poprawności danych w textboxie
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
-            //MessageBox.Show("Dlugosc = " + textBox2.Text.Length);
             if (string.IsNullOrWhiteSpace(textBox1.Text) ||
                 !System.Text.RegularExpressions.Regex.IsMatch(textBox1.Text, @"^[0-9]{1,10}$"))
             {
@@ -39,22 +39,16 @@ namespace Aplikacja_wypożyczalnia
             }
             if (poprawneTextboxy == true)
             {
-                try
+                int id = int.Parse(textBox1.Text);
+                string exmsg = "";
+                DataTable dt = Samochód.WyszukajSamochod(id, ref exmsg);
+                if (!string.IsNullOrWhiteSpace(exmsg))
                 {
-                    int id = int.Parse(textBox1.Text);
-                    string exmsg = Samochód.WyszukajSamochod(id);
-                    if (!string.IsNullOrWhiteSpace(exmsg))
-                        MessageBox.Show("Wystąpił błąd:\n" + exmsg);
-                    else
-                    {
-
-                        PokazSamochod pokazSamochod = new PokazSamochod();
-                    }
-
+                    MessageBox.Show("Wystąpił błąd: " + exmsg);
                 }
-                catch (Exception)
+                else
                 {
-                    MessageBox.Show("Wystąpił błąd:\nNiepoprawny lub pusty numer identyfikacyjny");
+                    dataGridView1.DataSource = dt;
                 }
             }
             else
@@ -66,6 +60,11 @@ namespace Aplikacja_wypożyczalnia
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
