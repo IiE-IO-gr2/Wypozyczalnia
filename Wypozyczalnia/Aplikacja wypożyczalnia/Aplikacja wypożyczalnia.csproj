@@ -182,17 +182,17 @@
     <Compile Include="RodzajKlienta.Designer.cs">
       <DependentUpon>RodzajKlienta.cs</DependentUpon>
     </Compile>
+    <Compile Include="RozliczWypozyczenie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RozliczWypozyczenie.Designer.cs">
+      <DependentUpon>RozliczWypozyczenie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Samochody.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Samochody.Designer.cs">
       <DependentUpon>Samochody.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UsunWypozyczenie.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UsunWypozyczenie.Designer.cs">
-      <DependentUpon>UsunWypozyczenie.cs</DependentUpon>
     </Compile>
     <Compile Include="Usun_rezerwacje.cs">
       <SubType>Form</SubType>
@@ -333,11 +333,11 @@
     <EmbeddedResource Include="RodzajKlienta.resx">
       <DependentUpon>RodzajKlienta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RozliczWypozyczenie.resx">
+      <DependentUpon>RozliczWypozyczenie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Samochody.resx">
       <DependentUpon>Samochody.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UsunWypozyczenie.resx">
-      <DependentUpon>UsunWypozyczenie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usun_rezerwacje.resx">
       <DependentUpon>Usun_rezerwacje.cs</DependentUpon>

@@ -41,15 +41,8 @@ namespace Aplikacja_wypożyczalnia
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            UsunWypozyczenie uw = new UsunWypozyczenie();
+            RozliczWypozyczenie uw = new RozliczWypozyczenie();
             uw.Show();
-        }
-        // Przycisk umozliwiający przejście do okna Edytuj Wypożyczenie
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            EdytujWypozyczenie ew = new EdytujWypozyczenie();
-            ew.Show();
         }
         // Przycisk umożliwiający powrót do menu po zalogowaniu
         private void button6_Click(object sender, EventArgs e)

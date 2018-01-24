@@ -31,6 +31,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.pobraneIDKlienta = new System.Windows.Forms.TextBox();
+            this.pobranaIloscWypozyczen = new System.Windows.Forms.TextBox();
+            this.pobranaZnizkaLojalnosciowa = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -38,6 +40,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(59, 52);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(610, 357);
             this.dataGridView1.TabIndex = 0;
@@ -55,17 +58,33 @@
             // pobraneIDKlienta
             // 
             this.pobraneIDKlienta.Enabled = false;
-            this.pobraneIDKlienta.Location = new System.Drawing.Point(169, 430);
+            this.pobraneIDKlienta.Location = new System.Drawing.Point(59, 415);
             this.pobraneIDKlienta.Name = "pobraneIDKlienta";
             this.pobraneIDKlienta.Size = new System.Drawing.Size(100, 20);
             this.pobraneIDKlienta.TabIndex = 3;
             this.pobraneIDKlienta.Visible = false;
+            // 
+            // pobranaIloscWypozyczen
+            // 
+            this.pobranaIloscWypozyczen.Location = new System.Drawing.Point(205, 436);
+            this.pobranaIloscWypozyczen.Name = "pobranaIloscWypozyczen";
+            this.pobranaIloscWypozyczen.Size = new System.Drawing.Size(76, 20);
+            this.pobranaIloscWypozyczen.TabIndex = 4;
+            // 
+            // pobranaZnizkaLojalnosciowa
+            // 
+            this.pobranaZnizkaLojalnosciowa.Location = new System.Drawing.Point(205, 455);
+            this.pobranaZnizkaLojalnosciowa.Name = "pobranaZnizkaLojalnosciowa";
+            this.pobranaZnizkaLojalnosciowa.Size = new System.Drawing.Size(76, 20);
+            this.pobranaZnizkaLojalnosciowa.TabIndex = 5;
             // 
             // WybierzKlienta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(718, 486);
+            this.Controls.Add(this.pobranaZnizkaLojalnosciowa);
+            this.Controls.Add(this.pobranaIloscWypozyczen);
             this.Controls.Add(this.pobraneIDKlienta);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -83,5 +102,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox pobraneIDKlienta;
+        private System.Windows.Forms.TextBox pobranaIloscWypozyczen;
+        private System.Windows.Forms.TextBox pobranaZnizkaLojalnosciowa;
     }
 }
