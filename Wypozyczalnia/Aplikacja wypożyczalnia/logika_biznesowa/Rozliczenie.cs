@@ -54,18 +54,16 @@ namespace logika_biznesowa
             string dz_d = string.Concat(dataPlanowanegoZwrotuSTR[8], dataPlanowanegoZwrotuSTR[9]);
             DateTime dataWypozyczenia = new DateTime(int.Parse(dw_rok), int.Parse(dw_m), int.Parse(dw_d));
             DateTime dataPlanowanegoZwrotu = new DateTime(int.Parse(dz_rok), int.Parse(dz_m), int.Parse(dz_d));
-            TimeSpan dlugoscWypozyczenia =  dataWypozyczenia - dataPlanowanegoZwrotu;
+            TimeSpan dlugoscWypozyczenia = Data_zwrotu - dataWypozyczenia;
             int dobyWypozyczenia = (int)Math.Ceiling(dlugoscWypozyczenia.TotalHours) / 24 + 1;
             // wyliczenie ceny
-            if (dataPlanowanegoZwrotu.CompareTo(Data_zwrotu) == 1 & Czy_uszkodzony == false & aktywnosc != 0 & aktywnosc % 5 == 0)
+            if (dataPlanowanegoZwrotu.CompareTo(Data_zwrotu) == 1 && Czy_uszkodzony == false && aktywnosc != 0 && aktywnosc % 5 == 0)
             {
-                test = "promo " + cenaZaDobe.ToString();
-                return cenaZaDobe * dobyWypozyczenia * (1 - promocja);
+                return (cenaZaDobe * dobyWypozyczenia * (1 - promocja));
             }
             else
             {
-                test = "bez promo " + cenaZaDobe.ToString();
-                return cenaZaDobe * dobyWypozyczenia;
+                return (cenaZaDobe * dobyWypozyczenia);
             }
         }
     }

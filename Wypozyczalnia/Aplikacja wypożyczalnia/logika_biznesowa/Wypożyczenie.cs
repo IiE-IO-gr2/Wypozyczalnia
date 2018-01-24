@@ -171,9 +171,8 @@ namespace logika_biznesowa {
         public static DataTable PokazWypozyczenie(ref string _exmsg)
         {
             DataTable dt = new DataTable();
-
-            string zapytanie = @"select [ID_wypo퓓czenia],[Data_wypo퓓czenia],[Data_planowanego_zwrotu],[Cena_za_wypozyczenie]" +
-                @"from [dbo].[Wypo퓓czenie] WHERE ([CzyUsuniete] = 0 or [CzyUsuniete] is null)";
+            string zapytanie = @"select [ID_wypo퓓czenia], [Data_wypo퓓czenia], [Data_planowanego_zwrotu], [Cena_za_wypozyczenie]," +
+                        @"[Id_Klienta], [Id_samochodu], [CzyRozliczone] from [dbo].[Wypo퓓czenie]";
             //Pobieranie danych z bazy
             string exmsg = "";
             dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);

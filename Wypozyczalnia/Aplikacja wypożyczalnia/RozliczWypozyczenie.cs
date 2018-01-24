@@ -73,7 +73,7 @@ namespace Aplikacja_wypożyczalnia
                         double nowaCena = rozliczenie1.WyliczCene(dt, ref test);
                         if (nowaCena <= 0)
                         {
-                            MessageBox.Show("Wystąpił błąd podczas wyliczania ceny " + nowaCena + "\n" + test);
+                            MessageBox.Show("Wystąpił błąd podczas wyliczania ceny");
                         }
                         else
                         {
@@ -98,6 +98,7 @@ namespace Aplikacja_wypożyczalnia
                                 MessageBox.Show("Wystąpił błąd podczas zmiany danych w kliencie:\n\t-" + exmsg_update2);
                             if (string.IsNullOrWhiteSpace(exmsg_update1) & string.IsNullOrWhiteSpace(exmsg_update2))
                                 MessageBox.Show("Wypożyczenie zostało rozliczone.");
+                            textBox3.Text = nowaCena.ToString();
                         }
                     }
                 }
