@@ -141,11 +141,10 @@ namespace logika_biznesowa {
             else // zapytanie nie zwróci³o b³êdu
             {
                 string zapytanie = "";
-                if (zwrotZapytanieCzyWypozyczenieIstnieje != "0") // zapytanie zwróci³o znalezienie w bazie klientów rekordu o podanym ID
+                if (zwrotZapytanieCzyWypozyczenieIstnieje != "0") // zapytanie zwróci³o znalezienie w bazie wypozyczeñ rekordu o podanym ID
                 {
-                    zapytanie = @"select [ID_wypo¿yczenia],[Data_wypo¿yczenia],[Data_planowanego_zwrotu],[Cena_za_wypozyczenie],[CzyUsuniete]" +
-                    @"from [dbo].[Wypo¿yczenie]" + identyfikator;
-
+                    zapytanie = @"select [ID_wypo¿yczenia],[Data_wypo¿yczenia],[Data_planowanego_zwrotu],[Cena_za_wypozyczenie]" +
+                    @"from [dbo].[Wypo¿yczenie] where [ID_wypo¿yczenia]=" + identyfikator;
                     // pobranie danych z bazy
                     string exmsg = "";
                     dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
