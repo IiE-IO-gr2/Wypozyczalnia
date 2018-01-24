@@ -104,7 +104,7 @@ namespace logika_biznesowa {
         /// <summary>
         /// konstruktor Samochód
         /// </summary>
-        public Samochód(int id, string mar, string mod, double poj, string rp, string tn, int ik, string sk, int ib, double zp, int im, int ilodr, int roc, string kol, double czd, bool dostep, string inne, int ka)
+        public Samochód(int id, string mar, string mod, double poj, string rp, string tn, int ik, string sk, int ib, double zuz, int im, int ilodr, int roc, string kol, double czd, bool dostep, string inne, int ka)
         {
             Id_samochodu = id;
             Marka = mar;
@@ -115,7 +115,7 @@ namespace logika_biznesowa {
             Ilosc_koni = ik;
             Skrzynia_biegow = sk;
             Ilosc_biegów = ib;
-            Zu¿ycie_paliwa = zp;
+            Zu¿ycie_paliwa = zuz;
             Ilosc_miejsc = im;
             Ilosc_drzwi = ilodr;
             Rocznik = roc;
@@ -139,7 +139,7 @@ namespace logika_biznesowa {
             string zuz = Zu¿ycie_paliwa.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
             string czd = Cena_za_dobê.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
             string zapytanie = @"insert into [dbo].[Samochód] ([Id_samochodu], [Marka], [Model], [Pojemnosc], [Rodzaj_paliwa], [Typ_nadwozia], [Ilosc_koni], [Skrzynia_biegow], [Ilosc_biegów], [Zu¿ycie_paliwa], [Ilosc_miejsc], [Ilosc_drzwi], [Rocznik], [Kolor], [Cena_za_dobê], [Dostepnosc], [Inne], [Kaucja], [CzyUsuniete] )" +
-                @"values (" + Id_samochodu + ", '" + Marka + "' , '" + Model + "', " + Pojemnosc + ", '" + Rodzaj_paliwa + "', '" + Typ_nadwozia + "', " + Ilosc_koni + ", '" + Skrzynia_biegow + "', " + Ilosc_biegów + ", " + zuz + ", " + Ilosc_miejsc + ", " + Ilosc_drzwi + ", " + Rocznik + ", '" + Kolor + "', " + czd + ", " + dostbool + ", '" + Inne + "', " + Kaucja + ", 0)";
+                @"values (" + Id_samochodu + ", '" + Marka + "' , '" + Model + "', " + Pojemnosc + ", '" + Rodzaj_paliwa + "', '" + Typ_nadwozia + "', " + Ilosc_koni + ", '" + Skrzynia_biegow + "', " + Ilosc_biegów + ", " + Zu¿ycie_paliwa + ", " + Ilosc_miejsc + ", " + Ilosc_drzwi + ", " + Rocznik + ", '" + Kolor + "', " + czd + ", " + Dostepnosc + ", '" + Inne + "', " + Kaucja + ", 0)";
             FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }
@@ -147,9 +147,45 @@ namespace logika_biznesowa {
 		/// <summary>
 		/// metoda edytuj¹ca samochód w bazie
 		/// </summary>
-		public void EdytujSamochod() {
-			throw new System.Exception("Not implemented");
-		}
+		public string EdytujSamochod(int identyfikator)
+        {
+            //throw new System.Exception("Not implemented");
+            string zapytanieCzySamochodIstnieje = @"SELECT count(*) FROM [dbo].[Samochód] WHERE [Id_samochodu] = " + identyfikator;
+            string exmsgTest = "";
+            string zwrotZapytanieCzySamochodIstnieje = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanieCzySamochodIstnieje, ref exmsgTest);
+            if (!string.IsNullOrWhiteSpace(exmsgTest)) // zapytanie testuj¹ce, czy w bazie jest samochód o danym ID zwróci³o b³¹d
+                return exmsgTest;
+            else
+            {
+                int licznik;
+                if (int.TryParse(zwrotZapytanieCzySamochodIstnieje, out licznik) == true) // uzyskan¹ wartoœæ da siê przekonwetowaæ na inta
+                {
+                    if (licznik == 1) // zapytanie zwróci³o znalezienie w bazie samochodów rekordu o podanym ID
+                    {
+                        string exmsg = "", exmsg1 = "", exmsg2 = "";
+                        // edycja danych z tabeli Samochody
+                        string zapytanie2 = @"UPDATE [dbo].[Samochód] SET [Marka]='" + Marka + "', [Model]='" + Model + "', [Pojemnosc]=" + Pojemnosc + @"," + 
+                            @"[Rodzaj_paliwa]='" + Rodzaj_paliwa + "', [Typ_nadwozia]='" + Typ_nadwozia + "', [Ilosc_koni]=" + Ilosc_koni + @", " +
+                            @"[Skrzynia_biegow]='" + Skrzynia_biegow + "', [Ilosc_biegów]=" + Ilosc_biegów + ", [Zu¿ycie_paliwa]=" + Zu¿ycie_paliwa + @"," + 
+                            @"[Ilosc_miejsc]=" + Ilosc_miejsc + ", [Ilosc_drzwi]= " + Ilosc_drzwi + ", [Rocznik]=" + Rocznik + ", [Kolor]='" + Kolor + @"'," + 
+                            @"[Cena_za_dobê]=" + Cena_za_dobê + ", [Dostepnosc]=" + Dostepnosc + ", [Inne]='" + Inne + "', [Kaucja]=" + Kaucja + @"," + 
+                            @"WHERE [Id_klienta] = " + identyfikator;
+                        
+                        FunkcjePomicnicze.WstawDaneSQL(zapytanie2, ref exmsg1);
+                        // budowa informacji wyjœciowej z funkcji
+                        if (!string.IsNullOrWhiteSpace(exmsg1))
+                            exmsg += "\n" + exmsg1;
+                        if (!string.IsNullOrWhiteSpace(exmsg2))
+                            exmsg += "\n" + exmsg2;
+                        return exmsg;
+                    }
+                    else
+                        return "Nie odnaleziono samochodu o podanym ID";
+                }
+                else
+                    return "Nie odnaleziono samochodu o podanym ID";
+            }
+        }
 		/// <summary>
 		/// metoda usuwaj¹ca samochód z bazy
 		/// </summary>
@@ -185,18 +221,50 @@ namespace logika_biznesowa {
                     return "Nie odnaleziono samochodu o podanym ID";
             }
 		}
-		/// <summary>
-		/// metoda wyszukuj¹ca samochód w bazie
-		/// </summary>
-		public static Samochód WyszukajSamochod(ref string exmsg) {
-			throw new System.Exception("Not implemented");
-		}
+        /// <summary>
+        /// metoda wyszukuj¹ca samochód w bazie
+        /// </summary>
+        public static DataTable WyszukajSamochod(int identyfikator, ref string _exmsg)
+        {
+            DataTable dt = new DataTable();
+            string zapytanieCzySamochodIstnieje = @"SELECT count(*) from [dbo].[Samochód] WHERE (([CzyUsuniete] = 0 or [CzyUsuniete] is null)" +
+                @"and [Id_samochodu] = " + identyfikator + ")";
+            string exmsgTest = "";
+            string zwrotZapytanieCzySamochodIstnieje = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanieCzySamochodIstnieje, ref exmsgTest);
+            if (!string.IsNullOrWhiteSpace(exmsgTest)) // zapytanie testuj¹ce, czy w bazie jest samochód o danym ID zwróci³o b³¹d
+            {
+                _exmsg = exmsgTest;
+                return dt;
+            }
+            else // zapytanie nie zwróci³o b³êdu
+            {
+                if (zwrotZapytanieCzySamochodIstnieje != "0") // zapytanie zwróci³o znalezienie w bazie samochód rekordu o podanym ID
+                {
+                    string exmsg = "";
+                    string zapytanie = "";
+                    zapytanie = @"SELECT * from[dbo].[Samochód] WHERE [Id_samochodu] = " + identyfikator;
+                    // pobranie danych z bazy
+                    string exmsg1 = "";
+                    dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg1);
+                    if (!string.IsNullOrWhiteSpace(exmsg))
+                        _exmsg += "\n" + exmsg;
+                    if (!string.IsNullOrWhiteSpace(exmsg1))
+                        _exmsg += "\n" + exmsg1;
+                    return dt;
+                }
+                else
+                {
+                    _exmsg = "Nie odnaleziono samochodu o podanym ID";
+                    return dt;
+                }
+            }
+        }
 		/// <summary>
 		/// metoda sprawdzaj¹ca czy samochód jest dostêpny w bazie
 		/// </summary>
-		public bool CzyDostepny() {
+		/*public bool CzyDostepny() {
 			throw new System.Exception("Not implemented");
-		}
+		}*/
 
 		private Panel_administratora panel_administratora;
 

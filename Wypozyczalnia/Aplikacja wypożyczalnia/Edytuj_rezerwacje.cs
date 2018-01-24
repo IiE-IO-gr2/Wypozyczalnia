@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using logika_biznesowa;
 
 namespace Aplikacja_wypożyczalnia
 {
@@ -32,6 +33,35 @@ namespace Aplikacja_wypożyczalnia
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            /// Sprawdzenie poprawności danych w textboxie
+            string bladWTextboxach = "";
+            bool poprawneTextboxy = true;
+            //MessageBox.Show("Dlugosc = " + textBox2.Text.Length);
+            if (string.IsNullOrWhiteSpace(textBox1.Text) ||
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox1.Text, @"^[0-9]{1,10}$"))
+            {
+                bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu ID";
+                poprawneTextboxy = false;
+            }
+
+            if (poprawneTextboxy == true)
+            {
+                /// Pobranie danych z TextBoxa
+                int id = int.Parse(textBox1.Text);
+            }
+
+            else
+            {
+                MessageBox.Show("Wystąpił błąd w danych wejściowych:" + bladWTextboxach);
+                bladWTextboxach = "";
+                poprawneTextboxy = true;
+            }
 
         }
     }

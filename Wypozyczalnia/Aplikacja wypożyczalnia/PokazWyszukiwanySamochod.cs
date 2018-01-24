@@ -11,28 +11,39 @@ using logika_biznesowa;
 
 namespace Aplikacja_wypożyczalnia
 {
-    public partial class DodajSamochód : Form
+    public partial class PokazWyszukiwanySamochod : Form
     {
-        public DodajSamochód()
+        public PokazWyszukiwanySamochod(DataTable dt)
         {
             InitializeComponent();
+            foreach (DataRow item in dt.Rows)
+            {
+                textBox1.Text = item[0].ToString();
+                textBox2.Text = item[1].ToString();
+                textBox3.Text = item[2].ToString();
+                textBox4.Text = item[3].ToString();
+                textBox5.Text = item[4].ToString();
+                textBox6.Text = item[5].ToString();
+                textBox7.Text = item[6].ToString();
+                textBox9.Text = item[7].ToString();
+                textBox8.Text = item[8].ToString();
+                textBox10.Text = item[9].ToString();
+                textBox11.Text = item[10].ToString();
+                textBox12.Text = item[11].ToString();
+                textBox13.Text = item[12].ToString();
+                textBox14.Text = item[13].ToString();
+                textBox15.Text = item[14].ToString();
+                textBox16.Text = item[15].ToString();
+                textBox17.Text = item[16].ToString();
+                textBox18.Text = item[17].ToString();
+            }
         }
-        
-        private void WsteczDS_Click(object sender, EventArgs e)
-        {
-            
-
-            this.Hide();
-            Samochody ds = new Samochody();
-            ds.Show();
-        }
-
-        private void ZatwierdźDS_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             /// Sprawdzenie poprawności danych w textboxach
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
-            
+
             if (string.IsNullOrWhiteSpace(textBox2.Text) ||
                 !System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, @"^([A-Za-z0-9\-]){2,30}$"))
             {
@@ -152,14 +163,14 @@ namespace Aplikacja_wypożyczalnia
                 string inne = textBox17.Text;
                 int ka = int.Parse(textBox18.Text);
 
-                Samochód samochód1 = new Samochód(id, mar,mod,poj,rp,tn,ik,sk,ib,zp,im,ilodr,roc,kol,czd,dostep,inne,ka);
-                
-                string exmsg_kl = samochód1.DodajSamochod();
-                if (string.IsNullOrWhiteSpace(exmsg_kl))
-                    MessageBox.Show("Dodano samochód do bazy");
+                /// Stworzenie obiektów reprezentujących podane dane
+                Samochód samochod = new Samochód(id, mar, mod, poj, rp, tn, ik, sk, ib, zp, im, ilodr, roc, kol, czd, dostep, inne, ka);
+                string exmsg_sm = samochod.EdytujSamochod(id);
+                if (string.IsNullOrWhiteSpace(exmsg_sm))
+                    MessageBox.Show("Zaktualizowano samochód w bazie");
                 else
-                    MessageBox.Show("Wystąpił błąd:\n" + exmsg_kl);
-               
+                    MessageBox.Show("Wystąpił błąd:\n" + exmsg_sm);
+
             }
             else
             {
@@ -167,17 +178,21 @@ namespace Aplikacja_wypożyczalnia
                 bladWTextboxach = "";
                 poprawneTextboxy = true;
             }
-            
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+            private void label1_Click(object sender, EventArgs e)
+            {
+
+            }
+            private void textBox1_TextChanged(object sender, EventArgs e)
+            {
+
+            }
+
+        private void button2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
-}
+    }
+

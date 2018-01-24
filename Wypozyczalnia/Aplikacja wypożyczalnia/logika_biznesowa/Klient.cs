@@ -126,16 +126,68 @@ namespace logika_biznesowa {
 		/// <summary>
 		/// metoda wyszukania klienta w bazie
 		/// </summary>
-        public static Klient WyszukajKlienta(ref string exmsg)
+        public static DataTable WyszukajKlienta(int identyfikator, ref string _exmsg)
         {
-			throw new System.Exception("Not implemented");
-		}
+            DataTable dt = new DataTable();
+            string zapytanieCzyKlientIstnieje = @"SELECT count(*) from [dbo].[Klient] WHERE (([CzyUsuniete] = 0 or [CzyUsuniete] is null)" +
+                @"and [Id_klienta] = " + identyfikator + ")";
+            string exmsgTest = "";
+            string zwrotZapytanieCzyKlientIstnieje = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanieCzyKlientIstnieje, ref exmsgTest);
+            if (!string.IsNullOrWhiteSpace(exmsgTest)) // zapytanie testuj¹ce, czy w bazie jest klient o danym ID zwróci³o b³¹d
+            {
+                _exmsg = exmsgTest;
+                return dt;
+            }
+            else // zapytanie nie zwróci³o b³êdu
+            {
+                if (zwrotZapytanieCzyKlientIstnieje != "0") // zapytanie zwróci³o znalezienie w bazie klientów rekordu o podanym ID
+                {
+                    // sprawdzenie, czy klient by³ klientem indywidualnym, czy firm¹
+                    string exmsg = "";
+                    string zapytanieTestoweCzyKlientFirma = @"SELECT count(*) FROM [dbo].[Klient_KlientFirma] WHERE [Id_klienta_K] = " + identyfikator;
+                    string liczbaRekordow = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanieTestoweCzyKlientFirma, ref exmsg);
+                    // budowa zapytania wyszukuj¹cego klienta_indywidualnego lub klienta_firmê
+                    string zapytanie = "";
+                    if (liczbaRekordow != "0") // czyli jest to klient-firma
+                    {
+                        zapytanie = @"SELECT k.Id_klienta, kf.Nazwa_firmy, kf.NIP, k.Telefon_kontaktowy, k.Adres_email, k.Adres, " +
+                            @"k.Promocja, k.Aktywnosc from[dbo].[Klient] as k inner join [dbo].[Klient_firmy] as kf " +
+                            @"on k.Id_klienta = kf.Id_klienta WHERE k.[Id_klienta] = " + identyfikator;
+                    }
+                    else
+                    {
+                        zapytanie = @"SELECT k.Id_klienta, ki.Imiê, ki.Nazwisko, ki.Numer_prawa_jazdy, ki.PESEL, ki.P³ec, " +
+                            @"k.Telefon_kontaktowy, k.Adres_email, k.Adres, k.Promocja, k.Aktywnosc from[dbo].[Klient] as k inner join " +
+                            @"[dbo].[Klient_indywidualny] as ki on k.Id_klienta = ki.Id_klienta WHERE k.[Id_klienta] = " + identyfikator;
+                    }
+                    // pobranie danych z bazy
+                    string exmsg1 = "";
+                    dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg1);
+                    if (!string.IsNullOrWhiteSpace(exmsg))
+                        _exmsg += "\n" + exmsg;
+                    if (!string.IsNullOrWhiteSpace(exmsg1))
+                        _exmsg += "\n" + exmsg1;
+                    return dt;
+                }
+                else
+                {
+                    _exmsg = "Nie odnaleziono klienta o podanym ID";
+                    return dt;
+                }
+            }
+        }
 		/// <summary>
-		/// metoda edytowania klienta w bazie
+		/// metoda aktualizuj¹ca dane klienta w bazie
 		/// </summary>
-		public void EdytujKlienta() {
-			throw new System.Exception("Not implemented!");
-		}
+		public string EdytujKlienta()
+        {
+            string exmsg = "";
+            string promo = Promocja.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
+            string zapytanie = @"update [dbo].[Klient] set [Telefon_kontaktowy] = '" + Telefon_kontaktowy + @"', [Adres] = '" + Adres + @"', " +
+                @"[Adres_email] = '" + Adres_email + "', [Promocja] = " + promo + ", [Aktywnosc] = " + Aktywnosc + "where [Id_klienta] = " + Id_klienta;
+            FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
+            return exmsg;
+        }
 
 		private Panel_administratora panel_administratora;
 

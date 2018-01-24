@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using logika_biznesowa;
 
 namespace Aplikacja_wypożyczalnia
 {
@@ -23,5 +24,21 @@ namespace Aplikacja_wypożyczalnia
             Wypozyczenia w = new Wypozyczenia();
             w.Show();
         }
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = new DataTable();
+            string exmsg = "";
+            DataTable dt = Wypożyczenie.PokazWypozyczenie(ref exmsg);
+            if (!string.IsNullOrWhiteSpace(exmsg))
+               {
+                 MessageBox.Show("Wystąpił błąd: " + exmsg);
+               }
+            else
+               {
+                 dataGridView1.DataSource = dt;
+               }
+            }
     }
+    
 }

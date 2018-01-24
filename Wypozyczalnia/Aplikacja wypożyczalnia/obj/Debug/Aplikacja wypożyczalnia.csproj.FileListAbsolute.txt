@@ -105,7 +105,6 @@ C:\Users\Lenovo\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalni
 C:\Users\Lenovo\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WyszukajWypozyczenie.resources
 C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.DodajWypozyczenie.resources
 C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.EdytujWypozyczenie.resources
-C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Form1.resources
 C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazRezerwacje.resources
 C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazWypozyczenia.resources
 C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.UsunWypozyczenie.resources
@@ -120,7 +119,6 @@ C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczal
 C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.EdytujSamochód.resources
 C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.EdytujWypozyczenie.resources
 C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Edytuj_rezerwacje.resources
-C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Form1.resources
 C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Klienci.resources
 C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazRezerwacje.resources
 C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazWypozyczenia.resources
@@ -196,7 +194,6 @@ C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\
 C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.EdytujSamochód.resources
 C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.EdytujWypozyczenie.resources
 C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Edytuj_rezerwacje.resources
-C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Form1.resources
 C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Klienci.resources
 C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Menu_po_zalogowaniu.resources
 C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Menu_glowne.resources
@@ -280,6 +277,7 @@ C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\o
 C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.EdytujSamochód.resources
 C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.EdytujWypozyczenie.resources
 C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Edytuj_rezerwacje.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Form1.resources
 C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Klienci.resources
 C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Menu_po_zalogowaniu.resources
 C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Menu_glowne.resources
@@ -353,5 +351,12 @@ C:\Users\sasal_000\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożycza
 C:\Users\sasal_000\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja wypożyczalnia.csproj.CoreCompileInputs.cache
 C:\Users\sasal_000\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja wypożyczalnia.exe
 C:\Users\sasal_000\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja wypożyczalnia.pdb
-C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WybierzKlientaIndywidualnego.resources
-C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WybierzSamoch.resources
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WybierzKlientaIndywidualnego.resources
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WybierzSamoch.resources
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazWyszukanegoKlientaIndywidualnego.resources
+C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazWyszukanegoKlientaIndywidualnego.resources
+C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WybierzKlientaIndywidualnego.resources
+C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WybierzSamoch.resources
+C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazWyszukanegoKlientaIndywidualnego.resources
+C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WybierzKlientaIndywidualnego.resources
+C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WybierzSamoch.resources
