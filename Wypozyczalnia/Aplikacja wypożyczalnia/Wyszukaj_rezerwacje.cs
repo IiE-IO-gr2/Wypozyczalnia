@@ -21,7 +21,7 @@ namespace Aplikacja_wypożyczalnia
         private void wstecz_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Rezerwacja re = new Rezerwacja();
+            Rezerwacje re = new Rezerwacje();
             re.Show();
         }
 
@@ -42,6 +42,16 @@ namespace Aplikacja_wypożyczalnia
             {
                 /// Pobranie danych z TextBoxa
                 int id = int.Parse(textBox1.Text);
+                string exmsg = "";
+                DataTable dt = Rezerwacja.WyszukajRezerwacje(id, ref exmsg);
+                if (!string.IsNullOrWhiteSpace(exmsg))
+                {
+                    MessageBox.Show("Wystąpił błąd: " + exmsg);
+                }
+                else
+                {
+                    dataGridView1.DataSource = dt;
+                }
             }
 
             else

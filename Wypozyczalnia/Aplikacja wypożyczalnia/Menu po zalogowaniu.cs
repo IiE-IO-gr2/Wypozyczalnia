@@ -55,7 +55,7 @@ namespace Aplikacja_wypożyczalnia
         private void rezerwacje_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Rezerwacja rez = new Rezerwacja();
+            Rezerwacje rez = new Rezerwacje();
             rez.Show();
         }
 

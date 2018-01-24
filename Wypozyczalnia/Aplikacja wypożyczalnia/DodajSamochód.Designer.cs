@@ -477,6 +477,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DodajSamochód";
             this.Text = "DodajSamochód";
+            this.Load += new System.EventHandler(this.DodajSamochód_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
