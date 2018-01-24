@@ -17,7 +17,7 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
-        
+        //Przycisk umożliwiający powrót do wyboru czynności w sekcji Samochody
         private void WsteczDS_Click(object sender, EventArgs e)
         {
             
@@ -26,7 +26,7 @@ namespace Aplikacja_wypożyczalnia
             Samochody ds = new Samochody();
             ds.Show();
         }
-
+        // Przycisk zatwierdź zatwierdza wprowadzone dane oraz dodaje nowy samochód do bazy
         private void ZatwierdźDS_Click(object sender, EventArgs e)
         {
             /// Sprawdzenie poprawności danych w textboxach
@@ -161,6 +161,7 @@ namespace Aplikacja_wypożyczalnia
                     MessageBox.Show("Wystąpił błąd:\n" + exmsg_kl);
                
             }
+            //Wyświetlanie informacji o błędzie
             else
             {
                 MessageBox.Show("Wystąpiły błędy w danych wejściowych:" + bladWTextboxach);

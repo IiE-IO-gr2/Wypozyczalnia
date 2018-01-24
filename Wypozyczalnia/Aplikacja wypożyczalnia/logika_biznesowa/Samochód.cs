@@ -2,6 +2,7 @@ using System;
 using System.Data;
 using System.Globalization;
 namespace logika_biznesowa {
+    //implementacja parametrów
 	public class Samochód {
 		/// <summary>
 		/// numer id samochodu
@@ -140,6 +141,7 @@ namespace logika_biznesowa {
             string czd = Cena_za_dobê.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
             string zapytanie = @"insert into [dbo].[Samochód] ([Id_samochodu], [Marka], [Model], [Pojemnosc], [Rodzaj_paliwa], [Typ_nadwozia], [Ilosc_koni], [Skrzynia_biegow], [Ilosc_biegów], [Zu¿ycie_paliwa], [Ilosc_miejsc], [Ilosc_drzwi], [Rocznik], [Kolor], [Cena_za_dobê], [Dostepnosc], [Inne], [Kaucja], [CzyUsuniete] )" +
                 @"values (" + Id_samochodu + ", '" + Marka + "' , '" + Model + "', " + poj + ", '" + Rodzaj_paliwa + "', '" + Typ_nadwozia + "', " + Ilosc_koni + ", '" + Skrzynia_biegow + "', " + Ilosc_biegów + ", " + zuz + ", " + Ilosc_miejsc + ", " + Ilosc_drzwi + ", " + Rocznik + ", '" + Kolor + "', " + czd + ", " + dostbool + ", '" + Inne + "', " + Kaucja + ",0)";
+            //wstawia wartoœci atrybutów u¿ytych w zapytaniu
             FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }
@@ -153,7 +155,9 @@ namespace logika_biznesowa {
             int dostbool = 0;
             if (Dostepnosc == true)
                 dostbool = 1;
+            //zapytanie, które umo¿liwia edycjê samochodu w opcji edycji
             string zapytanie = @"UPDATE [dbo].[Samochód] SET [Marka]='" + Marka + "', [Model]='" + Model + "', [Pojemnosc]=" + Pojemnosc + ",[Rodzaj_paliwa]='" + Rodzaj_paliwa + "', [Typ_nadwozia]='" + Typ_nadwozia + "', [Ilosc_koni]=" + Ilosc_koni + ",[Skrzynia_biegow]='" + Skrzynia_biegow + "', [Ilosc_biegów]=" + Ilosc_biegów + ", [Zu¿ycie_paliwa]=" + Zu¿ycie_paliwa + ",[Ilosc_miejsc]=" + Ilosc_miejsc + ", [Ilosc_drzwi]= " + Ilosc_drzwi + ", [Rocznik]=" + Rocznik + ", [Kolor]='" + Kolor + "', [Cena_za_dobê]=" + Cena_za_dobê + ", [Dostepnosc]=" + dostbool + ", [Inne]='" + Inne + "', [Kaucja]=" + Kaucja + " WHERE [Id_samochodu] = " + Id_samochodu;
+            //wstawia wartoœci atrybutów u¿ytych w zapytaniu
             FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }
@@ -161,7 +165,7 @@ namespace logika_biznesowa {
 		/// metoda usuwaj¹ca samochód z bazy
 		/// </summary>
         public static string UsunSamochod(int identyfikator)
-        {
+        {//sprawdza czy samochód jest w bazie
             string zapytanieCzySamochodIstnieje = @"SELECT count(*) FROM [dbo].[Samochód] WHERE [Id_samochodu] = " + identyfikator;
             string exmsgTest = "";
             string zwrotZapytanieCzySamochodIstnieje = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanieCzySamochodIstnieje, ref exmsgTest);
@@ -177,6 +181,7 @@ namespace logika_biznesowa {
                         string exmsg = "", exmsg1 = "", exmsg2 = "";
                         // usuniêcie danych z tabeli Samochody
                         string zapytanie1 = @"UPDATE [dbo].[Samochód] SET [CzyUsuniete] = 1 WHERE [Id_samochodu] = " + identyfikator;
+                        //wstawia wartoœci atrybutów u¿ytych w zapytaniu
                         FunkcjePomicnicze.WstawDaneSQL(zapytanie1, ref exmsg1);
                         // budowa informacji wyjœciowej z funkcji
                         if (!string.IsNullOrWhiteSpace(exmsg1))
@@ -198,6 +203,7 @@ namespace logika_biznesowa {
         public static DataTable WyszukajSamochod(int identyfikator, ref string _exmsg)
         {
             DataTable dt = new DataTable();
+            //sprawdza czy samochód jest w bazie
             string zapytanieCzySamochodIstnieje = @"SELECT count(*) from [dbo].[Samochód] WHERE (([CzyUsuniete] = 0 or [CzyUsuniete] is null)" +
                 @"and [Id_samochodu] = " + identyfikator + ")";
             string exmsgTest = "";
@@ -213,9 +219,11 @@ namespace logika_biznesowa {
                 {
                     string exmsg = "";
                     string zapytanie = "";
+                    //pokazuje wszystkie wartoœci atrybutów szukanego samochodu
                     zapytanie = @"SELECT * from[dbo].[Samochód] WHERE [Id_samochodu] = " + identyfikator;
                     // pobranie danych z bazy
                     string exmsg1 = "";
+                    //wstawia wartoœci atrybutów u¿ytych w zapytaniu do tabeli
                     dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg1);
                     if (!string.IsNullOrWhiteSpace(exmsg))
                         _exmsg += "\n" + exmsg;

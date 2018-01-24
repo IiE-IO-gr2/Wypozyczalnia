@@ -13,6 +13,7 @@ namespace Aplikacja_wypożyczalnia
 {
     public partial class PokazWyszukiwanySamochod : Form
     {
+        //Pokazuje dane przed edycją
         public PokazWyszukiwanySamochod(DataTable dt)
         {
             InitializeComponent();
@@ -38,7 +39,7 @@ namespace Aplikacja_wypożyczalnia
                 textBox18.Text = item[16].ToString();
             }
         }
-
+        //Przycisk zamknij okno zamyka okno edycji samochodu
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -48,7 +49,8 @@ namespace Aplikacja_wypożyczalnia
         {
 
         }
-
+        /*Przycisk, który zatwierdza wprowadzone zmiany (w polu Dostępność zawsze trzeba zmienić odpowiednio z true na 1,
+        a false na 0*/
         private void button1_Click_1(object sender, EventArgs e)
         {
             /// Sprawdzenie poprawności danych w textboxach
@@ -183,7 +185,7 @@ namespace Aplikacja_wypożyczalnia
                     MessageBox.Show("Wystąpił błąd:\n" + exmsg_sm);
             }
             else
-            {
+            {//Pokazuje, w którym textboxie jest błąd wprowadzonych danych
                 MessageBox.Show("Wystąpiły błędy w danych wejściowych:" + bladWTextboxach);
                 bladWTextboxach = "";
                 poprawneTextboxy = true;
