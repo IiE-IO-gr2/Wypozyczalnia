@@ -96,11 +96,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(248, 355);
+            this.label5.Location = new System.Drawing.Point(164, 357);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(169, 20);
+            this.label5.Size = new System.Drawing.Size(253, 20);
             this.label5.TabIndex = 31;
-            this.label5.Text = "Cena za wypożyczenie";
+            this.label5.Text = "Szacowana cena za wypożyczenie";
             // 
             // textBox1
             // 

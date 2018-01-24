@@ -41,10 +41,24 @@ namespace Aplikacja_wypożyczalnia
             {
                 DataRow dr = (dataGridView1.SelectedRows[0].DataBoundItem as DataRowView).Row;
                 string id = dr.ItemArray[0].ToString();
-                MessageBox.Show("ID wybranego klienta " + id);
-                pobraneIDKlienta.Text = id;
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                string exmsg_czymoze = "";
+                string zapytanie_czymoze = @"select count(*) from Wypożyczenie where ((CzyRozliczone=0 or CzyRozliczone is null)" +
+                    @"and [Id_Klienta] = " + id + ")";
+               int ileWypozyczenNierozliczonych = int.Parse(FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanie_czymoze, ref exmsg_czymoze));
+                if (!string.IsNullOrWhiteSpace(exmsg_czymoze))
+                {
+                    MessageBox.Show("Wystapił błąd podczas sprawdzania, czy dany klient może dokonać kolejnego wypozyczenia.\n\t-" + exmsg_czymoze);
+                }
+                else if (ileWypozyczenNierozliczonych > 5)
+                {
+                    MessageBox.Show("Dany klient nie może dokonać kolejnego wypożyczenia");
+                }
+                else
+                {
+                    pobraneIDKlienta.Text = id;
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
             }
             catch (Exception)
             {

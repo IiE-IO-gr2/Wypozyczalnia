@@ -20,8 +20,8 @@ namespace logika_biznesowa {
         /// cena za wypo퓓czenie samochodu
         /// </summary>
         public double Cena_za_wypozyczenie;
-        private Rezerwacja rezerwacja;
-        private Klient_indywidualny klient_indywidualny;
+        private int id_klienta;
+        private int id_samochodu;
         private Rozliczenie rozliczenie;
 
         /// <summary>
@@ -33,17 +33,21 @@ namespace logika_biznesowa {
             Data_wypo퓓czenia = new DateTime(1, 1, 1);
             Data_planowanego_zwrotu = new DateTime(1, 1, 1);
             Cena_za_wypozyczenie = 0.0;
+            id_klienta = 0;
+            id_samochodu = 0;
         }
 
         /// <summary>
         /// konstruktor Wypozyczenie
         /// </summary>
-        public Wypo퓓czenie(int id, DateTime dw, DateTime dpz, float czp)
+        public Wypo퓓czenie(int id_w, DateTime dw, DateTime dz, double czp, int idk, int ids)
         {
-            ID_wypo퓓czenia = id;
+            ID_wypo퓓czenia = id_w;
             Data_wypo퓓czenia = dw;
-            Data_planowanego_zwrotu = dpz;
+            Data_planowanego_zwrotu = dz;
             Cena_za_wypozyczenie = czp;
+            id_klienta = idk;
+            id_samochodu = ids;
         }
 
         /// <summary>
@@ -52,8 +56,13 @@ namespace logika_biznesowa {
         public string DodajWypozyczenie()
         {
             string exmsg = "";
-            string zapytanie = @"insert into [dbo].[Wypo퓓czenie] ([ID_wypo퓓czenia], [Data_wypo퓓czenia], [Data_planowanego_zwrotu], [Cena_za_wypozyczenie], [CzyUsuniete])" +
-                @"values (" + ID_wypo퓓czenia + ", " + Data_wypo퓓czenia + " , " + Data_planowanego_zwrotu + ", " + Cena_za_wypozyczenie + " , 0)";
+            string cena = Cena_za_wypozyczenie.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
+            string Data_wyp = Data_wypo퓓czenia.Year.ToString() + "-" + Data_wypo퓓czenia.Month.ToString() + "-" + Data_wypo퓓czenia.Day.ToString();
+            string Data_pl_zw = Data_planowanego_zwrotu.Year.ToString() + "-" + Data_planowanego_zwrotu.Month.ToString() + "-" + Data_planowanego_zwrotu.Day.ToString();
+            string zapytanie = @"INSERT INTO [dbo].[Wypo퓓czenie] ([ID_wypo퓓czenia], [Data_wypo퓓czenia], [Data_planowanego_zwrotu]," +
+                @"[Cena_za_wypozyczenie], [CzyUsuniete], [Id_Klienta], [Id_samochodu], [CzyRozliczone])" +
+                @"VALUES(" + ID_wypo퓓czenia + ", '" + Data_wyp + "', '" + Data_pl_zw +
+                "', " + cena + ", 0, " + id_klienta + ", " + id_samochodu + ", 0)";
             FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }
