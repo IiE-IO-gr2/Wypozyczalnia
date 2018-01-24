@@ -48,6 +48,10 @@ namespace Aplikacja_wypożyczalnia
             {
 
             }
-        
+
+        private void PokazSamochody_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
