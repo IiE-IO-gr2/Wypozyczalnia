@@ -110,7 +110,7 @@
             this.ListaSamochodow.Name = "ListaSamochodow";
             this.ListaSamochodow.Size = new System.Drawing.Size(125, 65);
             this.ListaSamochodow.TabIndex = 6;
-            this.ListaSamochodow.Text = "Lista";
+            this.ListaSamochodow.Text = "Pokaż";
             this.ListaSamochodow.UseVisualStyleBackColor = true;
             this.ListaSamochodow.Click += new System.EventHandler(this.ListaSamochodow_Click);
             // 
@@ -128,7 +128,7 @@
             this.Controls.Add(this.DodajSamochód);
             this.Controls.Add(this.label1);
             this.Name = "Samochody";
-            this.Text = "Samochody";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Samochody_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
