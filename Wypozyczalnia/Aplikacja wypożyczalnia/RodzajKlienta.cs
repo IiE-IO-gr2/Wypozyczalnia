@@ -17,6 +17,9 @@ namespace Aplikacja_wypożyczalnia
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający powrót do formularza Klienci
+        /// </summary>
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -24,6 +27,9 @@ namespace Aplikacja_wypożyczalnia
             k.Show();
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający przejście do formularza Dodaj Klienta - Klient Indywidualny
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -31,6 +37,9 @@ namespace Aplikacja_wypożyczalnia
             dki.Show();
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający przejście do formularza Dodaj Klienta - Firma
+        /// </summary>
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -38,25 +47,6 @@ namespace Aplikacja_wypożyczalnia
             dkf.Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            DodajKlientaIndywidualny dki = new DodajKlientaIndywidualny();
-            dki.Show();
-        }
-
-        private void WsteczWS_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Klienci k = new Klienci();
-            k.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            DodajKlientaFirma dkf = new DodajKlientaFirma();
-            dkf.Show();
-        }
+        
     }
 }

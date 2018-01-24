@@ -32,11 +32,17 @@ namespace Aplikacja_wypożyczalnia
             }
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający zamknięcie okna
+        /// </summary>
         private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający zapisanie edytowanych danych klienta indywidualnego
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             /// Sprawdzenie poprawności danych w textboxach
@@ -139,6 +145,7 @@ namespace Aplikacja_wypożyczalnia
             }
             else
             {
+                /// Wyświetlenie informacji o błędzie
                 MessageBox.Show("Wystąpiły błędy w danych wejściowych:" + bladWTextboxach);
                 bladWTextboxach = "";
                 poprawneTextboxy = true;
