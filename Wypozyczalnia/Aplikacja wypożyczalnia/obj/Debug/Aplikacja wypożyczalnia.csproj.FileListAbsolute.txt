@@ -280,7 +280,6 @@ C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\o
 C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Menu_glowne.resources
 C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Panel_administratora.resources
 C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazRezerwacje.resources
-C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazSamochod.resources
 C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazWypozyczenia.resources
 C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazWyszukanegoKlientaFirme.resources
 C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Properties.Resources.resources
@@ -368,3 +367,4 @@ C:\Users\sasal_000\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożycza
 C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Rezerwacje.resources
 C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazWyszukiwanySamochod.resources
 C:\Users\Koci\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Rezerwacje.resources
+C:\Users\iki\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazSamochody.resources
