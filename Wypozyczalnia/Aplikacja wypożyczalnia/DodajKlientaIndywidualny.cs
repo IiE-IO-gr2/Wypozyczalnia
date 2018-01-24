@@ -19,6 +19,9 @@ namespace Aplikacja_wypożyczalnia
             textBox1.ReadOnly = true;
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający dodanie i zapisanie danych nowego klienta indywidualnego
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -124,6 +127,7 @@ namespace Aplikacja_wypożyczalnia
             }
             else
             {
+                /// Wyświetlenie informacji o błędzie
                 MessageBox.Show("Wystąpiły błędy w danych wejściowych:" + bladWTextboxach);
                 bladWTextboxach = "";
                 poprawneTextboxy = true;
@@ -131,6 +135,9 @@ namespace Aplikacja_wypożyczalnia
            
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający powrót do formularza Rodzaj Klienta
+        /// </summary>
         private void WsteczWS_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -138,6 +145,9 @@ namespace Aplikacja_wypożyczalnia
             rk.Show();
         }
 
-        
+        private void DodajKlientaIndywidualny_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -38,7 +38,7 @@ namespace Aplikacja_wypożyczalnia
         }
 
         /// <summary>
-        /// Przycisk umożliwiający wylogowanie się z systemu i powrotu do panelu logowania się
+        /// Przycisk umożliwiający wylogowanie się z systemu i powrót do panelu logowania się
         /// </summary>
         private void wylogowanie_Click(object sender, EventArgs e)
         {

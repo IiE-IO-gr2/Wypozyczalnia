@@ -17,14 +17,15 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
-
+        // Przycisk wstecz, przenosi do poprzedniego okna
         private void wstecz_Click(object sender, EventArgs e)
         {
             this.Hide();
             Rezerwacje re = new Rezerwacje();
             re.Show();
         }
-
+        // przycisk odpowiedzialny za sprawdzenie poprawności wpisanego ID oraz wyszukanie w bazie danych
+        // odpowiedniego wypozyczenia i umieszczenie go w tabeli
         private void button1_Click(object sender, EventArgs e)
         {
             /// Sprawdzenie poprawności danych w textboxie

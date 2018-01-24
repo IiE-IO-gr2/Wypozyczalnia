@@ -18,6 +18,7 @@ namespace Aplikacja_wypożyczalnia
             InitializeComponent();
         }
 
+        //Przycisk wstecz, przenosi do poprzedniego okna
         private void wstecz_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -25,7 +26,8 @@ namespace Aplikacja_wypożyczalnia
             re.Show();
 
         }
-
+        //Przycisk button1 jest odpowiedzialny za uaktualnienie(pobranie) listy wypożyczeń z bazy danych
+        // i umieszczenie ich w tabeli(dataGridView1)
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = new DataTable();

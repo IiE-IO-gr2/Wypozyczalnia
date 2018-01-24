@@ -20,11 +20,10 @@ namespace Aplikacja_wypożyczalnia
         
         private void WybierzSamochod_Load(object sender, EventArgs e)
         {
+            MessageBox.Show("oups");
             string zapytanie = @"select [Id_samochodu],[Marka],[Model],[Cena_za_dobę],[Kaucja],[Pojemnosc],[Rodzaj_paliwa],[Rocznik],[Kolor]" +
-                @"from [dbo].[Samochód] WHERE ([CzyUsuniete] = 0 or [CzyUsuniete] is null)";
-
+                @"from [dbo].[Samochód] WHERE (([CzyUsuniete] = 0 or [CzyUsuniete] is null) and [Id_samochodu] not in (" + IdSamochodowKtorychNieMoznaWypozyczyc() + "))";
             string exmsg = "";
-
             DataTable dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
             if (!string.IsNullOrWhiteSpace(exmsg))
             {
@@ -37,13 +36,31 @@ namespace Aplikacja_wypożyczalnia
             }
         }
 
+        private string IdSamochodowKtorychNieMoznaWypozyczyc()
+        {
+            string zapytanie = @"select [Id_samochodu] from [dbo].[Wypożyczenie] where (CzyRozliczone=0 or CzyRozliczone is null)";
+            string exmsg = "";
+            DataTable dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
+            if (!string.IsNullOrEmpty(exmsg))
+            {
+                return "Wystąpił błąd podczas sprawdzania niedostępnych samochodów\n\t-" + exmsg;
+            }
+            else
+            {
+                string listaID = "";
+                foreach (DataRow item in dt.Rows)
+                    listaID += "," + item[0].ToString();
+                string listaIDCzysta = listaID.Substring(2);
+                return listaIDCzysta;
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
                 DataRow dr = (dataGridView1.SelectedRows[0].DataBoundItem as DataRowView).Row;
                 string id = dr.ItemArray[0].ToString();
-                MessageBox.Show("ID wybranego samochodu " + id);
                 PobraneIDSam.Text = id;
                 string cena = dr.ItemArray[3].ToString();
                 Kwota.Text = cena;
@@ -52,7 +69,7 @@ namespace Aplikacja_wypożyczalnia
             }
             catch (Exception)
             {
-                MessageBox.Show("Nie wybrano klienta");
+                MessageBox.Show("Nie wybrano samochodu");
             }
         }
 
