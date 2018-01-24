@@ -17,14 +17,14 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
-
+        // Przycisk umożliwiający przejście do poprzedniego okna
         private void Wstecz_Click(object sender, EventArgs e)
         {
             this.Hide();
             Wypozyczenia w = new Wypozyczenia();
             w.Show();
         }
-
+        //Przycisk umożliwiający wyszukanie wypożyczenia i usunięcie go z bazdy danych
         private void Button2_Click(object sender, EventArgs e)
         {
             /// Sprawdzenie poprawności danych w textboxie

@@ -320,6 +320,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DodajKlientaIndywidualny";
             this.Text = "DodajKlienta";
+            this.Load += new System.EventHandler(this.DodajKlientaIndywidualny_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

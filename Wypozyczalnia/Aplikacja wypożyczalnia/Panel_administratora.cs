@@ -17,6 +17,9 @@ namespace Aplikacja_wypożyczalnia
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Przycisk, po którym wychodzimy z panelu logowania się
+        /// </summary>
         private void button2_Click(object sender, EventArgs e)
         {
             if (Application.MessageLoop)
@@ -25,6 +28,9 @@ namespace Aplikacja_wypożyczalnia
             }
         }
 
+        /// <summary>
+        /// Przycisk, który umożliwia zalogowanie do systemu
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             string l = textBox1.Text;
