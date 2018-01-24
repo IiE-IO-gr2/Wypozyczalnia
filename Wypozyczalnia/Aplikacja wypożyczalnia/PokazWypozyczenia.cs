@@ -23,5 +23,27 @@ namespace Aplikacja_wypożyczalnia
             Wypozyczenia w = new Wypozyczenia();
             w.Show();
         }
+
+        private void PokazWypozyczenia_Load(object sender, EventArgs e)
+        {
+
+            string zapytanie = @"select [ID_wypożyczenia],[Data_wypożyczenia],[Data_planowanego_zwrotu],[Cena_za_wypozyczenie],[CzyUsuniete]" +
+                @"from [dbo].[Wypożyczenie]";
+       
+        string exmsg = "";
+
+            DataTable dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
+            if (!string.IsNullOrWhiteSpace(exmsg))
+            {
+                MessageBox.Show("Wystąpił błąd: " + exmsg);
+            }
+            else
+            {
+                dataGridView1.DataSource = dt;
+                dataGridView1.Select();
+            }
+        }
+
     }
+    
 }
