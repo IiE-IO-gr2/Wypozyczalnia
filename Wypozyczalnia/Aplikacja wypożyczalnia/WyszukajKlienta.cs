@@ -27,6 +27,7 @@ namespace Aplikacja_wypożyczalnia
 
         private void button1_Click(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = new DataTable();
             /// Sprawdzenie poprawności danych w textboxie
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
@@ -36,31 +37,20 @@ namespace Aplikacja_wypożyczalnia
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu ID";
                 poprawneTextboxy = false;
             }
-
             if (poprawneTextboxy == true)
             {
-                /// Pobranie danych z TextBoxa
-                int id1 = int.Parse(textBox1.Text);
-
-                try
+                int id = int.Parse(textBox1.Text);
+                string exmsg = "";
+                DataTable dt = Klient.WyszukajKlienta(id, ref exmsg);
+                if (!string.IsNullOrWhiteSpace(exmsg))
                 {
-                    int id = int.Parse(textBox1.Text);
-                    string exmsg = "";
-                    Klient znaleziony = Klient.WyszukajKlienta(ref exmsg);
-                    if (!string.IsNullOrWhiteSpace(exmsg))
-                        MessageBox.Show("Wystąpił błąd:\n" + exmsg);
-                    else
-                    {
-                        PokazWyszukanegoKlientaFirme pokazKlientaFirme = new PokazWyszukanegoKlientaFirme();
-                    }
-
+                    MessageBox.Show("Wystąpił błąd: " + exmsg);
                 }
-                catch (Exception)
+                else
                 {
-                    MessageBox.Show("Wystąpił błąd:\nNiepoprawny lub pusty numer identyfikacyjny");
+                    dataGridView1.DataSource = dt;
                 }
             }
-
             else
             {
                 MessageBox.Show("Wystąpił błąd w danych wejściowych:" + bladWTextboxach);

@@ -58,6 +58,7 @@
             this.button1.TabIndex = 51;
             this.button1.Text = "Zamknij okno";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox11
             // 
@@ -211,9 +212,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(300, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(327, 29);
+            this.label1.Size = new System.Drawing.Size(263, 29);
             this.label1.TabIndex = 28;
-            this.label1.Text = "Poszukiwany Klient - Firma";
+            this.label1.Text = "Edytuj Klienta - Firma";
             // 
             // button5
             // 
@@ -222,7 +223,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(125, 65);
             this.button5.TabIndex = 52;
-            this.button5.Text = "Wstecz";
+            this.button5.Text = "Zapisz";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
