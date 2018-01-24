@@ -37,6 +37,9 @@ namespace Aplikacja_wypożyczalnia
 
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający wylogowanie się z systemu i powrót do panelu logowania się
+        /// </summary>
         private void wylogowanie_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Wylogowano");
@@ -45,6 +48,9 @@ namespace Aplikacja_wypożyczalnia
             pan.Show();
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający przejście do formularza Samochodów
+        /// </summary>
         private void samochody_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -52,13 +58,19 @@ namespace Aplikacja_wypożyczalnia
             sa.Show();
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający przejście do formularza Rezerwacji
+        /// </summary>
         private void rezerwacje_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Rezerwacja rez = new Rezerwacja();
+            Rezerwacje rez = new Rezerwacje();
             rez.Show();
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający przejście do formularza Klienci
+        /// </summary>
         private void klienci_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -66,6 +78,9 @@ namespace Aplikacja_wypożyczalnia
             kl.Show();
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający przejście do formularza Wypożyczeń
+        /// </summary>
         private void wypozyczenia_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -73,6 +88,9 @@ namespace Aplikacja_wypożyczalnia
             w.Show();
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający wysyłanie przypominających maili
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             string exmsg = "";

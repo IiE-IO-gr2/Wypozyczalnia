@@ -17,14 +17,15 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
-
+        // Przycisk wstecz, przenosi do poprzedniego okna
         private void wstecz_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Rezerwacja re = new Rezerwacja();
+            Rezerwacje re = new Rezerwacje();
             re.Show();
         }
-
+        // przycisk odpowiedzialny za sprawdzenie poprawności wpisanego ID oraz wyszukanie w bazie danych
+        // odpowiedniego wypozyczenia i umieszczenie go w tabeli
         private void button1_Click(object sender, EventArgs e)
         {
             /// Sprawdzenie poprawności danych w textboxie
@@ -42,6 +43,16 @@ namespace Aplikacja_wypożyczalnia
             {
                 /// Pobranie danych z TextBoxa
                 int id = int.Parse(textBox1.Text);
+                string exmsg = "";
+                DataTable dt = Rezerwacja.WyszukajRezerwacje(id, ref exmsg);
+                if (!string.IsNullOrWhiteSpace(exmsg))
+                {
+                    MessageBox.Show("Wystąpił błąd: " + exmsg);
+                }
+                else
+                {
+                    dataGridView1.DataSource = dt;
+                }
             }
 
             else

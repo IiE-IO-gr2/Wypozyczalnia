@@ -33,6 +33,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.wstecz = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -40,7 +42,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(283, 69);
+            this.label1.Location = new System.Drawing.Point(278, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(289, 29);
             this.label1.TabIndex = 2;
@@ -51,7 +53,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(248, 139);
+            this.label2.Location = new System.Drawing.Point(202, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(142, 20);
             this.label2.TabIndex = 31;
@@ -59,7 +61,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(434, 139);
+            this.textBox1.Location = new System.Drawing.Point(410, 55);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 32;
@@ -86,12 +88,23 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(61, 94);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(738, 193);
+            this.dataGridView1.TabIndex = 59;
+            // 
             // WyszukajWypozyczenie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o1;
             this.ClientSize = new System.Drawing.Size(888, 484);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.wstecz);
             this.Controls.Add(this.textBox1);
@@ -99,6 +112,7 @@
             this.Controls.Add(this.label1);
             this.Name = "WyszukajWypozyczenie";
             this.Text = "WyszukajWypozyczenie";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,5 +125,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button wstecz;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

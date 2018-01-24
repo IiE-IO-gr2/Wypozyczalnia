@@ -43,7 +43,7 @@
             // samochody
             // 
             this.samochody.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.samochody.Location = new System.Drawing.Point(98, 109);
+            this.samochody.Location = new System.Drawing.Point(112, 109);
             this.samochody.Name = "samochody";
             this.samochody.Size = new System.Drawing.Size(235, 73);
             this.samochody.TabIndex = 0;
@@ -65,7 +65,7 @@
             // klienci
             // 
             this.klienci.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.klienci.Location = new System.Drawing.Point(98, 238);
+            this.klienci.Location = new System.Drawing.Point(112, 238);
             this.klienci.Name = "klienci";
             this.klienci.Size = new System.Drawing.Size(235, 73);
             this.klienci.TabIndex = 2;

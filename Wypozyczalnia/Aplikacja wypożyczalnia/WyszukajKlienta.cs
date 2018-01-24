@@ -18,6 +18,9 @@ namespace Aplikacja_wypożyczalnia
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający powrót do formularza Klienci
+        /// </summary>
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -25,6 +28,9 @@ namespace Aplikacja_wypożyczalnia
             k.Show();
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający wyszukanie i wyświetlenie danych klienta
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = new DataTable();
@@ -39,6 +45,7 @@ namespace Aplikacja_wypożyczalnia
             }
             if (poprawneTextboxy == true)
             {
+                /// Wyszukanie klienta w bazie o podanym ID
                 int id = int.Parse(textBox1.Text);
                 string exmsg = "";
                 DataTable dt = Klient.WyszukajKlienta(id, ref exmsg);
@@ -53,6 +60,7 @@ namespace Aplikacja_wypożyczalnia
             }
             else
             {
+                /// Wyświetlenie informacji o błędzie
                 MessageBox.Show("Wystąpił błąd w danych wejściowych:" + bladWTextboxach);
                 bladWTextboxach = "";
                 poprawneTextboxy = true;

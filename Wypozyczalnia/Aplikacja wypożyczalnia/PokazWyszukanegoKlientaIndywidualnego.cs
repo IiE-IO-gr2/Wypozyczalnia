@@ -32,11 +32,17 @@ namespace Aplikacja_wypożyczalnia
             }
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający zamknięcie okna
+        /// </summary>
         private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający zapisanie edytowanych danych klienta indywidualnego
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             /// Sprawdzenie poprawności danych w textboxach
@@ -57,7 +63,7 @@ namespace Aplikacja_wypożyczalnia
             }
 
             if (string.IsNullOrWhiteSpace(textBox4.Text) ||
-               !System.Text.RegularExpressions.Regex.IsMatch(textBox4.Text, @"^[A-Za-z0-9\-]{2,20}$"))
+               !System.Text.RegularExpressions.Regex.IsMatch(textBox4.Text, @"^[A-Za-z0-9\-/]{2,15}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu numer prawa jazdy";
                 poprawneTextboxy = false;
@@ -69,7 +75,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox6.Text) ||
-              !System.Text.RegularExpressions.Regex.IsMatch(textBox6.Text, @"^[A-Za-ząęłóżćśźńŁŚĆŻŹ]{1,10}$"))
+              !System.Text.RegularExpressions.Regex.IsMatch(textBox6.Text, @"^[K-Mk-m]{1}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu płeć";
                 poprawneTextboxy = false;
@@ -139,6 +145,7 @@ namespace Aplikacja_wypożyczalnia
             }
             else
             {
+                /// Wyświetlenie informacji o błędzie
                 MessageBox.Show("Wystąpiły błędy w danych wejściowych:" + bladWTextboxach);
                 bladWTextboxach = "";
                 poprawneTextboxy = true;

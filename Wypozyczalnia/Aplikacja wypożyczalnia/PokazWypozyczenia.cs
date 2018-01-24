@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using logika_biznesowa;
 
 namespace Aplikacja_wypożyczalnia
 {
@@ -16,34 +17,37 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        ///Przycisk umożliwiający powrót do poprzedniego okna
+        /// </summary>
         private void wstecz_Click(object sender, EventArgs e)
         {
             this.Hide();
             Wypozyczenia w = new Wypozyczenia();
             w.Show();
         }
+        /// <summary>
+        ///Przycisk umożliwiający uzupełnienie tabeli aktualną listą wypożyczeń
+        /// </summary>
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = new DataTable();
+            string exmsg = "";
+            DataTable dt = Wypożyczenie.PokazWypozyczenie(ref exmsg);
+            if (!string.IsNullOrWhiteSpace(exmsg))
+               {
+                 MessageBox.Show("Wystąpił błąd: " + exmsg);
+               }
+            else
+               {
+                 dataGridView1.DataSource = dt;
+               }
+            }
 
         private void PokazWypozyczenia_Load(object sender, EventArgs e)
         {
 
-            string zapytanie = @"select [ID_wypożyczenia],[Data_wypożyczenia],[Data_planowanego_zwrotu],[Cena_za_wypozyczenie],[CzyUsuniete]" +
-                @"from [dbo].[Wypożyczenie]";
-       
-        string exmsg = "";
-
-            DataTable dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
-            if (!string.IsNullOrWhiteSpace(exmsg))
-            {
-                MessageBox.Show("Wystąpił błąd: " + exmsg);
-            }
-            else
-            {
-                dataGridView1.DataSource = dt;
-                dataGridView1.Select();
-            }
         }
-
     }
     
 }

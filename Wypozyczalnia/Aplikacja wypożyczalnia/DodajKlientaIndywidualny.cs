@@ -19,6 +19,9 @@ namespace Aplikacja_wypożyczalnia
             textBox1.ReadOnly = true;
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający dodanie i zapisanie danych nowego klienta indywidualnego
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -40,7 +43,7 @@ namespace Aplikacja_wypożyczalnia
             }
 
             if (string.IsNullOrWhiteSpace(textBox4.Text) ||
-               !System.Text.RegularExpressions.Regex.IsMatch(textBox4.Text, @"^[A-Za-z0-9\-]{2,20}$"))
+               !System.Text.RegularExpressions.Regex.IsMatch(textBox4.Text, @"^[A-Za-z0-9\-/]{2,20}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu numer prawa jazdy";
                 poprawneTextboxy = false;
@@ -52,7 +55,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox6.Text) ||
-              !System.Text.RegularExpressions.Regex.IsMatch(textBox6.Text, @"^[A-Za-ząęłóżćśźńŁŚĆŻŹ]{1,10}$"))
+              !System.Text.RegularExpressions.Regex.IsMatch(textBox6.Text, @"^[K-Mk-m]{1}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu płeć";
                 poprawneTextboxy = false;
@@ -124,6 +127,7 @@ namespace Aplikacja_wypożyczalnia
             }
             else
             {
+                /// Wyświetlenie informacji o błędzie
                 MessageBox.Show("Wystąpiły błędy w danych wejściowych:" + bladWTextboxach);
                 bladWTextboxach = "";
                 poprawneTextboxy = true;
@@ -131,6 +135,9 @@ namespace Aplikacja_wypożyczalnia
            
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający powrót do formularza Rodzaj Klienta
+        /// </summary>
         private void WsteczWS_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -138,6 +145,9 @@ namespace Aplikacja_wypożyczalnia
             rk.Show();
         }
 
-        
+        private void DodajKlientaIndywidualny_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

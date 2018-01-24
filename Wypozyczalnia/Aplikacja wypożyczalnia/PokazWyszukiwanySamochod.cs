@@ -13,6 +13,9 @@ namespace Aplikacja_wypożyczalnia
 {
     public partial class PokazWyszukiwanySamochod : Form
     {
+        /// <summary>
+        ///Pokazuje dane przed edycją
+        /// </summary>
         public PokazWyszukiwanySamochod(DataTable dt)
         {
             InitializeComponent();
@@ -25,33 +28,50 @@ namespace Aplikacja_wypożyczalnia
                 textBox5.Text = item[4].ToString();
                 textBox6.Text = item[5].ToString();
                 textBox7.Text = item[6].ToString();
-                textBox9.Text = item[7].ToString();
-                textBox8.Text = item[8].ToString();
-                textBox10.Text = item[9].ToString();
-                textBox11.Text = item[10].ToString();
-                textBox12.Text = item[11].ToString();
-                textBox13.Text = item[12].ToString();
-                textBox14.Text = item[13].ToString();
-                textBox15.Text = item[14].ToString();
-                textBox16.Text = item[15].ToString();
-                textBox17.Text = item[16].ToString();
-                textBox18.Text = item[17].ToString();
+                textBox8.Text = item[7].ToString();
+                textBox9.Text = item[18].ToString();
+                textBox10.Text = item[8].ToString();
+                textBox11.Text = item[9].ToString();
+                textBox12.Text = item[10].ToString();
+                textBox13.Text = item[11].ToString();
+                textBox14.Text = item[12].ToString();
+                textBox15.Text = item[13].ToString();
+                textBox16.Text = item[14].ToString();
+                textBox17.Text = item[15].ToString();
+                textBox18.Text = item[16].ToString();
             }
         }
-        private void button1_Click(object sender, EventArgs e)
+        /// <summary>
+        ///Przycisk zamknij okno zamyka okno edycji samochodu
+        /// </summary>
+        private void button2_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void PokazWyszukiwanySamochod_Load(object sender, EventArgs e)
+        {
+
+        }
+        /// <summary>
+        ///Przycisk, który zatwierdza wprowadzone zmiany (w polu Dostępność zawsze trzeba zmienić odpowiednio z true na 1, a false na 0
+        /// </summary>
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            /// <summary>
             /// Sprawdzenie poprawności danych w textboxach
+            /// </summary>
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
 
             if (string.IsNullOrWhiteSpace(textBox2.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, @"^([A-Za-z0-9\-]){2,30}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, @"^([A-Za-z0-9\-ąćęłńóśźżĄĘŁŃŚŻŹĆÓ]){2,30}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu marka";
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox3.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, @"^([A-Za-z0-9\-]){2,30}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, @"^([A-Za-z0-9\-ąćęłńóśźżĄĘŁŃŚŻŹĆÓ ]){2,30}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu model";
                 poprawneTextboxy = false;
@@ -63,13 +83,13 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox5.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox5.Text, @"^([A-Za-z0-9\-]){2,20}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox5.Text, @"^([A-Za-z0-9\-ąćęłńóśźżĄĘŁŃŚŻŹĆÓ]){2,20}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu rodzaj paliwa";
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox6.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox6.Text, @"^([A-Za-z0-9\-]){2,30}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox6.Text, @"^([A-Za-z0-9\-ąćęłńóśźżĄĘŁŃŚŻŹĆÓ]){2,30}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu typ nadwozia";
                 poprawneTextboxy = false;
@@ -81,7 +101,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox8.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox8.Text, @"^([A-Za-z0-9\-]){2,30}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox8.Text, @"^([A-Za-z0-9\-ąćęłńóśźżĄĘŁŃŚŻŹĆÓ]){2,30}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu skrzynia biegów";
                 poprawneTextboxy = false;
@@ -93,7 +113,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox10.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox10.Text, @"^[0-9,.]{1,10}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox10.Text, @"^[0-9,.]{1,4}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu zużycie paliwa";
                 poprawneTextboxy = false;
@@ -117,13 +137,13 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox14.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox14.Text, @"^([A-Za-z]){2,20}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox14.Text, @"^([A-Za-ząćęłńóśźżĄĘŁŃŚŻŹĆÓ]){2,20}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu kolor";
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox15.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox15.Text, @"^([0-9]){2,10}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox15.Text, @"^([0-9,.]){2,10}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu cena za dobę";
                 poprawneTextboxy = false;
@@ -142,7 +162,7 @@ namespace Aplikacja_wypożyczalnia
             }
             if (poprawneTextboxy == true)
             {
-                int id = Samochód.MaksymalnyNumerIdentyfikatoraWBazie() + 1;
+                int id = int.Parse(textBox1.Text);
                 string mar = textBox2.Text;
                 string mod = textBox3.Text;
                 double poj = double.Parse(textBox4.Text);
@@ -162,37 +182,26 @@ namespace Aplikacja_wypożyczalnia
                     dostep = true;
                 string inne = textBox17.Text;
                 int ka = int.Parse(textBox18.Text);
-
+                /// <summary>
                 /// Stworzenie obiektów reprezentujących podane dane
+                /// </summary>
                 Samochód samochod = new Samochód(id, mar, mod, poj, rp, tn, ik, sk, ib, zp, im, ilodr, roc, kol, czd, dostep, inne, ka);
-                string exmsg_sm = samochod.EdytujSamochod(id);
+                string exmsg_sm = samochod.EdytujSamochod();
                 if (string.IsNullOrWhiteSpace(exmsg_sm))
                     MessageBox.Show("Zaktualizowano samochód w bazie");
                 else
                     MessageBox.Show("Wystąpił błąd:\n" + exmsg_sm);
-
             }
             else
             {
+                /// <summary>
+                ///Pokazuje, w którym textboxie jest błąd wprowadzonych danych
+                /// </summary>
                 MessageBox.Show("Wystąpiły błędy w danych wejściowych:" + bladWTextboxach);
                 bladWTextboxach = "";
                 poprawneTextboxy = true;
             }
         }
-
-            private void label1_Click(object sender, EventArgs e)
-            {
-
-            }
-            private void textBox1_TextChanged(object sender, EventArgs e)
-            {
-
-            }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
-    }
+}
 

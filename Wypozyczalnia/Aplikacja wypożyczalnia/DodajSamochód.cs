@@ -17,7 +17,9 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
-        
+        /// <summary>
+        ///Przycisk umożliwiający powrót do wyboru czynności w sekcji Samochody
+        /// </summary>
         private void WsteczDS_Click(object sender, EventArgs e)
         {
             
@@ -26,21 +28,25 @@ namespace Aplikacja_wypożyczalnia
             Samochody ds = new Samochody();
             ds.Show();
         }
-
+        /// <summary>
+        ///Przycisk zatwierdź zatwierdza wprowadzone dane oraz dodaje nowy samochód do bazy
+        /// </summary>
         private void ZatwierdźDS_Click(object sender, EventArgs e)
         {
+            /// <summary>
             /// Sprawdzenie poprawności danych w textboxach
+            /// </summary>
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
             
             if (string.IsNullOrWhiteSpace(textBox2.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, @"^([A-Za-z0-9\-]){2,30}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, @"^([A-Za-z0-9\-ąćęłńóśźżĄĘŁŃŚŻŹĆÓ]){2,30}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu marka";
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox3.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, @"^([A-Za-z0-9\-]){2,30}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, @"^([A-Za-z0-9\-ąćęłńóśźżĄĘŁŃŚŻŹĆÓ ]){2,30}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu model";
                 poprawneTextboxy = false;
@@ -52,13 +58,13 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox5.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox5.Text, @"^([A-Za-z0-9\-]){2,20}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox5.Text, @"^([A-Za-z0-9\-ąćęłńóśźżĄĘŁŃŚŻŹĆÓ]){2,20}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu rodzaj paliwa";
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox6.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox6.Text, @"^([A-Za-z0-9\-]){2,30}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox6.Text, @"^([A-Za-z0-9\-ąćęłńóśźżĄĘŁŃŚŻŹĆÓ]){2,30}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu typ nadwozia";
                 poprawneTextboxy = false;
@@ -70,7 +76,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox8.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox8.Text, @"^([A-Za-z0-9\-]){2,30}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox8.Text, @"^([A-Za-z0-9\-ółąę]){2,30}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu skrzynia biegów";
                 poprawneTextboxy = false;
@@ -82,7 +88,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox10.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox10.Text, @"^[0-9,.]{1,10}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox10.Text, @"^[0-9,.]{1,4}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu zużycie paliwa";
                 poprawneTextboxy = false;
@@ -106,7 +112,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox14.Text) ||
-                !System.Text.RegularExpressions.Regex.IsMatch(textBox14.Text, @"^([A-Za-z]){2,20}$"))
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox14.Text, @"^([A-Za-ząćęłńóśźżĄĘŁŃŚŻŹĆÓ]){2,20}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu kolor";
                 poprawneTextboxy = false;
@@ -161,6 +167,9 @@ namespace Aplikacja_wypożyczalnia
                     MessageBox.Show("Wystąpił błąd:\n" + exmsg_kl);
                
             }
+            /// <summary>
+            ///Wyświetlanie informacji o błędzie
+            /// </summary>
             else
             {
                 MessageBox.Show("Wystąpiły błędy w danych wejściowych:" + bladWTextboxach);
@@ -176,6 +185,11 @@ namespace Aplikacja_wypożyczalnia
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DodajSamochód_Load(object sender, EventArgs e)
         {
 
         }

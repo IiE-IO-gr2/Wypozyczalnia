@@ -79,7 +79,6 @@
             this.label1.Size = new System.Drawing.Size(216, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Edytuj Samochód";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label19
             // 
@@ -282,11 +281,11 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(418, 50);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(136, 20);
             this.textBox1.TabIndex = 47;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -416,6 +415,7 @@
             this.button1.TabIndex = 65;
             this.button1.Text = "Zapisz";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
@@ -475,6 +475,7 @@
             this.Controls.Add(this.label1);
             this.Name = "PokazWyszukiwanySamochod";
             this.Text = "PokazWyszukiwanySamochod";
+            this.Load += new System.EventHandler(this.PokazWyszukiwanySamochod_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

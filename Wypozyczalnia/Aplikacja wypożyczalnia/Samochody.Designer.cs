@@ -34,6 +34,7 @@
             this.UsuńSamochód = new System.Windows.Forms.Button();
             this.WyszukajSamochód = new System.Windows.Forms.Button();
             this.MenuGłówne = new System.Windows.Forms.Button();
+            this.ListaSamochodow = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -102,12 +103,24 @@
             this.MenuGłówne.UseVisualStyleBackColor = true;
             this.MenuGłówne.Click += new System.EventHandler(this.MenuGłówne_Click);
             // 
+            // ListaSamochodow
+            // 
+            this.ListaSamochodow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ListaSamochodow.Location = new System.Drawing.Point(395, 172);
+            this.ListaSamochodow.Name = "ListaSamochodow";
+            this.ListaSamochodow.Size = new System.Drawing.Size(125, 65);
+            this.ListaSamochodow.TabIndex = 6;
+            this.ListaSamochodow.Text = "Pokaż";
+            this.ListaSamochodow.UseVisualStyleBackColor = true;
+            this.ListaSamochodow.Click += new System.EventHandler(this.ListaSamochodow_Click);
+            // 
             // Samochody
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
             this.ClientSize = new System.Drawing.Size(884, 461);
+            this.Controls.Add(this.ListaSamochodow);
             this.Controls.Add(this.MenuGłówne);
             this.Controls.Add(this.WyszukajSamochód);
             this.Controls.Add(this.UsuńSamochód);
@@ -115,7 +128,8 @@
             this.Controls.Add(this.DodajSamochód);
             this.Controls.Add(this.label1);
             this.Name = "Samochody";
-            this.Text = "Samochody";
+            this.Text = " ";
+            this.Load += new System.EventHandler(this.Samochody_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,5 +143,6 @@
         private System.Windows.Forms.Button UsuńSamochód;
         private System.Windows.Forms.Button WyszukajSamochód;
         private System.Windows.Forms.Button MenuGłówne;
+        private System.Windows.Forms.Button ListaSamochodow;
     }
 }

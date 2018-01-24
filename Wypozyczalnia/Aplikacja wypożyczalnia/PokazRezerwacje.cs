@@ -18,12 +18,29 @@ namespace Aplikacja_wypożyczalnia
             InitializeComponent();
         }
 
+        //Przycisk wstecz, przenosi do poprzedniego okna
         private void wstecz_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Rezerwacja re = new Rezerwacja();
+            Rezerwacje re = new Rezerwacje();
             re.Show();
 
+        }
+        //Przycisk button1 jest odpowiedzialny za uaktualnienie(pobranie) listy wypożyczeń z bazy danych
+        // i umieszczenie ich w tabeli(dataGridView1)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = new DataTable();
+            string exmsg = "";
+            DataTable dt = Rezerwacja.PokazRezerwacje(ref exmsg);
+            if (!string.IsNullOrWhiteSpace(exmsg))
+            {
+                MessageBox.Show("Wystąpił błąd: " + exmsg);
+            }
+            else
+            {
+                dataGridView1.DataSource = dt;
+            }
         }
     }
 }

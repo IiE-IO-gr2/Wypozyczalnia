@@ -3,7 +3,8 @@ using System.Data;
 using System.Globalization;
 
 namespace logika_biznesowa {
-	public class Rezerwacja {
+	public class Rezerwacja
+    {
 		/// <summary>
 		/// numer id rezerwacji
 		/// </summary>
@@ -16,14 +17,21 @@ namespace logika_biznesowa {
 		/// data, kiedy klient planuje oddaæ samochód
 		/// </summary>
 		public DateTime Data_planowanego_zwrotu;
+        private Samochód samochód;
+        private Klient klient;
+        private Panel_administratora panel_administratora;
+        private Wypo¿yczenie wypo¿yczenie;
+        private Lista_rezerwacji lista_rezerwacji;
 
+        /// <summary>
+        /// Konstruktor bezparametrowy
+        /// </summary>
         public Rezerwacja()
         {
             ID_rezerwacji = 0;
             Data_planowanego_wypozyczenia = new DateTime(1, 1, 1);
             Data_planowanego_zwrotu = new DateTime(1, 1, 1);
         }
-
         /// <summary>
         /// konstruktor Rezerwacja
         /// </summary>
@@ -36,13 +44,21 @@ namespace logika_biznesowa {
 		/// <summary>
 		/// metoda, która pokazuje rezerwacjê
 		/// </summary>
-		public void PokazRezerwacje() {
-			throw new System.Exception("Not implemented");
-		}
+		public static DataTable PokazRezerwacje(ref string _exmsg)
+        {
+            DataTable dt = new DataTable();
+
+            string zapytanie = @"Select * from [dbo].[Rezerwacja]  ";
+            //Pobieranie danych z bazy
+            string exmsg = "";
+            dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
+            return dt;
+        }
 		/// <summary>
 		/// metoda, która edytuje rezerwacjê
 		/// </summary>
-		public void EdytujRezerwacje() {
+		public void EdytujRezerwacje()
+        {
 			throw new System.Exception("Not implemented");
 		}
 		/// <summary>
@@ -130,14 +146,7 @@ namespace logika_biznesowa {
                 }
             }
         }
-
-		private Samochód samochód;
-		private Klient klient;
-		private Panel_administratora panel_administratora;
-
-		private Wypo¿yczenie wypo¿yczenie;
-		private Lista_rezerwacji lista_rezerwacji;
-
+        
         public static int MaksymalnyNumerIdentyfikatoraWBazie()
         {
             string zapytanie = @"select max([ID_rezerwacji]) from [dbo].[Rezerwacja]";
