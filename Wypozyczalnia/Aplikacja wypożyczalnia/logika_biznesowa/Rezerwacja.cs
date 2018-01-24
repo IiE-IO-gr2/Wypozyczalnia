@@ -48,8 +48,8 @@ namespace logika_biznesowa {
         {
             DataTable dt = new DataTable();
 
-            string zapytanie = @"select [ID_rezerwacji],[Data_planowanego_wypozyczenia],[Data_planowanego_zwrotu],[CzyUsuniete]" +
-                @"from [dbo].[Rezerwacja]";
+            string zapytanie = @"select [ID_rezerwacji],[Data_planowanego_wypozyczenia],[Data_planowanego_zwrotu]" +
+                @"from [dbo].[Rezerwacja] WHERE ([CzyUsuniete] = 0 or [CzyUsuniete] is null)";
             //Pobieranie danych z bazy
             string exmsg = "";
             dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);

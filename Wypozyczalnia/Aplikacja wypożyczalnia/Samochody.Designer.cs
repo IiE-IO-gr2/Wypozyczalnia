@@ -110,7 +110,7 @@
             this.ListaSamochodow.Name = "ListaSamochodow";
             this.ListaSamochodow.Size = new System.Drawing.Size(125, 65);
             this.ListaSamochodow.TabIndex = 6;
-            this.ListaSamochodow.Text = "Lista";
+            this.ListaSamochodow.Text = "Pokaż";
             this.ListaSamochodow.UseVisualStyleBackColor = true;
             this.ListaSamochodow.Click += new System.EventHandler(this.ListaSamochodow_Click);
             // 
