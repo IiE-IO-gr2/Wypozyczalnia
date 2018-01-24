@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using logika_biznesowa;
 
-//using logika_biznesowa nie chce działać, przez to nie zczytuje metod
 namespace Aplikacja_wypożyczalnia
 {
     public partial class PokazRezerwacje : Form

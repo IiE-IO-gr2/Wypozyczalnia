@@ -25,10 +25,10 @@ namespace Aplikacja_wypożyczalnia
             us.Show();
         }
 
+
+
         private void ZatwierdźUS_Click(object sender, EventArgs e)
         {
-
-
             /// Sprawdzenie poprawności danych w textboxie
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
@@ -54,7 +54,7 @@ namespace Aplikacja_wypożyczalnia
                     {
                         MessageBox.Show("Usunięto samochód z bazy");
                         textBox1.Clear();
-                        
+
                     }
                 }
                 catch (Exception)
@@ -71,4 +71,6 @@ namespace Aplikacja_wypożyczalnia
             }
         }
     }
-}
+    }
+    
+
