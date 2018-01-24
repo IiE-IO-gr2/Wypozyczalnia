@@ -36,9 +36,18 @@ namespace logika_biznesowa {
 		/// <summary>
 		/// metoda, która pokazuje rezerwacjê
 		/// </summary>
-		public void PokazRezerwacje() {
-			throw new System.Exception("Not implemented");
-		}
+		public static DataTable PokazRezerwacje(ref string _exmsg)
+        {
+            DataTable dt = new DataTable();
+
+            string zapytanie = @"select [ID_rezerwacji],[Data_planowanego_wypozyczenia],[Data_planowanego_zwrotu],[CzyUsuniete]" +
+                @"from [dbo].[Rezerwacja]";
+            //Pobieranie danych z bazy
+            string exmsg = "";
+
+            dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
+            return dt;
+        }
 		/// <summary>
 		/// metoda, która edytuje rezerwacjê
 		/// </summary>
