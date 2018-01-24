@@ -270,7 +270,7 @@ namespace logika_biznesowa {
         {
             DataTable dt = new DataTable();
 
-            string zapytanie = @"Select * from [dbo.][Samochód]  ";
+            string zapytanie = @"Select * from [dbo].[Samochód]  ";
             //Pobieranie danych z bazy
             string exmsg = "";
             dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);

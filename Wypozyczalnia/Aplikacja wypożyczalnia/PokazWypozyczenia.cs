@@ -40,7 +40,10 @@ namespace Aplikacja_wypożyczalnia
                }
             }
 
-        
+        private void PokazWypozyczenia_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
