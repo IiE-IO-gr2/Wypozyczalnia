@@ -129,10 +129,10 @@ namespace logika_biznesowa {
         public static DataTable WyszukajWypozyczenie(int identyfikator, ref string _exmsg)
         {
             DataTable dt = new DataTable();
-            string zapytanieCzyKlientIstnieje = @"SELECT count(*) from [dbo].[Wypo¿yczenie] WHERE (([CzyUsuniete] = 0 or [CzyUsuniete] is null)" +
+            string zapytanieCzyWypozyczenieIstnieje = @"SELECT count(*) from [dbo].[Wypo¿yczenie] WHERE (([CzyUsuniete] = 0 or [CzyUsuniete] is null)" +
                 @"and [ID_wypo¿yczenia] = " + identyfikator + ")";
             string exmsgTest = "";
-            string zwrotZapytanieCzyWypozyczenieIstnieje = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanieCzyKlientIstnieje, ref exmsgTest);
+            string zwrotZapytanieCzyWypozyczenieIstnieje = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanieCzyWypozyczenieIstnieje, ref exmsgTest);
             if (!string.IsNullOrWhiteSpace(exmsgTest)) // zapytanie testuj¹ce, czy w bazie jest wypo¿yczenie o danym ID zwróci³o b³¹d
             {
                 _exmsg = exmsgTest;
@@ -141,11 +141,10 @@ namespace logika_biznesowa {
             else // zapytanie nie zwróci³o b³êdu
             {
                 string zapytanie = "";
-                if (zwrotZapytanieCzyWypozyczenieIstnieje != "0") // zapytanie zwróci³o znalezienie w bazie klientów rekordu o podanym ID
+                if (zwrotZapytanieCzyWypozyczenieIstnieje != "0") // zapytanie zwróci³o znalezienie w bazie wypozyczeñ rekordu o podanym ID
                 {
-                    zapytanie = @"select [ID_wypo¿yczenia],[Data_wypo¿yczenia],[Data_planowanego_zwrotu],[Cena_za_wypozyczenie],[CzyUsuniete]" +
-                    @"from [dbo].[Wypo¿yczenie]" + identyfikator;
-
+                    zapytanie = @"select [ID_wypo¿yczenia],[Data_wypo¿yczenia],[Data_planowanego_zwrotu],[Cena_za_wypozyczenie]" +
+                    @"from [dbo].[Wypo¿yczenie] where [ID_wypo¿yczenia]=" + identyfikator;
                     // pobranie danych z bazy
                     string exmsg = "";
                     dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
