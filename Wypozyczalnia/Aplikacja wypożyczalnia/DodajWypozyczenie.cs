@@ -18,14 +18,18 @@ namespace Aplikacja_wypożyczalnia
             InitializeComponent();
             textBox1.Text = (Wypożyczenie.MaksymalnyNumerIdentyfikatoraWBazie() + 1).ToString();
         }
-
+        /// <summary>
+        ///Przycisk umożliwiający powrót do poprzedniego okna
+        /// </summary>
         private void wstecz_Click(object sender, EventArgs e)
         {
             this.Hide();
             Wypozyczenia w = new Wypozyczenia();
             w.Show();
         }
-
+        /// <summary>
+        ///Przycisk umożliwiający wybranie samochodu do wypożyczenia
+        /// </summary>
         private void button2_Click(object sender, EventArgs e)
         {
             using (WybierzSamoch ws = new WybierzSamoch())
@@ -41,7 +45,9 @@ namespace Aplikacja_wypożyczalnia
                 }
             }
         }
-
+        /// <summary>
+        ///Przycisk umożliwiający wybranie klienta biznesowego do wypożyczenia
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             using (WybierzKlienta wk = new WybierzKlienta())
@@ -49,6 +55,8 @@ namespace Aplikacja_wypożyczalnia
                 if (wk.ShowDialog() == DialogResult.OK)
                 {
                     textBox3.Text = wk.PobraneIDKlientaWartosc;
+                    textBox6.Text = wk.PobranaZnizkaLojalnosciowa;
+                    textBox7.Text = wk.PobranaIloscWypozyczen;
                 }
                 else
                 {
@@ -57,7 +65,9 @@ namespace Aplikacja_wypożyczalnia
             }
 
         }
-
+        /// <summary>
+        ///Przycisk umożliwiający wybranie klienta indywidualnego do wypożyczenia
+        /// </summary>
         private void button4_Click(object sender, EventArgs e)
         {
             using (WybierzKlientaIndywidualnego wki = new WybierzKlientaIndywidualnego())
@@ -65,6 +75,8 @@ namespace Aplikacja_wypożyczalnia
                 if (wki.ShowDialog() == DialogResult.OK)
                 {
                     textBox3.Text = wki.PobraneIDKlientaWartosc;
+                    textBox6.Text = wki.PobranaZnizkaLojalnosciowaIND;
+                    textBox7.Text = wki.PobranaIloscWypozyczenIND;
                 }
                 else
                 {
@@ -72,7 +84,9 @@ namespace Aplikacja_wypożyczalnia
                 }
             }
         }
-
+        /// <summary>
+        ///Przycisk umozliwiający dodanie wypożyczenia do bazy
+        /// </summary>
         private void button3_Click(object sender, EventArgs e)
         {
             // sprawdzanie poprawnosci
@@ -108,12 +122,16 @@ namespace Aplikacja_wypożyczalnia
                 int id_wyp = int.Parse(textBox1.Text);
                 int id_kli = int.Parse(textBox3.Text);
                 int id_sam = int.Parse(textBox4.Text);
+                double znizkaLojaln = double.Parse(textBox6.Text);
+                int liczbaWypozyczen = (int)double.Parse(textBox7.Text);
                 double cena_za_dobe = double.Parse(textBox5.Text);
+                if (liczbaWypozyczen % 5 == 0 & liczbaWypozyczen != 0)
+                    cena_za_dobe *= (1 - znizkaLojaln);
                 TimeSpan dlugoscWypozyczenia = dataPlanowanegoZwrotu - dataPlanowanegoWypozyczenia;
                 int dobyWypozyczenia = (int)Math.Ceiling(dlugoscWypozyczenia.TotalHours) / 24 + 1;
                 double cena_wypozyczenia = cena_za_dobe * dobyWypozyczenia;
                 textBox2.Text = cena_wypozyczenia.ToString();
-                /// Stworzenie obiektu reprezentującego     podane dane
+                /// Stworzenie obiektu reprezentującego podane dane
                 Wypożyczenie wypożyczenie1 = new Wypożyczenie(id_wyp, dataPlanowanegoWypozyczenia, dataPlanowanegoZwrotu, cena_wypozyczenia, id_kli, id_sam);
                 string exmsg_wyp = wypożyczenie1.DodajWypozyczenie();
                 if (string.IsNullOrWhiteSpace(exmsg_wyp))

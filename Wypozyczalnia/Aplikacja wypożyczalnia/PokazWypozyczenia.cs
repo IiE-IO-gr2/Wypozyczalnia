@@ -42,12 +42,9 @@ namespace Aplikacja_wypożyczalnia
                {
                  dataGridView1.DataSource = dt;
                }
-            }
-
-        private void PokazWypozyczenia_Load(object sender, EventArgs e)
-        {
-
         }
+
+        
     }
     
 }

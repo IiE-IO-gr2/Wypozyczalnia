@@ -20,7 +20,6 @@ namespace Aplikacja_wypożyczalnia
         
         private void WybierzSamochod_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("oups");
             string zapytanie = @"select [Id_samochodu],[Marka],[Model],[Cena_za_dobę],[Kaucja],[Pojemnosc],[Rodzaj_paliwa],[Rocznik],[Kolor]" +
                 @"from [dbo].[Samochód] WHERE (([CzyUsuniete] = 0 or [CzyUsuniete] is null) and [Id_samochodu] not in (" + IdSamochodowKtorychNieMoznaWypozyczyc() + "))";
             string exmsg = "";
@@ -54,7 +53,9 @@ namespace Aplikacja_wypożyczalnia
                 return listaIDCzysta;
             }
         }
-
+        /// <summary>
+        ///Przycisk umożliwiający zatwierdzenie wybranego samochodu
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             try

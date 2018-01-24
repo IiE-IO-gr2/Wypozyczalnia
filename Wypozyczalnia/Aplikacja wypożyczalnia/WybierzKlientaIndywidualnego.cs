@@ -57,6 +57,8 @@ namespace Aplikacja_wypożyczalnia
                 }
                 else
                 {
+                    pobranaIloscWypozyczen.Text = dr.ItemArray[4].ToString();
+                    pobranaZnizkaLojalnosciowa.Text = dr.ItemArray[5].ToString();
                     pobraneIDKlienta.Text = id;
                     this.DialogResult = DialogResult.OK;
                     this.Close();
@@ -71,6 +73,16 @@ namespace Aplikacja_wypożyczalnia
         public string PobraneIDKlientaWartosc
         {
             get { return pobraneIDKlienta.Text; }
+        }
+
+        public string PobranaIloscWypozyczenIND
+        {
+            get { return pobranaIloscWypozyczen.Text; }
+        }
+
+        public string PobranaZnizkaLojalnosciowaIND
+        {
+            get { return pobranaZnizkaLojalnosciowa.Text; }
         }
     }
 }
