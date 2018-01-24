@@ -114,5 +114,10 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = true;
             }
         }
+
+        private void DodajKlientaFirma_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
