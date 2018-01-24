@@ -20,7 +20,7 @@ namespace Aplikacja_wypożyczalnia
         
         private void WybierzSamochod_Load(object sender, EventArgs e)
         {
-            string zapytanie = @"select [Id_samochodu],[Marka],[Model],[Cena_za_dobę],[Kaucja],[Pojemnosc],[Rodzaj_paliwa],[Rocznik],[Kolor],[Dostepnosc]" +
+            string zapytanie = @"select [Id_samochodu],[Marka],[Model],[Cena_za_dobę],[Kaucja],[Pojemnosc],[Rodzaj_paliwa],[Rocznik],[Kolor]" +
                 @"from [dbo].[Samochód]";
 
             string exmsg = "";

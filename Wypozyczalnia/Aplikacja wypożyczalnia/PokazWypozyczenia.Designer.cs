@@ -30,6 +30,8 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.wstecz = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -54,16 +56,27 @@
             this.wstecz.UseVisualStyleBackColor = true;
             this.wstecz.Click += new System.EventHandler(this.wstecz_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(101, 92);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(631, 270);
+            this.dataGridView1.TabIndex = 51;
+            // 
             // PokazWypozyczenia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o1;
             this.ClientSize = new System.Drawing.Size(888, 484);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.wstecz);
             this.Controls.Add(this.label2);
             this.Name = "PokazWypozyczenia";
             this.Text = "PokazWypozyczenia";
+            this.Load += new System.EventHandler(this.PokazWypozyczenia_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -73,5 +86,6 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button wstecz;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
