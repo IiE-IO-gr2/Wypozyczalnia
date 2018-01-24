@@ -68,6 +68,24 @@ namespace logika_biznesowa {
             FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }
-	}
+
+        /// <summary>
+        /// Edycja artybutów klienta indywidualnego w bazie danych
+        /// </summary>
+        /// <param name="identyfikator">Numer identyfikuj¹cy klienta w bazie</param>
+        /// <returns>exmsg - teskt b³êdu wywo³ania metody</returns>
+        public string EdytujKlientaIndywidualnegoWBazie(int identyfikator)
+        {
+            int plecBool = 0;
+            if (P³ec == true)
+                plecBool = 1;
+            string exmsg = "";
+            string zapytanie = @"UPDATE [dbo].[Klient_indywidualny] SET [Imiê] = '" + Imiê + @"' , [Nazwisko] = '" +
+                Nazwisko + @"', [Numer_prawa_jazdy] = '" + Numer_prawa_jazdy + @"', [PESEL] = '" + PESEL + @"' ,[P³ec] = " + plecBool +
+                @" WHERE [Id_klienta] = " + identyfikator;
+            FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
+            return exmsg;
+        }
+    }
 
 }
