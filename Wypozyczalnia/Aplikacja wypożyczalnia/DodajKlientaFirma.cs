@@ -28,7 +28,6 @@ namespace Aplikacja_wypożyczalnia
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             /// Sprawdzenie poprawności danych w textboxach
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
@@ -46,7 +45,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox7.Text) ||
-               !System.Text.RegularExpressions.Regex.IsMatch(textBox7.Text, @"^[0-9]{9,11}$"))
+               !System.Text.RegularExpressions.Regex.IsMatch(textBox7.Text, @"^[0-9]{1,9}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu telefon kontaktowy";
                 poprawneTextboxy = false;
@@ -75,11 +74,6 @@ namespace Aplikacja_wypożyczalnia
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu aktywność";
                 poprawneTextboxy = false;
             }
-
-
-            //
-            // DOPISAĆ DLA RESZTY PÓL
-            //
             if (poprawneTextboxy == true)
             {
                 /// Pobranie danych z TextBoxów
@@ -91,12 +85,10 @@ namespace Aplikacja_wypożyczalnia
                 string em = textBox9.Text;
                 double pr = double.Parse(textBox10.Text);
                 int ak = int.Parse(textBox11.Text);
-
                 /// Stworzenie obiektów reprezentujących podane dane
                 Klient klient1 = new Klient(id, tl, ad, em, pr, ak);
                 Klient_firmy klientFirma1 =
                     new Klient_firmy(nazwa, nip);
-
                 string exmsg_kl = klient1.DodanieKlienta();
                 string exmsg_ind = klientFirma1.DodajKlientaFirmeDoBazy(klient1.Id_klienta);
                 if (string.IsNullOrWhiteSpace(exmsg_kl))

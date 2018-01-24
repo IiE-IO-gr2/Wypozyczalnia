@@ -72,7 +72,7 @@
             this.button2.TabIndex = 55;
             this.button2.Text = "Zatwierdź";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // wstecz
             // 
@@ -83,7 +83,7 @@
             this.wstecz.TabIndex = 56;
             this.wstecz.Text = "Wstecz";
             this.wstecz.UseVisualStyleBackColor = true;
-            this.wstecz.Click += new System.EventHandler(this.wstecz_Click);
+            this.wstecz.Click += new System.EventHandler(this.Wstecz_Click);
             // 
             // UsunWypozyczenie
             // 

@@ -27,23 +27,43 @@ namespace Aplikacja_wypożyczalnia
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            dataGridView1.DataSource = new DataTable();
+            /// Sprawdzenie poprawności danych w textboxie
+            string bladWTextboxach = "";
+            bool poprawneTextboxy = true;
+            if (string.IsNullOrWhiteSpace(textBox1.Text) ||
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox1.Text, @"^[0-9]{1,10}$"))
+            {
+                bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu ID";
+                poprawneTextboxy = false;
+            }
+            if (poprawneTextboxy == true)
             {
                 int id = int.Parse(textBox1.Text);
                 string exmsg = "";
-                Klient znaleziony = Klient.WyszukajKlienta(ref exmsg);
+                DataTable dt = Klient.WyszukajKlienta(id, ref exmsg);
                 if (!string.IsNullOrWhiteSpace(exmsg))
-                    MessageBox.Show("Wystąpił błąd:\n" + exmsg);
+                {
+                    MessageBox.Show("Wystąpił błąd: " + exmsg);
+                }
                 else
                 {
-                    PokazWyszukanegoKlientaFirme pokazKlientaFirme = new PokazWyszukanegoKlientaFirme();
+                    dataGridView1.DataSource = dt;
                 }
-
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Wystąpił błąd:\nNiepoprawny lub pusty numer identyfikacyjny");
+                MessageBox.Show("Wystąpił błąd w danych wejściowych:" + bladWTextboxach);
+                bladWTextboxach = "";
+                poprawneTextboxy = true;
             }
+
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

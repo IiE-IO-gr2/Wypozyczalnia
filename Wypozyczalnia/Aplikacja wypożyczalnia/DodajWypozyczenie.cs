@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using logika_biznesowa;
 
 namespace Aplikacja_wypożyczalnia
 {
@@ -23,9 +24,9 @@ namespace Aplikacja_wypożyczalnia
             TimeSpan ts = dte - dts;
 
             int days = ts.Days;
-            
 
-            
+
+
         }
 
         private void wstecz_Click(object sender, EventArgs e)
@@ -66,7 +67,7 @@ namespace Aplikacja_wypożyczalnia
             }
 
         }
-        
+
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
@@ -90,8 +91,46 @@ namespace Aplikacja_wypożyczalnia
 
         private void button3_Click(object sender, EventArgs e)
         {
+            // sprawdzanie poprwnosci
+            string bladWTextboxach = "";
+            bool poprawneTextboxy = true;
 
+            if (string.IsNullOrWhiteSpace(textBox3.Text) ||
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, "^[0-9]{1,10}$"))
+            {
+                bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu ID klienta";
+                poprawneTextboxy = false;
+            }
+            if (string.IsNullOrWhiteSpace(textBox4.Text) ||
+                !System.Text.RegularExpressions.Regex.IsMatch(textBox4.Text, @"^[0-9]{1,10}$"))
+            {
+                bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu ID Samochodu";
+                poprawneTextboxy = false;
+            }
+            if (string.IsNullOrWhiteSpace(textBox5.Text) ||
+               !System.Text.RegularExpressions.Regex.IsMatch(textBox5.Text, @"^[0-9]{1,10}$"))
+            {
+                bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu cena za dobę";
+                poprawneTextboxy = false;
+            }
+            if (string.IsNullOrWhiteSpace(textBox2.Text) ||
+              !System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, @"^[0-9]{1,10}$"))
+            {
+                bladWTextboxach += "\n\t-Błędna lub pusta wartość w cena za wypożyczenie";
+                poprawneTextboxy = false;
+            if (string.IsNullOrWhiteSpace(textBox3.Text) ||
+               !System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, "^[0-9]{1,10}$"))
+            {
+                bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu ID klienta";
+                poprawneTextboxy = false;
+
+            }
+                    
+                
+
+            }
         }
-
     }
 }
+       
+
