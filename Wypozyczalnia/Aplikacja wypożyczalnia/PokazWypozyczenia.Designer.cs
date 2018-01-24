@@ -58,10 +58,11 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(101, 92);
+            this.dataGridView1.Location = new System.Drawing.Point(96, 83);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(631, 270);
+            this.dataGridView1.Size = new System.Drawing.Size(665, 276);
             this.dataGridView1.TabIndex = 51;
             // 
             // PokazWypozyczenia
