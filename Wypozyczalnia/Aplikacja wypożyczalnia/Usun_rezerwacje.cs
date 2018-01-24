@@ -33,8 +33,11 @@ namespace Aplikacja_wypożyczalnia
 
             if (poprawneTextboxy == true)
             {
+
                 /// Pobranie danych z TextBoxa
-                int id = int.Parse(textBox1.Text);
+                int id1 = int.Parse(textBox1.Text);
+
+                
             }
 
             else
