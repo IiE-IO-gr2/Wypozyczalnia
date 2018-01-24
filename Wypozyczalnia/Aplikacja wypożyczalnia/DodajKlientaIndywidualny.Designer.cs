@@ -60,7 +60,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(226, 9);
+            this.label1.Location = new System.Drawing.Point(264, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(417, 29);
             this.label1.TabIndex = 1;
@@ -268,7 +268,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(536, 385);
+            this.button1.Location = new System.Drawing.Point(496, 384);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 65);
             this.button1.TabIndex = 36;
@@ -279,7 +279,7 @@
             // WsteczWS
             // 
             this.WsteczWS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.WsteczWS.Location = new System.Drawing.Point(269, 385);
+            this.WsteczWS.Location = new System.Drawing.Point(243, 384);
             this.WsteczWS.Name = "WsteczWS";
             this.WsteczWS.Size = new System.Drawing.Size(125, 65);
             this.WsteczWS.TabIndex = 37;

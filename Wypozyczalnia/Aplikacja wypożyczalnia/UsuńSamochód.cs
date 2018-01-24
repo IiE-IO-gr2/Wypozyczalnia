@@ -17,7 +17,7 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
-
+        //Przycisk służący do powrotu do poprzedniej sekcji w tym wypadku sekcji Samochody
         private void WsteczUS_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -25,7 +25,9 @@ namespace Aplikacja_wypożyczalnia
             us.Show();
         }
 
-
+        /*Dzięki temu przyciskowi samochód o podanym numerze id jest usuwany z bazy, pod warunkiem, że samochód
+         został znaleziony w bazie po numerze id. Kiedy nie ma samochodu w bazie o wpisanym numerze id pojawia
+         się okno informujące że samochodu o wpisanym numerze id nie ma w bazie*/
 
         private void ZatwierdźUS_Click(object sender, EventArgs e)
         {
@@ -69,6 +71,11 @@ namespace Aplikacja_wypożyczalnia
                 bladWTextboxach = "";
                 poprawneTextboxy = true;
             }
+        }
+
+        private void UsuńSamochód_Load(object sender, EventArgs e)
+        {
+
         }
     }
     }

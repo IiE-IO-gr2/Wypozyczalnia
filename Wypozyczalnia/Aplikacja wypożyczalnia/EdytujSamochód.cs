@@ -17,14 +17,15 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
-
+        //Przycisk, który cofa do poprzedniej sekcji czyli Samochody
         private void WsteczES_Click(object sender, EventArgs e)
         {
             this.Hide();
             Samochody es = new Samochody();
             es.Show();
         }
-
+        /* Przycisk wyszukuje samochodu do edycji oraz pojawia się okno, w którym można edytować wszystkie,
+         bądź wybrane parametry samochodu*/
         private void ZatwierdźES_Click(object sender, EventArgs e)
         {
 
@@ -48,6 +49,7 @@ namespace Aplikacja_wypożyczalnia
                     MessageBox.Show("Wystąpił błąd:\n\t-" + exmsg);
                 else
                 {
+                    //opcja otwiera okno edycji z wszystkimi parametrami samochodu
                         PokazWyszukiwanySamochod pws = new PokazWyszukiwanySamochod(dt);
                         pws.Show();
                 }
@@ -58,6 +60,11 @@ namespace Aplikacja_wypożyczalnia
                 bladWTextboxach = "";
                 poprawneTextboxy = true;
             }
+        }
+
+        private void EdytujSamochód_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

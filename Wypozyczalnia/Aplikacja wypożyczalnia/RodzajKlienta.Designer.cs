@@ -39,7 +39,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(321, 48);
+            this.label1.Location = new System.Drawing.Point(350, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(182, 29);
             this.label1.TabIndex = 2;
@@ -48,7 +48,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button5.Location = new System.Drawing.Point(346, 374);
+            this.button5.Location = new System.Drawing.Point(25, 376);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(125, 65);
             this.button5.TabIndex = 55;
@@ -59,9 +59,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(473, 156);
+            this.button2.Location = new System.Drawing.Point(493, 156);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 65);
+            this.button2.Size = new System.Drawing.Size(195, 65);
             this.button2.TabIndex = 56;
             this.button2.Text = "Firma";
             this.button2.UseVisualStyleBackColor = true;
@@ -70,9 +70,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(218, 156);
+            this.button1.Location = new System.Drawing.Point(196, 156);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 65);
+            this.button1.Size = new System.Drawing.Size(195, 65);
             this.button1.TabIndex = 57;
             this.button1.Text = "Klient Indywidualny";
             this.button1.UseVisualStyleBackColor = true;

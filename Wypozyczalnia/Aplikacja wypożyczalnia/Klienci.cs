@@ -67,7 +67,7 @@ namespace Aplikacja_wypożyczalnia
             ek.Show();
         }
 
-        
+
 
         /*private void WsteczWS_Click(object sender, EventArgs e)
         {

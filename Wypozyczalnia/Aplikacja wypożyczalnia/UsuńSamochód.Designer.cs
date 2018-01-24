@@ -42,9 +42,9 @@
             this.label1.Image = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
             this.label1.Location = new System.Drawing.Point(350, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 29);
+            this.label1.Size = new System.Drawing.Size(199, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Usuń Samochód";
+            this.label1.Text = "Usuń samochód";
             // 
             // textBox1
             // 
@@ -99,6 +99,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UsuńSamochód";
             this.Text = "UsuńSamochód";
+            this.Load += new System.EventHandler(this.UsuńSamochód_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
