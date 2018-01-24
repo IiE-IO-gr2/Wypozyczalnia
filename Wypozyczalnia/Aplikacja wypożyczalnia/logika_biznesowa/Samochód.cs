@@ -203,7 +203,7 @@ namespace logika_biznesowa {
                     {
                         string exmsg = "", exmsg1 = "", exmsg2 = "";
                         // usuniêcie danych z tabeli Samochody
-                        string zapytanie1 = @"UPDATE [dbo].[Samochód] SET [CzyUsuniete] = 1 WHERE [Id_klienta] = " + identyfikator;
+                        string zapytanie1 = @"UPDATE [dbo].[Samochód] SET [CzyUsuniete] = 1 WHERE [Id_samochodu] = " + identyfikator;
                         FunkcjePomicnicze.WstawDaneSQL(zapytanie1, ref exmsg1);
                         // budowa informacji wyjœciowej z funkcji
                         if (!string.IsNullOrWhiteSpace(exmsg1))

@@ -85,6 +85,7 @@
             this.ZatwierdźUS.TabIndex = 35;
             this.ZatwierdźUS.Text = "Zatwierdź";
             this.ZatwierdźUS.UseVisualStyleBackColor = true;
+            this.ZatwierdźUS.Click += new System.EventHandler(this.ZatwierdźUS_Click_1);
             // 
             // UsuńSamochód
             // 
