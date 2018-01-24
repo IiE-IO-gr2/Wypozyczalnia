@@ -79,7 +79,6 @@
             this.label1.Size = new System.Drawing.Size(216, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Edytuj Samochód";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label19
             // 
@@ -282,11 +281,11 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(418, 50);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(136, 20);
             this.textBox1.TabIndex = 47;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
