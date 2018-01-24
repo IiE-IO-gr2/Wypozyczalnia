@@ -128,7 +128,7 @@
             this.Controls.Add(this.DodajSamochód);
             this.Controls.Add(this.label1);
             this.Name = "Samochody";
-            this.Text = "Samochody";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Samochody_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
