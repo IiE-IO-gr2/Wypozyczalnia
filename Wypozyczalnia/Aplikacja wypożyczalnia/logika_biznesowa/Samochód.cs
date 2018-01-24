@@ -139,7 +139,7 @@ namespace logika_biznesowa {
             string zuz = Zu¿ycie_paliwa.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
             string czd = Cena_za_dobê.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
             string zapytanie = @"insert into [dbo].[Samochód] ([Id_samochodu], [Marka], [Model], [Pojemnosc], [Rodzaj_paliwa], [Typ_nadwozia], [Ilosc_koni], [Skrzynia_biegow], [Ilosc_biegów], [Zu¿ycie_paliwa], [Ilosc_miejsc], [Ilosc_drzwi], [Rocznik], [Kolor], [Cena_za_dobê], [Dostepnosc], [Inne], [Kaucja], [CzyUsuniete] )" +
-                @"values (" + Id_samochodu + ", '" + Marka + "' , '" + Model + "', " + Pojemnosc + ", '" + Rodzaj_paliwa + "', '" + Typ_nadwozia + "', " + Ilosc_koni + ", '" + Skrzynia_biegow + "', " + Ilosc_biegów + ", " + Zu¿ycie_paliwa + ", " + Ilosc_miejsc + ", " + Ilosc_drzwi + ", " + Rocznik + ", '" + Kolor + "', " + czd + ", " + Dostepnosc + ", '" + Inne + "', " + Kaucja + ", 0)";
+                @"values (" + Id_samochodu + ", '" + Marka + "' , '" + Model + "', " + Pojemnosc + ", '" + Rodzaj_paliwa + "', '" + Typ_nadwozia + "', " + Ilosc_koni + ", '" + Skrzynia_biegow + "', " + Ilosc_biegów + ", " + Zu¿ycie_paliwa + ", " + Ilosc_miejsc + ", " + Ilosc_drzwi + ", " + Rocznik + ", '" + Kolor + "', " + czd + ", " + dostbool + ", '" + Inne + "', " + Kaucja + ", 0)";
             FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }
@@ -163,13 +163,11 @@ namespace logika_biznesowa {
                     if (licznik == 1) // zapytanie zwróci³o znalezienie w bazie samochodów rekordu o podanym ID
                     {
                         string exmsg = "", exmsg1 = "", exmsg2 = "";
+                        int dostbool = 0;
+                        if (Dostepnosc == true)
+                            dostbool = 1;
                         // edycja danych z tabeli Samochody
-                        string zapytanie2 = @"UPDATE [dbo].[Samochód] SET [Marka]='" + Marka + "', [Model]='" + Model + "', [Pojemnosc]=" + Pojemnosc + @"," + 
-                            @"[Rodzaj_paliwa]='" + Rodzaj_paliwa + "', [Typ_nadwozia]='" + Typ_nadwozia + "', [Ilosc_koni]=" + Ilosc_koni + @", " +
-                            @"[Skrzynia_biegow]='" + Skrzynia_biegow + "', [Ilosc_biegów]=" + Ilosc_biegów + ", [Zu¿ycie_paliwa]=" + Zu¿ycie_paliwa + @"," + 
-                            @"[Ilosc_miejsc]=" + Ilosc_miejsc + ", [Ilosc_drzwi]= " + Ilosc_drzwi + ", [Rocznik]=" + Rocznik + ", [Kolor]='" + Kolor + @"'," + 
-                            @"[Cena_za_dobê]=" + Cena_za_dobê + ", [Dostepnosc]=" + Dostepnosc + ", [Inne]='" + Inne + "', [Kaucja]=" + Kaucja + @"," + 
-                            @"WHERE [Id_klienta] = " + identyfikator;
+                        string zapytanie2 = @"UPDATE [dbo].[Samochód] SET [Marka]='" + Marka + "', [Model]='" + Model + "', [Pojemnosc]=" + Pojemnosc + ",[Rodzaj_paliwa]='" + Rodzaj_paliwa + "', [Typ_nadwozia]='" + Typ_nadwozia + "', [Ilosc_koni]=" + Ilosc_koni + ",[Skrzynia_biegow]='" + Skrzynia_biegow + "', [Ilosc_biegów]=" + Ilosc_biegów + ", [Zu¿ycie_paliwa]=" + Zu¿ycie_paliwa + ",[Ilosc_miejsc]=" + Ilosc_miejsc + ", [Ilosc_drzwi]= " + Ilosc_drzwi + ", [Rocznik]=" + Rocznik + ", [Kolor]='" + Kolor + "', [Cena_za_dobê]=" + Cena_za_dobê + ", [Dostepnosc]=" + dostbool + ", [Inne]='" + Inne + "', [Kaucja]=" + Kaucja + ", WHERE [Id_klienta] = " + identyfikator;
                         
                         FunkcjePomicnicze.WstawDaneSQL(zapytanie2, ref exmsg1);
                         // budowa informacji wyjœciowej z funkcji
