@@ -18,6 +18,9 @@ namespace Aplikacja_wypożyczalnia
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający powrót do formularza Klienci
+        /// </summary>
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -25,6 +28,9 @@ namespace Aplikacja_wypożyczalnia
             k.Show();
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający usunięcie danych klienta z bazy
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -66,6 +72,7 @@ namespace Aplikacja_wypożyczalnia
 
             else
             {
+                /// Wyświetlenie informacji o błędzie
                 MessageBox.Show("Wystąpił błąd w danych wejściowych:" + bladWTextboxach);
                 bladWTextboxach = "";
                 poprawneTextboxy = true;

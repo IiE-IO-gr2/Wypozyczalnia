@@ -35,6 +35,9 @@ namespace Aplikacja_wypożyczalnia
             }
         }
 
+        /// <summary>
+        /// Przycisk umożliwiający zatwierdzenie wyboru klienta z bazy
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             try
