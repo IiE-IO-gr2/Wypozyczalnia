@@ -25,17 +25,17 @@ namespace Aplikacja_wypożyczalnia
                 textBox5.Text = item[4].ToString();
                 textBox6.Text = item[5].ToString();
                 textBox7.Text = item[6].ToString();
-                textBox9.Text = item[7].ToString();
-                textBox8.Text = item[8].ToString();
-                textBox10.Text = item[9].ToString();
-                textBox11.Text = item[10].ToString();
-                textBox12.Text = item[11].ToString();
-                textBox13.Text = item[12].ToString();
-                textBox14.Text = item[13].ToString();
-                textBox15.Text = item[14].ToString();
-                textBox16.Text = item[15].ToString();
-                textBox17.Text = item[16].ToString();
-                textBox18.Text = item[17].ToString();
+                textBox8.Text = item[7].ToString();
+                textBox9.Text = item[18].ToString();
+                textBox10.Text = item[8].ToString();
+                textBox11.Text = item[9].ToString();
+                textBox12.Text = item[10].ToString();
+                textBox13.Text = item[11].ToString();
+                textBox14.Text = item[12].ToString();
+                textBox15.Text = item[13].ToString();
+                textBox16.Text = item[14].ToString();
+                textBox17.Text = item[15].ToString();
+                textBox18.Text = item[16].ToString();
             }
         }
         private void button1_Click(object sender, EventArgs e)
@@ -192,6 +192,11 @@ namespace Aplikacja_wypożyczalnia
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void PokazWyszukiwanySamochod_Load(object sender, EventArgs e)
+        {
+
         }
     }
     }
