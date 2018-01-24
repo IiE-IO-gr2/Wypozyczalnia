@@ -138,6 +138,9 @@ namespace Aplikacja_wypożyczalnia
             rk.Show();
         }
 
-        
+        private void DodajKlientaIndywidualny_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
