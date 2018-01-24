@@ -39,15 +39,6 @@ namespace Aplikacja_wypożyczalnia
             }
         }
 
-            private void label1_Click(object sender, EventArgs e)
-            {
-
-            }
-            private void textBox1_TextChanged(object sender, EventArgs e)
-            {
-
-            }
-
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -162,7 +153,7 @@ namespace Aplikacja_wypożyczalnia
             }
             if (poprawneTextboxy == true)
             {
-                int id = Samochód.MaksymalnyNumerIdentyfikatoraWBazie() + 1;
+                int id = int.Parse(textBox1.Text);
                 string mar = textBox2.Text;
                 string mod = textBox3.Text;
                 double poj = double.Parse(textBox4.Text);
@@ -190,7 +181,6 @@ namespace Aplikacja_wypożyczalnia
                     MessageBox.Show("Zaktualizowano samochód w bazie");
                 else
                     MessageBox.Show("Wystąpił błąd:\n" + exmsg_sm);
-
             }
             else
             {
@@ -200,5 +190,5 @@ namespace Aplikacja_wypożyczalnia
             }
         }
     }
-    }
+}
 
