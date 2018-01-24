@@ -31,7 +31,6 @@ namespace Aplikacja_wypożyczalnia
             /// Sprawdzenie poprawności danych w textboxie
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
-            //MessageBox.Show("Dlugosc = " + textBox2.Text.Length);
             if (string.IsNullOrWhiteSpace(textBox1.Text) ||
                 !System.Text.RegularExpressions.Regex.IsMatch(textBox1.Text, @"^[0-9]{1,10}$"))
             {
@@ -49,10 +48,8 @@ namespace Aplikacja_wypożyczalnia
                     MessageBox.Show("Wystąpił błąd:\n\t-" + exmsg);
                 else
                 {
-                    
                         PokazWyszukiwanySamochod pws = new PokazWyszukiwanySamochod(dt);
                         pws.Show();
-                    
                 }
             }
             else
@@ -61,11 +58,6 @@ namespace Aplikacja_wypożyczalnia
                 bladWTextboxach = "";
                 poprawneTextboxy = true;
             }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
