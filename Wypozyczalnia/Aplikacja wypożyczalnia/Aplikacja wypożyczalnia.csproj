@@ -138,11 +138,11 @@
     <Compile Include="PokazRezerwacje.Designer.cs">
       <DependentUpon>PokazRezerwacje.cs</DependentUpon>
     </Compile>
-    <Compile Include="PokazSamochod.cs">
+    <Compile Include="PokazSamochody.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PokazSamochod.Designer.cs">
-      <DependentUpon>PokazSamochod.cs</DependentUpon>
+    <Compile Include="PokazSamochody.Designer.cs">
+      <DependentUpon>PokazSamochody.cs</DependentUpon>
     </Compile>
     <Compile Include="PokazWypozyczenia.cs">
       <SubType>Form</SubType>
@@ -302,8 +302,8 @@
     <EmbeddedResource Include="PokazRezerwacje.resx">
       <DependentUpon>PokazRezerwacje.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PokazSamochod.resx">
-      <DependentUpon>PokazSamochod.cs</DependentUpon>
+    <EmbeddedResource Include="PokazSamochody.resx">
+      <DependentUpon>PokazSamochody.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PokazWypozyczenia.resx">
       <DependentUpon>PokazWypozyczenia.cs</DependentUpon>

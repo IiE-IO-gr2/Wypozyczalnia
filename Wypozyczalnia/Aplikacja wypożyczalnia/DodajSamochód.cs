@@ -17,7 +17,9 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
-        //Przycisk umożliwiający powrót do wyboru czynności w sekcji Samochody
+        /// <summary>
+        ///Przycisk umożliwiający powrót do wyboru czynności w sekcji Samochody
+        /// </summary>
         private void WsteczDS_Click(object sender, EventArgs e)
         {
             
@@ -26,10 +28,14 @@ namespace Aplikacja_wypożyczalnia
             Samochody ds = new Samochody();
             ds.Show();
         }
-        // Przycisk zatwierdź zatwierdza wprowadzone dane oraz dodaje nowy samochód do bazy
+        /// <summary>
+        ///Przycisk zatwierdź zatwierdza wprowadzone dane oraz dodaje nowy samochód do bazy
+        /// </summary>
         private void ZatwierdźDS_Click(object sender, EventArgs e)
         {
+            /// <summary>
             /// Sprawdzenie poprawności danych w textboxach
+            /// </summary>
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
             
@@ -161,7 +167,9 @@ namespace Aplikacja_wypożyczalnia
                     MessageBox.Show("Wystąpił błąd:\n" + exmsg_kl);
                
             }
-            //Wyświetlanie informacji o błędzie
+            /// <summary>
+            ///Wyświetlanie informacji o błędzie
+            /// </summary>
             else
             {
                 MessageBox.Show("Wystąpiły błędy w danych wejściowych:" + bladWTextboxach);
