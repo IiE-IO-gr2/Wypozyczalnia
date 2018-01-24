@@ -129,10 +129,10 @@ namespace logika_biznesowa {
         public static DataTable WyszukajWypozyczenie(int identyfikator, ref string _exmsg)
         {
             DataTable dt = new DataTable();
-            string zapytanieCzyKlientIstnieje = @"SELECT count(*) from [dbo].[Wypo¿yczenie] WHERE (([CzyUsuniete] = 0 or [CzyUsuniete] is null)" +
+            string zapytanieCzyWypozyczenieIstnieje = @"SELECT count(*) from [dbo].[Wypo¿yczenie] WHERE (([CzyUsuniete] = 0 or [CzyUsuniete] is null)" +
                 @"and [ID_wypo¿yczenia] = " + identyfikator + ")";
             string exmsgTest = "";
-            string zwrotZapytanieCzyWypozyczenieIstnieje = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanieCzyKlientIstnieje, ref exmsgTest);
+            string zwrotZapytanieCzyWypozyczenieIstnieje = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanieCzyWypozyczenieIstnieje, ref exmsgTest);
             if (!string.IsNullOrWhiteSpace(exmsgTest)) // zapytanie testuj¹ce, czy w bazie jest wypo¿yczenie o danym ID zwróci³o b³¹d
             {
                 _exmsg = exmsgTest;
