@@ -11,9 +11,9 @@ using logika_biznesowa;
 
 namespace Aplikacja_wypożyczalnia
 {
-    public partial class Rezerwacja : Form
+    public partial class Rezerwacje : Form
     {
-        public Rezerwacja()
+        public Rezerwacje()
         {
             InitializeComponent();
         }
