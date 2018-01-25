@@ -121,7 +121,9 @@ public static class FunkcjePomicnicze
             }
         }
     }
-
+    /// <summary>
+    /// Metoda wysylajace maile do klientów
+    /// </summary>
     public static void WyslijMaila(string tytulMaila, string trescMaila, List<string> listaAdresatow, ref string exmsg)
     {
         string SmptServer = "smtp.gmail.com";
