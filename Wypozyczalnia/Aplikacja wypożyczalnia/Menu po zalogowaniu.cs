@@ -102,7 +102,8 @@ namespace Aplikacja_wypożyczalnia
                 "Mamy nadzieję, że jest Pan/Pani zadowolona z naszej współpracy oraz w przyszłości chętnie Pan/Pani do nas wróci." +
                 "Serdecznie pozdrawiamy,\n" +
                 "Wypożyczalnia AutoPrestige \n";
-            string zapytanie = "<zapytanie od Patryka>";
+            string zapytanie = @"select k.[Adres_email] from([dbo].[Wypożyczenie] as w inner join[dbo].[Klient] as k on w.[Id_Klienta] = k.[Id_Klienta])
+                                where w.[Data_planowanego_zwrotu] < GETDATE()";
             string exmsgLista = "";
             List<string> listaAdresatow = FunkcjePomicnicze.PobierzListeStringow(zapytanie, ref exmsgLista);
             if (!string.IsNullOrWhiteSpace(exmsgLista))
@@ -129,7 +130,11 @@ namespace Aplikacja_wypożyczalnia
                 "Przepraszamy za wszelkie niedogodności. Postaramy się jak najszybciej udostępnić Panu/Pani samochód.\n" +
                 "Serdecznie pozdrawiamy,\n" +
                 "Wypożyczalnia AutoPrestige \n";
-            string zapytanie = "<zapytanie od Patryka>";
+            string zapytanie = @"elect k.Adres_email from ([dbo].[Rezerwacja] as r inner join [dbo].[Wypożyczenie] as w
+                                on r.Id_samochodu = w.Id_samochodu) inner join [dbo].[Klient] as k
+                                on r.Id_klienta = k.Id_klienta
+                                where ((r.Data_planowanego_wypozyczenia >= w.Data_planowanego_zwrotu + 1)
+                                and (w.CzyRozliczone is null or w.CzyRozliczone = 0))";
             string exmsgLista = "";
             List<string> listaAdresatow = FunkcjePomicnicze.PobierzListeStringow(zapytanie, ref exmsgLista);
             if (!string.IsNullOrWhiteSpace(exmsgLista))
@@ -157,7 +162,9 @@ namespace Aplikacja_wypożyczalnia
                 "Mamy nadzieję, że pojazd się przysłuży oraz w przyszłości chętnie Pan/Pani do nas wróci.\n" +
                 "Serdecznie pozdrawiamy,\n" +
                 "Wypożyczalnia AutoPrestige \n";
-            string zapytanie = "<zapytanie od Patryka>";
+            string zapytanie = @"select k.[Adres_email]
+                                from([dbo].[Wypożyczenie] as w inner join[dbo].[Klient] as k on w.[Id_Klienta] = k.[Id_Klienta])
+                                where w.[Data_wypożyczenia] + 1 = GETDATE()";
             string exmsgLista = "";
             List<string> listaAdresatow = FunkcjePomicnicze.PobierzListeStringow(zapytanie, ref exmsgLista);
             if (!string.IsNullOrWhiteSpace(exmsgLista))
