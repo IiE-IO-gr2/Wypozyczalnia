@@ -98,7 +98,7 @@ namespace Aplikacja_wypożyczalnia
             string tytulMaila = "Przypomnienie o zapłacie";
             string trescMaila = "Dzień dobry.\n" +
                 "Pragniemy przypomnieć o konieczności dokonania zapłaty za wypożyczenie samochodu." +
-                "Prosimy o jak najszybsze uregulowanie rachunku." +
+                "Prosimy o jak najszybsze uregulowanie rachunku. \n" +
                 "Mamy nadzieję, że jest Pan/Pani zadowolona z naszej współpracy oraz w przyszłości chętnie Pan/Pani do nas wróci." +
                 "Serdecznie pozdrawiamy,\n" +
                 "Wypożyczalnia AutoPrestige \n";
