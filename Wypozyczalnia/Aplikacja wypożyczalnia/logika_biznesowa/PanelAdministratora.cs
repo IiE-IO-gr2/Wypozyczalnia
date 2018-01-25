@@ -2,15 +2,6 @@ using System;
 using System.Data;
 namespace logika_biznesowa {
 	public class PanelAdministratora {
-		/// <summary>
-		/// login admina, aby zalogowaæ siê do systemu
-		/// </summary>
-		public string Login;
-		/// <summary>
-		/// has³o admina, aby zalogowaæ siê do systemu
-		/// </summary>
-		private string haslo;
-
         /// <summary>
         /// metoda zalogowania siê do systemu
         /// </summary>
@@ -32,12 +23,5 @@ namespace logika_biznesowa {
             else
                 return false;
         }
-
-        private Klient klient;
-		private Rezerwacja rezerwacja;
-		private Samochód samochód;
-		private Rozliczenie rozliczenie;
-
 	}
-
 }

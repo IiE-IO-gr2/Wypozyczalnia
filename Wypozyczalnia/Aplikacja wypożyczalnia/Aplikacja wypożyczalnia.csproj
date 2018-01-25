@@ -108,7 +108,6 @@
     <Compile Include="logika_biznesowa\Klient.cs" />
     <Compile Include="logika_biznesowa\Klient_firmy.cs" />
     <Compile Include="logika_biznesowa\Klient_indywidualny.cs" />
-    <Compile Include="logika_biznesowa\Lista_rezerwacji.cs" />
     <Compile Include="logika_biznesowa\PanelAdministratora.cs" />
     <Compile Include="logika_biznesowa\Rezerwacja.cs" />
     <Compile Include="logika_biznesowa\Rozliczenie.cs" />

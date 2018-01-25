@@ -11,10 +11,6 @@ namespace logika_biznesowa {
 		/// NIP firmy wypo¿yczaj¹cej samochód
 		/// </summary>
 		public string NIP;
-        /// <summary>
-        /// w³asnoœæ wskazuj¹ca, czy dany klient zosta³ oznaczony w bazie jako usuniêty
-        /// </summary>
-        public bool CzyUsuniete;
 
         /// <summary>
         /// konstruktor klient firma
