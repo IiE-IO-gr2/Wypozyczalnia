@@ -42,7 +42,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(278, 9);
+            this.label1.Location = new System.Drawing.Point(319, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(289, 29);
             this.label1.TabIndex = 2;
@@ -53,7 +53,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(202, 53);
+            this.label2.Location = new System.Drawing.Point(243, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(142, 20);
             this.label2.TabIndex = 31;
@@ -61,7 +61,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(410, 55);
+            this.textBox1.Location = new System.Drawing.Point(441, 71);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 32;
@@ -69,7 +69,7 @@
             // wstecz
             // 
             this.wstecz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.wstecz.Location = new System.Drawing.Point(219, 407);
+            this.wstecz.Location = new System.Drawing.Point(243, 384);
             this.wstecz.Name = "wstecz";
             this.wstecz.Size = new System.Drawing.Size(125, 65);
             this.wstecz.TabIndex = 57;
@@ -80,7 +80,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button4.Location = new System.Drawing.Point(503, 407);
+            this.button4.Location = new System.Drawing.Point(496, 384);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(125, 65);
             this.button4.TabIndex = 58;
@@ -93,9 +93,9 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(61, 94);
+            this.dataGridView1.Location = new System.Drawing.Point(60, 128);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(738, 193);
+            this.dataGridView1.Size = new System.Drawing.Size(738, 92);
             this.dataGridView1.TabIndex = 59;
             // 
             // WyszukajWypozyczenie
