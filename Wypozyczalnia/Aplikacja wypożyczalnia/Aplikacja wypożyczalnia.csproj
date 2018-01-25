@@ -120,6 +120,12 @@
     <Compile Include="Panel_administratora.Designer.cs">
       <DependentUpon>Panel_administratora.cs</DependentUpon>
     </Compile>
+    <Compile Include="PokazKlientow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PokazKlientow.Designer.cs">
+      <DependentUpon>PokazKlientow.cs</DependentUpon>
+    </Compile>
     <Compile Include="PokazRezerwacje.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panel_administratora.resx">
       <DependentUpon>Panel_administratora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PokazKlientow.resx">
+      <DependentUpon>PokazKlientow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PokazRezerwacje.resx">
       <DependentUpon>PokazRezerwacje.cs</DependentUpon>
