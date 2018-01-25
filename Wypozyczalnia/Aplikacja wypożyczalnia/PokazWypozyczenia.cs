@@ -43,8 +43,23 @@ namespace Aplikacja_wypożyczalnia
                  dataGridView1.DataSource = dt;
                }
         }
-
-        
+        /// <summary>
+        ///Przycisk umożliwiający uzupełnienie tabeli listą wypożyczeń, które powinny zostać już zwrócone
+        /// </summary>
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = new DataTable();
+            string exmsg = "";
+            DataTable dt = Wypożyczenie.PokazWypozyczenieZalegle(ref exmsg);
+            if (!string.IsNullOrWhiteSpace(exmsg))
+            {
+                MessageBox.Show("Wystąpił błąd: " + exmsg);
+            }
+            else
+            {
+                dataGridView1.DataSource = dt;
+            }
+        }
     }
     
 }

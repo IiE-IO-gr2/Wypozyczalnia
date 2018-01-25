@@ -64,11 +64,7 @@ namespace Aplikacja_wypożyczalnia
             Menu_po_zalogowaniu mn = new Menu_po_zalogowaniu();
             mn.Show();
         }
-
-        private void Samochody_Load(object sender, EventArgs e)
-        {
-
-        }
+        
         /// <summary>
         /// Przycisk przekierowuje do listy samochodów
         /// </summary>
@@ -76,6 +72,13 @@ namespace Aplikacja_wypożyczalnia
         {
             this.Hide();
             PokazSamochody ws = new PokazSamochody();
+            ws.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SamochodNaprawa ws = new SamochodNaprawa();
             ws.Show();
         }
     }

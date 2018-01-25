@@ -132,6 +132,20 @@ namespace logika_biznesowa {
             dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
             return dt;
         }
+        /// <summary>
+        /// Metoda pokazuj퉏a zaleg쿮 wypo퓓czenia w bazie
+        /// </summary>
+        public static DataTable PokazWypozyczenieZalegle(ref string _exmsg)
+        {
+            DataTable dt = new DataTable();
+            string zapytanie = @"select [ID_wypo퓓czenia], [Data_wypo퓓czenia], [Data_planowanego_zwrotu], [Cena_za_wypozyczenie]," +
+                        @"[Id_Klienta], [Id_samochodu] from [dbo].[Wypo퓓czenie]" +
+                        @"where (Data_planowanego_zwrotu <= GETDATE() and (CzyRozliczone is null or CzyRozliczone = 0))";
+            //Pobieranie danych z bazy
+            string exmsg = "";
+            dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
+            return dt;
+        }
     } 
 
 

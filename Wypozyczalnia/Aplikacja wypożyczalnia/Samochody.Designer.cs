@@ -35,6 +35,7 @@
             this.WyszukajSamochód = new System.Windows.Forms.Button();
             this.MenuGłówne = new System.Windows.Forms.Button();
             this.ListaSamochodow = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -114,12 +115,24 @@
             this.ListaSamochodow.UseVisualStyleBackColor = true;
             this.ListaSamochodow.Click += new System.EventHandler(this.ListaSamochodow_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Location = new System.Drawing.Point(661, 172);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 65);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Naprawa";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Samochody
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
             this.ClientSize = new System.Drawing.Size(884, 461);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.ListaSamochodow);
             this.Controls.Add(this.MenuGłówne);
             this.Controls.Add(this.WyszukajSamochód);
@@ -129,7 +142,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Samochody";
             this.Text = " ";
-            this.Load += new System.EventHandler(this.Samochody_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,5 +156,6 @@
         private System.Windows.Forms.Button WyszukajSamochód;
         private System.Windows.Forms.Button MenuGłówne;
         private System.Windows.Forms.Button ListaSamochodow;
+        private System.Windows.Forms.Button button1;
     }
 }
