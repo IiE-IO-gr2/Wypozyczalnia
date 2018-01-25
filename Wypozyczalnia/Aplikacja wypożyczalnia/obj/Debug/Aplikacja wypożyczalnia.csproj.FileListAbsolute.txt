@@ -369,3 +369,4 @@ C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\
 C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazWyszukiwanySamochod.resources
 C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.Rezerwacje.resources
 C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.RozliczWypozyczenie.resources
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.SamochodNaprawa.resources
