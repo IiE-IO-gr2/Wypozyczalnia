@@ -18,8 +18,10 @@ namespace Aplikacja_wypożyczalnia
             InitializeComponent();
         }
         /// <summary>
-        ///Przycisk służący do powrotu do poprzedniej sekcji w tym wypadku sekcji Samochody
+        /// Przycisk służący do powrotu do poprzedniej sekcji w tym wypadku sekcji Samochody
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void WsteczUS_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -27,13 +29,15 @@ namespace Aplikacja_wypożyczalnia
             us.Show();
         }
         /// <summary>
-        ///Dzięki temu przyciskowi samochód o podanym numerze id jest usuwany z bazy, pod warunkiem, że samochód został znaleziony w bazie po numerze id. Kiedy nie ma samochodu w bazie o wpisanym numerze id pojawia się okno informujące że samochodu o wpisanym numerze id nie ma w bazie*/
+        /// Dzięki temu przyciskowi samochód o podanym numerze id jest usuwany z bazy, pod warunkiem, że samochód został znaleziony w bazie po numerze id. Kiedy nie ma samochodu w bazie o wpisanym numerze id pojawia się okno informujące że samochodu o wpisanym numerze id nie ma w bazie
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ZatwierdźUS_Click(object sender, EventArgs e)
         {
-            /// <summary>
-            /// Sprawdzenie poprawności danych w textboxie
-            /// </summary>
+            
+            // Sprawdzenie poprawności danych w textboxie
+            
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
             if (string.IsNullOrWhiteSpace(textBox1.Text) ||
@@ -45,9 +49,9 @@ namespace Aplikacja_wypożyczalnia
 
             if (poprawneTextboxy == true)
             {
-                /// <summary>
-                /// Pobranie danych z TextBoxa
-                /// </summary>
+                
+                // Pobranie danych z TextBoxa
+                
                 int id1 = int.Parse(textBox1.Text);
 
                 try

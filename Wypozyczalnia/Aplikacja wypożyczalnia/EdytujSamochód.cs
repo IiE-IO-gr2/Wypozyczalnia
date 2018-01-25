@@ -18,8 +18,10 @@ namespace Aplikacja_wypożyczalnia
             InitializeComponent();
         }
         /// <summary>
-        ///Przycisk, który cofa do poprzedniej sekcji czyli Samochody
+        /// Przycisk, który cofa do poprzedniej sekcji czyli Samochody
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void WsteczES_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -27,13 +29,13 @@ namespace Aplikacja_wypożyczalnia
             es.Show();
         }
         /// <summary>
-        ///Przycisk wyszukuje samochodu do edycji oraz pojawia się okno, w którym można edytować wszystkie, bądź wybrane parametry samochodu
+        /// Przycisk wyszukuje samochodu do edycji oraz pojawia się okno, w którym można edytować wszystkie, bądź wybrane parametry samochodu
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ZatwierdźES_Click(object sender, EventArgs e)
         {
-            /// <summary>
-            /// Sprawdzenie poprawności danych w textboxie
-            /// </summary>
+            
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
             if (string.IsNullOrWhiteSpace(textBox1.Text) ||
@@ -45,9 +47,7 @@ namespace Aplikacja_wypożyczalnia
 
             if (poprawneTextboxy == true)
             {
-                /// <summary>
-                /// Pobranie danych z TextBoxa
-                /// </summary>
+                
                 int id = int.Parse(textBox1.Text);
                 string exmsg = "";
                 DataTable dt = Samochód.WyszukajSamochod(id, ref exmsg);
@@ -55,9 +55,7 @@ namespace Aplikacja_wypożyczalnia
                     MessageBox.Show("Wystąpił błąd:\n\t-" + exmsg);
                 else
                 {
-                    /// <summary>
-                    //opcja otwiera okno edycji z wszystkimi parametrami samochodu
-                    /// </summary>
+                    
                     PokazWyszukiwanySamochod pws = new PokazWyszukiwanySamochod(dt);
                         pws.Show();
                 }

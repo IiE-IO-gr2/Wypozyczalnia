@@ -135,6 +135,7 @@
             this.Controls.Add(this.label1);
             this.Name = "SamochodNaprawa";
             this.Text = "SamochodNaprawa";
+            this.Load += new System.EventHandler(this.SamochodNaprawa_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
