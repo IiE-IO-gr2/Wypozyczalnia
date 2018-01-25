@@ -113,6 +113,11 @@ namespace Aplikacja_wypożyczalnia
                 bladWTextboxach += "\n\t-Data zwrotu nie może być minioną datą";
                 poprawneTextboxy = false;
             }
+            if (dataPlanowanegoZwrotu.CompareTo(dataPlanowanegoWypozyczenia) == -1)
+            {
+                bladWTextboxach += "\n\t-Data zwrotu nie może być wcześniejsza od daty wypożyczenia";
+                poprawneTextboxy = false;
+            }
             if (poprawneTextboxy == true)
             {
                 /// Pobranie danych z TextBoxów
