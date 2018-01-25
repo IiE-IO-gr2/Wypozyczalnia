@@ -29,7 +29,6 @@ namespace Aplikacja_wypożyczalnia
         /// <summary>
         ///Przycisk umożliwiający poprawne wyszukanie wypożyczenia oraz umieszczenie go w tabeli
         /// </summary>
-        
         private void button4_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = new DataTable();

@@ -154,4 +154,18 @@ public static class FunkcjePomicnicze
         
     }              
 
+    public static List<string> PobierzListeStringow(string zapytanie, ref string exmsg)
+    {
+        List<string> lista = new List<string>();
+        DataTable dt = PobierzDaneSQL(zapytanie, ref exmsg);
+        if (string.IsNullOrWhiteSpace(exmsg))
+        {
+            foreach (DataRow item in dt.Rows)
+            {
+                lista.Add(item[0].ToString());
+            }
+
+        }
+        return lista;
+    }
 }

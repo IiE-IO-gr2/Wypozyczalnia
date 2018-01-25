@@ -53,7 +53,9 @@ namespace Aplikacja_wypożyczalnia
                 return listaIDCzysta;
             }
         }
-
+        /// <summary>
+        ///Przycisk umożliwiający zatwierdzenie wybranego samochodu
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             try

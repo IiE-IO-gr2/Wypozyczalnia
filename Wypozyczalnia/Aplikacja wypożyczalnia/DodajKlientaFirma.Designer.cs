@@ -256,6 +256,7 @@ namespace Aplikacja_wypożyczalnia
             this.Controls.Add(this.label1);
             this.Name = "DodajKlientaFirma";
             this.Text = "DodajKlientaFirma";
+            this.Load += new System.EventHandler(this.DodajKlientaFirma_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
