@@ -78,8 +78,11 @@ namespace logika_biznesowa {
 		public string DodajRezerwacje()
         {
             string exmsg = "";
-            string zapytanie = @"insert into [dbo].[Rezerwacja] ([ID_rezerwacji], [Data_planowanego_wypozyczenia], [Data_planowanego_zwrotu], [CzyUsuniete])" +
-                @"values (" + ID_rezerwacji + ", " + Data_planowanego_wypozyczenia + " , " + Data_planowanego_zwrotu + " , 0)";
+            string Data_pl_wyp = Data_planowanego_wypozyczenia.Year.ToString() + "-" + Data_planowanego_wypozyczenia.Month.ToString() + "-" + Data_planowanego_wypozyczenia.Day.ToString();
+            string Data_pl_zw = Data_planowanego_zwrotu.Year.ToString() + "-" + Data_planowanego_zwrotu.Month.ToString() + "-" + Data_planowanego_zwrotu.Day.ToString();
+            string zapytanie = @"INSERT INTO [dbo].[Rezerwacja] ([ID_rezerwacji], [Data_planowanego_wypozyczenia], [Data_planowanego_zwrotu]," +
+                @"[CzyUsuniete])" +
+                @"VALUES(" + ID_rezerwacji + ", '" + Data_pl_wyp + "', '" + Data_pl_zw + "', 0)";
             FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }

@@ -194,6 +194,12 @@
     <Compile Include="RozliczWypozyczenie.Designer.cs">
       <DependentUpon>RozliczWypozyczenie.cs</DependentUpon>
     </Compile>
+    <Compile Include="SamochodNaprawa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SamochodNaprawa.Designer.cs">
+      <DependentUpon>SamochodNaprawa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Samochody.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -344,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RozliczWypozyczenie.resx">
       <DependentUpon>RozliczWypozyczenie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SamochodNaprawa.resx">
+      <DependentUpon>SamochodNaprawa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Samochody.resx">
       <DependentUpon>Samochody.cs</DependentUpon>
