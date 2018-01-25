@@ -86,12 +86,6 @@
     <Compile Include="EdytujSamochód.Designer.cs">
       <DependentUpon>EdytujSamochód.cs</DependentUpon>
     </Compile>
-    <Compile Include="EdytujWypozyczenie.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EdytujWypozyczenie.Designer.cs">
-      <DependentUpon>EdytujWypozyczenie.cs</DependentUpon>
-    </Compile>
     <Compile Include="FunkcjePomocnicze.cs" />
     <Compile Include="Klienci.cs">
       <SubType>Form</SubType>
@@ -304,9 +298,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EdytujSamochód.resx">
       <DependentUpon>EdytujSamochód.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EdytujWypozyczenie.resx">
-      <DependentUpon>EdytujWypozyczenie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Klienci.resx">
       <DependentUpon>Klienci.cs</DependentUpon>
