@@ -37,7 +37,6 @@
             this.czas = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.wylogowanie = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -125,22 +124,10 @@
             this.wylogowanie.UseVisualStyleBackColor = true;
             this.wylogowanie.Click += new System.EventHandler(this.wylogowanie_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Location = new System.Drawing.Point(687, 73);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 49);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "e-mail: rezerwacja";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button2.Location = new System.Drawing.Point(688, 198);
+            this.button2.Location = new System.Drawing.Point(688, 177);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(147, 49);
             this.button2.TabIndex = 8;
@@ -151,7 +138,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button3.Location = new System.Drawing.Point(688, 262);
+            this.button3.Location = new System.Drawing.Point(688, 260);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(147, 49);
             this.button3.TabIndex = 9;
@@ -162,7 +149,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button4.Location = new System.Drawing.Point(688, 133);
+            this.button4.Location = new System.Drawing.Point(688, 99);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(147, 49);
             this.button4.TabIndex = 10;
@@ -175,7 +162,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(683, 34);
+            this.label1.Location = new System.Drawing.Point(690, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(145, 20);
             this.label1.TabIndex = 11;
@@ -191,7 +178,6 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.wylogowanie);
             this.Controls.Add(this.czas);
             this.Controls.Add(this.data);
@@ -218,7 +204,6 @@
         private System.Windows.Forms.Label czas;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button wylogowanie;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
