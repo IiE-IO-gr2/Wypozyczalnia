@@ -20,6 +20,7 @@ namespace Aplikacja_wypożyczalnia
         public PokazWyszukiwanySamochod(DataTable dt)
         {
             InitializeComponent();
+            string dostep = "";
             foreach (DataRow item in dt.Rows)
             {
                 textBox1.Text = item[0].ToString();
@@ -37,10 +38,14 @@ namespace Aplikacja_wypożyczalnia
                 textBox13.Text = item[11].ToString();
                 textBox14.Text = item[12].ToString();
                 textBox15.Text = item[13].ToString();
-                textBox16.Text = item[14].ToString();
+                dostep = item[14].ToString();
                 textBox17.Text = item[15].ToString();
                 textBox18.Text = item[16].ToString();
             }
+            if (dostep == "false")
+                textBox16.Text = "0";
+            else
+                textBox16.Text = "1";
         }
         /// <summary>
         /// Przycisk zamknij okno zamyka okno edycji samochodu
