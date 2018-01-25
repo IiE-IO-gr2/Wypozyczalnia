@@ -127,46 +127,46 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button1.Location = new System.Drawing.Point(687, 73);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 49);
             this.button1.TabIndex = 7;
-            this.button1.Text = "mail - zaliczka";
+            this.button1.Text = "e-mail: rezerwacja";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button2.Location = new System.Drawing.Point(687, 143);
+            this.button2.Location = new System.Drawing.Point(688, 198);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(147, 49);
             this.button2.TabIndex = 8;
-            this.button2.Text = "mail - zapłata";
+            this.button2.Text = "e-mail: zapłata";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button3.Location = new System.Drawing.Point(687, 217);
+            this.button3.Location = new System.Drawing.Point(688, 262);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(147, 49);
             this.button3.TabIndex = 9;
-            this.button3.Text = "mail - opóźnienia";
+            this.button3.Text = "e-mail: opóźnienia";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button4.Location = new System.Drawing.Point(688, 287);
+            this.button4.Location = new System.Drawing.Point(688, 133);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(147, 49);
             this.button4.TabIndex = 10;
-            this.button4.Text = "mail - zaliczka";
+            this.button4.Text = "e-mail:  zaliczka";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -175,11 +175,11 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(690, 32);
+            this.label1.Location = new System.Drawing.Point(683, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 20);
+            this.label1.Size = new System.Drawing.Size(145, 20);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Maile do klientów";
+            this.label1.Text = "E-maile do klientów";
             // 
             // Menu_po_zalogowaniu
             // 
