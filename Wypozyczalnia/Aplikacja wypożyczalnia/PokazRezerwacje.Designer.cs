@@ -40,7 +40,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(317, 51);
+            this.label2.Location = new System.Drawing.Point(330, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(195, 29);
             this.label2.TabIndex = 49;
@@ -49,7 +49,7 @@
             // wstecz
             // 
             this.wstecz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.wstecz.Location = new System.Drawing.Point(355, 397);
+            this.wstecz.Location = new System.Drawing.Point(372, 384);
             this.wstecz.Name = "wstecz";
             this.wstecz.Size = new System.Drawing.Size(125, 65);
             this.wstecz.TabIndex = 50;
@@ -59,11 +59,12 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(566, 56);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(348, 41);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 23);
+            this.button1.Size = new System.Drawing.Size(238, 29);
             this.button1.TabIndex = 53;
-            this.button1.Text = "Aktualizuj";
+            this.button1.Text = "Aktualizuj listę rezerwacji";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

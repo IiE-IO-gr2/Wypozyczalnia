@@ -20,7 +20,7 @@ namespace Aplikacja_wypożyczalnia
         }
 
         /// <summary>
-        ///Przycisk, który cofa do poprzedniej sekcji
+        ///Przycisk umożliwiający powrót do poprzedniego okna
         /// </summary>
         private void wstecz_Click(object sender, EventArgs e)
         {
@@ -30,21 +30,10 @@ namespace Aplikacja_wypożyczalnia
     
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            using (WybierzSamoch ws = new WybierzSamoch())
-            {
-                if (ws.ShowDialog() == DialogResult.OK)
-                {
-                    textBox4.Text = ws.PobraneIDSamWartosc;
-                }
-                else
-                {
-                    MessageBox.Show("Wystąpił nieoczekiwany błąd.");
-                }
-            }
-        }
 
+        /// <summary>
+        ///Przycisk umożliwiający wybranie klienta biznesowego do rezerwacji
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             using (WybierzKlientaRezerwacje wk = new WybierzKlientaRezerwacje())
@@ -60,6 +49,9 @@ namespace Aplikacja_wypożyczalnia
             }
         }
 
+        /// <summary>
+        ///Przycisk umożliwiający wybranie klienta indywidualnego do rezerwacji
+        /// </summary>
         private void button4_Click(object sender, EventArgs e)
         {
             using (WybierzKlientaIndywidualnegoRezerwacje wki = new WybierzKlientaIndywidualnegoRezerwacje())
@@ -75,6 +67,9 @@ namespace Aplikacja_wypożyczalnia
             }
         }
 
+        /// <summary>
+        ///Przycisk umożliwiający wybranie samochodu do rezerwacji
+        /// </summary>
         private void button2_Click_1(object sender, EventArgs e)
         {
             using (WybierzSamochRezerwacje ws = new WybierzSamochRezerwacje())
@@ -90,6 +85,9 @@ namespace Aplikacja_wypożyczalnia
             }
         }
 
+        /// <summary>
+        ///Przycisk umozliwiający dodanie rezerwacji do bazy
+        /// </summary>
         private void button3_Click(object sender, EventArgs e)
         {
             // sprawdzanie poprawnosci
