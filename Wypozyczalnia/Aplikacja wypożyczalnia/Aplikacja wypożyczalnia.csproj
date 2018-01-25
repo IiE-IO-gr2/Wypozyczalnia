@@ -92,12 +92,6 @@
     <Compile Include="EdytujWypozyczenie.Designer.cs">
       <DependentUpon>EdytujWypozyczenie.cs</DependentUpon>
     </Compile>
-    <Compile Include="Edytuj_rezerwacje.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edytuj_rezerwacje.Designer.cs">
-      <DependentUpon>Edytuj_rezerwacje.cs</DependentUpon>
-    </Compile>
     <Compile Include="FunkcjePomocnicze.cs" />
     <Compile Include="Klienci.cs">
       <SubType>Form</SubType>
@@ -313,9 +307,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EdytujWypozyczenie.resx">
       <DependentUpon>EdytujWypozyczenie.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edytuj_rezerwacje.resx">
-      <DependentUpon>Edytuj_rezerwacje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Klienci.resx">
       <DependentUpon>Klienci.cs</DependentUpon>
