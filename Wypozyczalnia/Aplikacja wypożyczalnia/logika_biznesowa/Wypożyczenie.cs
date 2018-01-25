@@ -67,60 +67,10 @@ namespace logika_biznesowa {
             return exmsg;
         }
 
+        
         /// <summary>
-        /// metoda usuwaj¹ca wypo¿yczenie z bazy
+        /// Metoda pobieraj¹ca z bazy danych najwy¿szy dotychczas uzyty numer ID
         /// </summary>
-        public static string UsunWypozyczenie(int identyfikator)
-        {
-            string zapytanieCzyWypozyczenieIstnieje = @"SELECT count(*) FROM [dbo].[Wypo¿yczenie] WHERE [ID_wypo¿yczenia] = " + identyfikator;
-            string exmsgTest = "";
-            string zwrotZapytanieCzyWypozyczenieIstnieje = FunkcjePomicnicze.PobierzDaneSQLPojedyncze(zapytanieCzyWypozyczenieIstnieje, ref exmsgTest);
-            if (!string.IsNullOrWhiteSpace(exmsgTest)) // zapytanie testuj¹ce, czy w bazie jest wypo¿yczenie o danym ID zwróci³o b³¹d
-                return exmsgTest;
-            else // zapytanie nie zwróci³o b³êdu
-            {
-                int licznik;
-                if (int.TryParse(zwrotZapytanieCzyWypozyczenieIstnieje, out licznik) == true) // uzyskan¹ wartoœæ da siê przekonwetowaæ na inta
-                {
-                    if (licznik == 1) // zapytanie zwróci³o znalezienie w bazie wypo¿yczeñ rekordu o podanym ID
-                    {
-                        string exmsg = "", exmsg1 = "", exmsg2 = "";
-                        // usuniêcie danych z tabeli Wypo¿yczenie
-                        string zapytanie1 = @"UPDATE [dbo].[Wypo¿yczenie] SET [CzyUsuniete] = 1 WHERE [ID_wypo¿yczenia] = " + identyfikator;
-                        FunkcjePomicnicze.WstawDaneSQL(zapytanie1, ref exmsg1);
-                        // budowa informacji wyjœciowej z funkcji
-                        if (!string.IsNullOrWhiteSpace(exmsg1))
-                            exmsg += "\n" + exmsg1;
-                        if (!string.IsNullOrWhiteSpace(exmsg2))
-                            exmsg += "\n" + exmsg2;
-                        return exmsg;
-                    }
-                    else
-                        return "Nie odnaleziono wypo¿yczenia o podanym ID";
-                }
-                else
-                    return "Nie odnaleziono wypo¿yczenia o podanym ID";
-            }
-        }
-        /// <summary>
-        /// metoda edytuj¹ca wypo¿yczenie w bazie
-        /// </summary>
-        public void EdytujWypozyczenie()
-        {
-            throw new System.Exception("Not implemented");
-        }
-        /// <summary>
-        /// metoda wyszukuj¹ca wypo¿yczenie w bazie
-        /// </summary>
-        public void WyszukajWypozyczenie()
-        {
-            throw new System.Exception("Not implemented");
-        }
-        /// <summary>
-        /// metoda pokazuj¹ca wypo¿yczenie w bazie
-        /// </summary>
-
-
         public static int MaksymalnyNumerIdentyfikatoraWBazie()
         {
             string zapytanie = @"select max([ID_wypo¿yczenia]) from [dbo].[Wypo¿yczenie]";
@@ -131,7 +81,9 @@ namespace logika_biznesowa {
             else
                 return 0;
         }
-        
+        /// <summary>
+        /// Metoda wyszukuj¹ca wypo¿yczenie w bazie
+        /// </summary>
         public static DataTable WyszukajWypozyczenie(int identyfikator, ref string _exmsg)
         {
             DataTable dt = new DataTable();
@@ -167,7 +119,9 @@ namespace logika_biznesowa {
                 }
             }
         }
-
+        /// <summary>
+        /// Metoda pokazuj¹ca wypo¿yczenie w bazie
+        /// </summary>
         public static DataTable PokazWypozyczenie(ref string _exmsg)
         {
             DataTable dt = new DataTable();

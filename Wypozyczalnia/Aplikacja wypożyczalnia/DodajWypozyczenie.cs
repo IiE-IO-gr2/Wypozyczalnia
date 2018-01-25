@@ -18,14 +18,18 @@ namespace Aplikacja_wypożyczalnia
             InitializeComponent();
             textBox1.Text = (Wypożyczenie.MaksymalnyNumerIdentyfikatoraWBazie() + 1).ToString();
         }
-
+        /// <summary>
+        ///Przycisk umożliwiający powrót do poprzedniego okna
+        /// </summary>
         private void wstecz_Click(object sender, EventArgs e)
         {
             this.Hide();
             Wypozyczenia w = new Wypozyczenia();
             w.Show();
         }
-
+        /// <summary>
+        ///Przycisk umożliwiający wybranie samochodu do wypożyczenia
+        /// </summary>
         private void button2_Click(object sender, EventArgs e)
         {
             using (WybierzSamoch ws = new WybierzSamoch())
@@ -41,7 +45,9 @@ namespace Aplikacja_wypożyczalnia
                 }
             }
         }
-
+        /// <summary>
+        ///Przycisk umożliwiający wybranie klienta biznesowego do wypożyczenia
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             using (WybierzKlienta wk = new WybierzKlienta())
@@ -59,7 +65,9 @@ namespace Aplikacja_wypożyczalnia
             }
 
         }
-
+        /// <summary>
+        ///Przycisk umożliwiający wybranie klienta indywidualnego do wypożyczenia
+        /// </summary>
         private void button4_Click(object sender, EventArgs e)
         {
             using (WybierzKlientaIndywidualnego wki = new WybierzKlientaIndywidualnego())
@@ -76,7 +84,9 @@ namespace Aplikacja_wypożyczalnia
                 }
             }
         }
-
+        /// <summary>
+        ///Przycisk umozliwiający dodanie wypożyczenia do bazy
+        /// </summary>
         private void button3_Click(object sender, EventArgs e)
         {
             // sprawdzanie poprawnosci

@@ -61,7 +61,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Image = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o1;
-            this.label1.Location = new System.Drawing.Point(350, 9);
+            this.label1.Location = new System.Drawing.Point(338, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(248, 29);
             this.label1.TabIndex = 33;
@@ -92,9 +92,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 159);
+            this.dataGridView1.Location = new System.Drawing.Point(60, 128);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(833, 181);
+            this.dataGridView1.Size = new System.Drawing.Size(738, 92);
             this.dataGridView1.TabIndex = 36;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
