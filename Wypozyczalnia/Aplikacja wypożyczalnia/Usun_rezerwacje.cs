@@ -18,9 +18,14 @@ namespace Aplikacja_wypożyczalnia
             InitializeComponent();
         }
 
+        /// <summary>
+        ///Przycisk zatwierdza usunięcie z bazy rezerwacji o podanym numerze id, pod warunkiem, że rezerwacja została znaleziona w bazie po numerze id. 
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
+            /// <summary>
             /// Sprawdzenie poprawności danych w textboxie
+            /// </summary>
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
             //MessageBox.Show("Dlugosc = " + textBox2.Text.Length);
@@ -33,8 +38,9 @@ namespace Aplikacja_wypożyczalnia
 
             if (poprawneTextboxy == true)
             {
-
+                ///<summary>
                 /// Pobranie danych z TextBoxa
+                /// </summary>
                 int id1 = int.Parse(textBox1.Text);
 
                 try
@@ -64,6 +70,9 @@ namespace Aplikacja_wypożyczalnia
             }
         }
 
+        /// <summary>
+        ///Przycisk służący do powrotu do poprzedniej sekcji 
+        /// </summary>
         private void wstecz_Click(object sender, EventArgs e)
         {
             this.Hide();

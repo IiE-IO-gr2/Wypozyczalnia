@@ -57,10 +57,21 @@ namespace logika_biznesowa {
 		/// <summary>
 		/// metoda, która edytuje rezerwacjê
 		/// </summary>
-		public void EdytujRezerwacje()
+		public string EdytujRezerwacje()
         {
-			throw new System.Exception("Not implemented");
-		}
+            //throw new System.Exception("Not implemented");
+
+            string exmsg = "";
+            /// <summary>
+            ///zapytanie, które umo¿liwia edycjê samochodu w opcji edycji
+            /// </summary>
+            string zapytanie = @"UPDATE [dbo].[Rezerwacja] SET [Data_planowanego_wypozyczenia]='" + Data_planowanego_wypozyczenia + "', [Data_planowanego_zwrotu]='" + Data_planowanego_zwrotu + " WHERE [ID_rezerwacji] = " + ID_rezerwacji ;
+            /// <summary>
+            ///wstawia wartoœci atrybutów u¿ytych w zapytaniu
+            /// </summary>
+            FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
+            return exmsg;
+        }
 		/// <summary>
 		/// metoda, która dodaje rezerwacjê
 		/// </summary>
@@ -146,7 +157,12 @@ namespace logika_biznesowa {
                 }
             }
         }
-        
+
+
+        /// <summary>
+        /// Metoda pobieraj¹ca z bazy danych najwy¿szy dotychczas uzyty numer ID rezerwacji
+        /// </summary>
+        /// <returns></returns>
         public static int MaksymalnyNumerIdentyfikatoraWBazie()
         {
             string zapytanie = @"select max([ID_rezerwacji]) from [dbo].[Rezerwacja]";

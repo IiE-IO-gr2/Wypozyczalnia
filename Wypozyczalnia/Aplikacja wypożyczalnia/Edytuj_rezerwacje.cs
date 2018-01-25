@@ -23,6 +23,9 @@ namespace Aplikacja_wypożyczalnia
 
         }
 
+        /// <summary>
+        ///Przycisk powraca do poprzedniej sekcji
+        /// </summary>
         private void wstecz_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -36,13 +39,16 @@ namespace Aplikacja_wypożyczalnia
 
         }
 
+        /// <summary>
+        ///Przycisk wyszukuje rezerwację do edycji oraz otwiera okno, w którym można edytować parametry rezerwacji
+        ///</summary>
         private void button3_Click(object sender, EventArgs e)
         {
-
+            /// <summary>
             /// Sprawdzenie poprawności danych w textboxie
+            /// </summary>
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
-            //MessageBox.Show("Dlugosc = " + textBox2.Text.Length);
             if (string.IsNullOrWhiteSpace(textBox1.Text) ||
                 !System.Text.RegularExpressions.Regex.IsMatch(textBox1.Text, @"^[0-9]{1,10}$"))
             {
@@ -52,10 +58,24 @@ namespace Aplikacja_wypożyczalnia
 
             if (poprawneTextboxy == true)
             {
+                /// <summary>
                 /// Pobranie danych z TextBoxa
+                /// </summary>
                 int id = int.Parse(textBox1.Text);
+                string exmsg = "";
+                DataTable dt = Rezerwacja.WyszukajRezerwacje(id, ref exmsg);
+                if (!string.IsNullOrEmpty(exmsg))
+                    MessageBox.Show("Wystąpił błąd:\n\t-" + exmsg);
+                else
+                {
+                    /// <summary>
+                    /// opcja otwiera okno edycji z wszystkimi parametrami rezerwacji
+                    /// </summary>
+                    
+                    //PokazWyszukiwanaRezerwacje  pwr = new PokazWyszukiwanaRezerwacje(dt);
+                    //pwr.Show();
+                }
             }
-
             else
             {
                 MessageBox.Show("Wystąpił błąd w danych wejściowych:" + bladWTextboxach);
