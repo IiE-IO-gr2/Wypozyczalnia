@@ -86,5 +86,3 @@ namespace Aplikacja_wypożyczalnia
         }
     }
 }
-    
-
