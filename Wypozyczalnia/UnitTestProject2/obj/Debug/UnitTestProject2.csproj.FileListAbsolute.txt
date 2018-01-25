@@ -1,0 +1,19 @@
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\UnitTestProject2\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\UnitTestProject2\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\UnitTestProject2\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\UnitTestProject2\bin\Debug\pl\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\UnitTestProject2\bin\Debug\pl\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\UnitTestProject2\bin\Debug\pl\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\UnitTestProject2\bin\Debug\UnitTestProject2.dll
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\UnitTestProject2\bin\Debug\UnitTestProject2.pdb
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\UnitTestProject2\bin\Debug\Aplikacja wypożyczalnia.exe
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\UnitTestProject2\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\UnitTestProject2\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\UnitTestProject2\bin\Debug\Aplikacja wypożyczalnia.pdb
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\UnitTestProject2\bin\Debug\Aplikacja wypożyczalnia.exe.config
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\UnitTestProject2\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\UnitTestProject2\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\UnitTestProject2\obj\Debug\UnitTestProject2.csprojResolveAssemblyReference.cache
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\UnitTestProject2\obj\Debug\UnitTestProject2.csproj.CoreCompileInputs.cache
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\UnitTestProject2\obj\Debug\UnitTestProject2.dll
+C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\UnitTestProject2\obj\Debug\UnitTestProject2.pdb
