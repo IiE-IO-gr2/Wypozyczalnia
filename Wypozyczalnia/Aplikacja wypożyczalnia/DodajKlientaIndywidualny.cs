@@ -73,7 +73,7 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = false;
             }
             if (string.IsNullOrWhiteSpace(textBox9.Text) ||
-              !System.Text.RegularExpressions.Regex.IsMatch(textBox9.Text, @"^[A-Za-z0-9\-,.@]{2,50}$"))
+              !System.Text.RegularExpressions.Regex.IsMatch(textBox9.Text, @"^[A-Za-z0-9\-,.@_]{2,50}$"))
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu adres e-mail";
                 poprawneTextboxy = false;
