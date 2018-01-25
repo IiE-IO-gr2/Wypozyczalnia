@@ -21,7 +21,7 @@ namespace Aplikacja_wypożyczalnia
         private void WybierzSamochod_Load(object sender, EventArgs e)
         {
             string zapytanie = @"select [Id_samochodu],[Marka],[Model],[Cena_za_dobę],[Kaucja],[Pojemnosc],[Rodzaj_paliwa],[Rocznik],[Kolor]" +
-                @"from [dbo].[Samochód] WHERE (([CzyUsuniete] = 0 or [CzyUsuniete] is null) and [Id_samochodu] not in (" + IdSamochodowKtorychNieMoznaWypozyczyc() + "))";
+                @"from [dbo].[Samochód] WHERE (([CzyUsuniete] = 0 or [CzyUsuniete] is null) and Dostepnosc = 1 and [Id_samochodu] not in (" + IdSamochodowKtorychNieMoznaWypozyczyc() + "))";
             string exmsg = "";
             DataTable dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
             if (!string.IsNullOrWhiteSpace(exmsg))

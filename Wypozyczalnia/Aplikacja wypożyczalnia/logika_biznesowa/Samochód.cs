@@ -67,7 +67,7 @@ namespace logika_biznesowa {
 		/// </summary>
 		public double Cena_za_dobê;
 		/// <summary>
-		/// czy samochód jest dostêpny w wypo¿yczalni
+		/// czy samochód jest dostêpny w wypo¿yczalni czy jest w naprawie
 		/// </summary>
 		public bool Dostepnosc;
 		/// <summary>
