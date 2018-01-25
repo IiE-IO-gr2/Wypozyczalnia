@@ -189,7 +189,7 @@ namespace logika_biznesowa {
             return exmsg;
         }
 
-		private Panel_administratora panel_administratora;
+		private PanelAdministratora panel_administratora;
 
 		private Rezerwacja rezerwacja;
 
