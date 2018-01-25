@@ -48,13 +48,6 @@ namespace Aplikacja_wypożyczalnia
             wr.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Edytuj_rezerwacje er = new Edytuj_rezerwacje();
-            er.Show();
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
             this.Hide();
