@@ -25,7 +25,7 @@ namespace Aplikacja_wypożyczalnia
             re.Show();
         }
         // przycisk odpowiedzialny za sprawdzenie poprawności wpisanego ID oraz wyszukanie w bazie danych
-        // odpowiedniego wypozyczenia i umieszczenie go w tabeli
+        // odpowiedniej rezerwacji i umieszczenie jej w tabeli
         private void button1_Click(object sender, EventArgs e)
         {
             /// Sprawdzenie poprawności danych w textboxie

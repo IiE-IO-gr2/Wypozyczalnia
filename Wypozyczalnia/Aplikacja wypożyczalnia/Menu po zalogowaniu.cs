@@ -88,27 +88,95 @@ namespace Aplikacja_wypożyczalnia
             w.Show();
         }
 
+
         /// <summary>
-        /// Przycisk umożliwiający wysyłanie przypominających maili
+        /// Przycisk umożliwiający wysyłanie maili przypominających o zapłacie
         /// </summary>
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             string exmsg = "";
-            string tytulMaila = "Przypomnienie o rezerwacji";
-            string trescMaila = "Dzień dobry." +
-                "Pragniemy przypomnieć o złożonej przez Pana/Panią rezerwacji u numerze 4127." +
-                "Samochód będzie dostępny do Pana/Pani potrzeb przez 3 doby." +
-                "Mamy nadzieję, że pojazd się przysłuży oraz w przyszłości chętnie Pan/Pani do nas wróci." +
-                "Serdecznie pozdrawiamy," +
-                "Biuro Obsługi Wypożyczalni KGB";
-            List<string> listaAdresatow = new List<string>();
-            listaAdresatow.Add("iie.io.gr2@gmail.com");
-            listaAdresatow.Add("mateuszsobol25@gmail.com");
-            FunkcjePomicnicze.WyslijMaila(tytulMaila, trescMaila, listaAdresatow, ref exmsg);
-            if (string.IsNullOrWhiteSpace(exmsg))
-                MessageBox.Show("Wysylanie powiodlo sie.");
+            string tytulMaila = "Przypomnienie o zapłacie";
+            string trescMaila = "Dzień dobry.\n" +
+                "Pragniemy przypomnieć o konieczności dokonania zapłaty za wypożyczenie samochodu." +
+                "Prosimy o jak najszybsze uregulowanie rachunku. \n" +
+                "Mamy nadzieję, że jest Pan/Pani zadowolona z naszej współpracy oraz w przyszłości chętnie Pan/Pani do nas wróci." +
+                "Serdecznie pozdrawiamy,\n" +
+                "Wypożyczalnia AutoPrestige \n";
+            string zapytanie = @"select k.[Adres_email] from([dbo].[Wypożyczenie] as w inner join[dbo].[Klient] as k on w.[Id_Klienta] = k.[Id_Klienta])
+                                where w.[Data_planowanego_zwrotu] < GETDATE()";
+            string exmsgLista = "";
+            List<string> listaAdresatow = FunkcjePomicnicze.PobierzListeStringow(zapytanie, ref exmsgLista);
+            if (!string.IsNullOrWhiteSpace(exmsgLista))
+                MessageBox.Show("Wystąpił błąd podczas pobierania adresów email\n\t-" + exmsgLista);
             else
-                MessageBox.Show("Wysylanie nie powiodlo sie.");
+            {
+                FunkcjePomicnicze.WyslijMaila(tytulMaila, trescMaila, listaAdresatow, ref exmsg);
+                if (string.IsNullOrWhiteSpace(exmsg))
+                    MessageBox.Show("Wysylanie powiodlo sie.");
+                else
+                    MessageBox.Show("Wysylanie nie powiodlo sie.");
+            }
+        }
+
+        /// <summary>
+        /// Przycisk umożliwiający wysyłanie maili informujących o opóźnieniach samochodu
+        /// </summary>
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string exmsg = "";
+            string tytulMaila = "Opóźnienia w zwrocie";
+            string trescMaila = "Dzień dobry.\n" +
+                "Z przykrością informujemy, że zarezerwowany przez Pana/Panią samochód będzie dostępny w opóźnionym terminie." +
+                "Przepraszamy za wszelkie niedogodności. Postaramy się jak najszybciej udostępnić Panu/Pani samochód.\n" +
+                "Serdecznie pozdrawiamy,\n" +
+                "Wypożyczalnia AutoPrestige \n";
+            string zapytanie = @"elect k.Adres_email from ([dbo].[Rezerwacja] as r inner join [dbo].[Wypożyczenie] as w
+                                on r.Id_samochodu = w.Id_samochodu) inner join [dbo].[Klient] as k
+                                on r.Id_klienta = k.Id_klienta
+                                where ((r.Data_planowanego_wypozyczenia >= w.Data_planowanego_zwrotu + 1)
+                                and (w.CzyRozliczone is null or w.CzyRozliczone = 0))";
+            string exmsgLista = "";
+            List<string> listaAdresatow = FunkcjePomicnicze.PobierzListeStringow(zapytanie, ref exmsgLista);
+            if (!string.IsNullOrWhiteSpace(exmsgLista))
+                MessageBox.Show("Wystąpił błąd podczas pobierania adresów email\n\t-" + exmsgLista);
+            else
+            {
+                FunkcjePomicnicze.WyslijMaila(tytulMaila, trescMaila, listaAdresatow, ref exmsg);
+                if (string.IsNullOrWhiteSpace(exmsg))
+                    MessageBox.Show("Wysylanie powiodlo sie.");
+                else
+                    MessageBox.Show("Wysylanie nie powiodlo sie.");
+            }
+        }
+
+        /// <summary>
+        /// Przycisk umożliwiający wysyłanie maili przypominających o wpłacie kaucji
+        /// </summary>
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string exmsg = "";
+            string tytulMaila = "Przypomnienie o wpłacie kaucji";
+            string trescMaila = "Dzień dobry.\n" +
+                "Przypominamy o konieczności wpłaty kaucji za dokonaną przez Pana/Panią rezerwację w naszym systemie." +
+                "Należy dokonać płatności w ciągu 24h od momentu złożenia rezerwacji." +
+                "Mamy nadzieję, że pojazd się przysłuży oraz w przyszłości chętnie Pan/Pani do nas wróci.\n" +
+                "Serdecznie pozdrawiamy,\n" +
+                "Wypożyczalnia AutoPrestige \n";
+            string zapytanie = @"select k.[Adres_email]
+                                from([dbo].[Wypożyczenie] as w inner join[dbo].[Klient] as k on w.[Id_Klienta] = k.[Id_Klienta])
+                                where w.[Data_wypożyczenia] + 1 = GETDATE()";
+            string exmsgLista = "";
+            List<string> listaAdresatow = FunkcjePomicnicze.PobierzListeStringow(zapytanie, ref exmsgLista);
+            if (!string.IsNullOrWhiteSpace(exmsgLista))
+                MessageBox.Show("Wystąpił błąd podczas pobierania adresów email\n\t-" + exmsgLista);
+            else
+            {
+                FunkcjePomicnicze.WyslijMaila(tytulMaila, trescMaila, listaAdresatow, ref exmsg);
+                if (string.IsNullOrWhiteSpace(exmsg))
+                    MessageBox.Show("Wysylanie powiodlo sie.");
+                else
+                    MessageBox.Show("Wysylanie nie powiodlo sie.");
+            }
         }
     }
 }
