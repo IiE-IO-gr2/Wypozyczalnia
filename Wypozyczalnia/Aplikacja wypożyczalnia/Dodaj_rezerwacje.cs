@@ -32,6 +32,9 @@ namespace Aplikacja_wypożyczalnia
         //      MessageBox.Show("Nie można podać minionej daty.");
         //  }
 
+        /// <summary>
+        ///Przycisk, który cofa do poprzedniej sekcji
+        /// </summary>
         private void wstecz_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -39,6 +42,7 @@ namespace Aplikacja_wypożyczalnia
             re.Show();
     
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
