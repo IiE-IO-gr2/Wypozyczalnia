@@ -16,10 +16,13 @@ namespace Aplikacja_wypożyczalnia
         public DodajSamochód()
         {
             InitializeComponent();
+            textBox1.Text = (Samochód.MaksymalnyNumerIdentyfikatoraWBazie() + 1).ToString();
         }
         /// <summary>
-        ///Przycisk umożliwiający powrót do wyboru czynności w sekcji Samochody
+        /// Przycisk umożliwiający powrót do wyboru czynności w sekcji Samochody
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void WsteczDS_Click(object sender, EventArgs e)
         {
             
@@ -29,13 +32,13 @@ namespace Aplikacja_wypożyczalnia
             ds.Show();
         }
         /// <summary>
-        ///Przycisk zatwierdź zatwierdza wprowadzone dane oraz dodaje nowy samochód do bazy
+        /// Przycisk zatwierdź zatwierdza wprowadzone dane oraz dodaje nowy samochód do bazy
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ZatwierdźDS_Click(object sender, EventArgs e)
         {
-            /// <summary>
-            /// Sprawdzenie poprawności danych w textboxach
-            /// </summary>
+            
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
             
@@ -137,7 +140,7 @@ namespace Aplikacja_wypożyczalnia
             }
             if (poprawneTextboxy == true)
             {
-                int id = Samochód.MaksymalnyNumerIdentyfikatoraWBazie() + 1;
+                int id = int.Parse(textBox1.Text);
                 string mar = textBox2.Text;
                 string mod = textBox3.Text;
                 double poj = double.Parse(textBox4.Text);
@@ -167,9 +170,7 @@ namespace Aplikacja_wypożyczalnia
                     MessageBox.Show("Wystąpił błąd:\n" + exmsg_kl);
                
             }
-            /// <summary>
-            ///Wyświetlanie informacji o błędzie
-            /// </summary>
+            
             else
             {
                 MessageBox.Show("Wystąpiły błędy w danych wejściowych:" + bladWTextboxach);

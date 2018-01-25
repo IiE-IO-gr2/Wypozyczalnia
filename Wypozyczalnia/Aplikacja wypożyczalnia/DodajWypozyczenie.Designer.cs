@@ -308,6 +308,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DodajWypozyczenie";
             this.Text = "DodajWypozyczenie";
+            this.Load += new System.EventHandler(this.DodajWypozyczenie_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

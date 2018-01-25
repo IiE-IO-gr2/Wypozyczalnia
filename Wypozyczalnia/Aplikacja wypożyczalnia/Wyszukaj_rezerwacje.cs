@@ -17,18 +17,25 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
-        // Przycisk wstecz, przenosi do poprzedniego okna
+
+        /// <summary>
+        ///Przycisk umożliwiający powrót do poprzedniego okna
+        /// </summary
         private void wstecz_Click(object sender, EventArgs e)
         {
             this.Hide();
             Rezerwacje re = new Rezerwacje();
             re.Show();
         }
-        // przycisk odpowiedzialny za sprawdzenie poprawności wpisanego ID oraz wyszukanie w bazie danych
-        // odpowiedniej rezerwacji i umieszczenie jej w tabeli
+
+        ///<summary>
+        /// przycisk odpowiedzialny za sprawdzenie poprawności wpisanego ID oraz wyszukanie w bazie danych
+        /// odpowiedniej rezerwacji i umieszczenie jej w tabeli
+        ///</summary>
         private void button1_Click(object sender, EventArgs e)
         {
-            /// Sprawdzenie poprawności danych w textboxie
+            
+            // Sprawdzenie poprawności danych w textboxie
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
             //MessageBox.Show("Dlugosc = " + textBox2.Text.Length);
@@ -41,7 +48,7 @@ namespace Aplikacja_wypożyczalnia
 
             if (poprawneTextboxy == true)
             {
-                /// Pobranie danych z TextBoxa
+                //Pobranie danych z TextBoxa
                 int id = int.Parse(textBox1.Text);
                 string exmsg = "";
                 DataTable dt = Rezerwacja.WyszukajRezerwacje(id, ref exmsg);

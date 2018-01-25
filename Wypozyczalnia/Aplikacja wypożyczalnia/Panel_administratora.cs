@@ -43,7 +43,10 @@ namespace Aplikacja_wypożyczalnia
             {
                 hasloZBazy = item[0].ToString();
             }
-            if (h == hasloZBazy)
+            bool hasloWpisane = true;
+            if (string.IsNullOrWhiteSpace(h))
+                hasloWpisane = false;
+            if (hasloWpisane == true && h == hasloZBazy)
             {
                 this.Hide();
                 Menu_po_zalogowaniu m = new Menu_po_zalogowaniu();

@@ -86,18 +86,6 @@
     <Compile Include="EdytujSamochód.Designer.cs">
       <DependentUpon>EdytujSamochód.cs</DependentUpon>
     </Compile>
-    <Compile Include="EdytujWypozyczenie.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EdytujWypozyczenie.Designer.cs">
-      <DependentUpon>EdytujWypozyczenie.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edytuj_rezerwacje.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edytuj_rezerwacje.Designer.cs">
-      <DependentUpon>Edytuj_rezerwacje.cs</DependentUpon>
-    </Compile>
     <Compile Include="FunkcjePomocnicze.cs" />
     <Compile Include="Klienci.cs">
       <SubType>Form</SubType>
@@ -131,6 +119,12 @@
     </Compile>
     <Compile Include="Panel_administratora.Designer.cs">
       <DependentUpon>Panel_administratora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PokazKlientow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PokazKlientow.Designer.cs">
+      <DependentUpon>PokazKlientow.cs</DependentUpon>
     </Compile>
     <Compile Include="PokazRezerwacje.cs">
       <SubType>Form</SubType>
@@ -188,6 +182,12 @@
     <Compile Include="RozliczWypozyczenie.Designer.cs">
       <DependentUpon>RozliczWypozyczenie.cs</DependentUpon>
     </Compile>
+    <Compile Include="SamochodNaprawa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SamochodNaprawa.Designer.cs">
+      <DependentUpon>SamochodNaprawa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Samochody.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,11 +224,29 @@
     <Compile Include="WybierzKlientaIndywidualnego.Designer.cs">
       <DependentUpon>WybierzKlientaIndywidualnego.cs</DependentUpon>
     </Compile>
+    <Compile Include="WybierzKlientaIndywidualnegoRezerwacje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WybierzKlientaIndywidualnegoRezerwacje.Designer.cs">
+      <DependentUpon>WybierzKlientaIndywidualnegoRezerwacje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WybierzKlientaRezerwacje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WybierzKlientaRezerwacje.Designer.cs">
+      <DependentUpon>WybierzKlientaRezerwacje.cs</DependentUpon>
+    </Compile>
     <Compile Include="WybierzSamoch.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WybierzSamoch.Designer.cs">
       <DependentUpon>WybierzSamoch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WybierzSamochRezerwacje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WybierzSamochRezerwacje.Designer.cs">
+      <DependentUpon>WybierzSamochRezerwacje.cs</DependentUpon>
     </Compile>
     <Compile Include="Wypozyczenia.cs">
       <SubType>Form</SubType>
@@ -281,12 +299,6 @@
     <EmbeddedResource Include="EdytujSamochód.resx">
       <DependentUpon>EdytujSamochód.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EdytujWypozyczenie.resx">
-      <DependentUpon>EdytujWypozyczenie.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edytuj_rezerwacje.resx">
-      <DependentUpon>Edytuj_rezerwacje.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Klienci.resx">
       <DependentUpon>Klienci.cs</DependentUpon>
     </EmbeddedResource>
@@ -298,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panel_administratora.resx">
       <DependentUpon>Panel_administratora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PokazKlientow.resx">
+      <DependentUpon>PokazKlientow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PokazRezerwacje.resx">
       <DependentUpon>PokazRezerwacje.cs</DependentUpon>
@@ -336,6 +351,9 @@
     <EmbeddedResource Include="RozliczWypozyczenie.resx">
       <DependentUpon>RozliczWypozyczenie.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SamochodNaprawa.resx">
+      <DependentUpon>SamochodNaprawa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Samochody.resx">
       <DependentUpon>Samochody.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WybierzKlientaIndywidualnego.resx">
       <DependentUpon>WybierzKlientaIndywidualnego.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WybierzKlientaIndywidualnegoRezerwacje.resx">
+      <DependentUpon>WybierzKlientaIndywidualnegoRezerwacje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WybierzSamoch.resx">
       <DependentUpon>WybierzSamoch.cs</DependentUpon>

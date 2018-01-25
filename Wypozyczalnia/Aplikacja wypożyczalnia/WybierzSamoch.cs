@@ -17,11 +17,15 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
-        
+        /// <summary>
+        /// metoda która wprowadza do listy dostępne samochody do wypożyczenia
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void WybierzSamochod_Load(object sender, EventArgs e)
         {
             string zapytanie = @"select [Id_samochodu],[Marka],[Model],[Cena_za_dobę],[Kaucja],[Pojemnosc],[Rodzaj_paliwa],[Rocznik],[Kolor]" +
-                @"from [dbo].[Samochód] WHERE (([CzyUsuniete] = 0 or [CzyUsuniete] is null) and [Id_samochodu] not in (" + IdSamochodowKtorychNieMoznaWypozyczyc() + "))";
+                @"from [dbo].[Samochód] WHERE (([CzyUsuniete] = 0 or [CzyUsuniete] is null) and Dostepnosc = 1 and [Id_samochodu] not in (" + IdSamochodowKtorychNieMoznaWypozyczyc() + "))";
             string exmsg = "";
             DataTable dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
             if (!string.IsNullOrWhiteSpace(exmsg))
@@ -34,7 +38,12 @@ namespace Aplikacja_wypożyczalnia
                 dataGridView1.Select();
             }
         }
-
+        /// <summary>
+        /// metoda sprawdza którego samochodu nie można wypożyczyć
+        /// </summary>
+        /// <returns>
+        /// zwraca samochód który jest wypożyczony
+        /// </returns>
         private string IdSamochodowKtorychNieMoznaWypozyczyc()
         {
             string zapytanie = @"select [Id_samochodu] from [dbo].[Wypożyczenie] where (CzyRozliczone=0 or CzyRozliczone is null)";
@@ -54,8 +63,10 @@ namespace Aplikacja_wypożyczalnia
             }
         }
         /// <summary>
-        ///Przycisk umożliwiający zatwierdzenie wybranego samochodu
+        /// Przycisk umożliwiający zatwierdzenie wybranego samochodu
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -86,5 +97,3 @@ namespace Aplikacja_wypożyczalnia
         }
     }
 }
-    
-

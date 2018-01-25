@@ -17,11 +17,8 @@ namespace logika_biznesowa {
 		/// data, kiedy klient planuje oddaæ samochód
 		/// </summary>
 		public DateTime Data_planowanego_zwrotu;
-        private Samochód samochód;
-        private Klient klient;
-        private Panel_administratora panel_administratora;
-        private Wypo¿yczenie wypo¿yczenie;
-        private Lista_rezerwacji lista_rezerwacji;
+        public int id_samochodu;
+        public int id_klienta;
 
         /// <summary>
         /// Konstruktor bezparametrowy
@@ -31,15 +28,19 @@ namespace logika_biznesowa {
             ID_rezerwacji = 0;
             Data_planowanego_wypozyczenia = new DateTime(1, 1, 1);
             Data_planowanego_zwrotu = new DateTime(1, 1, 1);
+            id_samochodu = -1;
+            id_klienta = -1;
         }
         /// <summary>
         /// konstruktor Rezerwacja
         /// </summary>
-        public Rezerwacja(int id, DateTime dpw, DateTime dpz)
+        public Rezerwacja(int id, DateTime dpw, DateTime dpz, int ids, int idk)
         {
             ID_rezerwacji = id;
             Data_planowanego_wypozyczenia = dpw;
             Data_planowanego_zwrotu = dpz;
+            id_klienta = idk;
+            id_samochodu = ids;
         }
 		/// <summary>
 		/// metoda, która pokazuje rezerwacjê
@@ -48,19 +49,15 @@ namespace logika_biznesowa {
         {
             DataTable dt = new DataTable();
 
-            string zapytanie = @"Select * from [dbo].[Rezerwacja]  ";
+            string zapytanie = @"select r.ID_rezerwacji, r.Data_planowanego_wypozyczenia, r.Data_planowanego_zwrotu, s.Id_samochodu," + 
+                @" k.Id_klienta, k.Telefon_kontaktowy, k.Adres_email, s.Marka, s.Model " + 
+                @"from ([dbo].[Rezerwacja] as r inner join [dbo].[Klient] as k on r.Id_klienta = k.Id_klienta) " +
+                @"inner join [dbo].[Samochód] as s on r.Id_samochodu = s.Id_samochodu";
             //Pobieranie danych z bazy
             string exmsg = "";
             dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
             return dt;
         }
-		/// <summary>
-		/// metoda, która edytuje rezerwacjê
-		/// </summary>
-		public void EdytujRezerwacje()
-        {
-			throw new System.Exception("Not implemented");
-		}
 		/// <summary>
 		/// metoda, która dodaje rezerwacjê
 		/// </summary>
@@ -69,9 +66,10 @@ namespace logika_biznesowa {
             string exmsg = "";
             string Data_pl_wyp = Data_planowanego_wypozyczenia.Year.ToString() + "-" + Data_planowanego_wypozyczenia.Month.ToString() + "-" + Data_planowanego_wypozyczenia.Day.ToString();
             string Data_pl_zw = Data_planowanego_zwrotu.Year.ToString() + "-" + Data_planowanego_zwrotu.Month.ToString() + "-" + Data_planowanego_zwrotu.Day.ToString();
-            string zapytanie = @"INSERT INTO [dbo].[Rezerwacja] ([ID_rezerwacji], [Data_planowanego_wypozyczenia], [Data_planowanego_zwrotu]," +
-                @"[CzyUsuniete])" +
-                @"VALUES(" + ID_rezerwacji + ", '" + Data_pl_wyp + "', '" + Data_pl_zw + "', 0)";
+            string zapytanie = @"INSERT INTO [dbo].[Rezerwacja] ([ID_rezerwacji], [Data_planowanego_wypozyczenia], " +
+                @"[Data_planowanego_zwrotu], [Id_klienta], [Id_samochodu], [CzyUsuniete])" +
+                @"VALUES (" + ID_rezerwacji + ", '" + Data_planowanego_wypozyczenia + "', '" + Data_planowanego_zwrotu + "'," +
+                id_klienta + ", " + id_samochodu + ", 0)";
             FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }
@@ -149,7 +147,12 @@ namespace logika_biznesowa {
                 }
             }
         }
-        
+
+
+        /// <summary>
+        /// Metoda pobieraj¹ca z bazy danych najwy¿szy dotychczas uzyty numer ID rezerwacji
+        /// </summary>
+        /// <returns></returns>
         public static int MaksymalnyNumerIdentyfikatoraWBazie()
         {
             string zapytanie = @"select max([ID_rezerwacji]) from [dbo].[Rezerwacja]";

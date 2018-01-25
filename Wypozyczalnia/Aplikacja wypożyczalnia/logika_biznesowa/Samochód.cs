@@ -2,9 +2,6 @@ using System;
 using System.Data;
 using System.Globalization;
 namespace logika_biznesowa {
-    /// <summary>
-    /// implementacje parametrów
-    /// </summary>
     public class Samochód {
 		/// <summary>
 		/// numer id samochodu
@@ -67,7 +64,7 @@ namespace logika_biznesowa {
 		/// </summary>
 		public double Cena_za_dobê;
 		/// <summary>
-		/// czy samochód jest dostêpny w wypo¿yczalni
+		/// czy samochód jest dostêpny w wypo¿yczalni czy jest w naprawie
 		/// </summary>
 		public bool Dostepnosc;
 		/// <summary>
@@ -132,6 +129,9 @@ namespace logika_biznesowa {
         /// <summary>
         /// metoda dodania samochodu do bazy
         /// </summary>
+        /// <returns>
+        /// Zwraca wartoœci samochodu
+        /// </returns>
         public string DodajSamochod()
         {
             string exmsg = "";
@@ -141,19 +141,27 @@ namespace logika_biznesowa {
             string poj = Pojemnosc.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
             string zuz = Zu¿ycie_paliwa.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
             string czd = Cena_za_dobê.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
-            string zapytanie = @"insert into [dbo].[Samochód] ([Id_samochodu], [Marka], [Model], [Pojemnosc], [Rodzaj_paliwa], [Typ_nadwozia], [Ilosc_koni], [Skrzynia_biegow], [Ilosc_biegów], [Zu¿ycie_paliwa], [Ilosc_miejsc], [Ilosc_drzwi], [Rocznik], [Kolor], [Cena_za_dobê], [Dostepnosc], [Inne], [Kaucja], [CzyUsuniete] )" +
-                @"values (" + Id_samochodu + ", '" + Marka + "' , '" + Model + "', " + poj + ", '" + Rodzaj_paliwa + "', '" + Typ_nadwozia + "', " + Ilosc_koni + ", '" + Skrzynia_biegow + "', " + Ilosc_biegów + ", " + zuz + ", " + Ilosc_miejsc + ", " + Ilosc_drzwi + ", " + Rocznik + ", '" + Kolor + "', " + czd + ", " + dostbool + ", '" + Inne + "', " + Kaucja + ",0)";
+            string zapytanie = @"insert into [dbo].[Samochód] ([Id_samochodu], [Marka], [Model], [Pojemnosc], " +
+                @"[Rodzaj_paliwa], [Typ_nadwozia], [Ilosc_koni], [Skrzynia_biegow], [Ilosc_biegów], [Zu¿ycie_paliwa], " + 
+                @"[Ilosc_miejsc], [Ilosc_drzwi], [Rocznik], [Kolor], [Cena_za_dobê], [Dostepnosc], [Inne], [Kaucja], [CzyUsuniete] )" +
+                @"values (" + Id_samochodu + ", '" + Marka + "' , '" + Model + "', " + poj + ", '" + Rodzaj_paliwa + "', '" + 
+                Typ_nadwozia + "', " + Ilosc_koni + ", '" + Skrzynia_biegow + "', " + Ilosc_biegów + ", " + zuz + ", " + 
+                Ilosc_miejsc + ", " + Ilosc_drzwi + ", " + Rocznik + ", '" + Kolor + "', " + czd + ", " + dostbool + ", '" + 
+                Inne + "', " + Kaucja + ",0)";
             /// <summary>
             //wstawia wartoœci atrybutów u¿ytych w zapytaniu
             /// </summary>
             FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }
-		
-		/// <summary>
-		/// metoda edytuj¹ca samochód w bazie
-		/// </summary>
-		public string EdytujSamochod()
+
+        /// <summary>
+        /// metoda edytuj¹ca samochód w bazie
+        /// </summary>
+        /// <returns>
+        /// Zwraca wartoœci samochodu do edycji, nastêpnie edytuje samochód
+        /// </returns>
+        public string EdytujSamochod()
         {
             string exmsg = "";
             string poj = Pojemnosc.ToString(CultureInfo.CreateSpecificCulture("en-GB"));
@@ -165,16 +173,24 @@ namespace logika_biznesowa {
             /// <summary>
             ///zapytanie, które umo¿liwia edycjê samochodu w opcji edycji
             /// </summary>
-            string zapytanie = @"UPDATE [dbo].[Samochód] SET [Marka]='" + Marka + "', [Model]='" + Model + "', [Pojemnosc]=" + poj + ",[Rodzaj_paliwa]='" + Rodzaj_paliwa + "', [Typ_nadwozia]='" + Typ_nadwozia + "', [Ilosc_koni]=" + Ilosc_koni + ",[Skrzynia_biegow]='" + Skrzynia_biegow + "', [Ilosc_biegów]=" + Ilosc_biegów + ", [Zu¿ycie_paliwa]=" + zuz + ",[Ilosc_miejsc]=" + Ilosc_miejsc + ", [Ilosc_drzwi]= " + Ilosc_drzwi + ", [Rocznik]=" + Rocznik + ", [Kolor]='" + Kolor + "', [Cena_za_dobê]=" + czd + ", [Dostepnosc]=" + dostbool + ", [Inne]='" + Inne + "', [Kaucja]=" + Kaucja + " WHERE [Id_samochodu] = " + Id_samochodu;
+            string zapytanie = @"UPDATE [dbo].[Samochód] SET [Marka]='" + Marka + "', [Model]='" + Model + "', [Pojemnosc]=" +
+                poj + ",[Rodzaj_paliwa]='" + Rodzaj_paliwa + "', [Typ_nadwozia]='" + Typ_nadwozia + "', [Ilosc_koni]=" + 
+                Ilosc_koni + ",[Skrzynia_biegow]='" + Skrzynia_biegow + "', [Ilosc_biegów]=" + Ilosc_biegów + 
+                ", [Zu¿ycie_paliwa]=" + zuz + ",[Ilosc_miejsc]=" + Ilosc_miejsc + ", [Ilosc_drzwi]= " + Ilosc_drzwi + 
+                ", [Rocznik]=" + Rocznik + ", [Kolor]='" + Kolor + "', [Cena_za_dobê]=" + czd + ", [Dostepnosc]=" + dostbool + 
+                ", [Inne]='" + Inne + "', [Kaucja]=" + Kaucja + " WHERE [Id_samochodu] = " + Id_samochodu;
             /// <summary>
             ///wstawia wartoœci atrybutów u¿ytych w zapytaniu
             /// </summary>
             FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
             return exmsg;
         }
-		/// <summary>
-		/// metoda usuwaj¹ca samochód z bazy
-		/// </summary>
+        /// <summary>
+        /// metoda usuwaj¹ca samochód z bazy
+        /// </summary>
+        /// <returns>
+        /// Zwraca wartoœci samochodu do usuniêcia, nastêpnie usuwa samochód
+        /// </returns>
         public static string UsunSamochod(int identyfikator)
         {
             /// <summary>
@@ -219,7 +235,10 @@ namespace logika_biznesowa {
 		}
         /// <summary>
         /// metoda wyszukuj¹ca samochód w bazie
-        /// </summary>
+        /// </summary>      
+        /// <returns>
+        /// Zwraca wartoœci samochodu wyszukiwanego
+        /// </returns>
         public static DataTable WyszukajSamochod(int identyfikator, ref string _exmsg)
         {
             DataTable dt = new DataTable();
@@ -269,6 +288,9 @@ namespace logika_biznesowa {
         /// <summary>
         ///metoda pokazuj¹ca listê samochodów
         /// </summary>
+        /// <returns>
+        /// Zwraca wartoœci wszytkich samochodów w liœcie
+        /// </returns>
         public static DataTable PokazSamochody(ref string _exmsg)
         {
             DataTable dt = new DataTable();
@@ -293,7 +315,9 @@ namespace logika_biznesowa {
         /// <summary>
         /// Metoda pobieraj¹ca z bazy danych najwy¿szy dotychczas uzyty numer ID
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// zwraca kolejny numer ID
+        /// </returns>
         public static int MaksymalnyNumerIdentyfikatoraWBazie()
         {
             string zapytanie = @"select max([Id_samochodu]) from [dbo].[Samochód]";
