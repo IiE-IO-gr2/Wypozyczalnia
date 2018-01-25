@@ -372,6 +372,5 @@ C:\Users\Lenovo\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalni
 C:\Users\Lenovo\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.SamochodNaprawa.resources
 C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazWyszukiwanaRezerwacje.resources
 C:\Users\krychcia\Source\Repos\Wypozyczalnia\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WybierzKlientaIndywidualnegoRezerwacje.resources
-C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.PokazWyszukiwanaRezerwacje.resources
 C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.SamochodNaprawa.resources
 C:\Users\eva\Source\Repos\Wypozyczalnia2\Wypozyczalnia\Aplikacja wypożyczalnia\obj\Debug\Aplikacja_wypożyczalnia.WybierzKlientaIndywidualnegoRezerwacje.resources

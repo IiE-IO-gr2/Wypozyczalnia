@@ -156,12 +156,6 @@
     <Compile Include="PokazWyszukanegoKlientaIndywidualnego.Designer.cs">
       <DependentUpon>PokazWyszukanegoKlientaIndywidualnego.cs</DependentUpon>
     </Compile>
-    <Compile Include="PokazWyszukiwanaRezerwacje.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PokazWyszukiwanaRezerwacje.Designer.cs">
-      <DependentUpon>PokazWyszukiwanaRezerwacje.cs</DependentUpon>
-    </Compile>
     <Compile Include="PokazWyszukiwanySamochod.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -334,9 +328,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PokazWyszukanegoKlientaIndywidualnego.resx">
       <DependentUpon>PokazWyszukanegoKlientaIndywidualnego.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PokazWyszukiwanaRezerwacje.resx">
-      <DependentUpon>PokazWyszukiwanaRezerwacje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PokazWyszukiwanySamochod.resx">
       <DependentUpon>PokazWyszukiwanySamochod.cs</DependentUpon>

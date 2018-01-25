@@ -19,7 +19,7 @@ namespace Aplikacja_wypożyczalnia
         }
 
         /// <summary>
-        ///Przycisk, który cofa do sekcji Samochody
+        ///Przycisk umożliwiający powrót do poprzedniego okna
         /// </summary>
         private void wstecz_Click(object sender, EventArgs e)
         {
