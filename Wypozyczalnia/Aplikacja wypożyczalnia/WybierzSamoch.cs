@@ -17,7 +17,11 @@ namespace Aplikacja_wypożyczalnia
         {
             InitializeComponent();
         }
-        
+        /// <summary>
+        /// metoda która wprowadza do listy dostępne samochody do wypożyczenia
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void WybierzSamochod_Load(object sender, EventArgs e)
         {
             string zapytanie = @"select [Id_samochodu],[Marka],[Model],[Cena_za_dobę],[Kaucja],[Pojemnosc],[Rodzaj_paliwa],[Rocznik],[Kolor]" +
@@ -34,7 +38,12 @@ namespace Aplikacja_wypożyczalnia
                 dataGridView1.Select();
             }
         }
-
+        /// <summary>
+        /// metoda sprawdza którego samochodu nie można wypożyczyć
+        /// </summary>
+        /// <returns>
+        /// zwraca samochód który jest wypożyczony
+        /// </returns>
         private string IdSamochodowKtorychNieMoznaWypozyczyc()
         {
             string zapytanie = @"select [Id_samochodu] from [dbo].[Wypożyczenie] where (CzyRozliczone=0 or CzyRozliczone is null)";
@@ -54,8 +63,10 @@ namespace Aplikacja_wypożyczalnia
             }
         }
         /// <summary>
-        ///Przycisk umożliwiający zatwierdzenie wybranego samochodu
+        /// Przycisk umożliwiający zatwierdzenie wybranego samochodu
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             try

@@ -51,10 +51,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(290, 119);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(275, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 20);
+            this.label1.Size = new System.Drawing.Size(113, 20);
             this.label1.TabIndex = 26;
             this.label1.Text = "ID rezerwacji";
             // 
@@ -62,10 +62,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(146, 160);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(115, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(244, 20);
+            this.label2.Size = new System.Drawing.Size(273, 20);
             this.label2.TabIndex = 27;
             this.label2.Text = "Data planowanego wypożyczenia";
             // 
@@ -73,31 +73,31 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(196, 199);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(171, 129);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(194, 20);
+            this.label3.Size = new System.Drawing.Size(217, 20);
             this.label3.TabIndex = 28;
             this.label3.Text = "Data planowanego zwrotu";
             // 
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(422, 121);
+            this.textBox1.Location = new System.Drawing.Point(441, 71);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 37;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(422, 160);
+            this.dateTimePicker1.Location = new System.Drawing.Point(441, 102);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 38;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(422, 198);
+            this.dateTimePicker2.Location = new System.Drawing.Point(441, 129);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 39;
@@ -105,7 +105,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.Location = new System.Drawing.Point(459, 407);
+            this.button3.Location = new System.Drawing.Point(496, 384);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(125, 65);
             this.button3.TabIndex = 42;
@@ -116,7 +116,7 @@
             // wstecz
             // 
             this.wstecz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.wstecz.Location = new System.Drawing.Point(231, 407);
+            this.wstecz.Location = new System.Drawing.Point(243, 384);
             this.wstecz.Name = "wstecz";
             this.wstecz.Size = new System.Drawing.Size(125, 65);
             this.wstecz.TabIndex = 43;
@@ -127,9 +127,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.label4.Image = global::Aplikacja_wypożyczalnia.Properties.Resources._26653464_1222776397822724_926715336_o;
-            this.label4.Location = new System.Drawing.Point(321, 47);
+            this.label4.Location = new System.Drawing.Point(350, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(240, 31);
             this.label4.TabIndex = 44;
@@ -138,17 +138,18 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label9.Location = new System.Drawing.Point(103, 262);
+            this.label9.BackColor = System.Drawing.SystemColors.Window;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(122, 182);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(115, 20);
+            this.label9.Size = new System.Drawing.Size(130, 20);
             this.label9.TabIndex = 56;
             this.label9.Text = "Wybierz klienta";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(231, 235);
+            this.button1.Location = new System.Drawing.Point(259, 162);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(159, 27);
             this.button1.TabIndex = 57;
@@ -159,7 +160,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button4.Location = new System.Drawing.Point(231, 277);
+            this.button4.Location = new System.Drawing.Point(258, 195);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(159, 27);
             this.button4.TabIndex = 58;
@@ -170,16 +171,18 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(419, 262);
+            this.label6.BackColor = System.Drawing.SystemColors.Window;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(436, 203);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(18, 13);
+            this.label6.Size = new System.Drawing.Size(20, 13);
             this.label6.TabIndex = 59;
             this.label6.Text = "ID";
             // 
             // textBox3
             // 
             this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(443, 259);
+            this.textBox3.Location = new System.Drawing.Point(462, 198);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 60;
@@ -187,7 +190,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(216, 325);
+            this.button2.Location = new System.Drawing.Point(233, 239);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(185, 25);
             this.button2.TabIndex = 61;
@@ -198,16 +201,18 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(419, 332);
+            this.label7.BackColor = System.Drawing.SystemColors.Window;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(438, 247);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(18, 13);
+            this.label7.Size = new System.Drawing.Size(20, 13);
             this.label7.TabIndex = 62;
             this.label7.Text = "ID";
             // 
             // textBox4
             // 
             this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(443, 329);
+            this.textBox4.Location = new System.Drawing.Point(462, 244);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 63;

@@ -18,6 +18,9 @@ namespace Aplikacja_wypożyczalnia
             InitializeComponent();
         }
 
+        /// <summary>
+        ///Przycisk umożliwiający przejście do okna Dodaj Rezerwacje
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -26,6 +29,9 @@ namespace Aplikacja_wypożyczalnia
         
         }
 
+        /// <summary>
+        ///Przycisk umożliwiający przejście do okna Usuń Rezerwacje
+        /// </summary>
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -33,6 +39,9 @@ namespace Aplikacja_wypożyczalnia
             ur.Show();
         }
 
+        /// <summary>
+        ///Przycisk umożliwiający przejście do okna Pokaż Rezerwacje
+        /// </summary>
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -41,6 +50,9 @@ namespace Aplikacja_wypożyczalnia
       
         }
 
+        /// <summary>
+        ///Przycisk umożliwiający przejście do okna Wyszukaj Rezerwacje
+        /// </summary>
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -48,6 +60,9 @@ namespace Aplikacja_wypożyczalnia
             wr.Show();
         }
 
+        /// <summary>
+        ///Przycisk umożliwiający powrót do menu po zalogowaniu
+        /// </summary>
         private void button6_Click(object sender, EventArgs e)
         {
             this.Hide();
