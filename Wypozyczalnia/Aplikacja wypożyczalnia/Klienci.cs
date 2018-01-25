@@ -67,6 +67,13 @@ namespace Aplikacja_wypożyczalnia
             ek.Show();
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PokazKlientow ek = new PokazKlientow();
+            ek.Show();
+        }
+
 
 
         /*private void WsteczWS_Click(object sender, EventArgs e)

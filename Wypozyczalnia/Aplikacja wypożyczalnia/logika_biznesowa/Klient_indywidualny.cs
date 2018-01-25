@@ -23,10 +23,6 @@ namespace logika_biznesowa {
 		/// p³eæ klienta indywidualnego
 		/// </summary>
 		public bool P³ec;
-        /// <summary>
-        /// w³asnoœæ wskazuj¹ca, czy dany klient zosta³ oznaczony w bazie jako usuniêty
-        /// </summary>
-        public bool CzyUsuniete;
 
         private Wypo¿yczenie wypo¿yczenie;
         

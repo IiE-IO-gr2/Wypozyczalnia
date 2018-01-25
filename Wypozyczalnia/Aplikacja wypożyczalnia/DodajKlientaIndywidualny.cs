@@ -16,7 +16,7 @@ namespace Aplikacja_wypożyczalnia
         public DodajKlientaIndywidualny()
         {
             InitializeComponent();
-            textBox1.ReadOnly = true;
+            textBox1.Text = (Klient.MaksymalnyNumerIdentyfikatoraWBazie() + 1).ToString();
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace Aplikacja_wypożyczalnia
             {
                 /// Pobranie danych z TextBoxów
                 //int id = int.Parse(textBox1.Text);
-                int id = Klient.MaksymalnyNumerIdentyfikatoraWBazie() + 1;
+                int id = int.Parse(textBox1.Text);
                 string imie = textBox2.Text;
                 string nazw = textBox3.Text;
                 string nr = textBox4.Text;

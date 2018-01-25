@@ -22,7 +22,6 @@ namespace logika_biznesowa {
         public double Cena_za_wypozyczenie;
         private int id_klienta;
         private int id_samochodu;
-        private Rozliczenie rozliczenie;
 
         /// <summary>
         /// konstruktor bezparametrowy Wypozyczenie
@@ -146,7 +145,5 @@ namespace logika_biznesowa {
             dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
             return dt;
         }
-    } 
-
-
+    }
 }

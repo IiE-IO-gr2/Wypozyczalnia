@@ -16,7 +16,7 @@ namespace Aplikacja_wypożyczalnia
         public DodajKlientaFirma()
         {
             InitializeComponent();
-            textBox1.ReadOnly = true;
+            textBox1.Text = (Klient.MaksymalnyNumerIdentyfikatoraWBazie() + 1).ToString();
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace Aplikacja_wypożyczalnia
             if (poprawneTextboxy == true)
             {
                 /// Pobranie danych z TextBoxów
-                int id = Klient.MaksymalnyNumerIdentyfikatoraWBazie() + 1;
+                int id = int.Parse(textBox1.Text);
                 string nazwa = textBox2.Text;
                 string nip = textBox5.Text;
                 string tl = textBox7.Text;
