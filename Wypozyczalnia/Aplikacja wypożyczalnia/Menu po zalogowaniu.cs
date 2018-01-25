@@ -89,7 +89,7 @@ namespace Aplikacja_wypożyczalnia
         }
 
         /// <summary>
-        /// Przycisk umożliwiający wysyłanie przypominających maili
+        /// Przycisk umożliwiający wysyłanie maili przypominających o rezerwacji
         /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
@@ -98,6 +98,75 @@ namespace Aplikacja_wypożyczalnia
             string trescMaila = "Dzień dobry." +
                 "Pragniemy przypomnieć o złożonej przez Pana/Panią rezerwacji u numerze 4127." +
                 "Samochód będzie dostępny do Pana/Pani potrzeb przez 3 doby." +
+                "Mamy nadzieję, że pojazd się przysłuży oraz w przyszłości chętnie Pan/Pani do nas wróci." +
+                "Serdecznie pozdrawiamy," +
+                "Biuro Obsługi Wypożyczalni KGB";
+            List<string> listaAdresatow = new List<string>();
+            listaAdresatow.Add("iie.io.gr2@gmail.com");
+            listaAdresatow.Add("mateuszsobol25@gmail.com");
+            FunkcjePomicnicze.WyslijMaila(tytulMaila, trescMaila, listaAdresatow, ref exmsg);
+            if (string.IsNullOrWhiteSpace(exmsg))
+                MessageBox.Show("Wysylanie powiodlo sie.");
+            else
+                MessageBox.Show("Wysylanie nie powiodlo sie.");
+        }
+
+        /// <summary>
+        /// Przycisk umożliwiający wysyłanie maili przypominających o zapłacie
+        /// </summary>
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string exmsg = "";
+            string tytulMaila = "Przypomnienie o zapłacie";
+            string trescMaila = "Dzień dobry." +
+                "Pragniemy przypomnieć o konieczności dokonania zapłaty za wypożyczenie samochodu." +
+                "Termin płatności mija za 5 dni roboczych. Prosimy o jak najszybsze uregulowanie rachunku." +
+                "Mamy nadzieję, że jest Pan/Pani zadowolona z naszej współpracy oraz w przyszłości chętnie Pan/Pani do nas wróci." +
+                "Serdecznie pozdrawiamy," +
+                "Biuro Obsługi Wypożyczalni KGB";
+            List<string> listaAdresatow = new List<string>();
+            listaAdresatow.Add("iie.io.gr2@gmail.com");
+            listaAdresatow.Add("mateuszsobol25@gmail.com");
+            FunkcjePomicnicze.WyslijMaila(tytulMaila, trescMaila, listaAdresatow, ref exmsg);
+            if (string.IsNullOrWhiteSpace(exmsg))
+                MessageBox.Show("Wysylanie powiodlo sie.");
+            else
+                MessageBox.Show("Wysylanie nie powiodlo sie.");
+
+        }
+
+        /// <summary>
+        /// Przycisk umożliwiający wysyłanie maili informujących o opóźnieniach samochodu
+        /// </summary>
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string exmsg = "";
+            string tytulMaila = "Opóźnienia w zwrocie";
+            string trescMaila = "Dzień dobry." +
+                "Z przykrością informujemy, że zarezerwowany przez Pana/Panią samochód będzie dostępny w opóźnionym terminie." +
+                "Przepraszamy za wszelkie niedogodności. Postaramy się jak najszybciej udostępnić Panu/Pani samochód." +
+                "Serdecznie pozdrawiamy," +
+                "Biuro Obsługi Wypożyczalni KGB";
+            List<string> listaAdresatow = new List<string>();
+            listaAdresatow.Add("iie.io.gr2@gmail.com");
+            listaAdresatow.Add("mateuszsobol25@gmail.com");
+            FunkcjePomicnicze.WyslijMaila(tytulMaila, trescMaila, listaAdresatow, ref exmsg);
+            if (string.IsNullOrWhiteSpace(exmsg))
+                MessageBox.Show("Wysylanie powiodlo sie.");
+            else
+                MessageBox.Show("Wysylanie nie powiodlo sie.");
+        }
+
+        /// <summary>
+        /// Przycisk umożliwiający wysyłanie maili przypominających o wpłacie zaliczki
+        /// </summary>
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string exmsg = "";
+            string tytulMaila = "Przypomnienie o wpłacie zaliczki";
+            string trescMaila = "Dzień dobry." +
+                "Przypominamy o konieczności wpłaty zaliczki za dokonaną przez Pana/Panią rezerwację w naszym systemie." +
+                "Należy dokonać płatności w ciągu 24h od momentu złożenia rezerwacji." +
                 "Mamy nadzieję, że pojazd się przysłuży oraz w przyszłości chętnie Pan/Pani do nas wróci." +
                 "Serdecznie pozdrawiamy," +
                 "Biuro Obsługi Wypożyczalni KGB";
