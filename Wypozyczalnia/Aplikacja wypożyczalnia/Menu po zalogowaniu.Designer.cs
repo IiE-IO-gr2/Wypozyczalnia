@@ -116,9 +116,10 @@
             // 
             // wylogowanie
             // 
-            this.wylogowanie.Location = new System.Drawing.Point(306, 355);
+            this.wylogowanie.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.wylogowanie.Location = new System.Drawing.Point(269, 331);
             this.wylogowanie.Name = "wylogowanie";
-            this.wylogowanie.Size = new System.Drawing.Size(75, 23);
+            this.wylogowanie.Size = new System.Drawing.Size(147, 49);
             this.wylogowanie.TabIndex = 6;
             this.wylogowanie.Text = "Wyloguj się";
             this.wylogowanie.UseVisualStyleBackColor = true;
@@ -126,7 +127,7 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.button2.Location = new System.Drawing.Point(688, 177);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(147, 49);
@@ -137,8 +138,8 @@
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button3.Location = new System.Drawing.Point(688, 260);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.button3.Location = new System.Drawing.Point(688, 251);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(147, 49);
             this.button3.TabIndex = 9;
@@ -148,7 +149,7 @@
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.button4.Location = new System.Drawing.Point(688, 99);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(147, 49);
@@ -161,10 +162,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(690, 57);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label1.Location = new System.Drawing.Point(693, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 20);
+            this.label1.Size = new System.Drawing.Size(137, 18);
             this.label1.TabIndex = 11;
             this.label1.Text = "E-maile do klientów";
             // 

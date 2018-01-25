@@ -1,4 +1,5 @@
-﻿using System;
+﻿using logika_biznesowa;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,18 +36,9 @@ namespace Aplikacja_wypożyczalnia
         {
             string l = textBox1.Text;
             string h = textBox2.Text;
-            string zapytanie = "Select haslo from [dbo].[Panel_administratora] where Login='"+l+"'";
-            string exmsg="";
-            DataTable dt = FunkcjePomicnicze.PobierzDaneSQL(zapytanie, ref exmsg);
-            string hasloZBazy = "";
-            foreach (DataRow item in dt.Rows)
-            {
-                hasloZBazy = item[0].ToString();
-            }
-            bool hasloWpisane = true;
-            if (string.IsNullOrWhiteSpace(h))
-                hasloWpisane = false;
-            if (hasloWpisane == true && h == hasloZBazy)
+            string exmsg = "";
+            bool zalogowany = PanelAdministratora.ZalogujSie(l, h, ref exmsg);
+            if (zalogowany == true)
             {
                 this.Hide();
                 Menu_po_zalogowaniu m = new Menu_po_zalogowaniu();

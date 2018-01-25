@@ -23,9 +23,8 @@ namespace Aplikacja_wypożyczalnia
         /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
-            /// <summary>
-            /// Sprawdzenie poprawności danych w textboxie
-            /// </summary>
+            
+            //Sprawdzenie poprawności danych w textboxie
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
             //MessageBox.Show("Dlugosc = " + textBox2.Text.Length);
@@ -71,7 +70,7 @@ namespace Aplikacja_wypożyczalnia
         }
 
         /// <summary>
-        ///Przycisk służący do powrotu do poprzedniej sekcji 
+        ///Przycisk służący do powrotu do poprzedniego okna
         /// </summary>
         private void wstecz_Click(object sender, EventArgs e)
         {

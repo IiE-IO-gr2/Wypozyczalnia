@@ -16,6 +16,7 @@ namespace Aplikacja_wypożyczalnia
         public DodajSamochód()
         {
             InitializeComponent();
+            textBox1.Text = (Samochód.MaksymalnyNumerIdentyfikatoraWBazie() + 1).ToString();
         }
         /// <summary>
         /// Przycisk umożliwiający powrót do wyboru czynności w sekcji Samochody
@@ -139,7 +140,7 @@ namespace Aplikacja_wypożyczalnia
             }
             if (poprawneTextboxy == true)
             {
-                int id = Samochód.MaksymalnyNumerIdentyfikatoraWBazie() + 1;
+                int id = int.Parse(textBox1.Text);
                 string mar = textBox2.Text;
                 string mod = textBox3.Text;
                 double poj = double.Parse(textBox4.Text);

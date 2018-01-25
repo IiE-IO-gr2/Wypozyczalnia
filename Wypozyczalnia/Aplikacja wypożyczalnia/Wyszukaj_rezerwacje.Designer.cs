@@ -41,16 +41,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(225, 64);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(282, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 20);
+            this.label1.Size = new System.Drawing.Size(113, 20);
             this.label1.TabIndex = 28;
             this.label1.Text = "ID rezerwacji";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(382, 66);
+            this.textBox1.Location = new System.Drawing.Point(441, 71);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 39;
@@ -58,7 +58,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(510, 407);
+            this.button1.Location = new System.Drawing.Point(496, 384);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 65);
             this.button1.TabIndex = 46;
@@ -69,7 +69,7 @@
             // wstecz
             // 
             this.wstecz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.wstecz.Location = new System.Drawing.Point(220, 407);
+            this.wstecz.Location = new System.Drawing.Point(243, 384);
             this.wstecz.Name = "wstecz";
             this.wstecz.Size = new System.Drawing.Size(125, 65);
             this.wstecz.TabIndex = 47;
@@ -82,7 +82,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(286, 20);
+            this.label2.Location = new System.Drawing.Point(350, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(256, 29);
             this.label2.TabIndex = 48;
