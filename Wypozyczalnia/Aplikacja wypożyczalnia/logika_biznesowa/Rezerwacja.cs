@@ -17,8 +17,8 @@ namespace logika_biznesowa {
 		/// data, kiedy klient planuje oddaæ samochód
 		/// </summary>
 		public DateTime Data_planowanego_zwrotu;
-        private int id_samochodu;
-        private int id_klienta;
+        public int id_samochodu;
+        public int id_klienta;
 
         /// <summary>
         /// Konstruktor bezparametrowy
