@@ -130,7 +130,7 @@ namespace Aplikacja_wypożyczalnia
                 "Przepraszamy za wszelkie niedogodności. Postaramy się jak najszybciej udostępnić Panu/Pani samochód.\n" +
                 "Serdecznie pozdrawiamy,\n" +
                 "Wypożyczalnia AutoPrestige \n";
-            string zapytanie = @"elect k.Adres_email from ([dbo].[Rezerwacja] as r inner join [dbo].[Wypożyczenie] as w
+            string zapytanie = @"select k.Adres_email from ([dbo].[Rezerwacja] as r inner join [dbo].[Wypożyczenie] as w
                                 on r.Id_samochodu = w.Id_samochodu) inner join [dbo].[Klient] as k
                                 on r.Id_klienta = k.Id_klienta
                                 where ((r.Data_planowanego_wypozyczenia >= w.Data_planowanego_zwrotu + 1)

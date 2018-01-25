@@ -74,7 +74,7 @@
             // UsuńSamochód
             // 
             this.UsuńSamochód.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.UsuńSamochód.Location = new System.Drawing.Point(262, 241);
+            this.UsuńSamochód.Location = new System.Drawing.Point(262, 275);
             this.UsuńSamochód.Name = "UsuńSamochód";
             this.UsuńSamochód.Size = new System.Drawing.Size(125, 65);
             this.UsuńSamochód.TabIndex = 3;
@@ -85,7 +85,7 @@
             // WyszukajSamochód
             // 
             this.WyszukajSamochód.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.WyszukajSamochód.Location = new System.Drawing.Point(529, 241);
+            this.WyszukajSamochód.Location = new System.Drawing.Point(529, 275);
             this.WyszukajSamochód.Name = "WyszukajSamochód";
             this.WyszukajSamochód.Size = new System.Drawing.Size(125, 65);
             this.WyszukajSamochód.TabIndex = 4;
@@ -107,7 +107,7 @@
             // ListaSamochodow
             // 
             this.ListaSamochodow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ListaSamochodow.Location = new System.Drawing.Point(395, 172);
+            this.ListaSamochodow.Location = new System.Drawing.Point(262, 187);
             this.ListaSamochodow.Name = "ListaSamochodow";
             this.ListaSamochodow.Size = new System.Drawing.Size(125, 65);
             this.ListaSamochodow.TabIndex = 6;
@@ -118,7 +118,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(661, 172);
+            this.button1.Location = new System.Drawing.Point(529, 187);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 65);
             this.button1.TabIndex = 7;

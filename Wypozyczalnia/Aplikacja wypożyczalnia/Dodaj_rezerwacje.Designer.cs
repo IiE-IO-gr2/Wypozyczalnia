@@ -154,7 +154,7 @@
             this.button1.TabIndex = 57;
             this.button1.Text = "Biznesowy";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
@@ -165,6 +165,7 @@
             this.button4.TabIndex = 58;
             this.button4.Text = "Indywidualny";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label6
             // 
@@ -192,6 +193,7 @@
             this.button2.TabIndex = 61;
             this.button2.Text = "Wybierz samochód";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // label7
             // 
