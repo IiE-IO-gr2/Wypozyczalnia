@@ -13,13 +13,13 @@ namespace Aplikacja_wypożyczalnia
 {
     public partial class PokazWyszukiwanaRezerwacje : Form
     {
-        public PokazWyszukiwanaRezerwacje()
+        public PokazWyszukiwanaRezerwacje(DataTable dt)
         {
             InitializeComponent();
             foreach (DataRow item in dt.Rows)
             {
                 textBox1.Text = item[0].ToString();
-                dateTimePicker1 = item[1].ToString();
+               /* dateTimePicker1 = item[1].ToString();*/
 
             }
         }
@@ -42,7 +42,7 @@ namespace Aplikacja_wypożyczalnia
             /// </summary>
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
-
+            /*
             if (string.IsNullOrWhiteSpace(textBox2.Text) ||
                 !System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, @"^([A-Za-z0-9\-ąćęłńóśźżĄĘŁŃŚŻŹĆÓ]){2,30}$"))
             {
@@ -138,10 +138,10 @@ namespace Aplikacja_wypożyczalnia
             {
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu kaucja";
                 poprawneTextboxy = false;
-            }
+            }*/
             if (poprawneTextboxy == true)
             {
-                int id = int.Parse(textBox1.Text);
+               /* int id = int.Parse(textBox1.Text);
                 string mar = textBox2.Text;
                 string mod = textBox3.Text;
                 double poj = double.Parse(textBox4.Text);
@@ -169,7 +169,7 @@ namespace Aplikacja_wypożyczalnia
                 if (string.IsNullOrWhiteSpace(exmsg_sm))
                     MessageBox.Show("Zaktualizowano samochód w bazie");
                 else
-                    MessageBox.Show("Wystąpił błąd:\n" + exmsg_sm);
+                    MessageBox.Show("Wystąpił błąd:\n" + exmsg_sm);*/
             }
             else
             {

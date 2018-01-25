@@ -42,15 +42,17 @@ namespace Aplikacja_wypożyczalnia
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu ID";
                 poprawneTextboxy = false;
             }
-
             if (poprawneTextboxy == true)
             {
                 /// <summary>
                 /// Pobranie danych z TextBoxa
                 /// </summary>
                 int id = int.Parse(textBox1.Text);
+                string inne = textBox2.Text;
+                if (string.IsNullOrEmpty(inne))
+                    inne = "brak";
                 string exmsg = "";
-                string zapytanie = "update [dbo].[Samochód] set [Dostepnosc] = 0 where [Id_samochodu] = " + id;
+                string zapytanie = "update [dbo].[Samochód] set [Dostepnosc] = 0, [Inne] = '" + inne + "' where [Id_samochodu] = " + id;
                 FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
                 if (!string.IsNullOrEmpty(exmsg))
                     MessageBox.Show("Wystąpił błąd:\n\t-" + exmsg);
@@ -78,15 +80,17 @@ namespace Aplikacja_wypożyczalnia
                 bladWTextboxach += "\n\t-Błędna lub pusta wartość w polu ID";
                 poprawneTextboxy = false;
             }
-
             if (poprawneTextboxy == true)
             {
                 /// <summary>
                 /// Pobranie danych z TextBoxa
                 /// </summary>
                 int id = int.Parse(textBox1.Text);
+                string inne = textBox2.Text;
+                if (string.IsNullOrEmpty(inne))
+                    inne = "brak";
                 string exmsg = "";
-                string zapytanie = "update [dbo].[Samochód] set [Dostepnosc] = 1 where [Id_samochodu] = " + id;
+                string zapytanie = "update [dbo].[Samochód] set [Dostepnosc] = 1, [Inne] = '" + inne + "' where [Id_samochodu] = " + id;
                 FunkcjePomicnicze.WstawDaneSQL(zapytanie, ref exmsg);
                 if (!string.IsNullOrEmpty(exmsg))
                     MessageBox.Show("Wystąpił błąd:\n\t-" + exmsg);

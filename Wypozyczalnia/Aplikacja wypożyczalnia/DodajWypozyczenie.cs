@@ -146,6 +146,11 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = true;
             }
         }
+
+        private void DodajWypozyczenie_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
        
