@@ -38,15 +38,15 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(59, 52);
+            this.dataGridView1.Location = new System.Drawing.Point(57, 31);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(610, 357);
+            this.dataGridView1.Size = new System.Drawing.Size(776, 357);
             this.dataGridView1.TabIndex = 0;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(533, 437);
+            this.button1.Location = new System.Drawing.Point(529, 415);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 34);
             this.button1.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // PobraneIDSam
             // 
-            this.PobraneIDSam.Location = new System.Drawing.Point(107, 424);
+            this.PobraneIDSam.Location = new System.Drawing.Point(123, 415);
             this.PobraneIDSam.Name = "PobraneIDSam";
             this.PobraneIDSam.Size = new System.Drawing.Size(107, 20);
             this.PobraneIDSam.TabIndex = 2;
@@ -64,7 +64,7 @@
             // 
             // Kwota
             // 
-            this.Kwota.Location = new System.Drawing.Point(261, 424);
+            this.Kwota.Location = new System.Drawing.Point(273, 415);
             this.Kwota.Name = "Kwota";
             this.Kwota.Size = new System.Drawing.Size(107, 20);
             this.Kwota.TabIndex = 3;
@@ -74,7 +74,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 486);
+            this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.Kwota);
             this.Controls.Add(this.PobraneIDSam);
             this.Controls.Add(this.button1);

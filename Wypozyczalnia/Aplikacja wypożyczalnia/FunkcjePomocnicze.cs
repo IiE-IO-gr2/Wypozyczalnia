@@ -152,8 +152,11 @@ public static class FunkcjePomicnicze
             }
         }
         
-    }              
+    }
 
+    /// <summary>
+    /// Metoda pobierająca listę, gdzie występują typy string
+    /// </summary>
     public static List<string> PobierzListeStringow(string zapytanie, ref string exmsg)
     {
         List<string> lista = new List<string>();

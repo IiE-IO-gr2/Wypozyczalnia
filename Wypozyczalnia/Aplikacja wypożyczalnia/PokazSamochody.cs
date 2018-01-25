@@ -18,8 +18,10 @@ namespace Aplikacja_wypożyczalnia
             InitializeComponent();
         }
         /// <summary>
-        ///Przycisk, który cofa do sekcji Samochody
+        /// Przycisk, który cofa do sekcji Samochody
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -27,8 +29,10 @@ namespace Aplikacja_wypożyczalnia
             w.Show();
         }
         /// <summary>
-        ///Przycisk, który aktualizuje i pokazuje listę wszystkich samochodów w bazie
+        /// Przycisk, który aktualizuje i pokazuje listę wszystkich samochodów w bazie
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = new DataTable();

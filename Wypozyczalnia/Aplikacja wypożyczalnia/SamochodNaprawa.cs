@@ -18,8 +18,10 @@ namespace Aplikacja_wypożyczalnia
             InitializeComponent();
         }
         /// <summary>
-        ///Przycisk, który cofa do poprzedniej sekcji czyli Samochody
+        /// Przycisk, który cofa do poprzedniej sekcji czyli Samochody
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void WsteczES_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -27,13 +29,15 @@ namespace Aplikacja_wypożyczalnia
             es.Show();
         }
         /// <summary>
-        ///Przycisk wyszukuje samochodu do edycji oraz pojawia się okno, w którym można edytować wszystkie, bądź wybrane parametry samochodu
+        /// Przycisk wyszukuje samochodu do edycji oraz pojawia się okno, w którym można edytować wszystkie, bądź wybrane parametry samochodu
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            /// <summary>
-            /// Sprawdzenie poprawności danych w textboxie
-            /// </summary>
+           
+            // Sprawdzenie poprawności danych w textboxie
+            
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
             if (string.IsNullOrWhiteSpace(textBox1.Text) ||
@@ -66,12 +70,16 @@ namespace Aplikacja_wypożyczalnia
                 poprawneTextboxy = true;
             }
         }
-
+        /// <summary>
+        /// Przycisk który zatwierdza wprowadzone zmiany
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ZatwierdźES_Click(object sender, EventArgs e)
         {
-            /// <summary>
-            /// Sprawdzenie poprawności danych w textboxie
-            /// </summary>
+            
+            // Sprawdzenie poprawności danych w textboxie
+           
             string bladWTextboxach = "";
             bool poprawneTextboxy = true;
             if (string.IsNullOrWhiteSpace(textBox1.Text) ||
@@ -82,9 +90,9 @@ namespace Aplikacja_wypożyczalnia
             }
             if (poprawneTextboxy == true)
             {
-                /// <summary>
-                /// Pobranie danych z TextBoxa
-                /// </summary>
+                
+                // Pobranie danych z TextBoxa
+                
                 int id = int.Parse(textBox1.Text);
                 string inne = textBox2.Text;
                 if (string.IsNullOrEmpty(inne))
@@ -103,6 +111,11 @@ namespace Aplikacja_wypożyczalnia
                 bladWTextboxach = "";
                 poprawneTextboxy = true;
             }
+        }
+
+        private void SamochodNaprawa_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
