@@ -52,7 +52,7 @@ namespace Aplikacja_wypożyczalnia
                 {
                     MessageBox.Show("Wystapił błąd podczas sprawdzania, czy dany klient może dokonać kolejnego wypozyczenia.\n\t-" + exmsg_czymoze);
                 }
-                else if (ileWypozyczenNierozliczonych > 5)
+                else if (ileWypozyczenNierozliczonych >= 5)
                 {
                     MessageBox.Show("Dany klient nie może dokonać kolejnego wypożyczenia");
                 }
