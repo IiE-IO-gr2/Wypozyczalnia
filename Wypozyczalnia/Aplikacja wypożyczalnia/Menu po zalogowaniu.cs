@@ -97,13 +97,13 @@ namespace Aplikacja_wypożyczalnia
             string exmsg = "";
             string tytulMaila = "Przypomnienie o zapłacie";
             string trescMaila = "Dzień dobry.\n" +
-                "Pragniemy przypomnieć o konieczności dokonania zapłaty za wypożyczenie samochodu." +
-                "Prosimy o jak najszybsze uregulowanie rachunku." +
-                "Mamy nadzieję, że jest Pan/Pani zadowolona z naszej współpracy oraz w przyszłości chętnie Pan/Pani do nas wróci." +
+                "Pragniemy przypomnieć o konieczności dokonania zapłaty za wypożyczenie samochodu. " +
+                "Prosimy o jak najszybsze uregulowanie rachunku. " +
+                "Mamy nadzieję, że jest Pan/Pani zadowolona z naszej współpracy oraz w przyszłości chętnie Pan/Pani do nas wróci. " +
                 "Serdecznie pozdrawiamy,\n" +
                 "Wypożyczalnia AutoPrestige \n";
             string zapytanie = @"select k.[Adres_email] from([dbo].[Wypożyczenie] as w inner join[dbo].[Klient] as k on w.[Id_Klienta] = k.[Id_Klienta])
-                                where w.[Data_planowanego_zwrotu] < GETDATE()";
+                                where w.[Data_planowanego_zwrotu] < GETDATE() and w.[Data_planowanego_zwrotu] > GETDATE() - 1";
             string exmsgLista = "";
             List<string> listaAdresatow = FunkcjePomicnicze.PobierzListeStringow(zapytanie, ref exmsgLista);
             if (!string.IsNullOrWhiteSpace(exmsgLista))
@@ -126,7 +126,7 @@ namespace Aplikacja_wypożyczalnia
             string exmsg = "";
             string tytulMaila = "Opóźnienia w zwrocie";
             string trescMaila = "Dzień dobry.\n" +
-                "Z przykrością informujemy, że zarezerwowany przez Pana/Panią samochód będzie dostępny w opóźnionym terminie." +
+                "Z przykrością informujemy, że zarezerwowany przez Pana/Panią samochód będzie dostępny w opóźnionym terminie. " +
                 "Przepraszamy za wszelkie niedogodności. Postaramy się jak najszybciej udostępnić Panu/Pani samochód.\n" +
                 "Serdecznie pozdrawiamy,\n" +
                 "Wypożyczalnia AutoPrestige \n";
@@ -157,8 +157,8 @@ namespace Aplikacja_wypożyczalnia
             string exmsg = "";
             string tytulMaila = "Przypomnienie o wpłacie kaucji";
             string trescMaila = "Dzień dobry.\n" +
-                "Przypominamy o konieczności wpłaty kaucji za dokonaną przez Pana/Panią rezerwację w naszym systemie." +
-                "Należy dokonać płatności w ciągu 24h od momentu złożenia rezerwacji." +
+                "Przypominamy o konieczności wpłaty kaucji za dokonaną przez Pana/Panią rezerwację w naszym systemie. " +
+                "Należy dokonać płatności w ciągu 24h od momentu złożenia rezerwacji. " +
                 "Mamy nadzieję, że pojazd się przysłuży oraz w przyszłości chętnie Pan/Pani do nas wróci.\n" +
                 "Serdecznie pozdrawiamy,\n" +
                 "Wypożyczalnia AutoPrestige \n";
